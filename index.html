@@ -24,10 +24,13 @@
         }
 
         /* Hero Section com o Gradiente Radial da referência */
-        .hero-wrapper {
+       .hero-wrapper {
             background: radial-gradient(circle at 70% 50%, var(--gradient-light) 0%, var(--dark-blue) 100%);
             width: 100%;
             overflow: hidden;
+            
+            /* IMPORTANTE: Removemos o arredondamento inferior */
+            border-radius: 12px 12px 0 0; 
         }
 
         .container {
@@ -52,7 +55,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3.0rem;
+            font-size: 3.5rem;
             margin: 0;
             text-transform: uppercase;
             font-weight: 700;
@@ -93,7 +96,7 @@
         /* Foto Transparente posicionada à direita */
         .profile-pic-container {
             position: absolute;
-            right: -5px;
+            right: -20px;
             bottom: 0;
             height: 100%;
             display: flex;
@@ -105,6 +108,7 @@
             height: 105%; 
             width: auto;
             display: block;
+            margin-bottom: 0;
         }
 
         /* Seções de Conteúdo */
