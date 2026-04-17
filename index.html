@@ -44,9 +44,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 320px;
+            min-height: 350px;
             position: relative;
-            padding: 0;
+            overflow: hidden;
         }
 
         .hero-text {
@@ -56,7 +56,7 @@
         }
 
         .hero-text h1 {
-            font-size: 2.8rem;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);;
             margin: 0;
             text-transform: uppercase;
             font-weight: 700;
@@ -103,14 +103,13 @@
             height: 100%;
             display: flex;
             align-items: flex-end;
-            z-index: 1;
         }
 
         .profile-pic {
-            height: 140%; 
+            height: 100%; 
             width: auto;
             display: block;
-            object-fit: contain;
+            object-fit: cover;
         }
 
         /* Seções de Conteúdo */
