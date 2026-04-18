@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Financeiro - Leandro Augusto Ferreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --gradient-light: #1e3a5f;
+            --light-blue: #00a8e8;
+            --card-bg: #112240;
+            --text-white: #e6f1ff;
+            --text-gray: #8892b0;
+        }
 
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1300px;
+            width: 95%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-back {
+            color: var(--light-blue);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { opacity: 0.8; }
+
+        /* Container do Projeto */
+        .project-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Área do Iframe */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: var(--card-bg);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Grid de Informações */
+        .case-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .case-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 3px solid var(--light-blue);
+        }
+
+        .case-item strong {
+            display: block;
+            color: var(--light-blue);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-item p {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-container { padding-bottom: 75%; } /* Ajuste para mobile */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="index.html" class="btn-back">← VOLTAR AO PORTFÓLIO</a>
+    </nav>
+
+    <header style="margin-bottom: 40px;">
+        <h1 style="font-size: 2.5rem; margin: 0;">Performance Estratégica Financeira</h1>
+        <p style="color: var(--light-blue); margin: 5px 0;">Relatório Interativo Power BI</p>
+    </header>
+
+    <div class="project-wrapper">
+        <div class="video-container">
+            <iframe title="Projeto_Financeiro" src="https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&embedImagePlaceholder=true&pageName=98b843ad0da8d9b9904c" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <div class="case-details">
+            <div class="case-item">
+                <strong>PROBLEMA</strong>
+                <p>Necessidade de centralizar Fluxo de Caixa para monitorar a saúde financeira e margens operacionais de forma dinâmica.</p>
+            </div>
+            <div class="case-item">
+                <strong>ANÁLISE</strong>
+                <p>Modelagem de dados integrando Receita Líquida, Custos e Despesas, permitindo comparar resultados reais vs. metas estabelecidas.</p>
+            </div>
+            <div class="case-item">
+                <strong>INSIGHTS</strong>
+                <p>Identificação de variações críticas na margem percentual e análise de sazonalidade nos meses de agosto e setembro.</p>
+            </div>
+            <div class="case-item">
+                <strong>RESULTADO</strong>
+                <p>Visibilidade total da conversão de caixa (116,28%) e suporte à decisão estratégica para redução de riscos operacionais.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Leandro Augusto Ferreira</p>
+    </footer>
+</div>
+
+</body>
+</html>
