@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logística de Transporte - Leandro Augusto Ferreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --gradient-light: #1e3a5f;
+            --light-blue: #00a8e8;
+            --card-bg: #112240;
+            --header-blue: #1e3a5f;
+            --text-white: #e6f1ff;
+            --text-gray: #8892b0;
+        }
 
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1300px;
+            width: 95%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-back {
+            color: var(--light-blue);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { opacity: 0.8; }
+
+        .project-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Container do Dashboard */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: var(--card-bg);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Grid de Informações Estilo Cards Simplificados */
+        .case-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .case-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .case-item strong {
+            background: var(--header-blue);
+            color: white;
+            padding: 12px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .case-item p {
+            padding: 20px 15px;
+            margin: 0;
+            color: var(--text-white);
+            font-size: 0.95rem;
+            text-align: center;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-container { padding-bottom: 75%; }
+            .case-details { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="index.html" class="btn-back">← VOLTAR AO PORTFÓLIO</a>
+    </nav>
+
+    <header style="margin-bottom: 40px;">
+        <h1 style="font-size: 2.5rem; margin: 0;">Logística de Transporte</h1>
+        <p style="color: var(--light-blue); margin: 5px 0;">Monitoramento de Frota e Performance de Entregas</p>
+    </header>
+
+    <div class="project-wrapper">
+        <div class="video-container">
+            <iframe title="Teste Siimp Sistemas" src="https://app.powerbi.com/view?r=eyJrIjoiZTNhMjE2M2YtZDZiMC00NmVjLTlhYWYtOTNkM2QyYzg5ZDJlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <div class="case-details">
+            <div class="case-item">
+                <strong>PROBLEMA</strong>
+                <p>Gargalos operacionais e falta de visibilidade no SLA de entregas.</p>
+            </div>
+            
+            <div class="case-item">
+                <strong>ANÁLISE</strong>
+                <p>Monitoramento de rotas, volumetria e performance por transportadora.</p>
+            </div>
+
+            <div class="case-item">
+                <strong>INSIGHTS</strong>
+                <p>Identificação de atrasos críticos e subutilização de capacidade de carga.</p>
+            </div>
+
+            <div class="case-item">
+                <strong>RESULTADO</strong>
+                <p>Otimização de rotas e melhoria nos níveis de serviço ao cliente.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Leandro Augusto Ferreira</p>
+    </footer>
+</div>
+
+</body>
+</html>
