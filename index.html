@@ -10,189 +10,119 @@
 
 <style>
 :root {
-    --dark: #0a192f;
-    --secondary: #112240;
-    --accent: #00a8e8;
-    --text: #e6f1ff;
-    --subtext: #8892b0;
+    --bg: #0b0f19;
+    --card: #111827;
+    --accent: #3b82f6;
+    --text: #f9fafb;
+    --sub: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: var(--dark);
+    background: var(--bg);
     color: var(--text);
 }
 
-/* ================= CONTAINER ================= */
+/* CONTAINER */
 .container {
-    max-width: 1300px;
+    max-width: 1100px;
     margin: auto;
-    padding: 0 40px;
+    padding: 0 24px;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
-    background: radial-gradient(circle at 70% 50%, #1e3a5f 0%, var(--dark) 100%);
-    padding: 80px 0;
+    padding: 120px 0 80px;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-.hero-text h1 {
-    font-size: 3rem;
-    margin: 0;
+.hero p {
+    font-size: 1.2rem;
+    color: var(--sub);
+    max-width: 600px;
 }
 
-.hero-text h2 {
-    color: var(--accent);
-    font-weight: 500;
-    margin: 10px 0;
-}
-
-.hero-text p {
-    color: var(--subtext);
-    max-width: 500px;
-}
-
+/* BOTÃO */
 .btn {
-    display: inline-block;
     background: var(--accent);
-    padding: 14px 28px;
-    margin-top: 20px;
+    padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
     color: white;
+    display: inline-block;
+    margin-top: 25px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,168,232,0.3);
 }
 
-/* FOTO */
-.profile {
-    max-height: 420px;
-}
-
-/* ================= SECTIONS ================= */
+/* SEÇÕES */
 .section {
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .section h3 {
-    border-left: 4px solid var(--accent);
-    padding-left: 15px;
-    margin-bottom: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
-/* ================= CASE ================= */
-.case {
+/* GRID */
+.grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 30px;
-    background: var(--secondary);
-    padding: 40px;
-    border-radius: 12px;
+    gap: 20px;
 }
 
-.case-box {
-    background: rgba(255,255,255,0.03);
-    padding: 20px;
+/* CARDS */
+.card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* PROJETOS */
+.projects {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project img {
+    width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.case-box strong {
-    color: var(--accent);
-    font-size: 0.8rem;
-}
-
-/* ================= PROJECTS ================= */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
-    gap: 25px;
-}
-
-.card {
-    background: var(--secondary);
+/* CASE */
+.case {
+    background: var(--card);
+    padding: 30px;
     border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.card img {
-    width: 100%;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card h4 {
-    margin: 10px 0;
-}
-
-.card span {
-    color: var(--accent);
-    font-size: 0.85rem;
-}
-
-/* ================= SKILLS ================= */
-.skills {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.skill {
-    background: var(--secondary);
-    padding: 15px 25px;
-    border-radius: 8px;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
     text-align: center;
-    margin: 100px 0;
+    margin: 120px 0;
 }
 
-.btn-outline {
-    border: 2px solid var(--accent);
-    padding: 14px 40px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: var(--accent);
-}
-
-.btn-outline:hover {
-    background: var(--accent);
-    color: white;
-}
-
-/* ================= RESPONSIVO ================= */
-@media(max-width: 900px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .case {
-        grid-template-columns: 1fr;
-    }
+footer h2 {
+    margin-bottom: 20px;
 }
 </style>
 </head>
@@ -200,53 +130,59 @@ footer {
 <body>
 
 <!-- HERO -->
-<section class="hero">
-<div class="container hero-content">
+<section class="hero container">
 
-<div class="hero-text">
-<h1>Leandro Ferreira</h1>
-<h2>Analista de Dados | SQL • Power BI • Python</h2>
+<h1>
+Transformo dados em decisões que impactam o negócio
+</h1>
+
 <p>
-Transformo dados em decisões estratégicas, gerando insights que impactam receita, retenção e performance.
+Analista de Dados com foco em churn, performance e estratégia.  
+Experiência com SQL, Power BI e Python para geração de insights acionáveis.
 </p>
 
 <a href="https://www.linkedin.com/in/leandro-datainsights/" class="btn">
-Falar comigo no LinkedIn
+Falar comigo
 </a>
-</div>
 
-<img src="img/foto.png" class="profile">
-
-</div>
 </section>
+
+<!-- VALOR -->
+<div class="container section">
+<h3>Como gero valor com dados</h3>
+
+<div class="grid">
+
+<div class="card">
+<p>Identifico padrões de churn e atuo na retenção de clientes.</p>
+</div>
+
+<div class="card">
+<p>Transformo dados em insights para tomada de decisão.</p>
+</div>
+
+<div class="card">
+<p>Melhoro performance de negócio com análise de indicadores.</p>
+</div>
+
+</div>
+</div>
 
 <!-- CASE -->
 <div class="container section">
-<h3>Case: Análise de Churn</h3>
+<h3>Case: Redução de Churn</h3>
 
 <div class="case">
 
-<div>
-<div class="case-box">
-<strong>PROBLEMA</strong>
-<p>Alta taxa de cancelamento impactando receita recorrente.</p>
-</div>
+<p><strong>Contexto:</strong> Alta taxa de cancelamento impactando receita recorrente.</p>
 
-<div class="case-box">
-<strong>ANÁLISE</strong>
-<p>Cruzamento de comportamento, contratos e perfil de clientes.</p>
-</div>
+<p><strong>Abordagem:</strong> Análise de comportamento, contratos e perfil de clientes.</p>
 
-<div class="case-box">
-<strong>INSIGHT</strong>
-<p>Contratos mensais têm churn até 6x maior, principalmente no início.</p>
-</div>
+<p><strong>Insight:</strong> Clientes com contrato mensal possuem churn até 6x maior, principalmente no início.</p>
 
-<div class="case-box">
-<strong>RESULTADO</strong>
-<p>Base para estratégias de retenção e priorização de clientes.</p>
-</div>
-</div>
+<p><strong>Recomendação:</strong> Estratégias de retenção nos primeiros meses e incentivo a contratos longos.</p>
+
+<br>
 
 <iframe width="100%" height="350"
 src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9">
@@ -257,62 +193,78 @@ src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4
 
 <!-- PROJETOS -->
 <div class="container section">
-<h3>Projetos</h3>
 
-<div class="projects">
+<h3>Projetos selecionados</h3>
 
-<a href="financeiro.html" class="card">
+<div class="grid projects">
+
+<a href="financeiro.html" class="card project">
 <img src="img/financeiro.png">
-<div class="card-content">
 <h4>BI Financeiro</h4>
-<p>Análise de performance e indicadores financeiros.</p>
-<span>Ver projeto →</span>
-</div>
+<p>Otimização de custos e análise de margem.</p>
 </a>
 
-<a href="transporte.html" class="card">
+<a href="transporte.html" class="card project">
 <img src="img/transporte.png">
-<div class="card-content">
 <h4>Logística</h4>
-<p>Monitoramento de frota e eficiência operacional.</p>
-<span>Ver projeto →</span>
-</div>
+<p>Eficiência operacional e gestão de frota.</p>
 </a>
 
-<a href="venda.html" class="card">
+<a href="venda.html" class="card project">
 <img src="img/venda.png">
-<div class="card-content">
 <h4>Comercial</h4>
-<p>Insights estratégicos de vendas.</p>
-<span>Ver projeto →</span>
-</div>
+<p>Insights para crescimento de receita.</p>
 </a>
 
 </div>
 </div>
 
-<!-- SKILLS -->
+<!-- IMPACTO -->
 <div class="container section">
+
+<h3>Impacto com dados</h3>
+
+<div class="grid">
+
+<div class="card">
+<p>Redução de churn através de análise comportamental.</p>
+</div>
+
+<div class="card">
+<p>Melhoria na tomada de decisão com dashboards estratégicos.</p>
+</div>
+
+<div class="card">
+<p>Identificação de oportunidades de crescimento de receita.</p>
+</div>
+
+</div>
+</div>
+
+<!-- STACK -->
+<div class="container section">
+
 <h3>Stack</h3>
 
-<div class="skills">
-<div class="skill">SQL</div>
-<div class="skill">Power BI</div>
-<div class="skill">Python</div>
-<div class="skill">Excel</div>
-<div class="skill">Data Analysis</div>
-</div>
+<div class="grid">
 
+<div class="card">SQL</div>
+<div class="card">Power BI</div>
+<div class="card">Python</div>
+<div class="card">Excel</div>
+
+</div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-<h3>Vamos trabalhar juntos?</h3>
-<p>Aberto a oportunidades em dados e BI</p>
 
-<a href="mailto:seuemail@exemplo.com" class="btn-outline">
+<h2>Aberto a oportunidades em dados</h2>
+
+<a href="mailto:leandroguto1@gmail.com" class="btn">
 Entrar em contato
 </a>
+
 </footer>
 
 </body>
