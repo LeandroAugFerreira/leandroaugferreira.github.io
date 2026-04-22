@@ -17,16 +17,12 @@
     --text-gray: #8892b0;
 }
 
+/* BASE */
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: var(--dark-blue);
     color: var(--text-white);
-}
-
-/* HERO */
-.hero-wrapper {
-    background: radial-gradient(circle at 70% 50%, var(--gradient-light) 0%, var(--dark-blue) 100%);
 }
 
 .container {
@@ -36,10 +32,15 @@ body {
     padding: 0 20px;
 }
 
+/* HERO */
+.hero-wrapper {
+    background: radial-gradient(circle at 70% 50%, var(--gradient-light), var(--dark-blue));
+}
+
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     min-height: 350px;
 }
 
@@ -50,26 +51,37 @@ header {
 
 .hero-text h2 {
     color: var(--light-blue);
-    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: var(--text-gray);
 }
 
 .btn-linkedin {
-    background-color: var(--light-blue);
+    background: var(--light-blue);
     padding: 12px 24px;
+    color: #fff;
     text-decoration: none;
-    color: white;
     border-radius: 5px;
 }
 
-/* SECTION */
+.profile-pic-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-pic {
+    height: 350px;
+}
+
+/* TITULOS */
 .section-title {
     border-bottom: 2px solid var(--light-blue);
-    display: inline-block;
     margin-top: 60px;
 }
 
 /* ===== CASE PREMIUM ===== */
-
 .case-container {
     display: grid;
     grid-template-columns: 1.1fr 1.4fr;
@@ -77,7 +89,6 @@ header {
     background: linear-gradient(145deg, #112240, #0a192f);
     padding: 40px;
     border-radius: 12px;
-    margin-top: 30px;
 }
 
 .case-grid {
@@ -87,8 +98,9 @@ header {
 }
 
 .case-item {
+    position: relative;
     background: rgba(255,255,255,0.03);
-    padding: 22px;
+    padding: 20px;
     border-radius: 10px;
     min-height: 140px;
     border: 1px solid rgba(255,255,255,0.05);
@@ -97,7 +109,7 @@ header {
 
 .case-item:hover {
     transform: translateY(-5px);
-    border: 1px solid var(--light-blue);
+    box-shadow: 0 0 20px rgba(0,168,232,0.3);
 }
 
 .case-item strong {
@@ -110,16 +122,52 @@ header {
     font-size: 0.9rem;
 }
 
+/* INSIGHT DESTACADO */
+.insight {
+    border: 1px solid #faad14;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #faad14;
+    color: #000;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+/* RESULTADO */
+.result {
+    border-left: 3px solid #52c41a;
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* IFRAME */
 .case-frame iframe {
     width: 100%;
     height: 420px;
     border-radius: 10px;
 }
 
-/* PROJECTS */
+/* PROJETOS */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -140,19 +188,11 @@ footer {
     padding: 80px 0;
 }
 
-.btn-contact {
-    border: 2px solid var(--light-blue);
-    padding: 12px 30px;
-    text-decoration: none;
-    color: var(--light-blue);
-}
-
 /* RESPONSIVO */
 @media (max-width: 900px) {
     .case-container {
         grid-template-columns: 1fr;
     }
-
     .case-grid {
         grid-template-columns: 1fr;
     }
@@ -163,49 +203,52 @@ footer {
 <body>
 
 <div class="hero-wrapper">
-    <div class="container">
-        <header>
-            <div class="hero-text">
-                <h1>Leandro Augusto Ferreira</h1>
-                <h2>Analista de Dados</h2>
-                <p>Transformando dados em decisões estratégicas com SQL, Power BI e Python.</p>
-                <a href="#" class="btn-linkedin">LinkedIn</a>
-            </div>
-        </header>
-    </div>
+<div class="container">
+<header>
+<div class="hero-text">
+<h1>Leandro Augusto Ferreira</h1>
+<h2>Analista de Dados</h2>
+<p>Transformando dados em decisões estratégicas com Excel, SQL, Power BI e Python.</p>
+<a href="https://www.linkedin.com/in/leandro-datainsights/" class="btn-linkedin">FALE COMIGO NO LINKEDIN</a>
+</div>
+
+<div class="profile-pic-container">
+<img src="img/foto.png" class="profile-pic">
+</div>
+</header>
+</div>
 </div>
 
 <div class="container">
 
-<!-- CASE -->
 <section>
-
-<h3 class="section-title">Case: Análise de Churn</h3>
+<h3 class="section-title">Case: Análise de Churn de Clientes</h3>
 
 <p style="color: var(--light-blue); opacity: 0.8;">
-Análise de padrões de cancelamento e retenção de clientes
+Análise dos padrões de cancelamento e retenção de clientes
 </p>
 
 <div class="case-container">
 
 <div class="case-grid">
 
-<div class="case-item">
+<div class="case-item fade-in">
 <strong>PROBLEMA</strong>
 <p>Alta taxa de churn impactando receita e previsibilidade.</p>
 </div>
 
-<div class="case-item">
+<div class="case-item fade-in">
 <strong>ANÁLISE</strong>
-<p>Cruzamento de comportamento, perfil e contratos para identificar padrões.</p>
+<p>Cruzamento de comportamento e contratos para identificar padrões.</p>
 </div>
 
-<div class="case-item">
+<div class="case-item insight fade-in">
+<span class="badge">ALTO IMPACTO</span>
 <strong>INSIGHTS</strong>
 <p>Clientes mensais apresentam até 6x mais churn, principalmente no início.</p>
 </div>
 
-<div class="case-item">
+<div class="case-item result fade-in">
 <strong>RESULTADO</strong>
 <p>Priorização de clientes em risco e estratégias de retenção.</p>
 </div>
@@ -217,38 +260,45 @@ Análise de padrões de cancelamento e retenção de clientes
 </div>
 
 </div>
-
 </section>
 
-<!-- PROJETOS -->
 <section>
-<h3 class="section-title">Projetos</h3>
+<h3 class="section-title">Projetos em Destaque</h3>
 
 <div class="projects-grid">
 
+<a href="financeiro.html">
 <div class="project-card">
-<h4>Dashboard Financeiro</h4>
-<p>Análise de receitas e custos.</p>
+<img src="img/financeiro.png">
+<h4>BI: Gestão Financeira</h4>
+<p>Análise de performance financeira</p>
 </div>
+</a>
 
+<a href="transporte.html">
 <div class="project-card">
-<h4>Logística</h4>
-<p>Monitoramento de frota.</p>
+<img src="img/transporte.png">
+<h4>BI: Logística e Frota</h4>
+<p>Monitoramento logístico</p>
 </div>
+</a>
 
+<a href="venda.html">
 <div class="project-card">
-<h4>Vendas</h4>
-<p>Análise comercial estratégica.</p>
+<img src="img/venda.png">
+<h4>BI: Análise Comercial</h4>
+<p>Gestão estratégica de vendas</p>
 </div>
+</a>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
 <h3>Vamos trabalhar juntos?</h3>
-<a href="#" class="btn-contact">Contato</a>
+<p>Estou aberto a novas oportunidades em BI</p>
+<a href="mailto:seuemail@exemplo.com" class="btn-linkedin">ENTRE EM CONTATO</a>
 </footer>
 
 </div>
