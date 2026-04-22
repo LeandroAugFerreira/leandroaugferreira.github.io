@@ -1,306 +1,344 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio - Leandro Augusto Ferreira</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Leandro Augusto Ferreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --gradient-light: #1e3a5f;
+            --light-blue: #00a8e8;
+            --card-bg: #112240;
+            --text-white: #e6f1ff;
+            --text-gray: #8892b0;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
 
-<style>
-:root {
-    --dark-blue: #0a192f;
-    --gradient-light: #1e3a5f;
-    --light-blue: #00a8e8;
-    --card-bg: #112240;
-    --text-white: #e6f1ff;
-    --text-gray: #8892b0;
-}
+        /* Hero Section com o Gradiente Radial da referência */
+       .hero-wrapper {
+            background: radial-gradient(circle at 70% 50%, var(--gradient-light) 0%, var(--dark-blue) 100%);
+            width: 100%;
+            overflow: hidden;
+            
+            /* IMPORTANTE: Removemos o arredondamento inferior */
+            border-radius: 12px 12px 0 0; 
+        }
 
-/* BASE */
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--dark-blue);
-    color: var(--text-white);
-}
+        .container {
+            max-width: 1200px; /* Aumentado para expandir o conteúdo lateralmente */
+            width: 95%;        /* Mantém uma margem de segurança em telas menores */
+            margin: 0 auto;    /* Mantém o site centralizado */
+            padding: 0 20px;
+        }
 
-.container {
-    max-width: 1200px;
-    width: 95%;
-    margin: auto;
-    padding: 0 20px;
-}
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* HERO */
-.hero-wrapper {
-    background: radial-gradient(circle at 70% 50%, var(--gradient-light), var(--dark-blue));
-}
+        .hero-text {
+            z-index: 2;
+            max-width: 650px;
+            padding: 0;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 350px;
-}
+        .hero-text h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 700;
+            white-space: nowrap;
+        }
 
-.hero-text h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
+        .hero-text h2 {
+            color: var(--light-blue);
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin: 5px 0 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: block;
+            padding-bottom: 10px;
+        }
 
-.hero-text h2 {
-    color: var(--light-blue);
-}
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
 
-.hero-text p {
-    color: var(--text-gray);
-}
+        .btn-linkedin {
+            background-color: var(--light-blue);
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
 
-.btn-linkedin {
-    background: var(--light-blue);
-    padding: 12px 24px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
+        .btn-linkedin:hover {
+            filter: brightness(1.2);
+            box-shadow: 0 5px 15px rgba(0, 168, 232, 0.3);
+        }
 
-.profile-pic-container {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
+        /* Foto Transparente posicionada à direita */
+        .profile-pic-container {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 110%;
+            display: flex;
+            align-items: flex-end;
+        }
 
-.profile-pic {
-    height: 350px;
-}
+        .profile-pic {
+            height: 110%; 
+            width: auto;
+            display: block;
+            object-fit: cover;
+        }
 
-/* TITULOS */
-.section-title {
-    border-bottom: 2px solid var(--light-blue);
-    margin-top: 60px;
-}
+        /* Seções de Conteúdo */
+        .section-title {
+            border-bottom: 2px solid var(--light-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
 
-/* ===== CASE PREMIUM ===== */
-.case-container {
-    display: grid;
-    grid-template-columns: 1.1fr 1.4fr;
-    gap: 40px;
-    background: linear-gradient(145deg, #112240, #0a192f);
-    padding: 40px;
-    border-radius: 12px;
-}
+        .case-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            align-items: center;
+        }
 
-.case-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
 
-.case-item {
-    position: relative;
-    background: rgba(255,255,255,0.03);
-    padding: 20px;
-    border-radius: 10px;
-    min-height: 140px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.3s;
-}
+        .case-item {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 8px;
+        }
 
-.case-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0,168,232,0.3);
-}
+        .case-item strong {
+            display: block;
+            color: var(--light-blue);
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
 
-.case-item strong {
-    color: var(--light-blue);
-    font-size: 0.75rem;
-}
+        .dashboard-preview {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
 
-.case-item p {
-    color: var(--text-gray);
-    font-size: 0.9rem;
-}
+        /* Grid de Projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-/* INSIGHT DESTACADO */
-.insight {
-    border: 1px solid #faad14;
-}
+        .project-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
 
-.badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #faad14;
-    color: #000;
-    font-size: 0.7rem;
-    padding: 4px 8px;
-    border-radius: 20px;
-}
+        .project-card:hover { transform: translateY(-8px); }
 
-/* RESULTADO */
-.result {
-    border-left: 3px solid #52c41a;
-}
+        .project-card img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
 
-/* ANIMAÇÃO */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s forwards;
-}
+        .project-card h4 { margin: 10px 0; font-size: 1.2rem; }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        /* Habilidades */
+        .skills-bar {
+            display: flex;
+            justify-content: space-around;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-/* IFRAME */
-.case-frame iframe {
-    width: 100%;
-    height: 420px;
-    border-radius: 10px;
-}
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
 
-/* PROJETOS */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 100px 0;
+        }
 
-.project-card {
-    background: var(--card-bg);
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+        .btn-contact {
+            border: 2px solid var(--light-blue);
+            color: var(--light-blue);
+            padding: 14px 50px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-weight: bold;
+            display: inline-block;
+        }
 
-.project-card:hover {
-    transform: translateY(-6px);
-}
+        .btn-contact:hover {
+            background: var(--light-blue);
+            color: white;
+        }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 80px 0;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-    .case-container {
-        grid-template-columns: 1fr;
-    }
-    .case-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+        /* Responsividade */
+        @media (max-width: 850px) {
+            header { flex-direction: column; text-align: center; height: auto; padding-top: 40px; }
+            .profile-pic-container { position: relative; right: 0; height: 350px; margin-top: 20px; justify-content: center; }
+            .case-container { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.8rem; }
+            .hero-text { max-width: 100%; }
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="hero-wrapper">
+    <div class="container">
+        <header>
+            <div class="hero-text">
+                <h1>Leandro Augusto Ferreira</h1>
+                <h2>Analista de Dados</h2>
+                <p>Transformando dados em decisões estratégicas com Excel, SQL, Power BI e Python.</p>
+                <a href="https://www.linkedin.com/in/leandro-datainsights/" class="btn-linkedin">FALE COMIGO NO LINKEDIN</a>
+            </div>
+            <div class="profile-pic-container">
+                <img src="img/foto.png" alt="Leandro Augusto" class="profile-pic">
+            </div>
+        </header>
+    </div>
+</div>
+
 <div class="container">
-<header>
-<div class="hero-text">
-<h1>Leandro Augusto Ferreira</h1>
-<h2>Analista de Dados</h2>
-<p>Transformando dados em decisões estratégicas com Excel, SQL, Power BI e Python.</p>
-<a href="https://www.linkedin.com/in/leandro-datainsights/" class="btn-linkedin">FALE COMIGO NO LINKEDIN</a>
-</div>
+   <section>
+    <h3 class="section-title">Case: Análise de Churn de Clientes</h3>
+    <p style="color: var(--light-blue); margin-top: -30px; margin-bottom: 30px; opacity: 0.8;">
+        Redução potencial da taxa de cancelamento através de análise orientada a dados
+    </p>
+    
+    <div class="case-container" style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap; justify-content: center;">
+        
+        <div class="case-grid" style="flex: 1; min-width: 350px;">
+            <div class="case-item" style="margin-bottom: 20px;">
+                <strong style="display: block; color: #fff;">PROBLEMA</strong>
+                <p>Elevada taxa de churn em serviços recorrentes, comprometendo a receita e a previsibilidade do negócio.</p>
+            </div>
+            <div class="case-item" style="margin-bottom: 20px;">
+                <strong style="display: block; color: #fff;">ANÁLISE</strong>
+                <p>Cruzamento de dados comportamentais, perfil de clientes e características contratuais para identificar padrões de churn e seus principais drivers.</p>
+            </div>
+            <div class="case-item" style="margin-bottom: 20px;">
+                <strong style="display: block; color: #fff;">INSIGHTS</strong>
+                <p>Clientes com contrato mensal concentram o churn — até 6x maior, sobretudo nos primeiros meses — incluindo clientes de alto valor e maior impacto na receita.</p>
+            </div>
+            <div class="case-item">
+                <strong style="display: block; color: #fff;">RESULTADO</strong>
+                <p>Geração de insights acionáveis para priorizar clientes de maior risco e orientar estratégias de retenção.</p>
+            </div>
+        </div>
 
-<div class="profile-pic-container">
-<img src="img/foto.png" class="profile-pic">
-</div>
-</header>
-</div>
-</div>
+        <div class="case-frame" style="flex: 1.2; min-width: 350px; display: flex; justify-content: center;">
+            <iframe title="telcochurn" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&embedImagePlaceholder=true" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
 
-<div class="container">
-
-<section>
-<h3 class="section-title">Case: Análise de Churn de Clientes</h3>
-
-<p style="color: var(--light-blue); opacity: 0.8;">
-Análise dos padrões de cancelamento e retenção de clientes
-</p>
-
-<div class="case-container">
-
-<div class="case-grid">
-
-<div class="case-item fade-in">
-<strong>PROBLEMA</strong>
-<p>Alta taxa de churn impactando receita e previsibilidade.</p>
-</div>
-
-<div class="case-item fade-in">
-<strong>ANÁLISE</strong>
-<p>Cruzamento de comportamento e contratos para identificar padrões.</p>
-</div>
-
-<div class="case-item insight fade-in">
-<span class="badge">ALTO IMPACTO</span>
-<strong>INSIGHTS</strong>
-<p>Clientes mensais apresentam até 6x mais churn, principalmente no início.</p>
-</div>
-
-<div class="case-item result fade-in">
-<strong>RESULTADO</strong>
-<p>Priorização de clientes em risco e estratégias de retenção.</p>
-</div>
-
-</div>
-
-<div class="case-frame">
-<iframe src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"></iframe>
-</div>
-
-</div>
+    </div>
 </section>
 
-<section>
-<h3 class="section-title">Projetos em Destaque</h3>
+    <section id="projetos">
+    <h3 class="section-title">Projetos em Destaque</h3>
+    <div class="projects-grid">
+        
+        <a href="financeiro.html" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+                <img src="img/financeiro.png" alt="Dash Financeiro">
+                <h4>BI: Gestão Financeira</h4>
+                <p>Análise de performance financeira</p>
+                <span style="color: var(--light-blue); font-size: 0.8rem; font-weight: bold;">VER CASE COMPLETO →</span>
+            </div>
+        </a>
 
-<div class="projects-grid">
+        <a href="transporte.html" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+                <img src="img/transporte.png" alt="Dash Financeiro">
+                <h4>BI: Logística e Frota</h4>
+                <p>Monitoramento tático de logística rodoviária.</p>
+                <span style="color: var(--light-blue); font-size: 0.8rem; font-weight: bold;">VER CASE COMPLETO →</span>
+            </div>
+        </a>
 
-<a href="financeiro.html">
-<div class="project-card">
-<img src="img/financeiro.png">
-<h4>BI: Gestão Financeira</h4>
-<p>Análise de performance financeira</p>
-</div>
-</a>
+        <a href="venda.html" style="text-decoration: none; color: inherit;">
+            <div class="project-card">
+                <img src="img/venda.png" alt="Dash Análise de Vendas">
+                <h4>BI: Análise Comercial</h4>
+                <p>Gestão estratégica de vendas.</p>
+                <div style="margin-top: 15px; display: flex; align-items: center; gap: 5px;">
+                    <span style="color: var(--light-blue); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;">VER CASE COMPLETO</span>
+                    <span style="color: var(--light-blue); font-size: 1rem;">→</span>
+                </div>
+            </div>
+        </a>
 
-<a href="transporte.html">
-<div class="project-card">
-<img src="img/transporte.png">
-<h4>BI: Logística e Frota</h4>
-<p>Monitoramento logístico</p>
-</div>
-</a>
+    </div>
+    </section>
+    <section>
+        <h3 class="section-title">Habilidades</h3>
+        <div class="skills-bar">
+            <div class="skill-item"><span>🗄️</span> Excel</div>
+            <div class="skill-item"><span>🗄️</span> SQL & Python</div>
+            <div class="skill-item"><span>📊</span> Power BI</div>
+            <div class="skill-item"><span>📈</span> Análise Preditiva</div>
+            <div class="skill-item"><span>📉</span> Data Viz</div>
+        </div>
+    </section>
 
-<a href="venda.html">
-<div class="project-card">
-<img src="img/venda.png">
-<h4>BI: Análise Comercial</h4>
-<p>Gestão estratégica de vendas</p>
-</div>
-</a>
-
-</div>
-
-</section>
-
-<footer>
-<h3>Vamos trabalhar juntos?</h3>
-<p>Estou aberto a novas oportunidades em BI</p>
-<a href="mailto:seuemail@exemplo.com" class="btn-linkedin">ENTRE EM CONTATO</a>
-</footer>
-
+    <footer>
+        <h3>Vamos trabalhar juntos?</h3>
+        <p>Estou aberto a novas oportunidades e parcerias em BI.</p>
+        <br><br>
+        <a href="mailto:seuemail@exemplo.com" class="btn-contact">ENTRE EM CONTATO</a>
+    </footer>
 </div>
 
 </body>
