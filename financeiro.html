@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash Financeiro - Leandro Augusto Ferreira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --dark-blue: #0a192f;
@@ -34,13 +36,30 @@
         .btn-back {
             color: var(--light-blue);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             transition: 0.3s;
         }
 
-        .btn-back:hover { opacity: 0.8; }
+        .btn-back:hover { opacity: 0.7; }
+
+        /* HEADER */
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        header p {
+            color: var(--text-gray);
+            max-width: 700px;
+            margin-top: 10px;
+        }
 
         .project-wrapper {
             display: flex;
@@ -48,122 +67,209 @@
             gap: 30px;
         }
 
-        /* Container do Dashboard */
-        .video-container {
-            position: relative;
+        /* DASHBOARD */
+       .video-container {
             width: 100%;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            height: 0;
-            border-radius: 12px;
+            height: 600px; /* impacto visual forte */
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
             background: var(--card-bg);
+            margin-bottom: 20px;
         }
-
+        
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
+        }
+        
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .video-container {
+                height: 420px;
+            }
         }
 
-        /* Grid de Informações Estilo Cards Simplificados */
+        /* CARDS */
         .case-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .case-item {
-            background: var(--card-bg);
-            border-radius: 8px;
+            background: linear-gradient(145deg, #112240, #0f1a33);
+            border-radius: 12px;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .case-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--light-blue);
         }
 
         .case-item strong {
-            background: var(--header-blue);
-            color: white;
-            padding: 12px;
-            font-size: 0.9rem;
+            display: block;
+            color: var(--light-blue);
+            padding: 15px;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-align: center;
         }
 
         .case-item p {
-            padding: 20px 15px;
+            padding: 0 15px 20px;
             margin: 0;
             color: var(--text-white);
             font-size: 0.95rem;
-            text-align: center;
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        /* IMPACTO */
+        .impact-section {
+            margin-top: 40px;
+        }
+
+        .impact-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .impact-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         footer {
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 0;
             opacity: 0.6;
             font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
             .video-container { padding-bottom: 75%; }
-            .case-details { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
+
 <body>
 
 <div class="container">
+
     <nav>
-        <a href="index.html" class="btn-back">← VOLTAR AO PORTFÓLIO</a>
+        <a href="index.html" class="btn-back">← Voltar ao portfólio</a>
     </nav>
 
-    <header style="margin-bottom: 40px;">
-        <h1 style="font-size: 2.5rem; margin: 0;">Performance Estratégica Financeira</h1>
-        <p style="color: var(--light-blue); margin: 5px 0;">Dashboard Interativo e Gestão de Indicadores</p>
+    <header>
+        <h1>Análise Financeira para Otimização de Margem</h1>
+
+        <p>
+        Projeto desenvolvido para analisar a performance financeira e identificar oportunidades de melhoria na margem,
+        através da integração de indicadores como fluxo de caixa, DRE e resultado líquido.
+        </p>
     </header>
 
     <div class="project-wrapper">
-        <div class="video-container">
-            <iframe title="Projeto_Financeiro" src="https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- DASHBOARD -->
+        <div style="margin-top: 20px;">
+        
+            <p style="
+                color: var(--text-gray);
+                margin-bottom: 25px;
+                font-size: 1.05rem;
+                max-width: 750px;
+            ">
+            Dashboard interativo desenvolvido para análise da performance financeira,
+            permitindo identificar oportunidades de otimização de margem e controle de custos.
+            </p>
+        
+            <div class="video-container">
+                <iframe 
+                    title="Projeto_Financeiro" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9" 
+                    frameborder="0" 
+                    allowFullScreen="true">
+                </iframe>
+            </div>
+        
         </div>
 
+        <!-- CASE -->
         <div class="case-details">
+
             <div class="case-item">
-                <strong>PROBLEMA</strong>
-                <p>Baixa visibilidade do Ponto de Equilíbrio e desvios orçamentários.</p>
+                <strong>CONTEXTO</strong>
+                <p>
+                Necessidade de aumentar a visibilidade sobre a performance financeira e identificar oportunidades de melhoria na margem.
+                </p>
             </div>
             
             <div class="case-item">
-                <strong>ANÁLISE</strong>
-                <p>Integração de Fluxo de Caixa e DRE para cálculo de resultado líquido.</p>
+                <strong>ABORDAGEM</strong>
+                <p>
+                Integração de dados financeiros (Fluxo de Caixa e DRE) para análise estruturada de receitas, custos e resultado líquido.
+                </p>
             </div>
 
             <div class="case-item">
-                <strong>INSIGHTS</strong>
-                <p>Margem consolidada de 26%, com desvio de aderência planejado em 74%.</p>
+                <strong>INSIGHT</strong>
+                <p>
+                Identificação de variações relevantes de custos impactando diretamente a margem em períodos específicos.
+                </p>
             </div>
 
             <div class="case-item">
-                <strong>RESULTADO</strong>
-                <p>Monitoramento tático e preservação da sustentabilidade financeira.</p>
+                <strong>RECOMENDAÇÃO</strong>
+                <p>
+                Foco na otimização de custos críticos e monitoramento contínuo dos principais indicadores financeiros.
+                </p>
             </div>
+
         </div>
+
+        <!-- IMPACTO -->
+        <div class="impact-section">
+
+            <h3 class="impact-title">Impacto da análise</h3>
+
+            <div class="impact-grid">
+
+                <div class="impact-item">
+                    Melhor visibilidade sobre a composição da margem.
+                </div>
+
+                <div class="impact-item">
+                    Identificação de oportunidades de redução de custos.
+                </div>
+
+                <div class="impact-item">
+                    Base para tomada de decisão financeira mais estratégica.
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
     <footer>
         <p>Desenvolvido por Leandro Augusto Ferreira</p>
     </footer>
+
 </div>
 
 </body>
