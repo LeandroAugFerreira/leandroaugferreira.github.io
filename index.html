@@ -25,6 +25,12 @@ body {
     color: var(--text-white);
 }
 
+/* REMOVE ROXO DOS LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* HERO */
 .hero-wrapper {
     background: radial-gradient(circle at 70% 50%, var(--gradient-light), var(--dark-blue));
@@ -62,7 +68,6 @@ header {
     background: var(--light-blue);
     padding: 12px 25px;
     color: white;
-    text-decoration: none;
     border-radius: 4px;
 }
 
@@ -105,11 +110,9 @@ header {
     display: block;
     color: var(--light-blue);
     font-size: 0.75rem;
-    margin-bottom: 8px;
-    text-transform: uppercase;
 }
 
-/* PROJETOS (MELHORADO) */
+/* PROJETOS */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -122,38 +125,17 @@ header {
     border-radius: 14px;
     transition: all 0.3s ease;
     border: 1px solid rgba(255,255,255,0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.project-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top left, rgba(0,168,232,0.15), transparent 60%);
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.project-card:hover::before {
-    opacity: 1;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 60px rgba(0,0,0,0.7);
-    border-color: rgba(0,168,232,0.4);
 }
 
 .project-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
-    transition: 0.4s;
-}
-
-.project-card:hover img {
-    transform: scale(1.03);
 }
 
 .project-card h4 {
@@ -164,20 +146,12 @@ header {
 
 .project-card p {
     color: var(--text-gray);
-    font-size: 0.95rem;
-    margin-bottom: 10px;
 }
 
 .project-card span {
-    display: inline-block;
     color: var(--light-blue);
     font-size: 0.8rem;
     font-weight: 700;
-    transition: 0.3s;
-}
-
-.project-card:hover span {
-    transform: translateX(5px);
 }
 
 /* SKILLS */
@@ -200,26 +174,18 @@ footer {
     border: 2px solid var(--light-blue);
     padding: 12px 40px;
     color: var(--light-blue);
-    text-decoration: none;
 }
 
 /* RESPONSIVO */
 @media (max-width: 850px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .case-container {
-        grid-template-columns: 1fr;
-    }
+    header { flex-direction: column; text-align: center; }
+    .case-container { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero-wrapper">
 <div class="container">
 <header>
@@ -228,13 +194,7 @@ footer {
 <h1>Leandro Augusto Ferreira</h1>
 <h2>Analista de Dados | Excel • SQL • Power BI • Python</h2>
 
-<p>
-Transformo dados em decisões estratégicas com foco em retenção, performance e crescimento de receita.
-</p>
-
-<p style="color: var(--light-blue); font-size: 0.9rem;">
-Disponível para oportunidades em Análise de Dados
-</p>
+<p>Transformo dados em decisões estratégicas com foco em retenção, performance e crescimento de receita.</p>
 
 <a href="https://www.linkedin.com/in/leandro-datainsights/" class="btn-linkedin">
 Fale comigo no LinkedIn
@@ -253,55 +213,17 @@ Fale comigo no LinkedIn
 <section>
 <h3 class="section-title">Case Principal: Análise de Churn</h3>
 
-<p style="color: var(--light-blue); margin-bottom: 30px;">
-Identificação de padrões de cancelamento e oportunidades de retenção.
-</p>
-
 <div class="case-container">
-
 <div class="case-grid">
-
-<div class="case-item">
-<strong>CONTEXTO</strong>
-<p>Alta taxa de churn impactando receita recorrente.</p>
+<div class="case-item"><strong>CONTEXTO</strong><p>Alta taxa de churn.</p></div>
+<div class="case-item"><strong>ABORDAGEM</strong><p>Análise comportamental.</p></div>
+<div class="case-item"><strong>INSIGHT</strong><p>Churn 6x maior.</p></div>
+<div class="case-item"><strong>RECOMENDAÇÃO</strong><p>Foco em retenção.</p></div>
 </div>
 
-<div class="case-item">
-<strong>ABORDAGEM</strong>
-<p>Análise de comportamento de clientes e contratos.</p>
-</div>
-
-<div class="case-item">
-<strong>INSIGHT</strong>
-<p>Churn até 6x maior em contratos mensais.</p>
-</div>
-
-<div class="case-item">
-<strong>RECOMENDAÇÃO</strong>
-<p>Foco em retenção inicial e planos de fidelização.</p>
-</div>
-
-</div>
-
-<iframe 
-width="100%" 
-height="500"
-src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"
-loading="lazy"
-style="border-radius:10px;">
+<iframe width="100%" height="500"
+src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9">
 </iframe>
-
-</div>
-</section>
-
-<!-- COMO PENSO -->
-<section>
-<h3 class="section-title">Como penso como analista</h3>
-
-<div class="projects-grid">
-<div class="project-card"><p>Sempre começo entendendo o problema de negócio antes dos dados.</p></div>
-<div class="project-card"><p>Identifico padrões que impactam receita, custos e retenção.</p></div>
-<div class="project-card"><p>Transformo análise em recomendação prática para decisão.</p></div>
 </div>
 </section>
 
@@ -315,8 +237,8 @@ style="border-radius:10px;">
 <div class="project-card">
 <img src="img/financeiro.png">
 <h4>Gestão Financeira</h4>
-<p>Otimização de margem e controle de custos.</p>
-<span>VER CASE COMPLETO →</span>
+<p>Otimização de margem e custos.</p>
+<span>VER CASE →</span>
 </div>
 </a>
 
@@ -324,8 +246,8 @@ style="border-radius:10px;">
 <div class="project-card">
 <img src="img/transporte.png">
 <h4>Logística e Frota</h4>
-<p>Eficiência operacional e redução de custos.</p>
-<span>VER CASE COMPLETO →</span>
+<p>Eficiência operacional.</p>
+<span>VER CASE →</span>
 </div>
 </a>
 
@@ -333,43 +255,46 @@ style="border-radius:10px;">
 <div class="project-card">
 <img src="img/venda.png">
 <h4>Análise Comercial</h4>
-<p>Crescimento de receita e margem.</p>
-<span>VER CASE COMPLETO →</span>
+<p>Crescimento de receita.</p>
+<span>VER CASE →</span>
+</div>
+</a>
+
+<!-- NOVOS -->
+
+<a href="python.html">
+<div class="project-card">
+<img src="img/python.png">
+<h4>Projeto Python</h4>
+<p>Análise e automação com dados.</p>
+<span>VER PROJETO →</span>
+</div>
+</a>
+
+<a href="sql.html">
+<div class="project-card">
+<img src="img/sql.png">
+<h4>Projeto SQL</h4>
+<p>Consultas e modelagem de dados.</p>
+<span>VER PROJETO →</span>
+</div>
+</a>
+
+<a href="excel.html">
+<div class="project-card">
+<img src="img/excel.png">
+<h4>Projeto Excel</h4>
+<p>Análises e dashboards avançados.</p>
+<span>VER PROJETO →</span>
 </div>
 </a>
 
 </div>
-</section>
-
-<!-- STACK -->
-<section>
-<h3 class="section-title">Stack</h3>
-
-<div class="skills-bar">
-<div>SQL Server | MySQL | Oracle</div>
-<div>Power BI | Excel</div>
-<div>Python (Pandas)</div>
-<div>Data Analysis</div>
-</div>
-</section>
-
-<!-- SOBRE -->
-<section>
-<h3 class="section-title">Sobre mim</h3>
-
-<p style="max-width:700px; color: var(--text-gray);">
-Experiência em melhoria contínua aplicada à análise de dados, com foco em decisões estratégicas e resultados de negócio.
-</p>
-
 </section>
 
 <footer>
 <h3>Vamos trabalhar juntos?</h3>
-<p>Disponível para oportunidades</p>
-
-<a href="mailto:leandroguto1@gmail.com" class="btn-contact">
-Entrar em contato
-</a>
+<a href="mailto:leandroguto1@gmail.com" class="btn-contact">Contato</a>
 </footer>
 
 </div>
