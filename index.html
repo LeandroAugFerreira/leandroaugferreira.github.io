@@ -109,29 +109,75 @@ header {
     text-transform: uppercase;
 }
 
-/* PROJECTS */
+/* PROJETOS (MELHORADO) */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: linear-gradient(145deg, #112240, #0f1a33);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(0,168,232,0.15), transparent 60%);
+    opacity: 0;
     transition: 0.3s;
 }
 
+.project-card:hover::before {
+    opacity: 1;
+}
+
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    border-color: rgba(0,168,232,0.4);
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+}
+
+.project-card h4 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.project-card span {
+    display: inline-block;
+    color: var(--light-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.project-card:hover span {
+    transform: translateX(5px);
 }
 
 /* SKILLS */
@@ -203,7 +249,7 @@ Fale comigo no LinkedIn
 
 <div class="container">
 
-<!-- CHURN (PRINCIPAL) -->
+<!-- CHURN -->
 <section>
 <h3 class="section-title">Case Principal: Análise de Churn</h3>
 
@@ -253,9 +299,9 @@ style="border-radius:10px;">
 <h3 class="section-title">Como penso como analista</h3>
 
 <div class="projects-grid">
-<div class="project-card"><p>Entendimento do problema antes dos dados.</p></div>
-<div class="project-card"><p>Foco em impacto financeiro e retenção.</p></div>
-<div class="project-card"><p>Transformo análise em decisão prática.</p></div>
+<div class="project-card"><p>Sempre começo entendendo o problema de negócio antes dos dados.</p></div>
+<div class="project-card"><p>Identifico padrões que impactam receita, custos e retenção.</p></div>
+<div class="project-card"><p>Transformo análise em recomendação prática para decisão.</p></div>
 </div>
 </section>
 
@@ -269,7 +315,8 @@ style="border-radius:10px;">
 <div class="project-card">
 <img src="img/financeiro.png">
 <h4>Gestão Financeira</h4>
-<p>Otimização de margem e custos.</p>
+<p>Otimização de margem e controle de custos.</p>
+<span>VER CASE COMPLETO →</span>
 </div>
 </a>
 
@@ -278,6 +325,7 @@ style="border-radius:10px;">
 <img src="img/transporte.png">
 <h4>Logística e Frota</h4>
 <p>Eficiência operacional e redução de custos.</p>
+<span>VER CASE COMPLETO →</span>
 </div>
 </a>
 
@@ -286,6 +334,7 @@ style="border-radius:10px;">
 <img src="img/venda.png">
 <h4>Análise Comercial</h4>
 <p>Crescimento de receita e margem.</p>
+<span>VER CASE COMPLETO →</span>
 </div>
 </a>
 
