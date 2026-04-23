@@ -81,15 +81,22 @@
             gap: 20px;
         }
 
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
         .project-card {
             background: var(--card-bg);
             padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
+            border-radius: 12px;
+            transition: all 0.3s ease;
         }
-
+        
         .project-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
         }
 
         .skills-bar {
@@ -184,24 +191,67 @@ Fale comigo no LinkedIn
 
 <div class="projects-grid">
 
-<a href="financeiro.html">
+<!-- FINANCEIRO -->
+<a href="financeiro.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
+
+<img src="img/financeiro.png" alt="Dashboard Financeiro">
+
 <h4>Gestão Financeira</h4>
-<p>Otimização de margem e controle de custos.</p>
+<p>Otimização de margem, controle de custos e análise de performance financeira.</p>
+
+<span style="color: var(--light-blue); font-size: 0.8rem; font-weight: 700;">
+VER CASE COMPLETO →
+</span>
+
 </div>
 </a>
 
-<a href="transporte.html">
+<!-- TRANSPORTE -->
+<a href="transporte.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
+
+<img src="img/transporte.png" alt="Dashboard Logística">
+
 <h4>Logística e Frota</h4>
-<p>Eficiência operacional e redução de custos.</p>
+<p>Eficiência operacional, redução de custos e otimização da utilização da frota.</p>
+
+<span style="color: var(--light-blue); font-size: 0.8rem; font-weight: 700;">
+VER CASE COMPLETO →
+</span>
+
 </div>
 </a>
 
-<a href="venda.html">
+<!-- VENDAS -->
+<a href="venda.html" style="text-decoration:none; color:inherit;">
 <div class="project-card">
+
+<img src="img/venda.png" alt="Dashboard Comercial">
+
 <h4>Análise Comercial</h4>
-<p>Crescimento de receita com dados.</p>
+<p>Crescimento de receita, análise de margem e otimização do mix de produtos.</p>
+
+<span style="color: var(--light-blue); font-size: 0.8rem; font-weight: 700;">
+VER CASE COMPLETO →
+</span>
+
+</div>
+</a>
+
+<!-- PYTHON (SE QUISER INCLUIR) -->
+<a href="python.html" style="text-decoration:none; color:inherit;">
+<div class="project-card">
+
+<img src="img/python.png" alt="Projeto Python">
+
+<h4>Análise de Dados com Python</h4>
+<p>Exploração de dados, identificação de padrões e geração de insights com Pandas.</p>
+
+<span style="color: var(--light-blue); font-size: 0.8rem; font-weight: 700;">
+VER PROJETO →
+</span>
+
 </div>
 </a>
 
