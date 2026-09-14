@@ -1,1 +1,1540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Projeto Transcrição em Texto desenvolvido por Leandro Augusto Ferreira com Python, Flask, Whisper e JavaScript."
+    >
+
+    <title>
+        Transcrição em Texto - Leandro Augusto Ferreira
+    </title>
+
+    <style>
+
+        /* =====================================================
+           RESET
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            min-height: 100vh;
+
+            background:
+                #07172b;
+
+            color:
+                #ffffff;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height:
+                1.6;
+        }
+
+
+        a {
+            color:
+                inherit;
+
+            text-decoration:
+                none;
+        }
+
+
+        img {
+            max-width:
+                100%;
+
+            display:
+                block;
+        }
+
+
+        /* =====================================================
+           CONTAINER
+           ===================================================== */
+
+        .container {
+            width:
+                min(1120px, calc(100% - 40px));
+
+            margin:
+                0 auto;
+        }
+
+
+        /* =====================================================
+           TOPO
+           ===================================================== */
+
+        .topo {
+            padding:
+                28px 0;
+
+            border-bottom:
+                1px solid #1d3654;
+        }
+
+
+        .voltar {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            color:
+                #45b5ff;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+
+        .voltar:hover {
+            opacity:
+                0.75;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .hero {
+            padding:
+                72px 0 54px;
+        }
+
+
+        .tag {
+            display:
+                inline-block;
+
+            margin-bottom:
+                18px;
+
+            padding:
+                7px 12px;
+
+            color:
+                #69baff;
+
+            background:
+                #102944;
+
+            border:
+                1px solid #214b70;
+
+            border-radius:
+                999px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .hero h1 {
+            max-width:
+                850px;
+
+            margin-bottom:
+                20px;
+
+            font-size:
+                clamp(36px, 6vw, 64px);
+
+            line-height:
+                1.05;
+        }
+
+
+        .hero-descricao {
+            max-width:
+                800px;
+
+            color:
+                #a9bed8;
+
+            font-size:
+                19px;
+
+            line-height:
+                1.7;
+        }
+
+
+        .hero-acoes {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+
+            margin-top:
+                30px;
+        }
+
+
+        .botao {
+            min-height:
+                46px;
+
+            padding:
+                0 20px;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                8px;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            transition:
+                transform 0.15s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .botao:hover {
+            transform:
+                translateY(-2px);
+        }
+
+
+        .botao-principal {
+            color:
+                #ffffff;
+
+            background:
+                #087cff;
+
+            border:
+                1px solid #3396ff;
+        }
+
+
+        .botao-principal:hover {
+            background:
+                #168aff;
+        }
+
+
+        .botao-secundario {
+            color:
+                #d7e8fb;
+
+            background:
+                #10243c;
+
+            border:
+                1px solid #294a6c;
+        }
+
+
+        .botao-secundario:hover {
+            background:
+                #17304e;
+        }
+
+
+        /* =====================================================
+           IMAGEM PRINCIPAL
+           ===================================================== */
+
+        .imagem-principal {
+            margin-bottom:
+                65px;
+
+            overflow:
+                hidden;
+
+            background:
+                #11243d;
+
+            border:
+                1px solid #203d5e;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 24px 65px rgba(0, 0, 0, 0.28);
+        }
+
+
+        .imagem-principal img {
+            width:
+                100%;
+        }
+
+
+        /* =====================================================
+           SEÇÕES
+           ===================================================== */
+
+        .secao {
+            padding:
+                58px 0;
+
+            border-top:
+                1px solid #162f4c;
+        }
+
+
+        .rotulo {
+            margin-bottom:
+                8px;
+
+            color:
+                #45adff;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1.3px;
+        }
+
+
+        .secao h2 {
+            margin-bottom:
+                24px;
+
+            font-size:
+                clamp(27px, 4vw, 38px);
+        }
+
+
+        .texto {
+            max-width:
+                860px;
+
+            color:
+                #afc1d8;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           CARDS
+           ===================================================== */
+
+        .grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                18px;
+
+            margin-top:
+                30px;
+        }
+
+
+        .card {
+            padding:
+                24px;
+
+            background:
+                #0f223a;
+
+            border:
+                1px solid #1d3b5c;
+
+            border-radius:
+                14px;
+        }
+
+
+        .card h3 {
+            margin-bottom:
+                10px;
+
+            color:
+                #ffffff;
+
+            font-size:
+                17px;
+        }
+
+
+        .card p {
+            color:
+                #9fb5d0;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           STACK
+           ===================================================== */
+
+        .stack {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                10px;
+
+            margin-top:
+                26px;
+        }
+
+
+        .tecnologia {
+            padding:
+                8px 12px;
+
+            color:
+                #a9d6ff;
+
+            background:
+                #102944;
+
+            border:
+                1px solid #214b70;
+
+            border-radius:
+                7px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           ARQUITETURA
+           ===================================================== */
+
+        .arquitetura {
+            margin-top:
+                30px;
+
+            padding:
+                28px;
+
+            overflow-x:
+                auto;
+
+            background:
+                #091a2e;
+
+            border:
+                1px solid #1c3b5c;
+
+            border-radius:
+                14px;
+        }
+
+
+        .arquitetura pre {
+            min-width:
+                550px;
+
+            color:
+                #bcdcff;
+
+            font-family:
+                Consolas,
+                "Courier New",
+                monospace;
+
+            font-size:
+                15px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           SCREENSHOTS
+           ===================================================== */
+
+        .galeria {
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr;
+
+            gap:
+                30px;
+
+            margin-top:
+                30px;
+        }
+
+
+        .captura {
+            overflow:
+                hidden;
+
+            background:
+                #10243c;
+
+            border:
+                1px solid #203f61;
+
+            border-radius:
+                16px;
+        }
+
+
+        .captura img {
+            width:
+                100%;
+        }
+
+
+        .captura-legenda {
+            padding:
+                18px 20px;
+        }
+
+
+        .captura-legenda strong {
+            display:
+                block;
+
+            margin-bottom:
+                4px;
+
+            font-size:
+                15px;
+        }
+
+
+        .captura-legenda span {
+            color:
+                #92aac7;
+
+            font-size:
+                13px;
+        }
+
+
+        /* =====================================================
+           DESTAQUE TÉCNICO
+           ===================================================== */
+
+        .destaque {
+            margin-top:
+                30px;
+
+            padding:
+                28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #102b49,
+                    #0d2037
+                );
+
+            border:
+                1px solid #25517a;
+
+            border-radius:
+                15px;
+        }
+
+
+        .destaque h3 {
+            margin-bottom:
+                12px;
+
+            color:
+                #69bbff;
+        }
+
+
+        .destaque p {
+            color:
+                #bad0e7;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           LISTA
+           ===================================================== */
+
+        .lista {
+            margin-top:
+                24px;
+
+            padding-left:
+                20px;
+
+            color:
+                #afc1d8;
+        }
+
+
+        .lista li {
+            margin-bottom:
+                10px;
+        }
+
+
+        /* =====================================================
+           VERSÃO
+           ===================================================== */
+
+        .versao {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            margin-top:
+                22px;
+
+            padding:
+                9px 14px;
+
+            color:
+                #62e0a5;
+
+            background:
+                #0d3229;
+
+            border:
+                1px solid #176047;
+
+            border-radius:
+                999px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           CTA
+           ===================================================== */
+
+        .cta {
+            margin:
+                60px 0;
+
+            padding:
+                42px;
+
+            text-align:
+                center;
+
+            background:
+                #10243c;
+
+            border:
+                1px solid #214362;
+
+            border-radius:
+                18px;
+        }
+
+
+        .cta h2 {
+            margin-bottom:
+                12px;
+        }
+
+
+        .cta p {
+            max-width:
+                670px;
+
+            margin:
+                0 auto 24px;
+
+            color:
+                #9fb4cd;
+        }
+
+
+        .cta .hero-acoes {
+            justify-content:
+                center;
+
+            margin-top:
+                0;
+        }
+
+
+        /* =====================================================
+           RODAPÉ
+           ===================================================== */
+
+        footer {
+            padding:
+                28px 0 40px;
+
+            text-align:
+                center;
+
+            color:
+                #6f88a5;
+
+            font-size:
+                13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+           ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .hero {
+                padding-top:
+                    48px;
+            }
+
+
+            .cta {
+                padding:
+                    30px 20px;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .container {
+                width:
+                    min(100% - 24px, 1120px);
+            }
+
+
+            .hero-descricao {
+                font-size:
+                    16px;
+            }
+
+
+            .hero-acoes {
+                flex-direction:
+                    column;
+            }
+
+
+            .botao {
+                width:
+                    100%;
+            }
+
+
+            .secao {
+                padding:
+                    42px 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOPO
+         ===================================================== -->
+
+    <header class="topo">
+
+        <div class="container">
+
+            <a
+                class="voltar"
+                href="index.html"
+            >
+                ← Voltar ao portfólio
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <span class="tag">
+                    PROJETO PYTHON
+                </span>
+
+                <h1>
+                    Transcrição em Texto
+                </h1>
+
+                <p class="hero-descricao">
+
+                    Aplicação web desenvolvida com Python,
+                    Flask e Whisper para transformar arquivos
+                    de áudio e vídeo em texto, com fila de
+                    processamento, cancelamento imediato,
+                    tratamento de erros e exportação
+                    automática para Microsoft Word.
+
+                </p>
+
+
+                <div class="hero-acoes">
+
+                    <a
+                        class="botao botao-principal"
+                        href="https://github.com/LeandroAugFerreira/transcricao-audio-web"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver código no GitHub →
+                    </a>
+
+
+                    <a
+                        class="botao botao-secundario"
+                        href="https://github.com/LeandroAugFerreira/transcricao-audio-web/tree/v1.0.0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver v1.0.0
+                    </a>
+
+                </div>
+
+
+                <span class="versao">
+                    ✓ Versão estável v1.0.0
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             IMAGEM PRINCIPAL
+             ================================================= -->
+
+        <div class="container">
+
+            <div class="imagem-principal">
+
+                <img
+                    src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                    alt="Interface principal do projeto Transcrição em Texto"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTEXTO
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    CONTEXTO
+                </p>
+
+                <h2>
+                    Do áudio ao documento em um único fluxo
+                </h2>
+
+                <p class="texto">
+
+                    O projeto surgiu da necessidade de automatizar
+                    a transformação de aulas, gravações e vídeos
+                    em documentos de texto organizados.
+
+                    Em vez de executar scripts manualmente,
+                    manipular arquivos pelo explorador ou utilizar
+                    diferentes ferramentas para cada etapa,
+                    a solução concentra todo o processo em uma
+                    interface web local.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SOLUÇÃO
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    SOLUÇÃO
+                </p>
+
+                <h2>
+                    Uma aplicação completa de transcrição
+                </h2>
+
+                <p class="texto">
+
+                    A solução utiliza Flask para conectar a
+                    interface web ao mecanismo de transcrição
+                    Whisper.
+
+                    Os arquivos entram em uma fila dinâmica,
+                    são processados individualmente e o resultado
+                    é tratado e convertido automaticamente em
+                    documentos Word formatados.
+
+                </p>
+
+
+                <div class="grid">
+
+                    <article class="card">
+
+                        <h3>
+                            🎙️ Transcrição
+                        </h3>
+
+                        <p>
+                            Reconhecimento de fala utilizando
+                            Whisper com foco em conteúdos em
+                            português.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            ⚙️ Fila de processamento
+                        </h3>
+
+                        <p>
+                            Vários arquivos podem ser adicionados
+                            e processados sequencialmente com
+                            acompanhamento individual.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            📄 Exportação Word
+                        </h3>
+
+                        <p>
+                            O texto final é transformado em um
+                            documento .docx automaticamente
+                            formatado.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            ⏸️ Controle da fila
+                        </h3>
+
+                        <p>
+                            Pausa entre arquivos, continuação
+                            da execução e gerenciamento dos
+                            estados da fila.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            ❌ Cancelamento imediato
+                        </h3>
+
+                        <p>
+                            O processo do Whisper pode ser
+                            interrompido durante uma transcrição
+                            sem travar a aplicação.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3>
+                            🛡️ Recuperação de erros
+                        </h3>
+
+                        <p>
+                            Falhas em um arquivo são tratadas
+                            sem necessariamente interromper
+                            os demais itens.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TECNOLOGIAS
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    TECNOLOGIAS
+                </p>
+
+                <h2>
+                    Stack utilizada
+                </h2>
+
+                <div class="stack">
+
+                    <span class="tecnologia">
+                        Python
+                    </span>
+
+                    <span class="tecnologia">
+                        Flask
+                    </span>
+
+                    <span class="tecnologia">
+                        Whisper
+                    </span>
+
+                    <span class="tecnologia">
+                        PyTorch
+                    </span>
+
+                    <span class="tecnologia">
+                        FFmpeg
+                    </span>
+
+                    <span class="tecnologia">
+                        python-docx
+                    </span>
+
+                    <span class="tecnologia">
+                        JavaScript
+                    </span>
+
+                    <span class="tecnologia">
+                        HTML5
+                    </span>
+
+                    <span class="tecnologia">
+                        CSS3
+                    </span>
+
+                    <span class="tecnologia">
+                        Git
+                    </span>
+
+                    <span class="tecnologia">
+                        GitHub
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ARQUITETURA
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    ARQUITETURA
+                </p>
+
+                <h2>
+                    Fluxo da aplicação
+                </h2>
+
+                <p class="texto">
+
+                    O frontend controla a experiência do usuário
+                    e envia cada arquivo ao Flask.
+
+                    O backend direciona o processamento para um
+                    worker separado responsável pelo Whisper,
+                    trata o texto retornado e gera o documento
+                    final.
+
+                </p>
+
+
+                <div class="arquitetura">
+
+<pre>
+Usuário
+   │
+   ▼
+HTML / CSS / JavaScript
+   │
+   ▼
+Flask
+   │
+   ▼
+Fila de processamento
+   │
+   ▼
+Worker Whisper
+   │
+   ├── FFmpeg
+   │
+   ▼
+Tratamento do texto
+   │
+   ▼
+python-docx
+   │
+   ▼
+Documento Word
+</pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DESAFIO TÉCNICO
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    DESAFIO TÉCNICO
+                </p>
+
+                <h2>
+                    Cancelamento sem travar o servidor
+                </h2>
+
+                <p class="texto">
+
+                    Durante o desenvolvimento surgiu um desafio:
+                    uma transcrição do Whisper é uma operação
+                    longa e, se executada diretamente no processo
+                    principal, dificulta o cancelamento imediato.
+
+                </p>
+
+
+                <div class="destaque">
+
+                    <h3>
+                        Worker em processo separado
+                    </h3>
+
+                    <p>
+
+                        O Whisper passou a funcionar em um processo
+                        independente do Flask.
+
+                        Quando o usuário solicita o cancelamento,
+                        o backend encerra o worker e possíveis
+                        subprocessos associados ao FFmpeg.
+
+                        Em seguida, um novo worker é iniciado,
+                        permitindo que a aplicação permaneça
+                        disponível para uma nova transcrição.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DEMONSTRAÇÃO
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    DEMONSTRAÇÃO
+                </p>
+
+                <h2>
+                    Fluxo de utilização
+                </h2>
+
+
+                <div class="galeria">
+
+                    <article class="captura">
+
+                        <img
+                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                            alt="Arquivos aguardando transcrição"
+                        >
+
+                        <div class="captura-legenda">
+
+                            <strong>
+                                1. Preparação da fila
+                            </strong>
+
+                            <span>
+                                Arquivos selecionados e aguardando
+                                o início do processamento.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="captura">
+
+                        <img
+                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/processamento.png"
+                            alt="Fila sendo processada"
+                        >
+
+                        <div class="captura-legenda">
+
+                            <strong>
+                                2. Processamento
+                            </strong>
+
+                            <span>
+                                Progresso, cronômetros e status
+                                atualizados durante a transcrição.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="captura">
+
+                        <img
+                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/resultado.png"
+                            alt="Resultado da transcrição"
+                        >
+
+                        <div class="captura-legenda">
+
+                            <strong>
+                                3. Resultado
+                            </strong>
+
+                            <span>
+                                Texto disponível para visualização
+                                e documento Word pronto para
+                                download.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ROBUSTEZ
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    ROBUSTEZ
+                </p>
+
+                <h2>
+                    Cuidados implementados
+                </h2>
+
+                <ul class="lista">
+
+                    <li>
+                        Prevenção de arquivos duplicados.
+                    </li>
+
+                    <li>
+                        Tratamento individual de erros na fila.
+                    </li>
+
+                    <li>
+                        Possibilidade de tentar novamente
+                        arquivos que apresentaram erro.
+                    </li>
+
+                    <li>
+                        Limpeza automática dos uploads
+                        temporários.
+                    </li>
+
+                    <li>
+                        Remoção de arquivos temporários deixados
+                        por execuções interrompidas.
+                    </li>
+
+                    <li>
+                        Proteção contra sobrescrita de documentos
+                        Word existentes.
+                    </li>
+
+                    <li>
+                        Recuperação automática do worker em caso
+                        de interrupção.
+                    </li>
+
+                    <li>
+                        Nova sessão sem necessidade de atualizar
+                        a página.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULTADO
+             ================================================= -->
+
+        <section class="secao">
+
+            <div class="container">
+
+                <p class="rotulo">
+                    RESULTADO
+                </p>
+
+                <h2>
+                    Da automação em Python para uma aplicação
+                    utilizável
+                </h2>
+
+                <p class="texto">
+
+                    O projeto evoluiu de um processo executado
+                    diretamente em Python para uma aplicação web
+                    completa, capaz de controlar arquivos,
+                    processamento, erros, cancelamento e geração
+                    de documentos através de uma única interface.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <div class="container">
+
+            <section class="cta">
+
+                <h2>
+                    Explore o projeto
+                </h2>
+
+                <p>
+
+                    Consulte o código-fonte, documentação,
+                    arquitetura e instruções de instalação no
+                    repositório do projeto.
+
+                </p>
+
+
+                <div class="hero-acoes">
+
+                    <a
+                        class="botao botao-principal"
+                        href="https://github.com/LeandroAugFerreira/transcricao-audio-web"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir repositório →
+                    </a>
+
+
+                    <a
+                        class="botao botao-secundario"
+                        href="index.html"
+                    >
+                        Voltar ao portfólio
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            Desenvolvido por
+            <strong>
+                Leandro Augusto Ferreira
+            </strong>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
