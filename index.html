@@ -109,7 +109,7 @@
 
 
         /* ============================================================
-           HERO SECTION COM FUNDO TECNOLÓGICO DE DADOS EM CSS
+           HERO SECTION COM A NOVA IMAGEM DE FUNDO TECNOLÓGICA
            ============================================================ */
 
         .hero-wrapper {
@@ -119,18 +119,19 @@
 
             overflow: hidden;
 
-            background-color: #030a16;
-
             background-image: 
-                radial-gradient(circle at 85% 50%, rgba(0, 168, 232, 0.22) 0%, rgba(3, 10, 22, 0) 50%),
-                radial-gradient(circle at 20% 20%, rgba(69, 181, 255, 0.12) 0%, rgba(3, 10, 22, 0) 45%),
-                radial-gradient(rgba(69, 181, 255, 0.18) 1.5px, transparent 1.5px),
-                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.75) 0%,
+                    rgba(3, 10, 22, 0.95) 100%
+                ),
+                url('img/fundo-tech.jpg');
 
-            background-size: 100% 100%, 100% 100%, 32px 32px, 64px 64px, 64px 64px;
+            background-size: cover;
 
-            background-position: center, center, 0 0, 0 0, 0 0;
+            background-position: center;
+
+            background-repeat: no-repeat;
         }
 
 
@@ -364,22 +365,16 @@
 
 
         /* Moldura Dupla da Foto */
-                .hero-wrapper {
+        .profile-wrapper {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
             position: relative;
-            padding: 60px 0 80px;
-            overflow: hidden;
-        
-            background-image: 
-                linear-gradient(
-                    180deg,
-                    rgba(3, 10, 22, 0.75) 0%,
-                    rgba(3, 10, 22, 0.95) 100%
-                ),
-                url('img/fundo-tech.jpg');
-        
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
 
