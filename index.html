@@ -445,7 +445,44 @@
 
 
         /* ============================================================
-           SEÇÕES COM FUSÃO SUAVE DA SEGUNDA IMAGEM DE FUNDO
+           DIVISOR GRADIENTE FINO ENTRE CONTAINERS
+           ============================================================ */
+
+        .section-divider {
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 80%;
+
+            max-width: 1000px;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(0, 229, 255, 0.5) 30%,
+                rgba(168, 85, 247, 0.5) 70%,
+                transparent 100%
+            );
+
+            box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+        }
+
+
+        /* ============================================================
+           SEÇÕES FLUTUANTES
            ============================================================ */
 
         .section {
@@ -455,7 +492,6 @@
         }
 
 
-        /* Seção especial que aplica a segunda imagem com gradiente suave nas bordas */
         .section-alt {
             position: relative;
 
@@ -1630,11 +1666,11 @@
 
 
 <!-- ============================================================
-     PROJETOS PRINCIPAIS
+     PROJETOS PRINCIPAIS (COM DIVISOR DE LINHA GRADIENTE NO TOPO)
      ============================================================ -->
 
 <section
-    class="section"
+    class="section section-divider"
     id="projetos"
 >
 
