@@ -605,10 +605,10 @@
         }
 
 
-        /* Container de imagem preenchendo as bordas superiores do card sem margens */
+        /* Container com enquadramento perfeito mantendo o foco central e sem bordas salientes */
         .featured-image,
         .featured-image-contain {
-            height: 270px;
+            height: 280px;
 
             width: 100%;
 
@@ -616,7 +616,7 @@
 
             padding: 0 !important;
 
-            background: transparent !important;
+            background: #030a16 !important;
 
             border-bottom: 1px solid var(--border-subtle);
 
@@ -632,7 +632,7 @@
 
             object-fit: cover !important;
 
-            object-position: center;
+            object-position: center top !important;
 
             border-radius: 0 !important;
 
@@ -642,7 +642,7 @@
 
         .featured-card:hover .featured-image img,
         .featured-card:hover .featured-image-contain img {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
 
@@ -1703,7 +1703,7 @@
 
 
 <!-- ============================================================
-     PROJETOS PRINCIPAL (INVERTIDO & BORDAS PREENCHIDAS)
+     PROJETOS PRINCIPAIS (INVERTIDO & ENQUADRAMENTO PERFEITO)
      ============================================================ -->
 
 <section
