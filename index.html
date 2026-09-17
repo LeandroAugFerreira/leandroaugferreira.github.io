@@ -27,12 +27,11 @@
     <style>
 
         /* ============================================================
-           VARIÁVEIS TEMA HARMONIZADO COM A IMAGEM DE FUNDO
+           VARIÁVEIS DE COR E ESTILO
            ============================================================ */
 
         :root {
             --bg-dark: #030a16;
-            --bg-dark-alt: #051022;
             --bg-card: rgba(6, 17, 36, 0.75);
             --bg-card-hover: rgba(12, 28, 56, 0.85);
             --primary-blue: #00a8e8;
@@ -43,8 +42,8 @@
             --text-title: #ffffff;
             --text-body: #94a3b8;
             --text-light: #e2e8f0;
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-active: rgba(0, 229, 255, 0.4);
+            --border-subtle: rgba(255, 255, 255, 0.1);
+            --border-active: rgba(0, 229, 255, 0.45);
             --green-status: #62e0a5;
             --radius-lg: 20px;
             --radius-md: 14px;
@@ -54,7 +53,7 @@
 
 
         /* ============================================================
-           RESET & ESTRUTURA GERAL
+           RESET & ESTRUTURA COM FUNDO FIXO BASE
            ============================================================ */
 
         * {
@@ -74,13 +73,26 @@
                 'Inter',
                 sans-serif;
 
-            background: var(--bg-dark);
+            /* Fundo principal fixo de base */
+            background-image: 
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.65) 0%,
+                    rgba(3, 10, 22, 0.85) 100%
+                ),
+                url('img/fundo-tech.jpeg');
 
-            color:
-                var(--text-light);
+            background-size: cover;
 
-            line-height:
-                1.6;
+            background-position: center center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+            color: var(--text-light);
+
+            line-height: 1.6;
 
             -webkit-font-smoothing: antialiased;
         }
@@ -105,42 +117,25 @@
                     calc(100% - 40px)
                 );
 
-            margin:
-                0 auto;
+            margin: 0 auto;
         }
 
 
         /* ============================================================
-           HERO SECTION INTEGRADA AO FUNDO
+           HERO SECTION (CAPA)
            ============================================================ */
 
         .hero-wrapper {
+            padding: 40px 0 30px;
+
             position: relative;
-
-            padding: 20px 0 30px;
-
-            overflow: hidden;
-
-            background-image: 
-                linear-gradient(
-                    180deg,
-                    rgba(3, 10, 22, 0.35) 0%,
-                    rgba(3, 10, 22, 0.95) 100%
-                ),
-                url('img/fundo-tech.jpeg');
-
-            background-size: cover;
-
-            background-position: center;
-
-            background-repeat: no-repeat;
         }
 
 
         .hero {
             min-height: auto;
 
-            padding: 10px 0;
+            padding: 20px 0;
 
             display: grid;
 
@@ -266,11 +261,11 @@
         .hero-stack span {
             padding: 5px 12px;
 
-            background: rgba(6, 17, 36, 0.85);
+            background: rgba(3, 10, 22, 0.85);
 
             backdrop-filter: blur(8px);
 
-            border: 1px solid rgba(0, 229, 255, 0.25);
+            border: 1px solid rgba(0, 229, 255, 0.3);
 
             border-radius: 999px;
 
@@ -369,7 +364,7 @@
 
 
         .btn-secondary {
-            background: rgba(6, 17, 36, 0.7);
+            background: rgba(3, 10, 22, 0.75);
 
             color: #ffffff;
 
@@ -432,9 +427,9 @@
 
             overflow: hidden;
 
-            background-color: var(--bg-dark);
+            background-color: #030a16;
 
-            border: 4px solid var(--bg-dark);
+            border: 4px solid #030a16;
         }
 
 
@@ -450,21 +445,34 @@
 
 
         /* ============================================================
-           SEÇÕES GERAIS COM RITMO VISUAL
+           SEÇÕES COM FUSÃO SUAVE DA SEGUNDA IMAGEM DE FUNDO
            ============================================================ */
 
         .section {
-            padding: 85px 0;
+            padding: 80px 0;
+
             position: relative;
         }
 
 
+        /* Seção especial que aplica a segunda imagem com gradiente suave nas bordas */
         .section-alt {
-            background: linear-gradient(180deg, rgba(8, 20, 42, 0.5) 0%, rgba(3, 10, 22, 0.8) 100%);
+            position: relative;
 
-            border-top: 1px solid var(--border-subtle);
+            background-image: 
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.7) 0%,
+                    rgba(3, 10, 22, 0.4) 50%,
+                    rgba(3, 10, 22, 0.7) 100%
+                ),
+                url('img/fundo-tech-2.jpeg');
 
-            border-bottom: 1px solid var(--border-subtle);
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
         }
 
 
@@ -553,9 +561,11 @@
         .featured-card:hover {
             transform: translateY(-6px);
 
+            background: var(--bg-card-hover);
+
             border-color: var(--border-active);
 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 229, 255, 0.18);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 229, 255, 0.2);
         }
 
 
@@ -564,7 +574,7 @@
 
             overflow: hidden;
 
-            background: #061324;
+            background: #030a16;
 
             border-bottom: 1px solid var(--border-subtle);
         }
@@ -606,7 +616,7 @@
 
             color: var(--cyan-neon);
 
-            background: rgba(0, 229, 255, 0.08);
+            background: rgba(0, 229, 255, 0.1);
 
             border: 1px solid var(--border-active);
 
@@ -660,7 +670,7 @@
 
             color: #cbd5e1;
 
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(3, 10, 22, 0.8);
 
             border: 1px solid var(--border-subtle);
 
@@ -745,7 +755,7 @@
 
             padding: 30px 24px;
 
-            background: rgba(6, 17, 36, 0.85);
+            background: var(--bg-card);
 
             backdrop-filter: blur(12px);
 
@@ -760,9 +770,11 @@
         .process-card:hover {
             transform: translateY(-5px);
 
+            background: var(--bg-card-hover);
+
             border-color: var(--border-active);
 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 18px rgba(168, 85, 247, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 18px rgba(168, 85, 247, 0.2);
         }
 
 
@@ -785,7 +797,7 @@
 
             color: var(--cyan-neon);
 
-            background: #061324;
+            background: #030a16;
 
             border: 1px solid var(--border-active);
 
@@ -854,9 +866,11 @@
         .project-card:hover {
             transform: translateY(-6px);
 
+            background: var(--bg-card-hover);
+
             border-color: var(--border-active);
 
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 229, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
         }
 
 
@@ -958,9 +972,11 @@
         a.development-card:hover {
             transform: translateY(-6px);
 
+            background: var(--bg-card-hover);
+
             border-color: var(--border-active);
 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 229, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
         }
 
 
@@ -969,7 +985,7 @@
 
             overflow: hidden;
 
-            background: #061324;
+            background: #030a16;
 
             border-bottom: 1px solid var(--border-subtle);
         }
@@ -1038,7 +1054,7 @@
 
             text-align: center;
 
-            background: rgba(6, 17, 36, 0.4);
+            background: rgba(3, 10, 22, 0.5);
 
             border: 1px dashed rgba(168, 85, 247, 0.4);
 
@@ -1164,7 +1180,7 @@
 
             padding: 28px;
 
-            background: rgba(8, 20, 42, 0.6);
+            background: var(--bg-card);
 
             backdrop-filter: blur(12px);
 
@@ -1179,9 +1195,11 @@
         .stack-card:hover {
             transform: translateY(-5px);
 
+            background: var(--bg-card-hover);
+
             border-color: var(--border-active);
 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 229, 255, 0.15);
         }
 
 
@@ -1281,15 +1299,13 @@
 
 
         /* ============================================================
-           CONTATO COM BRILHO NEON DUPLO (AZUL/ROXO)
+           CONTATO
            ============================================================ */
 
         .contact-section {
             padding: 100px 0;
 
             text-align: center;
-
-            border-top: 1px solid var(--border-subtle);
         }
 
 
@@ -1308,7 +1324,7 @@
 
             border-radius: var(--radius-lg);
 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(168, 85, 247, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.2);
         }
 
 
@@ -1753,7 +1769,7 @@
 
 
 <!-- ============================================================
-     MÉTODO
+     MÉTODO (COM SEGUNDO FUNDO DISSOLVIDO SUAVEMENTE)
      ============================================================ -->
 
 <section class="section section-alt">
