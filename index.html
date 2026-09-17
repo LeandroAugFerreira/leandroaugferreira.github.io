@@ -12,7 +12,7 @@
 
     <meta
         name="description"
-        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python e Desenvolvimento de Aplicações."
+        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python, automação e desenvolvimento de aplicações."
     >
 
     <title>
@@ -245,8 +245,7 @@
             max-width:
                 670px;
 
-            margin:
-                0;
+            margin: 0;
 
             color:
                 #aec0d8;
@@ -260,17 +259,13 @@
 
 
         .hero-stack {
-            display:
-                flex;
+            display: flex;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                8px;
+            gap: 8px;
 
-            margin-top:
-                25px;
+            margin-top: 25px;
         }
 
 
@@ -299,8 +294,7 @@
 
 
         .availability {
-            margin-top:
-                25px;
+            margin-top: 25px;
 
             color:
                 var(--green);
@@ -316,38 +310,29 @@
         .availability::before {
             content: "●";
 
-            margin-right:
-                8px;
+            margin-right: 8px;
         }
 
 
         .hero-actions {
-            display:
-                flex;
+            display: flex;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                12px;
+            gap: 12px;
 
-            margin-top:
-                28px;
+            margin-top: 28px;
         }
 
 
         .btn {
-            min-height:
-                46px;
+            min-height: 46px;
 
-            display:
-                inline-flex;
+            display: inline-flex;
 
-            align-items:
-                center;
+            align-items: center;
 
-            justify-content:
-                center;
+            justify-content: center;
 
             padding:
                 0 20px;
@@ -362,7 +347,10 @@
                 700;
 
             transition:
-                0.25s;
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
         }
 
 
@@ -412,17 +400,13 @@
 
 
         .profile-pic {
-            height:
-                540px;
+            height: 540px;
 
-            max-width:
-                430px;
+            max-width: 430px;
 
-            object-fit:
-                contain;
+            object-fit: contain;
 
-            object-position:
-                bottom;
+            object-position: bottom;
         }
 
 
@@ -464,8 +448,7 @@
 
 
         .section-title {
-            margin:
-                0;
+            margin: 0;
 
             font-size:
                 clamp(
@@ -480,8 +463,7 @@
 
 
         .section-description {
-            max-width:
-                750px;
+            max-width: 750px;
 
             margin:
                 15px 0 35px;
@@ -502,17 +484,14 @@
            ============================================================ */
 
         .featured-grid {
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 repeat(2, 1fr);
 
-            gap:
-                25px;
+            gap: 25px;
 
-            margin-top:
-                35px;
+            margin-top: 35px;
         }
 
 
@@ -521,14 +500,11 @@
 
             overflow: hidden;
 
-            min-height:
-                520px;
+            min-height: 520px;
 
-            display:
-                flex;
+            display: flex;
 
-            flex-direction:
-                column;
+            flex-direction: column;
 
             background:
                 linear-gradient(
@@ -544,7 +520,9 @@
                 18px;
 
             transition:
-                0.3s;
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
 
@@ -561,11 +539,9 @@
 
 
         .featured-image {
-            height:
-                270px;
+            height: 270px;
 
-            overflow:
-                hidden;
+            overflow: hidden;
 
             background:
                 #09192b;
@@ -573,14 +549,10 @@
 
 
         .featured-image img {
-            width:
-                100%;
+            width: 100%;
+            height: 100%;
 
-            height:
-                100%;
-
-            object-fit:
-                cover;
+            object-fit: cover;
 
             transition:
                 transform 0.5s ease;
@@ -594,26 +566,20 @@
 
 
         .featured-content {
-            flex:
-                1;
+            flex: 1;
 
-            display:
-                flex;
+            display: flex;
 
-            flex-direction:
-                column;
+            flex-direction: column;
 
-            padding:
-                26px;
+            padding: 26px;
         }
 
 
         .project-type {
-            width:
-                fit-content;
+            width: fit-content;
 
-            margin-bottom:
-                14px;
+            margin-bottom: 14px;
 
             padding:
                 6px 10px;
@@ -654,8 +620,7 @@
 
 
         .featured-content p {
-            margin:
-                0;
+            margin: 0;
 
             color:
                 var(--text-gray);
@@ -663,17 +628,13 @@
 
 
         .project-tech {
-            display:
-                flex;
+            display: flex;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                7px;
+            gap: 7px;
 
-            margin-top:
-                18px;
+            margin-top: 18px;
         }
 
 
@@ -699,14 +660,11 @@
 
 
         .project-link {
-            display:
-                inline-block;
+            display: inline-block;
 
-            margin-top:
-                auto;
+            margin-top: auto;
 
-            padding-top:
-                24px;
+            padding-top: 24px;
 
             color:
                 var(--light-blue);
@@ -726,50 +684,110 @@
            PROCESSO
            ============================================================ */
 
+        .process-wrapper {
+            position: relative;
+
+            margin-top: 42px;
+        }
+
+
+        .process-line {
+            position: absolute;
+
+            top: 45px;
+            left: 9%;
+            right: 9%;
+
+            height: 2px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 168, 232, 0.15),
+                    rgba(0, 168, 232, 0.75),
+                    rgba(0, 168, 232, 0.15)
+                );
+        }
+
+
         .process-grid {
-            display:
-                grid;
+            position: relative;
+
+            display: grid;
 
             grid-template-columns:
                 repeat(4, 1fr);
 
-            gap:
-                18px;
-
-            margin-top:
-                35px;
+            gap: 18px;
         }
 
 
         .process-card {
             position: relative;
 
+            min-height: 220px;
+
             padding:
-                25px;
+                26px;
 
             background:
-                var(--card-bg);
+                linear-gradient(
+                    145deg,
+                    #122746,
+                    #10213b
+                );
 
             border:
-                1px solid var(--border);
+                1px solid #223e60;
 
             border-radius:
-                12px;
+                14px;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .process-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(0, 168, 232, 0.55);
         }
 
 
         .process-number {
-            display:
-                block;
+            position: relative;
 
-            margin-bottom:
-                16px;
+            z-index: 2;
+
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 22px;
 
             color:
                 var(--light-blue);
 
+            background:
+                #0a1b30;
+
+            border:
+                1px solid #22517b;
+
+            border-radius:
+                50%;
+
             font-size:
-                1.6rem;
+                1.15rem;
 
             font-weight:
                 800;
@@ -786,8 +804,7 @@
 
 
         .process-card p {
-            margin:
-                0;
+            margin: 0;
 
             color:
                 var(--text-gray);
@@ -802,29 +819,21 @@
            ============================================================ */
 
         .projects-grid {
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
+                repeat(3, 1fr);
 
-            gap:
-                22px;
+            gap: 22px;
 
-            margin-top:
-                35px;
+            margin-top: 35px;
         }
 
 
         .project-card {
-            height:
-                100%;
+            height: 100%;
 
-            overflow:
-                hidden;
+            overflow: hidden;
 
             background:
                 linear-gradient(
@@ -840,7 +849,9 @@
                 14px;
 
             transition:
-                0.3s;
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
 
@@ -857,26 +868,27 @@
 
 
         .project-card img {
-            width:
-                100%;
+            width: 100%;
+            height: 210px;
 
-            height:
-                190px;
-
-            object-fit:
-                cover;
+            object-fit: cover;
         }
 
 
         .project-card-content {
-            padding:
-                21px;
+            min-height: 190px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 22px;
         }
 
 
         .project-card h4 {
             margin:
-                0 0 7px;
+                0 0 8px;
 
             font-size:
                 1rem;
@@ -884,8 +896,7 @@
 
 
         .project-card p {
-            margin:
-                0;
+            margin: 0;
 
             color:
                 var(--text-gray);
@@ -893,17 +904,17 @@
             font-size:
                 0.85rem;
 
-            min-height:
-                52px;
+            line-height:
+                1.7;
         }
 
 
         .project-card span {
-            display:
-                inline-block;
+            display: inline-block;
 
-            margin-top:
-                18px;
+            margin-top: auto;
+
+            padding-top: 20px;
 
             color:
                 var(--light-blue);
@@ -920,23 +931,31 @@
            DESENVOLVIMENTO
            ============================================================ */
 
-        .development-card {
-            display:
-                grid;
+        .development-grid {
+            display: grid;
 
             grid-template-columns:
-                1.1fr 0.9fr;
+                repeat(2, 1fr);
 
-            overflow:
-                hidden;
+            gap: 24px;
 
-            margin-top:
-                35px;
+            margin-top: 35px;
+        }
+
+
+        .development-card {
+            min-height: 520px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            overflow: hidden;
 
             background:
                 linear-gradient(
-                    135deg,
-                    #102944,
+                    145deg,
+                    #112642,
                     #0a1c31
                 );
 
@@ -945,57 +964,264 @@
 
             border-radius:
                 18px;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        a.development-card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                var(--light-blue);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.32);
+        }
+
+
+        .development-image {
+            height: 280px;
+
+            overflow: hidden;
+
+            background:
+                #091a2e;
+        }
+
+
+        .development-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
         }
 
 
         .development-content {
-            padding:
-                38px;
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 28px;
         }
 
 
         .development-content h3 {
             margin:
-                0 0 14px;
+                0 0 12px;
 
             font-size:
-                1.7rem;
+                1.45rem;
         }
 
 
         .development-content p {
-            max-width:
-                620px;
-
-            margin:
-                0;
+            margin: 0;
 
             color:
                 #aec0d8;
 
+            font-size:
+                0.92rem;
+
             line-height:
-                1.8;
+                1.75;
         }
 
 
-        .development-image {
-            min-height:
-                360px;
+        /* ============================================================
+           FUTURO PROJETO
+           ============================================================ */
 
-            overflow:
-                hidden;
+        .future-card {
+            position: relative;
+
+            min-height: 520px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            padding: 45px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(17, 38, 66, 0.72),
+                    rgba(9, 26, 46, 0.72)
+                );
+
+            border:
+                1px dashed #315a7f;
+
+            border-radius:
+                18px;
         }
 
 
-        .development-image img {
-            width:
-                100%;
+        .future-card::before {
+            content: "";
 
-            height:
-                100%;
+            position: absolute;
 
-            object-fit:
-                cover;
+            width: 320px;
+            height: 320px;
+
+            top: -160px;
+            right: -130px;
+
+            background:
+                rgba(0, 168, 232, 0.07);
+
+            border-radius:
+                50%;
+        }
+
+
+        .future-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            bottom: -160px;
+            left: -120px;
+
+            background:
+                rgba(69, 181, 255, 0.04);
+
+            border-radius:
+                50%;
+        }
+
+
+        .future-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 420px;
+        }
+
+
+        .future-icon {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin:
+                0 auto 24px;
+
+            color:
+                var(--light-blue);
+
+            background:
+                rgba(0, 168, 232, 0.08);
+
+            border:
+                1px solid #25517a;
+
+            border-radius:
+                18px;
+
+            font-size:
+                2rem;
+
+            font-weight:
+                400;
+        }
+
+
+        .future-status {
+            display: inline-block;
+
+            margin-bottom: 16px;
+
+            padding:
+                6px 11px;
+
+            color:
+                var(--green);
+
+            background:
+                rgba(98, 224, 165, 0.07);
+
+            border:
+                1px solid rgba(98, 224, 165, 0.25);
+
+            border-radius:
+                999px;
+
+            font-size:
+                0.68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .future-card h3 {
+            margin:
+                0 0 12px;
+
+            font-size:
+                1.45rem;
+        }
+
+
+        .future-card p {
+            margin: 0;
+
+            color:
+                var(--text-gray);
+
+            font-size:
+                0.9rem;
+
+            line-height:
+                1.75;
+        }
+
+
+        .future-note {
+            display: block;
+
+            margin-top: 24px;
+
+            color:
+                #6f88a5;
+
+            font-size:
+                0.75rem;
+
+            font-weight:
+                600;
         }
 
 
@@ -1004,32 +1230,69 @@
            ============================================================ */
 
         .stack-grid {
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 repeat(4, 1fr);
 
-            gap:
-                18px;
+            gap: 18px;
 
-            margin-top:
-                35px;
+            margin-top: 35px;
         }
 
 
         .stack-card {
-            padding:
-                25px;
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 26px;
 
             background:
-                var(--card-bg);
+                linear-gradient(
+                    145deg,
+                    #122746,
+                    #10213b
+                );
 
             border:
-                1px solid var(--border);
+                1px solid #223e60;
 
             border-radius:
-                12px;
+                14px;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .stack-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(0, 168, 232, 0.5);
+        }
+
+
+        .stack-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--light-blue),
+                    transparent
+                );
         }
 
 
@@ -1052,20 +1315,16 @@
 
 
         .stack-card ul {
-            list-style:
-                none;
+            list-style: none;
 
-            margin:
-                0;
-
-            padding:
-                0;
+            margin: 0;
+            padding: 0;
         }
 
 
         .stack-card li {
             padding:
-                7px 0;
+                8px 0;
 
             color:
                 #c0d0e2;
@@ -1089,17 +1348,22 @@
            ============================================================ */
 
         .about {
-            display:
-                grid;
+            display: grid;
 
             grid-template-columns:
                 0.7fr 1.3fr;
 
-            gap:
-                60px;
+            gap: 60px;
 
-            align-items:
-                start;
+            align-items: start;
+        }
+
+
+        .about-text {
+            padding-left: 30px;
+
+            border-left:
+                2px solid rgba(0, 168, 232, 0.3);
         }
 
 
@@ -1115,16 +1379,20 @@
         }
 
 
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
         /* ============================================================
-           CTA
+           CONTATO
            ============================================================ */
 
         .contact-section {
             padding:
                 90px 0;
 
-            text-align:
-                center;
+            text-align: center;
 
             border-top:
                 1px solid var(--border);
@@ -1132,6 +1400,10 @@
 
 
         .contact-box {
+            position: relative;
+
+            overflow: hidden;
+
             padding:
                 55px 30px;
 
@@ -1150,6 +1422,38 @@
         }
 
 
+        .contact-box::before {
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+            height: 400px;
+
+            top: -300px;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            background:
+                rgba(0, 168, 232, 0.12);
+
+            border-radius:
+                50%;
+
+            filter:
+                blur(20px);
+        }
+
+
+        .contact-box > * {
+            position: relative;
+
+            z-index: 2;
+        }
+
+
         .contact-box h2 {
             margin:
                 0 0 12px;
@@ -1164,8 +1468,7 @@
 
 
         .contact-box p {
-            max-width:
-                650px;
+            max-width: 650px;
 
             margin:
                 0 auto 25px;
@@ -1176,17 +1479,13 @@
 
 
         .contact-actions {
-            display:
-                flex;
+            display: flex;
 
-            justify-content:
-                center;
+            justify-content: center;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                12px;
+            gap: 12px;
         }
 
 
@@ -1194,8 +1493,7 @@
             padding:
                 0 0 40px;
 
-            text-align:
-                center;
+            text-align: center;
 
             color:
                 #6f88a5;
@@ -1206,25 +1504,14 @@
 
 
         /* ============================================================
-           RESPONSIVO
+           RESPONSIVIDADE BÁSICA
+           A revisão mobile completa será feita na próxima etapa.
            ============================================================ */
 
         @media (max-width: 950px) {
 
-            .hero {
-                min-height:
-                    auto;
-            }
-
-
-            .profile-pic {
-                height:
-                    430px;
-            }
-
-
             .featured-grid,
-            .development-card,
+            .development-grid,
             .about {
                 grid-template-columns:
                     1fr;
@@ -1244,12 +1531,8 @@
             }
 
 
-            .development-image {
-                order:
-                    -1;
-
-                min-height:
-                    300px;
+            .process-line {
+                display: none;
             }
         }
 
@@ -1257,14 +1540,11 @@
         @media (max-width: 700px) {
 
             .hero {
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                align-items:
-                    center;
+                align-items: center;
 
-                gap:
-                    0;
+                gap: 0;
             }
 
 
@@ -1272,27 +1552,23 @@
                 padding:
                     60px 0 20px;
 
-                text-align:
-                    center;
+                text-align: center;
             }
 
 
             .hero-stack,
             .hero-actions {
-                justify-content:
-                    center;
+                justify-content: center;
             }
 
 
             .profile-wrapper {
-                align-self:
-                    center;
+                align-self: center;
             }
 
 
             .profile-pic {
-                height:
-                    390px;
+                height: 390px;
             }
 
 
@@ -1304,21 +1580,16 @@
             }
 
 
-            .featured-card {
-                min-height:
-                    auto;
-            }
-
-
             .section {
                 padding:
                     60px 0;
             }
 
 
-            .development-content {
-                padding:
-                    27px;
+            .about-text {
+                padding-left: 0;
+
+                border-left: none;
             }
         }
 
@@ -1341,26 +1612,23 @@
 
 
             .profile-pic {
-                height:
-                    330px;
+                height: 330px;
             }
 
 
-            .featured-image {
-                height:
-                    220px;
+            .featured-image,
+            .development-image {
+                height: 220px;
             }
 
 
             .contact-actions {
-                flex-direction:
-                    column;
+                flex-direction: column;
             }
 
 
             .contact-actions .btn {
-                width:
-                    100%;
+                width: 100%;
             }
         }
 
@@ -1621,7 +1889,7 @@
 
 
 <!-- ============================================================
-     PROCESSO
+     MÉTODO
      ============================================================ -->
 
 <section class="section">
@@ -1644,80 +1912,87 @@
         </p>
 
 
-        <div class="process-grid">
+        <div class="process-wrapper">
+
+            <div class="process-line"></div>
 
 
-            <article class="process-card">
-
-                <span class="process-number">
-                    01
-                </span>
-
-                <h3>
-                    Entendo o problema
-                </h3>
-
-                <p>
-                    Começo pelo contexto, pela necessidade
-                    do usuário e pelo objetivo de negócio.
-                </p>
-
-            </article>
+            <div class="process-grid">
 
 
-            <article class="process-card">
+                <article class="process-card">
 
-                <span class="process-number">
-                    02
-                </span>
+                    <span class="process-number">
+                        01
+                    </span>
 
-                <h3>
-                    Estruturo os dados
-                </h3>
+                    <h3>
+                        Entendo o problema
+                    </h3>
 
-                <p>
-                    Identifico fontes, regras, indicadores
-                    e informações necessárias para a solução.
-                </p>
+                    <p>
+                        Começo pelo contexto, pela necessidade
+                        do usuário e pelo objetivo de negócio.
+                    </p>
 
-            </article>
-
-
-            <article class="process-card">
-
-                <span class="process-number">
-                    03
-                </span>
-
-                <h3>
-                    Desenvolvo a solução
-                </h3>
-
-                <p>
-                    Construo análises, dashboards, automações
-                    ou aplicações conforme o problema.
-                </p>
-
-            </article>
+                </article>
 
 
-            <article class="process-card">
+                <article class="process-card">
 
-                <span class="process-number">
-                    04
-                </span>
+                    <span class="process-number">
+                        02
+                    </span>
 
-                <h3>
-                    Entrego resultado
-                </h3>
+                    <h3>
+                        Estruturo os dados
+                    </h3>
 
-                <p>
-                    Transformo dados e código em algo
-                    utilizável, compreensível e orientado
-                    a resultado.
-                </p>
+                    <p>
+                        Identifico fontes, regras, indicadores
+                        e informações necessárias para a solução.
+                    </p>
 
-            </article>
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Desenvolvo a solução
+                    </h3>
+
+                    <p>
+                        Construo análises, dashboards, automações
+                        ou aplicações conforme o problema.
+                    </p>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Entrego resultado
+                    </h3>
+
+                    <p>
+                        Transformo dados e código em algo
+                        utilizável, compreensível e orientado
+                        a resultado.
+                    </p>
+
+                </article>
+
+            </div>
 
         </div>
 
@@ -1745,14 +2020,16 @@
         <p class="section-description">
 
             Projetos voltados a finanças, operações,
-            logística, vendas, análise e estruturação
-            de dados.
+            logística e vendas, utilizando dados para
+            apoiar análises e decisões de negócio.
 
         </p>
 
 
         <div class="projects-grid">
 
+
+            <!-- FINANCEIRO -->
 
             <a href="financeiro.html">
 
@@ -1784,6 +2061,8 @@
 
             </a>
 
+
+            <!-- LOGÍSTICA -->
 
             <a href="transporte.html">
 
@@ -1817,6 +2096,8 @@
             </a>
 
 
+            <!-- COMERCIAL -->
+
             <a href="venda.html">
 
                 <article class="project-card">
@@ -1840,68 +2121,6 @@
 
                         <span>
                             VER CASE →
-                        </span>
-
-                    </div>
-
-                </article>
-
-            </a>
-
-
-            <a href="sql.html">
-
-                <article class="project-card">
-
-                    <img
-                        src="img/sql.png"
-                        alt="Projeto SQL"
-                    >
-
-                    <div class="project-card-content">
-
-                        <h4>
-                            Projeto SQL
-                        </h4>
-
-                        <p>
-                            Consultas, manipulação e
-                            estruturação de dados.
-                        </p>
-
-                        <span>
-                            VER PROJETO →
-                        </span>
-
-                    </div>
-
-                </article>
-
-            </a>
-
-
-            <a href="excel.html">
-
-                <article class="project-card">
-
-                    <img
-                        src="img/excel.png"
-                        alt="Projeto Excel"
-                    >
-
-                    <div class="project-card-content">
-
-                        <h4>
-                            Excel & Análise
-                        </h4>
-
-                        <p>
-                            Análises, indicadores,
-                            automações e dashboards.
-                        </p>
-
-                        <span>
-                            VER PROJETO →
                         </span>
 
                     </div>
@@ -1935,74 +2154,116 @@
 
         <p class="section-description">
 
-            Desenvolvimento de soluções que utilizam
-            programação para automatizar processos e
-            transformar necessidades em aplicações
-            funcionais.
+            Projetos voltados à criação de aplicações,
+            automações e soluções digitais construídas
+            para resolver necessidades reais.
 
         </p>
 
 
-        <a
-            href="python.html"
-            class="development-card"
-        >
-
-            <div class="development-content">
-
-                <span class="project-type">
-                    Python • Full Stack
-                </span>
-
-                <h3>
-                    Transcrição em Texto
-                </h3>
-
-                <p>
-
-                    Projeto que evoluiu de uma automação
-                    executada diretamente em Python para uma
-                    aplicação com frontend, backend Flask,
-                    processamento com Whisper, integração com
-                    FFmpeg, controle de fila e geração
-                    automática de documentos Word.
-
-                </p>
+        <div class="development-grid">
 
 
-                <div class="project-tech">
+            <!-- TRANSCRIÇÃO EM TEXTO -->
 
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>JavaScript</span>
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>Whisper</span>
-                    <span>PyTorch</span>
-                    <span>FFmpeg</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
+            <a
+                href="python.html"
+                class="development-card"
+            >
+
+                <div class="development-image">
+
+                    <img
+                        src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                        alt="Interface da aplicação Transcrição em Texto"
+                    >
 
                 </div>
 
 
-                <span class="project-link">
-                    CONHECER A APLICAÇÃO →
-                </span>
+                <div class="development-content">
 
-            </div>
+                    <span class="project-type">
+                        Python • Full Stack
+                    </span>
+
+                    <h3>
+                        Transcrição em Texto
+                    </h3>
+
+                    <p>
+
+                        Aplicação que evoluiu de uma automação
+                        em Python para uma solução com frontend,
+                        backend Flask, processamento com Whisper,
+                        controle de fila e geração automática
+                        de documentos.
+
+                    </p>
 
 
-            <div class="development-image">
+                    <div class="project-tech">
 
-                <img
-                    src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
-                    alt="Interface da aplicação Transcrição em Texto"
-                >
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Whisper</span>
+                        <span>FFmpeg</span>
 
-            </div>
+                    </div>
 
-        </a>
+
+                    <span class="project-link">
+                        CONHECER A APLICAÇÃO →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- PRÓXIMO PROJETO -->
+
+            <article class="future-card">
+
+                <div class="future-content">
+
+                    <div class="future-icon">
+                        +
+                    </div>
+
+
+                    <span class="future-status">
+                        Próximo projeto
+                    </span>
+
+
+                    <h3>
+                        Nova solução em desenvolvimento
+                    </h3>
+
+
+                    <p>
+
+                        Este espaço será dedicado a um novo
+                        projeto de desenvolvimento, ampliando
+                        o portfólio com novas tecnologias,
+                        arquitetura e funcionalidades.
+
+                    </p>
+
+
+                    <span class="future-note">
+                        EM BREVE
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
