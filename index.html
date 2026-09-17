@@ -27,26 +27,31 @@
     <style>
 
         /* ============================================================
-           VARIÁVEIS
+           VARIÁVEIS TEMA ESCURO HARMONIZADO
            ============================================================ */
 
         :root {
-            --dark-blue: #07172b;
-            --dark-blue-2: #0a192f;
-            --gradient-light: #1e3a5f;
-            --light-blue: #00a8e8;
-            --light-blue-2: #45b5ff;
-            --card-bg: #112240;
-            --card-bg-2: #0d2037;
-            --text-white: #e6f1ff;
-            --text-gray: #93a4bd;
-            --border: rgba(255, 255, 255, 0.08);
-            --green: #62e0a5;
+            --bg-dark: #030a16;
+            --bg-card: rgba(11, 23, 42, 0.75);
+            --bg-card-hover: rgba(15, 32, 58, 0.85);
+            --primary-blue: #00a8e8;
+            --light-blue: #45b5ff;
+            --accent-glow: rgba(0, 168, 232, 0.15);
+            --text-title: #ffffff;
+            --text-body: #93a4bd;
+            --text-light: #e6f1ff;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(69, 181, 255, 0.35);
+            --green-status: #62e0a5;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
 
         /* ============================================================
-           RESET
+           RESET & ESTRUTURA GERAL
            ============================================================ */
 
         * {
@@ -67,13 +72,15 @@
                 sans-serif;
 
             background:
-                radial-gradient(circle at 80% 20%, #071933 0%, #030a16 100%);
+                radial-gradient(circle at 80% 10%, #081a33 0%, #030a16 60%);
 
             color:
-                var(--text-white);
+                var(--text-light);
 
             line-height:
                 1.6;
+
+            -webkit-font-smoothing: antialiased;
         }
 
 
@@ -102,14 +109,32 @@
 
 
         /* ============================================================
-           HERO
+           HERO SECTION COM O FUNDO DA IMAGEM
            ============================================================ */
+
         .hero-wrapper {
-            padding: 40px 0 60px;
+            position: relative;
+
+            padding: 60px 0 80px;
+
+            background-image:
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.85) 0%,
+                    rgba(3, 10, 22, 0.95) 100%
+                ),
+                url('watermarked_img_18141580615978673223.jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
         }
 
+
         .hero {
-            min-height: 600px;
+            min-height: 560px;
 
             display: grid;
 
@@ -128,8 +153,6 @@
         .hero-text {
             max-width: 720px;
 
-            padding: 40px 0;
-
             display: flex;
 
             flex-direction: column;
@@ -143,17 +166,17 @@
 
             align-items: center;
 
-            gap: 6px;
+            gap: 8px;
 
-            padding: 6px 14px;
+            padding: 6px 16px;
 
-            background: rgba(0, 168, 232, 0.12);
+            background: var(--accent-glow);
 
-            border: 1px solid rgba(69, 181, 255, 0.3);
+            border: 1px solid var(--border-active);
 
-            border-radius: 20px;
+            border-radius: 999px;
 
-            color: var(--light-blue-2);
+            color: var(--light-blue);
 
             font-size: 0.72rem;
 
@@ -163,13 +186,12 @@
 
             text-transform: uppercase;
 
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
 
         .hero h1 {
-            margin:
-                0 0 12px;
+            margin: 0 0 12px;
 
             font-size:
                 clamp(
@@ -178,15 +200,15 @@
                     3.8rem
                 );
 
-            line-height:
-                1.08;
+            line-height: 1.08;
 
-            letter-spacing:
-                -1.5px;
+            letter-spacing: -1.5px;
 
             font-weight: 800;
 
             white-space: nowrap;
+
+            color: var(--text-title);
         }
 
 
@@ -204,7 +226,7 @@
         .hero-description {
             margin: 0 0 24px;
 
-            color: var(--text-gray);
+            color: var(--text-body);
 
             font-size: 0.98rem;
 
@@ -219,7 +241,7 @@
 
             gap: 8px;
 
-            margin-bottom: 22px;
+            margin-bottom: 24px;
         }
 
 
@@ -228,13 +250,13 @@
 
             background: rgba(15, 23, 42, 0.8);
 
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--border-subtle);
 
-            border-radius: 20px;
+            border-radius: 999px;
 
             font-size: 0.85rem;
 
-            color: #e2e8f0;
+            color: #cbd5e1;
 
             font-weight: 500;
         }
@@ -253,7 +275,7 @@
 
             font-weight: 500;
 
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
 
 
@@ -262,11 +284,11 @@
 
             height: 10px;
 
-            background-color: var(--green);
+            background-color: var(--green-status);
 
             border-radius: 50%;
 
-            box-shadow: 0 0 8px var(--green);
+            box-shadow: 0 0 10px var(--green-status);
         }
 
 
@@ -275,7 +297,7 @@
 
             align-items: center;
 
-            gap: 12px;
+            gap: 14px;
         }
 
 
@@ -286,15 +308,15 @@
 
             justify-content: center;
 
-            padding: 10px 22px;
+            padding: 12px 24px;
 
-            border-radius: 24px;
+            border-radius: 999px;
 
             font-size: 0.88rem;
 
             font-weight: 600;
 
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
 
@@ -304,15 +326,19 @@
             color: #ffffff;
 
             border: 1px solid #1e3a8a;
+
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         }
 
 
         .btn-primary:hover {
             background: #1e3a8a;
 
-            border-color: var(--light-blue-2);
+            border-color: var(--light-blue);
 
             transform: translateY(-2px);
+
+            box-shadow: 0 6px 25px rgba(0, 168, 232, 0.3);
         }
 
 
@@ -321,20 +347,20 @@
 
             color: #ffffff;
 
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-subtle);
         }
 
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.05);
 
-            border-color: #ffffff;
+            border-color: var(--text-title);
 
             transform: translateY(-2px);
         }
 
 
-        /* Moldura Dupla da Foto (Estilo Neon/Degradê) */
+        /* Moldura Dupla da Foto */
         .profile-wrapper {
             width: 100%;
 
@@ -361,7 +387,7 @@
 
             background: linear-gradient(135deg, #00a8e8 0%, #818cf8 50%, #030a16 100%);
 
-            box-shadow: 0 0 50px rgba(0, 168, 232, 0.25);
+            box-shadow: 0 0 50px rgba(0, 168, 232, 0.22);
 
             display: flex;
 
@@ -380,9 +406,9 @@
 
             overflow: hidden;
 
-            background-color: var(--dark-blue);
+            background-color: var(--bg-dark);
 
-            border: 4px solid var(--dark-blue);
+            border: 4px solid var(--bg-dark);
         }
 
 
@@ -398,39 +424,31 @@
 
 
         /* ============================================================
-           SEÇÕES
+           SEÇÕES GERAIS
            ============================================================ */
 
         .section {
-            padding:
-                80px 0;
+            padding: 90px 0;
         }
 
 
         .section + .section {
-            border-top:
-                1px solid var(--border);
+            border-top: 1px solid var(--border-subtle);
         }
 
 
         .section-label {
-            margin:
-                0 0 8px;
+            margin: 0 0 8px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            font-size:
-                0.72rem;
+            font-size: 0.75rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            letter-spacing:
-                1.5px;
+            letter-spacing: 1.5px;
 
-            text-transform:
-                uppercase;
+            text-transform: uppercase;
         }
 
 
@@ -441,44 +459,40 @@
                 clamp(
                     1.8rem,
                     4vw,
-                    2.7rem
+                    2.6rem
                 );
 
-            line-height:
-                1.2;
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            color: var(--text-title);
         }
 
 
         .section-description {
-            max-width: 750px;
+            max-width: 720px;
 
-            margin:
-                15px 0 35px;
+            margin: 14px 0 40px;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
 
-            font-size:
-                1rem;
+            font-size: 1rem;
 
-            line-height:
-                1.8;
+            line-height: 1.8;
         }
 
 
         /* ============================================================
-           PROJETOS PRINCIPAIS
+           PROJETOS PRINCIPAIS (FEATURED GRID)
            ============================================================ */
 
         .featured-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
-            gap: 25px;
-
-            margin-top: 35px;
+            gap: 30px;
         }
 
 
@@ -493,35 +507,24 @@
 
             flex-direction: column;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #112642,
-                    #0b1c32
-                );
+            background: var(--bg-card);
 
-            border:
-                1px solid var(--border);
+            backdrop-filter: blur(12px);
 
-            border-radius:
-                18px;
+            border: 1px solid var(--border-subtle);
 
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+            border-radius: var(--radius-lg);
+
+            transition: var(--transition);
         }
 
 
         .featured-card:hover {
-            transform:
-                translateY(-7px);
+            transform: translateY(-6px);
 
-            border-color:
-                rgba(0, 168, 232, 0.55);
+            border-color: var(--border-active);
 
-            box-shadow:
-                0 25px 65px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 168, 232, 0.15);
         }
 
 
@@ -530,25 +533,23 @@
 
             overflow: hidden;
 
-            background:
-                #09192b;
+            background: #061324;
         }
 
 
         .featured-image img {
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
-            transition:
-                transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
 
         .featured-card:hover .featured-image img {
-            transform:
-                scale(1.025);
+            transform: scale(1.03);
         }
 
 
@@ -559,7 +560,7 @@
 
             flex-direction: column;
 
-            padding: 26px;
+            padding: 30px;
         }
 
 
@@ -568,49 +569,45 @@
 
             margin-bottom: 14px;
 
-            padding:
-                6px 10px;
+            padding: 5px 12px;
 
-            color:
-                var(--light-blue-2);
+            color: var(--light-blue);
 
-            background:
-                rgba(0, 168, 232, 0.08);
+            background: var(--accent-glow);
 
-            border:
-                1px solid rgba(0, 168, 232, 0.25);
+            border: 1px solid var(--border-active);
 
-            border-radius:
-                999px;
+            border-radius: 999px;
 
-            font-size:
-                0.68rem;
+            font-size: 0.68rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            letter-spacing:
-                1px;
+            letter-spacing: 1px;
 
-            text-transform:
-                uppercase;
+            text-transform: uppercase;
         }
 
 
         .featured-content h3 {
-            margin:
-                0 0 10px;
+            margin: 0 0 12px;
 
-            font-size:
-                1.45rem;
+            font-size: 1.45rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
         }
 
 
         .featured-content p {
             margin: 0;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
+
+            font-size: 0.92rem;
+
+            line-height: 1.7;
         }
 
 
@@ -619,81 +616,83 @@
 
             flex-wrap: wrap;
 
-            gap: 7px;
+            gap: 8px;
 
-            margin-top: 18px;
+            margin-top: 20px;
         }
 
 
         .project-tech span {
-            padding:
-                5px 8px;
+            padding: 5px 10px;
 
-            color:
-                #b9d9f7;
+            color: #cbd5e1;
 
-            background:
-                #0a1b30;
+            background: rgba(15, 23, 42, 0.6);
 
-            border:
-                1px solid #1c3c5d;
+            border: 1px solid var(--border-subtle);
 
-            border-radius:
-                5px;
+            border-radius: var(--radius-sm);
 
-            font-size:
-                0.7rem;
+            font-size: 0.72rem;
         }
 
 
         .project-link {
-            display: inline-block;
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
 
             margin-top: auto;
 
             padding-top: 24px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            font-size:
-                0.78rem;
+            font-size: 0.78rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            letter-spacing:
-                0.7px;
+            letter-spacing: 0.8px;
+
+            transition: var(--transition);
+        }
+
+
+        .featured-card:hover .project-link {
+            color: var(--light-blue);
         }
 
 
         /* ============================================================
-           PROCESSO
+           MÉTODO (PROCESSO)
            ============================================================ */
 
         .process-wrapper {
             position: relative;
 
-            margin-top: 42px;
+            margin-top: 40px;
         }
 
 
         .process-line {
             position: absolute;
 
-            top: 45px;
-            left: 9%;
-            right: 9%;
+            top: 42px;
+
+            left: 10%;
+
+            right: 10%;
 
             height: 2px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0, 168, 232, 0.15),
-                    rgba(0, 168, 232, 0.75),
-                    rgba(0, 168, 232, 0.15)
-                );
+            background: linear-gradient(
+                90deg,
+                rgba(0, 168, 232, 0.1),
+                rgba(0, 168, 232, 0.6),
+                rgba(0, 168, 232, 0.1)
+            );
         }
 
 
@@ -702,46 +701,35 @@
 
             display: grid;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
-            gap: 18px;
+            gap: 20px;
         }
 
 
         .process-card {
             position: relative;
 
-            min-height: 220px;
+            padding: 30px 24px;
 
-            padding:
-                26px;
+            background: var(--bg-card);
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #122746,
-                    #10213b
-                );
+            backdrop-filter: blur(12px);
 
-            border:
-                1px solid #223e60;
+            border: 1px solid var(--border-subtle);
 
-            border-radius:
-                14px;
+            border-radius: var(--radius-md);
 
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease;
+            transition: var(--transition);
         }
 
 
         .process-card:hover {
-            transform:
-                translateY(-5px);
+            transform: translateY(-5px);
 
-            border-color:
-                rgba(0, 168, 232, 0.55);
+            border-color: var(--border-active);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
 
@@ -750,8 +738,9 @@
 
             z-index: 2;
 
-            width: 52px;
-            height: 52px;
+            width: 50px;
+
+            height: 50px;
 
             display: flex;
 
@@ -759,61 +748,56 @@
 
             justify-content: center;
 
-            margin-bottom: 22px;
+            margin-bottom: 24px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            background:
-                #0a1b30;
+            background: #09182d;
 
-            border:
-                1px solid #22517b;
+            border: 1px solid var(--border-active);
 
-            border-radius:
-                50%;
+            border-radius: 50%;
 
-            font-size:
-                1.15rem;
+            font-size: 1.1rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
+
+            box-shadow: 0 0 15px rgba(0, 168, 232, 0.2);
         }
 
 
         .process-card h3 {
-            margin:
-                0 0 10px;
+            margin: 0 0 10px;
 
-            font-size:
-                0.95rem;
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
         }
 
 
         .process-card p {
             margin: 0;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
 
-            font-size:
-                0.86rem;
+            font-size: 0.86rem;
+
+            line-height: 1.65;
         }
 
 
         /* ============================================================
-           DATA & ANALYTICS
+           DATA & ANALYTICS GRID
            ============================================================ */
 
         .projects-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
 
-            gap: 22px;
-
-            margin-top: 35px;
+            gap: 24px;
         }
 
 
@@ -822,40 +806,30 @@
 
             overflow: hidden;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #112240,
-                    #0c1b30
-                );
+            background: var(--bg-card);
 
-            border:
-                1px solid var(--border);
+            backdrop-filter: blur(12px);
 
-            border-radius:
-                14px;
+            border: 1px solid var(--border-subtle);
 
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
         }
 
 
         .project-card:hover {
-            transform:
-                translateY(-7px);
+            transform: translateY(-6px);
 
-            border-color:
-                rgba(0, 168, 232, 0.45);
+            border-color: var(--border-active);
 
-            box-shadow:
-                0 20px 45px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
         }
 
 
         .project-card img {
             width: 100%;
+
             height: 210px;
 
             object-fit: cover;
@@ -863,36 +837,35 @@
 
 
         .project-card-content {
-            min-height: 190px;
-
             display: flex;
 
             flex-direction: column;
 
-            padding: 22px;
+            padding: 24px;
+
+            height: calc(100% - 210px);
         }
 
 
         .project-card h4 {
-            margin:
-                0 0 8px;
+            margin: 0 0 10px;
 
-            font-size:
-                1rem;
+            font-size: 1.1rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
         }
 
 
         .project-card p {
             margin: 0;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
 
-            font-size:
-                0.85rem;
+            font-size: 0.88rem;
 
-            line-height:
-                1.7;
+            line-height: 1.65;
         }
 
 
@@ -903,14 +876,13 @@
 
             padding-top: 20px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            font-size:
-                0.72rem;
+            font-size: 0.75rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
         }
 
 
@@ -921,17 +893,14 @@
         .development-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
-            gap: 24px;
-
-            margin-top: 35px;
+            gap: 28px;
         }
 
 
         .development-card {
-            min-height: 520px;
+            min-height: 500px;
 
             display: flex;
 
@@ -939,50 +908,39 @@
 
             overflow: hidden;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #112642,
-                    #0a1c31
-                );
+            background: var(--bg-card);
 
-            border:
-                1px solid #25517a;
+            backdrop-filter: blur(12px);
 
-            border-radius:
-                18px;
+            border: 1px solid var(--border-subtle);
 
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+            border-radius: var(--radius-lg);
+
+            transition: var(--transition);
         }
 
 
         a.development-card:hover {
-            transform:
-                translateY(-7px);
+            transform: translateY(-6px);
 
-            border-color:
-                var(--light-blue);
+            border-color: var(--border-active);
 
-            box-shadow:
-                0 25px 60px rgba(0, 0, 0, 0.32);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
         }
 
 
         .development-image {
-            height: 280px;
+            height: 260px;
 
             overflow: hidden;
 
-            background:
-                #091a2e;
+            background: #061324;
         }
 
 
         .development-image img {
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
@@ -1001,25 +959,24 @@
 
 
         .development-content h3 {
-            margin:
-                0 0 12px;
+            margin: 0 0 12px;
 
-            font-size:
-                1.45rem;
+            font-size: 1.45rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
         }
 
 
         .development-content p {
             margin: 0;
 
-            color:
-                #aec0d8;
+            color: var(--text-body);
 
-            font-size:
-                0.92rem;
+            font-size: 0.92rem;
 
-            line-height:
-                1.75;
+            line-height: 1.75;
         }
 
 
@@ -1030,7 +987,7 @@
         .future-card {
             position: relative;
 
-            min-height: 520px;
+            min-height: 500px;
 
             display: flex;
 
@@ -1040,60 +997,15 @@
 
             overflow: hidden;
 
-            padding: 45px;
+            padding: 40px;
 
             text-align: center;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(17, 38, 66, 0.72),
-                    rgba(9, 26, 46, 0.72)
-                );
+            background: rgba(11, 23, 42, 0.4);
 
-            border:
-                1px dashed #315a7f;
+            border: 1px dashed rgba(69, 181, 255, 0.3);
 
-            border-radius:
-                18px;
-        }
-
-
-        .future-card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 320px;
-            height: 320px;
-
-            top: -160px;
-            right: -130px;
-
-            background:
-                rgba(0, 168, 232, 0.07);
-
-            border-radius:
-                50%;
-        }
-
-
-        .future-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 260px;
-            height: 260px;
-
-            bottom: -160px;
-            left: -120px;
-
-            background:
-                rgba(69, 181, 255, 0.04);
-
-            border-radius:
-                50%;
+            border-radius: var(--radius-lg);
         }
 
 
@@ -1102,13 +1014,14 @@
 
             z-index: 2;
 
-            max-width: 420px;
+            max-width: 400px;
         }
 
 
         .future-icon {
-            width: 70px;
-            height: 70px;
+            width: 64px;
+
+            height: 64px;
 
             display: flex;
 
@@ -1116,83 +1029,64 @@
 
             justify-content: center;
 
-            margin:
-                0 auto 24px;
+            margin: 0 auto 20px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            background:
-                rgba(0, 168, 232, 0.08);
+            background: var(--accent-glow);
 
-            border:
-                1px solid #25517a;
+            border: 1px solid var(--border-active);
 
-            border-radius:
-                18px;
+            border-radius: var(--radius-md);
 
-            font-size:
-                2rem;
-
-            font-weight:
-                400;
+            font-size: 1.8rem;
         }
 
 
         .future-status {
             display: inline-block;
 
-            margin-bottom: 16px;
+            margin-bottom: 14px;
 
-            padding:
-                6px 11px;
+            padding: 5px 12px;
 
-            color:
-                var(--green);
+            color: var(--green-status);
 
-            background:
-                rgba(98, 224, 165, 0.07);
+            background: rgba(98, 224, 165, 0.08);
 
-            border:
-                1px solid rgba(98, 224, 165, 0.25);
+            border: 1px solid rgba(98, 224, 165, 0.25);
 
-            border-radius:
-                999px;
+            border-radius: 999px;
 
-            font-size:
-                0.68rem;
+            font-size: 0.68rem;
 
-            font-weight:
-                800;
+            font-weight: 800;
 
-            letter-spacing:
-                1px;
+            letter-spacing: 1px;
 
-            text-transform:
-                uppercase;
+            text-transform: uppercase;
         }
 
 
         .future-card h3 {
-            margin:
-                0 0 12px;
+            margin: 0 0 12px;
 
-            font-size:
-                1.45rem;
+            font-size: 1.4rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
         }
 
 
         .future-card p {
             margin: 0;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
 
-            font-size:
-                0.9rem;
+            font-size: 0.9rem;
 
-            line-height:
-                1.75;
+            line-height: 1.7;
         }
 
 
@@ -1201,30 +1095,26 @@
 
             margin-top: 24px;
 
-            color:
-                #6f88a5;
+            color: #64748b;
 
-            font-size:
-                0.75rem;
+            font-size: 0.75rem;
 
-            font-weight:
-                600;
+            font-weight: 700;
+
+            letter-spacing: 1px;
         }
 
 
         /* ============================================================
-           STACK
+           STACK GRID
            ============================================================ */
 
         .stack-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
-            gap: 18px;
-
-            margin-top: 35px;
+            gap: 20px;
         }
 
 
@@ -1233,33 +1123,24 @@
 
             overflow: hidden;
 
-            padding: 26px;
+            padding: 28px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #122746,
-                    #10213b
-                );
+            background: var(--bg-card);
 
-            border:
-                1px solid #223e60;
+            backdrop-filter: blur(12px);
 
-            border-radius:
-                14px;
+            border: 1px solid var(--border-subtle);
 
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease;
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
         }
 
 
         .stack-card:hover {
-            transform:
-                translateY(-5px);
+            transform: translateY(-5px);
 
-            border-color:
-                rgba(0, 168, 232, 0.5);
+            border-color: var(--border-active);
         }
 
 
@@ -1269,35 +1150,29 @@
             position: absolute;
 
             top: 0;
+
             left: 0;
 
             width: 100%;
+
             height: 3px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--light-blue),
-                    transparent
-                );
+            background: linear-gradient(90deg, var(--primary-blue), transparent);
         }
 
 
         .stack-card h3 {
-            margin:
-                0 0 18px;
+            margin: 0 0 20px;
 
-            color:
-                var(--light-blue);
+            color: var(--primary-blue);
 
-            font-size:
-                0.8rem;
+            font-size: 0.82rem;
 
-            text-transform:
-                uppercase;
+            font-weight: 800;
 
-            letter-spacing:
-                1px;
+            text-transform: uppercase;
+
+            letter-spacing: 1.2px;
         }
 
 
@@ -1305,40 +1180,35 @@
             list-style: none;
 
             margin: 0;
+
             padding: 0;
         }
 
 
         .stack-card li {
-            padding:
-                8px 0;
+            padding: 9px 0;
 
-            color:
-                #c0d0e2;
+            color: #cbd5e1;
 
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 
-            font-size:
-                0.87rem;
+            font-size: 0.88rem;
         }
 
 
         .stack-card li:last-child {
-            border-bottom:
-                none;
+            border-bottom: none;
         }
 
 
         /* ============================================================
-           SOBRE
+           SOBRE MIM
            ============================================================ */
 
         .about {
             display: grid;
 
-            grid-template-columns:
-                0.7fr 1.3fr;
+            grid-template-columns: 0.7fr 1.3fr;
 
             gap: 60px;
 
@@ -1349,20 +1219,18 @@
         .about-text {
             padding-left: 30px;
 
-            border-left:
-                2px solid rgba(0, 168, 232, 0.3);
+            border-left: 2px solid var(--border-active);
         }
 
 
         .about-text p {
-            margin:
-                0 0 17px;
+            margin: 0 0 18px;
 
-            color:
-                #aebfd3;
+            color: var(--text-body);
 
-            line-height:
-                1.85;
+            font-size: 1rem;
+
+            line-height: 1.85;
         }
 
 
@@ -1376,13 +1244,11 @@
            ============================================================ */
 
         .contact-section {
-            padding:
-                90px 0;
+            padding: 100px 0;
 
             text-align: center;
 
-            border-top:
-                1px solid var(--border);
+            border-top: 1px solid var(--border-subtle);
         }
 
 
@@ -1391,21 +1257,17 @@
 
             overflow: hidden;
 
-            padding:
-                55px 30px;
+            padding: 60px 30px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #102944,
-                    #0b1e34
-                );
+            background: var(--bg-card);
 
-            border:
-                1px solid #214b70;
+            backdrop-filter: blur(12px);
 
-            border-radius:
-                18px;
+            border: 1px solid var(--border-active);
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
 
@@ -1415,22 +1277,20 @@
             position: absolute;
 
             width: 400px;
+
             height: 400px;
 
-            top: -300px;
+            top: -250px;
+
             left: 50%;
 
-            transform:
-                translateX(-50%);
+            transform: translateX(-50%);
 
-            background:
-                rgba(0, 168, 232, 0.12);
+            background: var(--accent-glow);
 
-            border-radius:
-                50%;
+            border-radius: 50%;
 
-            filter:
-                blur(20px);
+            filter: blur(40px);
         }
 
 
@@ -1442,26 +1302,29 @@
 
 
         .contact-box h2 {
-            margin:
-                0 0 12px;
+            margin: 0 0 14px;
 
             font-size:
                 clamp(
                     1.8rem,
                     4vw,
-                    2.7rem
+                    2.6rem
                 );
+
+            font-weight: 800;
+
+            color: var(--text-title);
         }
 
 
         .contact-box p {
-            max-width: 650px;
+            max-width: 600px;
 
-            margin:
-                0 auto 25px;
+            margin: 0 auto 30px;
 
-            color:
-                var(--text-gray);
+            color: var(--text-body);
+
+            font-size: 1rem;
         }
 
 
@@ -1472,21 +1335,29 @@
 
             flex-wrap: wrap;
 
-            gap: 12px;
+            gap: 14px;
         }
 
 
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+
         footer {
-            padding:
-                0 0 40px;
+            padding: 40px 0;
 
             text-align: center;
 
-            color:
-                #6f88a5;
+            color: #64748b;
 
-            font-size:
-                0.78rem;
+            font-size: 0.8rem;
+
+            border-top: 1px solid var(--border-subtle);
+        }
+
+
+        footer strong {
+            color: var(--text-title);
         }
 
 
@@ -1511,21 +1382,14 @@
             .featured-grid,
             .development-grid,
             .about {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
 
             .process-grid,
-            .stack-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
+            .stack-grid,
             .projects-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
 
@@ -1538,26 +1402,18 @@
         @media (max-width: 700px) {
 
             .hero {
-                gap: 20px;
+                gap: 30px;
             }
 
 
             .hero-text {
-                padding:
-                    40px 0 20px;
-
-                text-align: center;
+                padding: 20px 0;
             }
 
 
             .hero-stack,
             .hero-actions {
                 justify-content: center;
-            }
-
-
-            .profile-wrapper {
-                align-self: center;
             }
 
 
@@ -1571,14 +1427,12 @@
             .projects-grid,
             .process-grid,
             .stack-grid {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
 
             .section {
-                padding:
-                    60px 0;
+                padding: 60px 0;
             }
 
 
@@ -1592,31 +1446,10 @@
 
         @media (max-width: 480px) {
 
-            .container {
-                width:
-                    min(
-                        100% - 24px,
-                        1180px
-                    );
-            }
-
-
-            .hero h1 {
-                letter-spacing:
-                    -1px;
-            }
-
-
             .profile-border-outer {
                 width: 280px;
 
                 height: 280px;
-            }
-
-
-            .featured-image,
-            .development-image {
-                height: 220px;
             }
 
 
@@ -1639,7 +1472,7 @@
 
 
 <!-- ============================================================
-     HERO
+     HERO SECTION
      ============================================================ -->
 
 <div class="hero-wrapper">
@@ -1666,13 +1499,7 @@
                 </h2>
 
                 <p class="hero-description">
-
-                    Transformo problemas de negócio em soluções
-                    digitais orientadas por dados, combinando
-                    análise, automação e desenvolvimento de
-                    aplicações para gerar eficiência, informação
-                    e suporte à tomada de decisão.
-
+                    Transformo problemas de negócio em soluções digitais orientadas por dados, combinando análise, automação e desenvolvimento de aplicações para gerar eficiência, informação e suporte à tomada de decisão.
                 </p>
 
 
@@ -1765,11 +1592,7 @@
         </h2>
 
         <p class="section-description">
-
-            Duas vertentes que representam minha atuação:
-            transformar dados em informação para decisões e
-            transformar código em soluções utilizáveis.
-
+            Duas vertentes que representam minha atuação: transformar dados em informação para decisões e transformar código em soluções utilizáveis.
         </p>
 
 
@@ -1808,12 +1631,7 @@
                     </h3>
 
                     <p>
-
-                        Análise de comportamento e perfil de
-                        clientes para identificar padrões de
-                        cancelamento, segmentos de maior risco
-                        e oportunidades de retenção.
-
+                        Análise de comportamento e perfil de clientes para identificar padrões de cancelamento, segmentos de maior risco e oportunidades de retenção.
                     </p>
 
 
@@ -1827,7 +1645,7 @@
 
 
                     <span class="project-link">
-                        CASE ANALÍTICO
+                        CASE ANALÍTICO →
                     </span>
 
                 </div>
@@ -1863,12 +1681,7 @@
                     </h3>
 
                     <p>
-
-                        Aplicação web local para transformar
-                        arquivos de áudio e vídeo em documentos
-                        utilizando reconhecimento de fala,
-                        processamento em fila e automação.
-
+                        Aplicação web local para transformar arquivos de áudio e vídeo em documentos utilizando reconhecimento de fala, processamento em fila e automação.
                     </p>
 
 
@@ -1915,10 +1728,7 @@
         </h2>
 
         <p class="section-description">
-
-            Dados e desenvolvimento partem do mesmo princípio:
-            entender o problema antes de escolher a tecnologia.
-
+            Dados e desenvolvimento partem do mesmo princípio: entender o problema antes de escolher a tecnologia.
         </p>
 
 
@@ -1941,8 +1751,7 @@
                     </h3>
 
                     <p>
-                        Começo pelo contexto, pela necessidade
-                        do usuário e pelo objetivo de negócio.
+                        Começo pelo contexto, pela necessidade do usuário e pelo objetivo de negócio.
                     </p>
 
                 </article>
@@ -1959,8 +1768,7 @@
                     </h3>
 
                     <p>
-                        Identifico fontes, regras, indicadores
-                        e informações necessárias para a solução.
+                        Identifico fontes, regras, indicadores e informações necessárias para a solução.
                     </p>
 
                 </article>
@@ -1977,8 +1785,7 @@
                     </h3>
 
                     <p>
-                        Construo análises, dashboards, automações
-                        ou aplicações conforme o problema.
+                        Construo análises, dashboards, automações ou aplicações conforme o problema.
                     </p>
 
                 </article>
@@ -1995,9 +1802,7 @@
                     </h3>
 
                     <p>
-                        Transformo dados e código em algo
-                        utilizável, compreensível e orientado
-                        a resultado.
+                        Transformo dados e código em algo utilizável, compreensível e orientado a resultado.
                     </p>
 
                 </article>
@@ -2028,11 +1833,7 @@
         </h2>
 
         <p class="section-description">
-
-            Projetos voltados a finanças, operações,
-            logística e vendas, utilizando dados para
-            apoiar análises e decisões de negócio.
-
+            Projetos voltados a finanças, operações, logística e vendas, utilizando dados para apoiar análises e decisões de negócio.
         </p>
 
 
@@ -2057,8 +1858,7 @@
                         </h4>
 
                         <p>
-                            Análise de margem, custos,
-                            fluxo financeiro e resultado.
+                            Análise de margem, custos, fluxo financeiro e resultado.
                         </p>
 
                         <span>
@@ -2090,9 +1890,7 @@
                         </h4>
 
                         <p>
-                            Eficiência operacional,
-                            utilização de frota e
-                            redução de custos.
+                            Eficiência operacional, utilização de frota e redução de custos.
                         </p>
 
                         <span>
@@ -2124,9 +1922,7 @@
                         </h4>
 
                         <p>
-                            Faturamento, margem,
-                            performance regional e
-                            oportunidades de receita.
+                            Faturamento, margem, performance regional e oportunidades de receita.
                         </p>
 
                         <span>
@@ -2163,11 +1959,7 @@
         </h2>
 
         <p class="section-description">
-
-            Projetos voltados à criação de aplicações,
-            automações e soluções digitais construídas
-            para resolver necessidades reais.
-
+            Projetos voltados à criação de aplicações, automações e soluções digitais construídas para resolver necessidades reais.
         </p>
 
 
@@ -2202,13 +1994,7 @@
                     </h3>
 
                     <p>
-
-                        Aplicação que evoluiu de uma automação
-                        em Python para uma solução com frontend,
-                        backend Flask, processamento com Whisper,
-                        controle de fila e geração automática
-                        de documentos.
-
+                        Aplicação que evoluiu de uma automação em Python para uma solução com frontend, backend Flask, processamento com Whisper, controle de fila e geração automática de documentos.
                     </p>
 
 
@@ -2256,12 +2042,7 @@
 
 
                     <p>
-
-                        Este espaço será dedicado a um novo
-                        projeto de desenvolvimento, ampliando
-                        o portfólio com novas tecnologias,
-                        arquitetura e funcionalidades.
-
+                        Este espaço será dedicado a um novo projeto de desenvolvimento, ampliando o portfólio com novas tecnologias, arquitetura e funcionalidades.
                     </p>
 
 
@@ -2297,10 +2078,7 @@
         </h2>
 
         <p class="section-description">
-
-            Tecnologias utilizadas em projetos de análise,
-            automação e desenvolvimento.
-
+            Tecnologias utilizadas em projetos de análise, automação e desenvolvimento.
         </p>
 
 
@@ -2380,7 +2158,7 @@
 
 
 <!-- ============================================================
-     SOBRE
+     SOBRE MIM
      ============================================================ -->
 
 <section class="section">
@@ -2405,31 +2183,15 @@
             <div class="about-text">
 
                 <p>
-
-                    Minha trajetória profissional combina
-                    experiência em processos e melhoria contínua
-                    com uma evolução direcionada para dados,
-                    automação e desenvolvimento.
-
+                    Minha trajetória profissional combina experiência em processos e melhoria contínua com uma evolução direcionada para dados, automação e desenvolvimento.
                 </p>
 
                 <p>
-
-                    Essa combinação me permite enxergar tecnologia
-                    não apenas pelo código ou pelos indicadores,
-                    mas pelo problema que precisa ser resolvido
-                    e pelo resultado que a solução deve gerar.
-
+                    Essa combinação me permite enxergar tecnologia não apenas pelo código ou pelos indicadores, mas pelo problema que precisa ser resolvido e pelo resultado que a solução deve gerar.
                 </p>
 
                 <p>
-
-                    Hoje desenvolvo projetos que transitam entre
-                    Business Intelligence, análise de dados,
-                    Python e desenvolvimento de aplicações,
-                    ampliando continuamente minha atuação
-                    dentro da área de tecnologia.
-
+                    Hoje desenvolvo projetos que transitam entre Business Intelligence, análise de dados, Python e desenvolvimento de aplicações, ampliando continuamente minha atuação dentro da área de tecnologia.
                 </p>
 
             </div>
@@ -2460,11 +2222,7 @@
             </h2>
 
             <p>
-
-                Estou disponível para oportunidades em
-                Dados, Business Intelligence, Python,
-                automação e desenvolvimento.
-
+                Estou disponível para oportunidades em Dados, Business Intelligence, Python, automação e desenvolvimento.
             </p>
 
 
