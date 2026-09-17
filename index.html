@@ -1,5 +1,1699 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python, automação e desenvolvimento de aplicações."
+    >
+
+    <title>
+        Leandro Augusto Ferreira | Dados & Desenvolvimento
+    </title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* ============================================================
+           VARIÁVEIS DE COR E ESTILO
+           ============================================================ */
+
+        :root {
+            --bg-dark: #030a16;
+            --bg-card: rgba(6, 17, 36, 0.75);
+            --bg-card-hover: rgba(12, 28, 56, 0.85);
+            --primary-blue: #00a8e8;
+            --cyan-neon: #00e5ff;
+            --purple-neon: #a855f7;
+            --light-blue: #45b5ff;
+            --accent-glow: rgba(0, 229, 255, 0.15);
+            --text-title: #ffffff;
+            --text-body: #94a3b8;
+            --text-light: #e2e8f0;
+            --border-subtle: rgba(255, 255, 255, 0.1);
+            --border-active: rgba(0, 229, 255, 0.45);
+            --green-status: #62e0a5;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+
+        /* ============================================================
+           RESET & ESTRUTURA COM FUNDO FIXO BASE
+           ============================================================ */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+
+            font-family:
+                'Inter',
+                sans-serif;
+
+            /* Fundo principal fixo de base */
+            background-image: 
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.65) 0%,
+                    rgba(3, 10, 22, 0.85) 100%
+                ),
+                url('img/fundo-tech.jpeg');
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+            color: var(--text-light);
+
+            line-height: 1.6;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        .container {
+            width:
+                min(
+                    1180px,
+                    calc(100% - 40px)
+                );
+
+            margin: 0 auto;
+        }
+
+
+        /* ============================================================
+           HERO SECTION (CAPA)
+           ============================================================ */
+
+        .hero-wrapper {
+            padding: 40px 0 30px;
+
+            position: relative;
+        }
+
+
+        .hero {
+            min-height: auto;
+
+            padding: 20px 0;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.25fr)
+                minmax(360px, 0.75fr);
+
+            align-items: center;
+
+            gap: 40px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .hero-text {
+            max-width: 720px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+
+        .hero-label {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 5px 14px;
+
+            background: rgba(0, 229, 255, 0.12);
+
+            border: 1px solid var(--border-active);
+
+            border-radius: 999px;
+
+            color: var(--cyan-neon);
+
+            font-size: 0.7rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 14px;
+
+            backdrop-filter: blur(8px);
+
+            box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+        }
+
+
+        .hero h1 {
+            margin: 0 0 8px;
+
+            font-size:
+                clamp(
+                    2rem,
+                    3.8vw,
+                    3.5rem
+                );
+
+            line-height: 1.08;
+
+            letter-spacing: -1.5px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            color: var(--text-title);
+
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+
+        .hero h2 {
+            margin: 0 0 12px;
+
+            font-size: 1.25rem;
+
+            font-weight: 700;
+
+            color: var(--cyan-neon);
+
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+
+        .hero-description {
+            margin: 0 0 18px;
+
+            color: #f1f5f9;
+
+            font-size: 0.95rem;
+
+            line-height: 1.65;
+
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+        }
+
+
+        .hero-stack {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 16px;
+        }
+
+
+        .hero-stack span {
+            padding: 5px 12px;
+
+            background: rgba(3, 10, 22, 0.85);
+
+            backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(0, 229, 255, 0.3);
+
+            border-radius: 999px;
+
+            font-size: 0.82rem;
+
+            color: #e2e8f0;
+
+            font-weight: 500;
+        }
+
+
+        .availability {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #e2e8f0;
+
+            font-size: 0.85rem;
+
+            font-weight: 500;
+
+            margin-bottom: 22px;
+
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+        }
+
+
+        .status-dot {
+            width: 10px;
+
+            height: 10px;
+
+            background-color: var(--green-status);
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 10px var(--green-status);
+        }
+
+
+        .hero-actions {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 160px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+
+            backdrop-filter: blur(8px);
+        }
+
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0077b6 0%, #00a8e8 100%);
+
+            color: #ffffff;
+
+            border: 1px solid var(--cyan-neon);
+
+            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.35);
+        }
+
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0096c7 0%, #00e5ff 100%);
+
+            color: #030a16;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 25px rgba(0, 229, 255, 0.6);
+        }
+
+
+        .btn-secondary {
+            background: rgba(3, 10, 22, 0.75);
+
+            color: #ffffff;
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+
+            border-color: #ffffff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* Moldura de Perfil */
+        .profile-wrapper {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .profile-border-outer {
+            position: relative;
+
+            width: 380px;
+
+            height: 380px;
+
+            border-radius: 50%;
+
+            padding: 8px;
+
+            background: linear-gradient(135deg, var(--cyan-neon) 0%, var(--purple-neon) 100%);
+
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.35), 0 0 20px rgba(0, 229, 255, 0.25);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .profile-border-inner {
+            width: 100%;
+
+            height: 100%;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            background-color: #030a16;
+
+            border: 4px solid #030a16;
+        }
+
+
+        .profile-pic {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center center;
+        }
+
+
+        /* ============================================================
+           DIVISOR GRADIENTE FINO ENTRE CONTAINERS
+           ============================================================ */
+
+        .section-divider {
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 80%;
+
+            max-width: 1000px;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(0, 229, 255, 0.5) 30%,
+                rgba(168, 85, 247, 0.5) 70%,
+                transparent 100%
+            );
+
+            box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+        }
+
+
+        /* ============================================================
+           SEÇÕES FLUTUANTES
+           ============================================================ */
+
+        .section {
+            padding: 80px 0;
+
+            position: relative;
+        }
+
+
+        .section-alt {
+            position: relative;
+
+            background-image: 
+                linear-gradient(
+                    180deg,
+                    rgba(3, 10, 22, 0.7) 0%,
+                    rgba(3, 10, 22, 0.4) 50%,
+                    rgba(3, 10, 22, 0.7) 100%
+                ),
+                url('img/fundo-tech-2.jpeg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        .section-label {
+            margin: 0 0 8px;
+
+            color: var(--cyan-neon);
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-title {
+            margin: 0;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    4vw,
+                    2.6rem
+                );
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            color: var(--text-title);
+        }
+
+
+        .section-description {
+            max-width: 720px;
+
+            margin: 14px 0 40px;
+
+            color: var(--text-body);
+
+            font-size: 1rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* ============================================================
+           PROJETOS PRINCIPAIS (FEATURED GRID)
+           ============================================================ */
+
+        .featured-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+
+        .featured-card {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 520px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-lg);
+
+            transition: var(--transition);
+        }
+
+
+        .featured-card:hover {
+            transform: translateY(-6px);
+
+            background: var(--bg-card-hover);
+
+            border-color: var(--border-active);
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 229, 255, 0.2);
+        }
+
+
+        .featured-image {
+            height: 270px;
+
+            overflow: hidden;
+
+            background: #030a16;
+
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+
+        .featured-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+        }
+
+
+        .featured-card:hover .featured-image img {
+            transform: scale(1.03);
+        }
+
+
+        /* Moldura interna especial para exibir a aplicação sem cortes */
+        .featured-image-contain {
+            padding: 14px;
+
+            background: rgba(3, 10, 22, 0.95);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .featured-image-contain img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain !important;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .featured-content {
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 30px;
+        }
+
+
+        .project-type {
+            width: fit-content;
+
+            margin-bottom: 14px;
+
+            padding: 5px 12px;
+
+            color: var(--cyan-neon);
+
+            background: rgba(0, 229, 255, 0.1);
+
+            border: 1px solid var(--border-active);
+
+            border-radius: 999px;
+
+            font-size: 0.68rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        .featured-content h3 {
+            margin: 0 0 12px;
+
+            font-size: 1.45rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
+        }
+
+
+        .featured-content p {
+            margin: 0;
+
+            color: var(--text-body);
+
+            font-size: 0.92rem;
+
+            line-height: 1.7;
+        }
+
+
+        .project-tech {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 20px;
+        }
+
+
+        .project-tech span {
+            padding: 5px 10px;
+
+            color: #cbd5e1;
+
+            background: rgba(3, 10, 22, 0.8);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-sm);
+
+            font-size: 0.72rem;
+        }
+
+
+        .project-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            margin-top: auto;
+
+            padding-top: 24px;
+
+            color: var(--cyan-neon);
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.8px;
+
+            transition: var(--transition);
+        }
+
+
+        .featured-card:hover .project-link {
+            color: #ffffff;
+        }
+
+
+        /* ============================================================
+           MÉTODO (PROCESSO)
+           ============================================================ */
+
+        .process-wrapper {
+            position: relative;
+
+            margin-top: 40px;
+        }
+
+
+        .process-line {
+            position: absolute;
+
+            top: 42px;
+
+            left: 10%;
+
+            right: 10%;
+
+            height: 2px;
+
+            background: linear-gradient(
+                90deg,
+                rgba(0, 229, 255, 0.1),
+                rgba(168, 85, 247, 0.6),
+                rgba(0, 229, 255, 0.1)
+            );
+        }
+
+
+        .process-grid {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .process-card {
+            position: relative;
+
+            padding: 30px 24px;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
+        }
+
+
+        .process-card:hover {
+            transform: translateY(-5px);
+
+            background: var(--bg-card-hover);
+
+            border-color: var(--border-active);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 18px rgba(168, 85, 247, 0.2);
+        }
+
+
+        .process-number {
+            position: relative;
+
+            z-index: 2;
+
+            width: 50px;
+
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 24px;
+
+            color: var(--cyan-neon);
+
+            background: #030a16;
+
+            border: 1px solid var(--border-active);
+
+            border-radius: 50%;
+
+            font-size: 1.1rem;
+
+            font-weight: 800;
+
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
+        }
+
+
+        .process-card h3 {
+            margin: 0 0 10px;
+
+            font-size: 1.05rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
+        }
+
+
+        .process-card p {
+            margin: 0;
+
+            color: var(--text-body);
+
+            font-size: 0.88rem;
+
+            line-height: 1.65;
+        }
+
+
+        /* ============================================================
+           DATA & ANALYTICS GRID
+           ============================================================ */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+
+        .project-card {
+            height: 100%;
+
+            overflow: hidden;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-6px);
+
+            background: var(--bg-card-hover);
+
+            border-color: var(--border-active);
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+
+
+        .project-card img {
+            width: 100%;
+
+            height: 210px;
+
+            object-fit: cover;
+
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+
+        .project-card-content {
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 24px;
+
+            height: calc(100% - 210px);
+        }
+
+
+        .project-card h4 {
+            margin: 0 0 10px;
+
+            font-size: 1.1rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
+        }
+
+
+        .project-card p {
+            margin: 0;
+
+            color: var(--text-body);
+
+            font-size: 0.88rem;
+
+            line-height: 1.65;
+        }
+
+
+        .project-card span {
+            display: inline-block;
+
+            margin-top: auto;
+
+            padding-top: 20px;
+
+            color: var(--cyan-neon);
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* ============================================================
+           DESENVOLVIMENTO
+           ============================================================ */
+
+        .development-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 28px;
+        }
+
+
+        .development-card {
+            min-height: 500px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            overflow: hidden;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-lg);
+
+            transition: var(--transition);
+        }
+
+
+        a.development-card:hover {
+            transform: translateY(-6px);
+
+            background: var(--bg-card-hover);
+
+            border-color: var(--border-active);
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+
+
+        .development-image {
+            height: 260px;
+
+            overflow: hidden;
+
+            background: #030a16;
+
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+
+        .development-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .development-content {
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 28px;
+        }
+
+
+        .development-content h3 {
+            margin: 0 0 12px;
+
+            font-size: 1.45rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
+        }
+
+
+        .development-content p {
+            margin: 0;
+
+            color: var(--text-body);
+
+            font-size: 0.92rem;
+
+            line-height: 1.75;
+        }
+
+
+        /* ============================================================
+           FUTURO PROJETO
+           ============================================================ */
+
+        .future-card {
+            position: relative;
+
+            min-height: 500px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            padding: 40px;
+
+            text-align: center;
+
+            background: rgba(3, 10, 22, 0.5);
+
+            border: 1px dashed rgba(168, 85, 247, 0.4);
+
+            border-radius: var(--radius-lg);
+
+            backdrop-filter: blur(12px);
+        }
+
+
+        .future-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 400px;
+        }
+
+
+        .future-icon {
+            width: 64px;
+
+            height: 64px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            color: var(--purple-neon);
+
+            background: rgba(168, 85, 247, 0.12);
+
+            border: 1px solid rgba(168, 85, 247, 0.3);
+
+            border-radius: var(--radius-md);
+
+            font-size: 1.8rem;
+        }
+
+
+        .future-status {
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            padding: 5px 12px;
+
+            color: var(--green-status);
+
+            background: rgba(98, 224, 165, 0.08);
+
+            border: 1px solid rgba(98, 224, 165, 0.25);
+
+            border-radius: 999px;
+
+            font-size: 0.68rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        .future-card h3 {
+            margin: 0 0 12px;
+
+            font-size: 1.4rem;
+
+            font-weight: 700;
+
+            color: var(--text-title);
+        }
+
+
+        .future-card p {
+            margin: 0;
+
+            color: var(--text-body);
+
+            font-size: 0.9rem;
+
+            line-height: 1.7;
+        }
+
+
+        .future-note {
+            display: block;
+
+            margin-top: 24px;
+
+            color: #64748b;
+
+            font-size: 0.75rem;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ============================================================
+           STACK GRID
+           ============================================================ */
+
+        .stack-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .stack-card {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 28px;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-subtle);
+
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
+        }
+
+
+        .stack-card:hover {
+            transform: translateY(-5px);
+
+            background: var(--bg-card-hover);
+
+            border-color: var(--border-active);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 229, 255, 0.15);
+        }
+
+
+        .stack-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 3px;
+
+            background: linear-gradient(90deg, var(--cyan-neon), var(--purple-neon));
+        }
+
+
+        .stack-card h3 {
+            margin: 0 0 20px;
+
+            color: var(--cyan-neon);
+
+            font-size: 0.82rem;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.2px;
+        }
+
+
+        .stack-card ul {
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+        }
+
+
+        .stack-card li {
+            padding: 9px 0;
+
+            color: #cbd5e1;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+            font-size: 0.88rem;
+        }
+
+
+        .stack-card li:last-child {
+            border-bottom: none;
+        }
+
+
+        /* ============================================================
+           SOBRE MIM
+           ============================================================ */
+
+        .about {
+            display: grid;
+
+            grid-template-columns: 0.7fr 1.3fr;
+
+            gap: 60px;
+
+            align-items: start;
+        }
+
+
+        .about-text {
+            padding-left: 30px;
+
+            border-left: 2px solid var(--cyan-neon);
+        }
+
+
+        .about-text p {
+            margin: 0 0 18px;
+
+            color: var(--text-body);
+
+            font-size: 1rem;
+
+            line-height: 1.85;
+        }
+
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* ============================================================
+           CONTATO
+           ============================================================ */
+
+        .contact-section {
+            padding: 100px 0;
+
+            text-align: center;
+        }
+
+
+        .contact-box {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 60px 30px;
+
+            background: var(--bg-card);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid var(--border-active);
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.2);
+        }
+
+
+        .contact-box::before {
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            top: -250px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.25), rgba(168, 85, 247, 0.25));
+
+            border-radius: 50%;
+
+            filter: blur(50px);
+        }
+
+
+        .contact-box > * {
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .contact-box h2 {
+            margin: 0 0 14px;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    4vw,
+                    2.6rem
+                );
+
+            font-weight: 800;
+
+            color: var(--text-title);
+        }
+
+
+        .contact-box p {
+            max-width: 600px;
+
+            margin: 0 auto 30px;
+
+            color: var(--text-body);
+
+            font-size: 1rem;
+        }
+
+
+        .contact-actions {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+
+        footer {
+            padding: 40px 0;
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 0.8rem;
+
+            border-top: 1px solid var(--border-subtle);
+        }
+
+
+        footer strong {
+            color: var(--text-title);
+        }
+
+
+        /* ============================================================
+           RESPONSIVIDADE
+           ============================================================ */
+
+        @media (max-width: 950px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .hero-text {
+                align-items: center;
+            }
+
+
+            .featured-grid,
+            .development-grid,
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+
+            .process-grid,
+            .stack-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .process-line {
+                display: none;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .hero {
+                gap: 25px;
+            }
+
+
+            .hero-text {
+                padding: 10px 0;
+            }
+
+
+            .hero-stack,
+            .hero-actions {
+                justify-content: center;
+            }
+
+
+            .profile-border-outer {
+                width: 300px;
+
+                height: 300px;
+            }
+
+
+            .projects-grid,
+            .process-grid,
+            .stack-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .section {
+                padding: 60px 0;
+            }
+
+
+            .about-text {
+                padding-left: 0;
+
+                border-left: none;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .profile-border-outer {
+                width: 260px;
+
+                height: 260px;
+            }
+
+
+            .contact-actions {
+                flex-direction: column;
+            }
+
+
+            .contact-actions .btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
 <!-- ============================================================
-     PROJETOS PRINCIPAIS (INVERTIDO & AJUSTADO)
+     HERO SECTION
+     ============================================================ -->
+
+<div class="hero-wrapper">
+
+    <div class="container">
+
+        <header class="hero">
+
+            <div class="hero-text">
+
+                <span class="hero-label">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <path d="M12 19V5M5 12l7-7 7 7"/>
+                    </svg>
+                    Dados & Desenvolvimento
+                </span>
+
+                <h1>
+                    Leandro Augusto Ferreira
+                </h1>
+
+                <h2>
+                    Engenharia de Dados, Analytics e Soluções em Python.
+                </h2>
+
+                <p class="hero-description">
+                    Especialista na transformação de desafios operacionais em inteligência estratégica. Desenvolvo dashboards de alta performance, automações de processos e aplicações focadas na otimização da tomada de decisão.
+                </p>
+
+
+                <div class="hero-stack">
+
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Flask</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    Disponível para projetos e oportunidades em Dados
+                </div>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#projetos"
+                        class="btn btn-primary"
+                    >
+                        Ver Projetos ↓
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/leandro-datainsights/"
+                        class="btn btn-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-wrapper">
+
+                <div class="profile-border-outer">
+
+                    <div class="profile-border-inner">
+
+                        <img
+                            src="img/foto.png"
+                            class="profile-pic"
+                            alt="Leandro Augusto Ferreira"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<!-- ============================================================
+     PROJETOS PRINCIPAIS (INVERTIDO, MOCKUP SEM CORTE E DIVISOR)
      ============================================================ -->
 
 <section
@@ -25,7 +1719,7 @@
         <div class="featured-grid">
 
 
-            <!-- 1. DESENVOLVIMENTO (AGORA À ESQUERDA) -->
+            <!-- 1. DESENVOLVIMENTO (À ESQUERDA) -->
 
             <a
                 href="python.html"
@@ -77,7 +1771,7 @@
             </a>
 
 
-            <!-- 2. DATA & ANALYTICS (AGORA À DIREITA) -->
+            <!-- 2. DATA & ANALYTICS (À DIREITA) -->
 
             <article class="featured-card">
 
@@ -134,3 +1828,564 @@
     </div>
 
 </section>
+
+
+<!-- ============================================================
+     MÉTODO (COM SEGUNDO FUNDO DISSOLVIDO SUAVEMENTE)
+     ============================================================ -->
+
+<section class="section section-alt">
+
+    <div class="container">
+
+        <p class="section-label">
+            Método
+        </p>
+
+        <h2 class="section-title">
+            Como transformo problemas em soluções
+        </h2>
+
+        <p class="section-description">
+            Metodologia focada na compreensão do negócio antes da escolha das ferramentas tecnológicas.
+        </p>
+
+
+        <div class="process-wrapper">
+
+            <div class="process-line"></div>
+
+
+            <div class="process-grid">
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Entendimento
+                    </h3>
+
+                    <p>
+                        Mapeamento das dores operacionais, necessidades dos usuários e objetivos estratégicos do negócio.
+                    </p>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Arquitetura
+                    </h3>
+
+                    <p>
+                        Modelagem de dados, definição de métricas cruciais (KPIs) e estruturação de dados confiáveis.
+                    </p>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Construção
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de visuais interativos, rotinas de automação e códigos de alto desempenho.
+                    </p>
+
+                </article>
+
+
+                <article class="process-card">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Entrega de Valor
+                    </h3>
+
+                    <p>
+                        Disponibilização de ferramentas intuitivas que geram impacto real e aceleram a tomada de decisão.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     DATA & ANALYTICS
+     ============================================================ -->
+
+<section class="section">
+
+    <div class="container">
+
+        <p class="section-label">
+            Data & Analytics
+        </p>
+
+        <h2 class="section-title">
+            Inteligência aplicada ao negócio
+        </h2>
+
+        <p class="section-description">
+            Soluções analíticas desenvolvidas para otimizar operações financeiras, logísticas e comerciais através da visualização de dados.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- FINANCEIRO -->
+
+            <a href="financeiro.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/financeiro.png"
+                        alt="Dashboard de Gestão Financeira"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Gestão Financeira
+                        </h4>
+
+                        <p>
+                            Análise de margem de lucro, estrutura de custos, fluxo de caixa e ponto de equilíbrio.
+                        </p>
+
+                        <span>
+                            VER DASHBOARD →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <!-- LOGÍSTICA -->
+
+            <a href="transporte.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/transporte.png"
+                        alt="Dashboard de Logística e Frota"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Logística e Frota
+                        </h4>
+
+                        <p>
+                            Monitoramento de capacidade, eficiência de entregas e otimização de rotas e custos.
+                        </p>
+
+                        <span>
+                            VER DASHBOARD →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <!-- COMERCIAL -->
+
+            <a href="venda.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/venda.png"
+                        alt="Dashboard de Análise Comercial"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Análise Comercial
+                        </h4>
+
+                        <p>
+                            Acompanhamento de receita, ticket médio, cobertura regional e identificação de tendências.
+                        </p>
+
+                        <span>
+                            VER DASHBOARD →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     DESENVOLVIMENTO
+     ============================================================ -->
+
+<section class="section section-alt">
+
+    <div class="container">
+
+        <p class="section-label">
+            Desenvolvimento & Automação
+        </p>
+
+        <h2 class="section-title">
+            Aplicações e Automações
+        </h2>
+
+        <p class="section-description">
+            Criação de software, scripts de automação e sistemas sob medida desenvolvidos com foco na solução de problemas do mundo real.
+        </p>
+
+
+        <div class="development-grid">
+
+
+            <!-- TRANSCRIÇÃO EM TEXTO -->
+
+            <a
+                href="python.html"
+                class="development-card"
+            >
+
+                <div class="development-image">
+
+                    <img
+                        src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                        alt="Interface da aplicação Transcrição em Texto"
+                    >
+
+                </div>
+
+
+                <div class="development-content">
+
+                    <span class="project-type">
+                        Python • Full Stack
+                    </span>
+
+                    <h3>
+                        Transcrição em Texto
+                    </h3>
+
+                    <p>
+                        Solução integrada com backend Flask e processamento neural, equipada com fila de execução e geração automática de relatórios.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Whisper</span>
+                        <span>FFmpeg</span>
+
+                    </div>
+
+
+                    <span class="project-link">
+                        VER PROJETO COMPLETO →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- PRÓXIMO PROJETO -->
+
+            <article class="future-card">
+
+                <div class="future-content">
+
+                    <div class="future-icon">
+                        +
+                    </div>
+
+
+                    <span class="future-status">
+                        Próximo projeto
+                    </span>
+
+
+                    <h3>
+                        Nova solução em desenvolvimento
+                    </h3>
+
+
+                    <p>
+                        Projeto em fase de construção focado em arquitetura de dados e APIs para integração de sistemas.
+                    </p>
+
+
+                    <span class="future-note">
+                        EM BREVE
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     STACK
+     ============================================================ -->
+
+<section class="section">
+
+    <div class="container">
+
+        <p class="section-label">
+            Tecnologias
+        </p>
+
+        <h2 class="section-title">
+            Stack Tecnológica
+        </h2>
+
+        <p class="section-description">
+            Principais linguagens, frameworks e ferramentas aplicadas no ecossistema de desenvolvimento e análise.
+        </p>
+
+
+        <div class="stack-grid">
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Data & Analytics
+                </h3>
+
+                <ul>
+                    <li>Power BI</li>
+                    <li>Excel Avançado</li>
+                    <li>SQL</li>
+                    <li>Pandas</li>
+                    <li>Data Analysis</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Desenvolvimento
+                </h3>
+
+                <ul>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Banco de Dados
+                </h3>
+
+                <ul>
+                    <li>SQL Server</li>
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Ferramentas & Automação
+                </h3>
+
+                <ul>
+                    <li>Git / GitHub</li>
+                    <li>VS Code</li>
+                    <li>Whisper AI</li>
+                    <li>FFmpeg</li>
+                    <li>Apps Script</li>
+                </ul>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     SOBRE MIM
+     ============================================================ -->
+
+<section class="section section-alt">
+
+    <div class="container">
+
+        <div class="about">
+
+            <div>
+
+                <p class="section-label">
+                    Sobre mim
+                </p>
+
+                <h2 class="section-title">
+                    Negócio, dados e tecnologia
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    Minha trajetória profissional combina experiência prática em otimização de processos corporativos com uma especialização contínua na engenharia e análise de dados.
+                </p>
+
+                <p>
+                    Essa visão integrada me permite abordar o desenvolvimento técnico não apenas pelo código, mas pelo valor de negócio que a tecnologia gera para as decisões estratégicas.
+                </p>
+
+                <p>
+                    Desenvolvo projetos que integram o ecossistema de Business Intelligence, modelagem de banco de dados e aplicações em Python, entregando inteligência e automação ponta a ponta.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     CONTATO
+     ============================================================ -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <p class="section-label">
+                Contato
+            </p>
+
+            <h2>
+                Vamos construir algo juntos?
+            </h2>
+
+            <p>
+                Aberto a conexões profissionais e oportunidades nas áreas de Análise de Dados, BI e Desenvolvimento.
+            </p>
+
+
+            <div class="contact-actions">
+
+                <a
+                    href="mailto:leandroguto1@gmail.com"
+                    class="btn btn-primary"
+                >
+                    Enviar e-mail
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/leandro-datainsights/"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    Desenvolvido por
+    <strong>
+        Leandro Augusto Ferreira
+    </strong>
+
+</footer>
+
+
+</body>
+
+</html>
