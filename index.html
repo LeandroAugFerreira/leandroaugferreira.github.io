@@ -32,6 +32,7 @@
 
         :root {
             --bg-dark: #030a16;
+            --bg-dark-alt: #051022;
             --bg-card: rgba(6, 17, 36, 0.75);
             --bg-card-hover: rgba(12, 28, 56, 0.85);
             --primary-blue: #00a8e8;
@@ -73,8 +74,7 @@
                 'Inter',
                 sans-serif;
 
-            background:
-                radial-gradient(circle at 80% 10%, #0c182e 0%, #030a16 70%);
+            background: var(--bg-dark);
 
             color:
                 var(--text-light);
@@ -125,7 +125,7 @@
                 linear-gradient(
                     180deg,
                     rgba(3, 10, 22, 0.35) 0%,
-                    rgba(3, 10, 22, 0.65) 100%
+                    rgba(3, 10, 22, 0.95) 100%
                 ),
                 url('img/fundo-tech.jpeg');
 
@@ -386,7 +386,7 @@
         }
 
 
-        /* Moldura de Perfil com Gradiente Azul/Roxo do Fundo */
+        /* Moldura de Perfil */
         .profile-wrapper {
             width: 100%;
 
@@ -450,16 +450,21 @@
 
 
         /* ============================================================
-           SEÇÕES GERAIS COM TONS DA IMAGEM
+           SEÇÕES GERAIS COM RITMO VISUAL
            ============================================================ */
 
         .section {
-            padding: 80px 0;
+            padding: 85px 0;
+            position: relative;
         }
 
 
-        .section + .section {
+        .section-alt {
+            background: linear-gradient(180deg, rgba(8, 20, 42, 0.5) 0%, rgba(3, 10, 22, 0.8) 100%);
+
             border-top: 1px solid var(--border-subtle);
+
+            border-bottom: 1px solid var(--border-subtle);
         }
 
 
@@ -740,7 +745,7 @@
 
             padding: 30px 24px;
 
-            background: var(--bg-card);
+            background: rgba(6, 17, 36, 0.85);
 
             backdrop-filter: blur(12px);
 
@@ -1159,7 +1164,7 @@
 
             padding: 28px;
 
-            background: var(--bg-card);
+            background: rgba(8, 20, 42, 0.6);
 
             backdrop-filter: blur(12px);
 
@@ -1751,7 +1756,7 @@
      MÉTODO
      ============================================================ -->
 
-<section class="section">
+<section class="section section-alt">
 
     <div class="container">
 
@@ -1982,7 +1987,7 @@
      DESENVOLVIMENTO
      ============================================================ -->
 
-<section class="section">
+<section class="section section-alt">
 
     <div class="container">
 
@@ -2197,7 +2202,7 @@
      SOBRE MIM
      ============================================================ -->
 
-<section class="section">
+<section class="section section-alt">
 
     <div class="container">
 
