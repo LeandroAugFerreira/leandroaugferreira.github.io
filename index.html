@@ -3,498 +3,1368 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>
-    Portfólio - Leandro Augusto Ferreira
-</title>
+    <meta
+        name="description"
+        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python e Desenvolvimento de Aplicações."
+    >
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
->
+    <title>
+        Leandro Augusto Ferreira | Dados & Desenvolvimento
+    </title>
 
-<style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-:root {
-    --dark-blue: #0a192f;
-    --gradient-light: #1e3a5f;
-    --light-blue: #00a8e8;
-    --card-bg: #112240;
-    --text-white: #e6f1ff;
-    --text-gray: #8892b0;
-}
+    <style>
 
+        /* ============================================================
+           VARIÁVEIS
+           ============================================================ */
 
-body {
-    margin: 0;
+        :root {
+            --dark-blue: #07172b;
+            --dark-blue-2: #0a192f;
+            --gradient-light: #1e3a5f;
+            --light-blue: #00a8e8;
+            --light-blue-2: #45b5ff;
+            --card-bg: #112240;
+            --card-bg-2: #0d2037;
+            --text-white: #e6f1ff;
+            --text-gray: #93a4bd;
+            --border: rgba(255, 255, 255, 0.08);
+            --green: #62e0a5;
+        }
 
-    font-family:
-        'Inter',
-        sans-serif;
 
-    background-color:
-        var(--dark-blue);
+        /* ============================================================
+           RESET
+           ============================================================ */
 
-    color:
-        var(--text-white);
-}
+        * {
+            box-sizing: border-box;
+        }
 
 
-a {
-    text-decoration:
-        none;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    color:
-        inherit;
-}
 
+        body {
+            margin: 0;
 
-/* ============================================================
-   HERO
-   ============================================================ */
+            font-family:
+                'Inter',
+                sans-serif;
 
-.hero-wrapper {
-    background:
-        radial-gradient(
-            circle at 70% 50%,
-            var(--gradient-light),
-            var(--dark-blue)
-        );
-}
+            background:
+                var(--dark-blue);
 
+            color:
+                var(--text-white);
 
-.hero-wrapper .container {
-    padding:
-        20px 20px;
-}
+            line-height:
+                1.6;
+        }
 
 
-.container {
-    max-width:
-        1200px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    width:
-        95%;
 
-    margin:
-        auto;
+        img {
+            display: block;
+            max-width: 100%;
+        }
 
-    padding:
-        20px 20px;
-}
 
+        .container {
+            width:
+                min(
+                    1180px,
+                    calc(100% - 40px)
+                );
 
-header {
-    display:
-        flex;
+            margin:
+                0 auto;
+        }
 
-    align-items:
-        flex-end;
 
-    justify-content:
-        space-between;
+        /* ============================================================
+           HERO
+           ============================================================ */
 
-    gap:
-        40px;
-}
+        .hero-wrapper {
+            position: relative;
 
+            overflow: hidden;
 
-.hero-text {
-    display:
-        flex;
+            background:
+                radial-gradient(
+                    circle at 80% 35%,
+                    #173d63 0%,
+                    #0a2039 30%,
+                    #07172b 70%
+                );
 
-    flex-direction:
-        column;
+            border-bottom:
+                1px solid var(--border);
+        }
 
-    gap:
-        12px;
 
-    max-width:
-        600px;
-}
+        .hero-wrapper::before {
+            content: "";
 
+            position: absolute;
 
-.hero-text h1 {
-    font-size:
-        clamp(
-            1.8rem,
-            4vw,
-            2.8rem
-        );
+            width: 500px;
+            height: 500px;
 
-    margin:
-        0;
-}
+            top: -260px;
+            left: -180px;
 
+            background:
+                rgba(0, 168, 232, 0.08);
 
-.hero-text h2 {
-    color:
-        var(--light-blue);
+            border-radius:
+                50%;
 
-    font-weight:
-        400;
-}
+            filter:
+                blur(20px);
+        }
 
 
-.hero-text p {
-    color:
-        var(--text-gray);
+        .hero {
+            min-height: 640px;
 
-    margin:
-        0;
-}
+            display: flex;
 
+            align-items: center;
 
-.btn-linkedin {
-    background:
-        linear-gradient(
-            135deg,
-            #00a8e8,
-            #0077b5
-        );
+            justify-content: space-between;
 
-    padding:
-        12px 22px;
+            gap: 70px;
 
-    color:
-        white;
+            position: relative;
+        }
 
-    border-radius:
-        6px;
 
-    font-weight:
-        600;
+        .hero-text {
+            max-width: 720px;
 
-    width:
-        fit-content;
+            padding:
+                80px 0;
+        }
 
-    margin-top:
-        10px;
 
-    transition:
-        0.3s;
-}
+        .hero-label {
+            display: inline-flex;
 
+            padding:
+                7px 12px;
 
-.btn-linkedin:hover {
-    transform:
-        translateY(-2px);
+            margin-bottom:
+                20px;
 
-    box-shadow:
-        0 10px 25px
-        rgba(0,168,232,0.4);
-}
+            color:
+                var(--light-blue-2);
 
+            background:
+                rgba(0, 168, 232, 0.08);
 
-.profile-pic {
-    height:
-        480px;
-}
+            border:
+                1px solid rgba(0, 168, 232, 0.25);
 
+            border-radius:
+                999px;
 
-/* ============================================================
-   TÍTULOS
-   ============================================================ */
+            font-size:
+                0.75rem;
 
-.section-title {
-    border-bottom:
-        2px solid
-        var(--light-blue);
+            font-weight:
+                700;
 
-    display:
-        inline-block;
+            letter-spacing:
+                1.5px;
 
-    margin-top:
-        80px;
+            text-transform:
+                uppercase;
+        }
 
-    margin-bottom:
-        30px;
-}
 
+        .hero h1 {
+            margin:
+                0 0 8px;
 
-/* ============================================================
-   CASE PRINCIPAL
-   ============================================================ */
+            font-size:
+                clamp(
+                    2.4rem,
+                    5vw,
+                    4.4rem
+                );
 
-.case-container {
-    display:
-        grid;
+            line-height:
+                1.05;
 
-    grid-template-columns:
-        1fr 1fr;
+            letter-spacing:
+                -2px;
+        }
 
-    gap:
-        30px;
 
-    background:
-        var(--card-bg);
+        .hero h2 {
+            margin:
+                0 0 24px;
 
-    padding:
-        30px;
+            color:
+                var(--light-blue);
 
-    border-radius:
-        12px;
+            font-size:
+                clamp(
+                    1.3rem,
+                    2.5vw,
+                    2rem
+                );
 
-    align-items:
-        stretch;
-}
+            font-weight:
+                600;
+        }
 
 
-.case-grid {
-    display:
-        grid;
+        .hero-description {
+            max-width:
+                670px;
 
-    grid-template-columns:
-        1fr 1fr;
+            margin:
+                0;
 
-    gap:
-        15px;
-}
+            color:
+                #aec0d8;
 
+            font-size:
+                1.08rem;
 
-.case-item {
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.03
-        );
+            line-height:
+                1.8;
+        }
 
-    padding:
-        20px;
 
-    border-radius:
-        8px;
-}
+        .hero-stack {
+            display:
+                flex;
 
+            flex-wrap:
+                wrap;
 
-.case-item strong {
-    display:
-        block;
+            gap:
+                8px;
 
-    color:
-        var(--light-blue);
+            margin-top:
+                25px;
+        }
 
-    font-size:
-        0.75rem;
-}
 
+        .hero-stack span {
+            padding:
+                7px 11px;
 
-/* ============================================================
-   IFRAME
-   ============================================================ */
+            color:
+                #b9ddff;
 
-.case-frame {
-    height:
-        100%;
-}
+            background:
+                rgba(17, 34, 64, 0.8);
 
+            border:
+                1px solid #214b70;
 
-.case-frame iframe {
-    width:
-        100%;
+            border-radius:
+                6px;
 
-    height:
-        100%;
+            font-size:
+                0.76rem;
 
-    min-height:
-        420px;
+            font-weight:
+                600;
+        }
 
-    border:
-        none;
 
-    border-radius:
-        10px;
+        .availability {
+            margin-top:
+                25px;
 
-    display:
-        block;
-}
+            color:
+                var(--green);
 
+            font-size:
+                0.85rem;
 
-/* ============================================================
-   PROJETOS
-   ============================================================ */
+            font-weight:
+                600;
+        }
 
-.projects-grid {
-    display:
-        grid;
 
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(
-                320px,
-                1fr
-            )
-        );
+        .availability::before {
+            content: "●";
 
-    gap:
-        30px;
-}
+            margin-right:
+                8px;
+        }
 
 
-.project-card {
-    background:
-        linear-gradient(
-            145deg,
-            #112240,
-            #0f1a33
-        );
+        .hero-actions {
+            display:
+                flex;
 
-    padding:
-        20px;
+            flex-wrap:
+                wrap;
 
-    border-radius:
-        14px;
+            gap:
+                12px;
 
-    transition:
-        0.3s;
+            margin-top:
+                28px;
+        }
 
-    border:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.05
-        );
-}
 
+        .btn {
+            min-height:
+                46px;
 
-.project-card:hover {
-    transform:
-        translateY(-10px);
+            display:
+                inline-flex;
 
-    box-shadow:
-        0 25px 60px
-        rgba(
-            0,
-            0,
-            0,
-            0.7
-        );
-}
+            align-items:
+                center;
 
+            justify-content:
+                center;
 
-.project-card img {
-    width:
-        100%;
+            padding:
+                0 20px;
 
-    border-radius:
-        10px;
+            border-radius:
+                7px;
 
-    margin-bottom:
-        15px;
-}
+            font-size:
+                0.85rem;
 
+            font-weight:
+                700;
 
-.project-card h4 {
-    margin:
-        10px 0 5px;
+            transition:
+                0.25s;
+        }
 
-    font-weight:
-        700;
-}
 
+        .btn-primary {
+            color:
+                #ffffff;
 
-.project-card p {
-    color:
-        var(--text-gray);
-}
+            background:
+                linear-gradient(
+                    135deg,
+                    #00a8e8,
+                    #087cff
+                );
 
+            border:
+                1px solid #3396ff;
+        }
 
-.project-card span {
-    color:
-        var(--light-blue);
 
-    font-weight:
-        700;
+        .btn-secondary {
+            color:
+                #d5e9fb;
 
-    font-size:
-        0.8rem;
-}
+            background:
+                rgba(17, 34, 64, 0.8);
 
+            border:
+                1px solid #294a6c;
+        }
 
-/* ============================================================
-   SKILLS
-   ============================================================ */
 
-.skills-bar {
-    display:
-        flex;
+        .btn:hover {
+            transform:
+                translateY(-3px);
 
-    flex-wrap:
-        wrap;
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.3);
+        }
 
-    gap:
-        15px;
 
-    background:
-        var(--card-bg);
+        .profile-wrapper {
+            position: relative;
 
-    padding:
-        20px;
+            align-self:
+                flex-end;
+        }
 
-    border-radius:
-        10px;
-}
 
+        .profile-pic {
+            height:
+                540px;
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+            max-width:
+                430px;
 
-footer {
-    text-align:
-        center;
+            object-fit:
+                contain;
 
-    padding:
-        80px 0;
-}
+            object-position:
+                bottom;
+        }
 
 
-.btn-contact {
-    border:
-        2px solid
-        var(--light-blue);
+        /* ============================================================
+           SEÇÕES
+           ============================================================ */
 
-    padding:
-        12px 40px;
+        .section {
+            padding:
+                80px 0;
+        }
 
-    color:
-        var(--light-blue);
-}
 
+        .section + .section {
+            border-top:
+                1px solid var(--border);
+        }
 
-/* ============================================================
-   RESPONSIVO
-   ============================================================ */
 
-@media (max-width: 850px) {
+        .section-label {
+            margin:
+                0 0 8px;
 
-    header {
-        flex-direction:
-            column;
+            color:
+                var(--light-blue);
 
-        text-align:
-            center;
-    }
+            font-size:
+                0.72rem;
 
+            font-weight:
+                800;
 
-    .case-container {
-        grid-template-columns:
-            1fr;
-    }
-}
+            letter-spacing:
+                1.5px;
 
-</style>
+            text-transform:
+                uppercase;
+        }
+
+
+        .section-title {
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    4vw,
+                    2.7rem
+                );
+
+            line-height:
+                1.2;
+        }
+
+
+        .section-description {
+            max-width:
+                750px;
+
+            margin:
+                15px 0 35px;
+
+            color:
+                var(--text-gray);
+
+            font-size:
+                1rem;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* ============================================================
+           PROJETOS PRINCIPAIS
+           ============================================================ */
+
+        .featured-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                25px;
+
+            margin-top:
+                35px;
+        }
+
+
+        .featured-card {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height:
+                520px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #112642,
+                    #0b1c32
+                );
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                18px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .featured-card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(0, 168, 232, 0.55);
+
+            box-shadow:
+                0 25px 65px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .featured-image {
+            height:
+                270px;
+
+            overflow:
+                hidden;
+
+            background:
+                #09192b;
+        }
+
+
+        .featured-image img {
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+
+        .featured-card:hover .featured-image img {
+            transform:
+                scale(1.025);
+        }
+
+
+        .featured-content {
+            flex:
+                1;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            padding:
+                26px;
+        }
+
+
+        .project-type {
+            width:
+                fit-content;
+
+            margin-bottom:
+                14px;
+
+            padding:
+                6px 10px;
+
+            color:
+                var(--light-blue-2);
+
+            background:
+                rgba(0, 168, 232, 0.08);
+
+            border:
+                1px solid rgba(0, 168, 232, 0.25);
+
+            border-radius:
+                999px;
+
+            font-size:
+                0.68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .featured-content h3 {
+            margin:
+                0 0 10px;
+
+            font-size:
+                1.45rem;
+        }
+
+
+        .featured-content p {
+            margin:
+                0;
+
+            color:
+                var(--text-gray);
+        }
+
+
+        .project-tech {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+            margin-top:
+                18px;
+        }
+
+
+        .project-tech span {
+            padding:
+                5px 8px;
+
+            color:
+                #b9d9f7;
+
+            background:
+                #0a1b30;
+
+            border:
+                1px solid #1c3c5d;
+
+            border-radius:
+                5px;
+
+            font-size:
+                0.7rem;
+        }
+
+
+        .project-link {
+            display:
+                inline-block;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                24px;
+
+            color:
+                var(--light-blue);
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.7px;
+        }
+
+
+        /* ============================================================
+           PROCESSO
+           ============================================================ */
+
+        .process-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                18px;
+
+            margin-top:
+                35px;
+        }
+
+
+        .process-card {
+            position: relative;
+
+            padding:
+                25px;
+
+            background:
+                var(--card-bg);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+        }
+
+
+        .process-number {
+            display:
+                block;
+
+            margin-bottom:
+                16px;
+
+            color:
+                var(--light-blue);
+
+            font-size:
+                1.6rem;
+
+            font-weight:
+                800;
+        }
+
+
+        .process-card h3 {
+            margin:
+                0 0 10px;
+
+            font-size:
+                0.95rem;
+        }
+
+
+        .process-card p {
+            margin:
+                0;
+
+            color:
+                var(--text-gray);
+
+            font-size:
+                0.86rem;
+        }
+
+
+        /* ============================================================
+           DATA & ANALYTICS
+           ============================================================ */
+
+        .projects-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                22px;
+
+            margin-top:
+                35px;
+        }
+
+
+        .project-card {
+            height:
+                100%;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #112240,
+                    #0c1b30
+                );
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                14px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .project-card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(0, 168, 232, 0.45);
+
+            box-shadow:
+                0 20px 45px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .project-card img {
+            width:
+                100%;
+
+            height:
+                190px;
+
+            object-fit:
+                cover;
+        }
+
+
+        .project-card-content {
+            padding:
+                21px;
+        }
+
+
+        .project-card h4 {
+            margin:
+                0 0 7px;
+
+            font-size:
+                1rem;
+        }
+
+
+        .project-card p {
+            margin:
+                0;
+
+            color:
+                var(--text-gray);
+
+            font-size:
+                0.85rem;
+
+            min-height:
+                52px;
+        }
+
+
+        .project-card span {
+            display:
+                inline-block;
+
+            margin-top:
+                18px;
+
+            color:
+                var(--light-blue);
+
+            font-size:
+                0.72rem;
+
+            font-weight:
+                800;
+        }
+
+
+        /* ============================================================
+           DESENVOLVIMENTO
+           ============================================================ */
+
+        .development-card {
+            display:
+                grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            overflow:
+                hidden;
+
+            margin-top:
+                35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #102944,
+                    #0a1c31
+                );
+
+            border:
+                1px solid #25517a;
+
+            border-radius:
+                18px;
+        }
+
+
+        .development-content {
+            padding:
+                38px;
+        }
+
+
+        .development-content h3 {
+            margin:
+                0 0 14px;
+
+            font-size:
+                1.7rem;
+        }
+
+
+        .development-content p {
+            max-width:
+                620px;
+
+            margin:
+                0;
+
+            color:
+                #aec0d8;
+
+            line-height:
+                1.8;
+        }
+
+
+        .development-image {
+            min-height:
+                360px;
+
+            overflow:
+                hidden;
+        }
+
+
+        .development-image img {
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+        }
+
+
+        /* ============================================================
+           STACK
+           ============================================================ */
+
+        .stack-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                18px;
+
+            margin-top:
+                35px;
+        }
+
+
+        .stack-card {
+            padding:
+                25px;
+
+            background:
+                var(--card-bg);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+        }
+
+
+        .stack-card h3 {
+            margin:
+                0 0 18px;
+
+            color:
+                var(--light-blue);
+
+            font-size:
+                0.8rem;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .stack-card ul {
+            list-style:
+                none;
+
+            margin:
+                0;
+
+            padding:
+                0;
+        }
+
+
+        .stack-card li {
+            padding:
+                7px 0;
+
+            color:
+                #c0d0e2;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.04);
+
+            font-size:
+                0.87rem;
+        }
+
+
+        .stack-card li:last-child {
+            border-bottom:
+                none;
+        }
+
+
+        /* ============================================================
+           SOBRE
+           ============================================================ */
+
+        .about {
+            display:
+                grid;
+
+            grid-template-columns:
+                0.7fr 1.3fr;
+
+            gap:
+                60px;
+
+            align-items:
+                start;
+        }
+
+
+        .about-text p {
+            margin:
+                0 0 17px;
+
+            color:
+                #aebfd3;
+
+            line-height:
+                1.85;
+        }
+
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+
+        .contact-section {
+            padding:
+                90px 0;
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .contact-box {
+            padding:
+                55px 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #102944,
+                    #0b1e34
+                );
+
+            border:
+                1px solid #214b70;
+
+            border-radius:
+                18px;
+        }
+
+
+        .contact-box h2 {
+            margin:
+                0 0 12px;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    4vw,
+                    2.7rem
+                );
+        }
+
+
+        .contact-box p {
+            max-width:
+                650px;
+
+            margin:
+                0 auto 25px;
+
+            color:
+                var(--text-gray);
+        }
+
+
+        .contact-actions {
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+        }
+
+
+        footer {
+            padding:
+                0 0 40px;
+
+            text-align:
+                center;
+
+            color:
+                #6f88a5;
+
+            font-size:
+                0.78rem;
+        }
+
+
+        /* ============================================================
+           RESPONSIVO
+           ============================================================ */
+
+        @media (max-width: 950px) {
+
+            .hero {
+                min-height:
+                    auto;
+            }
+
+
+            .profile-pic {
+                height:
+                    430px;
+            }
+
+
+            .featured-grid,
+            .development-card,
+            .about {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .process-grid,
+            .stack-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .projects-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .development-image {
+                order:
+                    -1;
+
+                min-height:
+                    300px;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            .hero {
+                flex-direction:
+                    column;
+
+                align-items:
+                    center;
+
+                gap:
+                    0;
+            }
+
+
+            .hero-text {
+                padding:
+                    60px 0 20px;
+
+                text-align:
+                    center;
+            }
+
+
+            .hero-stack,
+            .hero-actions {
+                justify-content:
+                    center;
+            }
+
+
+            .profile-wrapper {
+                align-self:
+                    center;
+            }
+
+
+            .profile-pic {
+                height:
+                    390px;
+            }
+
+
+            .projects-grid,
+            .process-grid,
+            .stack-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .featured-card {
+                min-height:
+                    auto;
+            }
+
+
+            .section {
+                padding:
+                    60px 0;
+            }
+
+
+            .development-content {
+                padding:
+                    27px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                width:
+                    min(
+                        100% - 24px,
+                        1180px
+                    );
+            }
+
+
+            .hero h1 {
+                letter-spacing:
+                    -1px;
+            }
+
+
+            .profile-pic {
+                height:
+                    330px;
+            }
+
+
+            .featured-image {
+                height:
+                    220px;
+            }
+
+
+            .contact-actions {
+                flex-direction:
+                    column;
+            }
+
+
+            .contact-actions .btn {
+                width:
+                    100%;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -510,50 +1380,82 @@ footer {
 
     <div class="container">
 
-        <header>
+        <header class="hero">
 
             <div class="hero-text">
+
+                <span class="hero-label">
+                    Dados & Desenvolvimento
+                </span>
 
                 <h1>
                     Leandro Augusto Ferreira
                 </h1>
 
                 <h2>
-                    Analista de Dados |
-                    Excel • SQL • Power BI • Python
+                    Transformando dados e código em soluções.
                 </h2>
 
-                <p>
-                    Transformo dados em decisões estratégicas
-                    com foco em retenção, performance e
-                    crescimento de receita.
+                <p class="hero-description">
+
+                    Transformo problemas de negócio em soluções
+                    digitais orientadas por dados, combinando
+                    análise, automação e desenvolvimento de
+                    aplicações para gerar eficiência, informação
+                    e suporte à tomada de decisão.
+
                 </p>
 
-                <p
-                    style="
-                        color: var(--light-blue);
-                        font-size: 0.9rem;
-                    "
-                >
-                    Disponível para oportunidades
-                    em Análise de Dados
-                </p>
 
-                <a
-                    href="https://www.linkedin.com/in/leandro-datainsights/"
-                    class="btn-linkedin"
-                >
-                    Fale comigo no LinkedIn
-                </a>
+                <div class="hero-stack">
+
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Flask</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+
+                <div class="availability">
+                    Disponível para oportunidades em Dados e Desenvolvimento
+                </div>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#projetos"
+                        class="btn btn-primary"
+                    >
+                        Explorar projetos ↓
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/leandro-datainsights/"
+                        class="btn btn-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn →
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <img
-                src="img/foto.png"
-                class="profile-pic"
-                alt="Leandro Augusto Ferreira"
-            >
+            <div class="profile-wrapper">
+
+                <img
+                    src="img/foto.png"
+                    class="profile-pic"
+                    alt="Leandro Augusto Ferreira"
+                >
+
+            </div>
 
         </header>
 
@@ -562,100 +1464,156 @@ footer {
 </div>
 
 
-<div class="container">
+<main>
 
 
 <!-- ============================================================
-     CASE PRINCIPAL
+     PROJETOS PRINCIPAIS
      ============================================================ -->
 
-<section>
+<section
+    class="section"
+    id="projetos"
+>
 
-    <h3 class="section-title">
-        Case Principal: Análise de Churn
-    </h3>
+    <div class="container">
 
+        <p class="section-label">
+            Portfólio
+        </p>
 
-    <div class="case-container">
+        <h2 class="section-title">
+            Projetos em Destaque
+        </h2>
 
+        <p class="section-description">
 
-        <div class="case-grid">
+            Duas vertentes que representam minha atuação:
+            transformar dados em informação para decisões e
+            transformar código em soluções utilizáveis.
 
-
-            <div class="case-item">
-
-                <strong>
-                    CONTEXTO
-                </strong>
-
-                <p>
-                    Elevada taxa de churn em serviços
-                    recorrentes, comprometendo a receita
-                    e a previsibilidade do negócio.
-                </p>
-
-            </div>
+        </p>
 
 
-            <div class="case-item">
-
-                <strong>
-                    ABORDAGEM
-                </strong>
-
-                <p>
-                    Cruzamento de dados comportamentais,
-                    perfil de clientes e características
-                    contratuais para identificar padrões
-                    de churn e seus principais drivers.
-                </p>
-
-            </div>
+        <div class="featured-grid">
 
 
-            <div class="case-item">
+            <!-- DATA & ANALYTICS -->
 
-                <strong>
-                    INSIGHT
-                </strong>
+            <article class="featured-card">
 
-                <p>
-                    Clientes com contrato mensal concentram
-                    o churn — até 6x maior, sobretudo nos
-                    primeiros meses — incluindo clientes
-                    de alto valor e maior impacto na receita.
-                </p>
+                <div class="featured-image">
 
-            </div>
+                    <iframe
+                        src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"
+                        title="Dashboard de Análise de Churn"
+                        style="
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                        "
+                        loading="lazy"
+                    >
+                    </iframe>
 
-
-            <div class="case-item">
-
-                <strong>
-                    RECOMENDAÇÃO
-                </strong>
-
-                <p>
-                    Geração de insights acionáveis para
-                    priorizar clientes de maior risco e
-                    orientar estratégias de retenção.
-                </p>
-
-            </div>
+                </div>
 
 
-        </div>
+                <div class="featured-content">
+
+                    <span class="project-type">
+                        Data & Analytics
+                    </span>
+
+                    <h3>
+                        Análise de Churn
+                    </h3>
+
+                    <p>
+
+                        Análise de comportamento e perfil de
+                        clientes para identificar padrões de
+                        cancelamento, segmentos de maior risco
+                        e oportunidades de retenção.
+
+                    </p>
 
 
-        <div class="case-frame">
+                    <div class="project-tech">
 
-            <iframe
-                src="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"
+                        <span>Power BI</span>
+                        <span>Data Analysis</span>
+                        <span>Business Intelligence</span>
+
+                    </div>
+
+
+                    <span class="project-link">
+                        CASE ANALÍTICO
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- DESENVOLVIMENTO -->
+
+            <a
+                href="python.html"
+                class="featured-card"
             >
-            </iframe>
+
+                <div class="featured-image">
+
+                    <img
+                        src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                        alt="Aplicação Transcrição em Texto"
+                    >
+
+                </div>
+
+
+                <div class="featured-content">
+
+                    <span class="project-type">
+                        Desenvolvimento
+                    </span>
+
+                    <h3>
+                        Transcrição em Texto
+                    </h3>
+
+                    <p>
+
+                        Aplicação web local para transformar
+                        arquivos de áudio e vídeo em documentos
+                        utilizando reconhecimento de fala,
+                        processamento em fila e automação.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>Whisper</span>
+                        <span>FFmpeg</span>
+
+                    </div>
+
+
+                    <span class="project-link">
+                        EXPLORAR PROJETO →
+                    </span>
+
+                </div>
+
+            </a>
 
         </div>
-
 
     </div>
 
@@ -663,47 +1621,105 @@ footer {
 
 
 <!-- ============================================================
-     COMO PENSO
+     PROCESSO
      ============================================================ -->
 
-<section>
+<section class="section">
 
-    <h3 class="section-title">
-        Como penso como analista?
-    </h3>
+    <div class="container">
+
+        <p class="section-label">
+            Método
+        </p>
+
+        <h2 class="section-title">
+            Como transformo problemas em soluções
+        </h2>
+
+        <p class="section-description">
+
+            Dados e desenvolvimento partem do mesmo princípio:
+            entender o problema antes de escolher a tecnologia.
+
+        </p>
 
 
-    <div class="projects-grid">
+        <div class="process-grid">
 
 
-        <div class="project-card">
+            <article class="process-card">
 
-            <p>
-                Sempre começo entendendo o problema
-                de negócio antes dos dados.
-            </p>
+                <span class="process-number">
+                    01
+                </span>
+
+                <h3>
+                    Entendo o problema
+                </h3>
+
+                <p>
+                    Começo pelo contexto, pela necessidade
+                    do usuário e pelo objetivo de negócio.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <span class="process-number">
+                    02
+                </span>
+
+                <h3>
+                    Estruturo os dados
+                </h3>
+
+                <p>
+                    Identifico fontes, regras, indicadores
+                    e informações necessárias para a solução.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <span class="process-number">
+                    03
+                </span>
+
+                <h3>
+                    Desenvolvo a solução
+                </h3>
+
+                <p>
+                    Construo análises, dashboards, automações
+                    ou aplicações conforme o problema.
+                </p>
+
+            </article>
+
+
+            <article class="process-card">
+
+                <span class="process-number">
+                    04
+                </span>
+
+                <h3>
+                    Entrego resultado
+                </h3>
+
+                <p>
+                    Transformo dados e código em algo
+                    utilizável, compreensível e orientado
+                    a resultado.
+                </p>
+
+            </article>
 
         </div>
-
-
-        <div class="project-card">
-
-            <p>
-                Identifico padrões que impactam
-                receita, custos e retenção.
-            </p>
-
-        </div>
-
-
-        <div class="project-card">
-
-            <p>
-                Transformo análise em decisão prática.
-            </p>
-
-        </div>
-
 
     </div>
 
@@ -711,190 +1727,282 @@ footer {
 
 
 <!-- ============================================================
-     PROJETOS
+     DATA & ANALYTICS
      ============================================================ -->
 
-<section>
+<section class="section">
 
-    <h3 class="section-title">
-        Projetos em Destaque
-    </h3>
+    <div class="container">
+
+        <p class="section-label">
+            Data & Analytics
+        </p>
+
+        <h2 class="section-title">
+            Dados aplicados a problemas de negócio
+        </h2>
+
+        <p class="section-description">
+
+            Projetos voltados a finanças, operações,
+            logística, vendas, análise e estruturação
+            de dados.
+
+        </p>
 
 
-    <div class="projects-grid">
+        <div class="projects-grid">
 
 
-        <!-- GESTÃO FINANCEIRA -->
+            <a href="financeiro.html">
 
-        <a href="financeiro.html">
+                <article class="project-card">
 
-            <div class="project-card">
+                    <img
+                        src="img/financeiro.png"
+                        alt="Dashboard de Gestão Financeira"
+                    >
 
-                <img
-                    src="img/financeiro.png"
-                    alt="Dashboard de Gestão Financeira"
-                >
+                    <div class="project-card-content">
 
-                <h4>
-                    Gestão Financeira
-                </h4>
+                        <h4>
+                            Gestão Financeira
+                        </h4>
+
+                        <p>
+                            Análise de margem, custos,
+                            fluxo financeiro e resultado.
+                        </p>
+
+                        <span>
+                            VER CASE →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <a href="transporte.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/transporte.png"
+                        alt="Dashboard de Logística e Frota"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Logística e Frota
+                        </h4>
+
+                        <p>
+                            Eficiência operacional,
+                            utilização de frota e
+                            redução de custos.
+                        </p>
+
+                        <span>
+                            VER CASE →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <a href="venda.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/venda.png"
+                        alt="Dashboard de Análise Comercial"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Análise Comercial
+                        </h4>
+
+                        <p>
+                            Faturamento, margem,
+                            performance regional e
+                            oportunidades de receita.
+                        </p>
+
+                        <span>
+                            VER CASE →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <a href="sql.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/sql.png"
+                        alt="Projeto SQL"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Projeto SQL
+                        </h4>
+
+                        <p>
+                            Consultas, manipulação e
+                            estruturação de dados.
+                        </p>
+
+                        <span>
+                            VER PROJETO →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+
+            <a href="excel.html">
+
+                <article class="project-card">
+
+                    <img
+                        src="img/excel.png"
+                        alt="Projeto Excel"
+                    >
+
+                    <div class="project-card-content">
+
+                        <h4>
+                            Excel & Análise
+                        </h4>
+
+                        <p>
+                            Análises, indicadores,
+                            automações e dashboards.
+                        </p>
+
+                        <span>
+                            VER PROJETO →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     DESENVOLVIMENTO
+     ============================================================ -->
+
+<section class="section">
+
+    <div class="container">
+
+        <p class="section-label">
+            Desenvolvimento & Automação
+        </p>
+
+        <h2 class="section-title">
+            Do script à aplicação
+        </h2>
+
+        <p class="section-description">
+
+            Desenvolvimento de soluções que utilizam
+            programação para automatizar processos e
+            transformar necessidades em aplicações
+            funcionais.
+
+        </p>
+
+
+        <a
+            href="python.html"
+            class="development-card"
+        >
+
+            <div class="development-content">
+
+                <span class="project-type">
+                    Python • Full Stack
+                </span>
+
+                <h3>
+                    Transcrição em Texto
+                </h3>
 
                 <p>
-                    Otimização de margem e custos.
+
+                    Projeto que evoluiu de uma automação
+                    executada diretamente em Python para uma
+                    aplicação com frontend, backend Flask,
+                    processamento com Whisper, integração com
+                    FFmpeg, controle de fila e geração
+                    automática de documentos Word.
+
                 </p>
 
-                <span>
-                    VER CASE →
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>JavaScript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Whisper</span>
+                    <span>PyTorch</span>
+                    <span>FFmpeg</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+
+                </div>
+
+
+                <span class="project-link">
+                    CONHECER A APLICAÇÃO →
                 </span>
 
             </div>
 
-        </a>
 
-
-        <!-- LOGÍSTICA E FROTA -->
-
-        <a href="transporte.html">
-
-            <div class="project-card">
-
-                <img
-                    src="img/transporte.png"
-                    alt="Dashboard de Logística e Frota"
-                >
-
-                <h4>
-                    Logística e Frota
-                </h4>
-
-                <p>
-                    Eficiência operacional e
-                    redução de custos.
-                </p>
-
-                <span>
-                    VER CASE →
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- ANÁLISE COMERCIAL -->
-
-        <a href="venda.html">
-
-            <div class="project-card">
-
-                <img
-                    src="img/venda.png"
-                    alt="Dashboard de Análise Comercial"
-                >
-
-                <h4>
-                    Análise Comercial
-                </h4>
-
-                <p>
-                    Crescimento de receita.
-                </p>
-
-                <span>
-                    VER CASE →
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- =================================================
-             TRANSCRIÇÃO EM TEXTO
-             ================================================= -->
-
-        <a href="python.html">
-
-            <div class="project-card">
+            <div class="development-image">
 
                 <img
                     src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
-                    alt="Aplicação Transcrição em Texto"
+                    alt="Interface da aplicação Transcrição em Texto"
                 >
-
-                <h4>
-                    Transcrição em Texto
-                </h4>
-
-                <p>
-                    Transcrição de áudio e vídeo com
-                    Python, Flask e Whisper.
-                </p>
-
-                <span>
-                    VER PROJETO →
-                </span>
 
             </div>
 
         </a>
-
-
-        <!-- PROJETO SQL -->
-
-        <a href="sql.html">
-
-            <div class="project-card">
-
-                <img
-                    src="img/sql.png"
-                    alt="Projeto SQL"
-                >
-
-                <h4>
-                    Projeto SQL
-                </h4>
-
-                <p>
-                    Consultas e modelagem de dados.
-                </p>
-
-                <span>
-                    VER PROJETO →
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- PROJETO EXCEL -->
-
-        <a href="excel.html">
-
-            <div class="project-card">
-
-                <img
-                    src="img/excel.png"
-                    alt="Projeto Excel"
-                >
-
-                <h4>
-                    Projeto Excel
-                </h4>
-
-                <p>
-                    Análises e dashboards avançados.
-                </p>
-
-                <span>
-                    VER PROJETO →
-                </span>
-
-            </div>
-
-        </a>
-
 
     </div>
 
@@ -905,29 +2013,94 @@ footer {
      STACK
      ============================================================ -->
 
-<section>
+<section class="section">
 
-    <h3 class="section-title">
-        Stack
-    </h3>
+    <div class="container">
+
+        <p class="section-label">
+            Tecnologias
+        </p>
+
+        <h2 class="section-title">
+            Stack
+        </h2>
+
+        <p class="section-description">
+
+            Tecnologias utilizadas em projetos de análise,
+            automação e desenvolvimento.
+
+        </p>
 
 
-    <div class="skills-bar">
+        <div class="stack-grid">
 
-        <div>
-            SQL Server | MySQL | Oracle
-        </div>
 
-        <div>
-            Power BI | Excel
-        </div>
+            <article class="stack-card">
 
-        <div>
-            Python (Pandas)
-        </div>
+                <h3>
+                    Data & Analytics
+                </h3>
 
-        <div>
-            Data Analysis
+                <ul>
+                    <li>Power BI</li>
+                    <li>Excel</li>
+                    <li>SQL</li>
+                    <li>Pandas</li>
+                    <li>Data Analysis</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Desenvolvimento
+                </h3>
+
+                <ul>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Banco de Dados
+                </h3>
+
+                <ul>
+                    <li>SQL Server</li>
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                </ul>
+
+            </article>
+
+
+            <article class="stack-card">
+
+                <h3>
+                    Ferramentas & Automação
+                </h3>
+
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>VS Code</li>
+                    <li>Whisper</li>
+                    <li>FFmpeg</li>
+                </ul>
+
+            </article>
+
         </div>
 
     </div>
@@ -939,53 +2112,130 @@ footer {
      SOBRE
      ============================================================ -->
 
-<section>
+<section class="section">
 
-    <h3 class="section-title">
-        Sobre mim
-    </h3>
+    <div class="container">
+
+        <div class="about">
+
+            <div>
+
+                <p class="section-label">
+                    Sobre mim
+                </p>
+
+                <h2 class="section-title">
+                    Negócio, dados e tecnologia
+                </h2>
+
+            </div>
 
 
-    <p
-        style="
-            max-width: 700px;
-            color: var(--text-gray);
-        "
-    >
-        Experiência em melhoria contínua aplicada
-        à análise de dados, com foco em decisões
-        estratégicas e resultados de negócio.
-    </p>
+            <div class="about-text">
+
+                <p>
+
+                    Minha trajetória profissional combina
+                    experiência em processos e melhoria contínua
+                    com uma evolução direcionada para dados,
+                    automação e desenvolvimento.
+
+                </p>
+
+                <p>
+
+                    Essa combinação me permite enxergar tecnologia
+                    não apenas pelo código ou pelos indicadores,
+                    mas pelo problema que precisa ser resolvido
+                    e pelo resultado que a solução deve gerar.
+
+                </p>
+
+                <p>
+
+                    Hoje desenvolvo projetos que transitam entre
+                    Business Intelligence, análise de dados,
+                    Python e desenvolvimento de aplicações,
+                    ampliando continuamente minha atuação
+                    dentro da área de tecnologia.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <!-- ============================================================
-     FOOTER
+     CONTATO
      ============================================================ -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <p class="section-label">
+                Contato
+            </p>
+
+            <h2>
+                Vamos construir algo juntos?
+            </h2>
+
+            <p>
+
+                Estou disponível para oportunidades em
+                Dados, Business Intelligence, Python,
+                automação e desenvolvimento.
+
+            </p>
+
+
+            <div class="contact-actions">
+
+                <a
+                    href="mailto:leandroguto1@gmail.com"
+                    class="btn btn-primary"
+                >
+                    Entrar em contato
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/leandro-datainsights/"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
 
 <footer>
 
-    <h3>
-        Vamos trabalhar juntos?
-    </h3>
-
-    <p>
-        Disponível para oportunidades
-    </p>
-
-
-    <a
-        href="mailto:leandroguto1@gmail.com"
-        class="btn-contact"
-    >
-        Entrar em contato
-    </a>
+    Desenvolvido por
+    <strong>
+        Leandro Augusto Ferreira
+    </strong>
 
 </footer>
-
-
-</div>
 
 
 </body>
