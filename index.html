@@ -605,7 +605,6 @@
         }
 
 
-        /* Container com enquadramento perfeito mantendo o foco central e sem bordas salientes */
         .featured-image,
         .featured-image-contain {
             height: 280px;
@@ -646,7 +645,6 @@
         }
 
 
-        /* Container limpo para o Iframe do Power BI */
         .powerbi-frame-container {
             width: 100%;
 
@@ -663,7 +661,7 @@
         .powerbi-frame-container iframe {
             width: 100%;
 
-            height: calc(100% + 38px); /* Esconde a barra inferior nativa do Power BI */
+            height: calc(100% + 38px);
 
             border: none;
         }
@@ -1009,7 +1007,7 @@
 
 
         /* ============================================================
-           DESENVOLVIMENTO
+           DESENVOLVIMENTO (COM GALERIA DE CAPTURAS V1.2.0)
            ============================================================ */
 
         .development-grid {
@@ -1022,7 +1020,7 @@
 
 
         .development-card {
-            min-height: 500px;
+            min-height: 520px;
 
             display: flex;
 
@@ -1042,21 +1040,17 @@
         }
 
 
-        a.development-card:hover {
-            transform: translateY(-6px);
-
-            background: var(--bg-card-hover);
-
+        .development-card:hover {
             border-color: var(--border-active);
 
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
         }
 
 
-        .development-image {
-            height: 260px;
+        .development-viewer {
+            position: relative;
 
-            overflow: hidden;
+            height: 270px;
 
             background: #030a16;
 
@@ -1064,12 +1058,76 @@
         }
 
 
-        .development-image img {
+        .development-viewer img {
             width: 100%;
 
             height: 100%;
 
             object-fit: cover;
+
+            object-position: top center;
+
+            transition: opacity 0.4s ease;
+        }
+
+
+        /* Miniaturas NAVEGÁVEIS */
+        .gallery-thumbs {
+            display: flex;
+
+            gap: 8px;
+
+            padding: 10px 14px;
+
+            background: rgba(3, 10, 22, 0.9);
+
+            border-bottom: 1px solid var(--border-subtle);
+
+            overflow-x: auto;
+        }
+
+
+        .thumb-btn {
+            position: relative;
+
+            width: 68px;
+
+            height: 42px;
+
+            border-radius: 6px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border-subtle);
+
+            cursor: pointer;
+
+            opacity: 0.6;
+
+            transition: var(--transition);
+
+            background: transparent;
+
+            padding: 0;
+        }
+
+
+        .thumb-btn img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .thumb-btn:hover,
+        .thumb-btn.active {
+            opacity: 1;
+
+            border-color: var(--cyan-neon);
+
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
         }
 
 
@@ -1113,7 +1171,7 @@
         .future-card {
             position: relative;
 
-            min-height: 500px;
+            min-height: 520px;
 
             display: flex;
 
@@ -1703,7 +1761,7 @@
 
 
 <!-- ============================================================
-     PROJETOS PRINCIPAIS (INVERTIDO & ENQUADRAMENTO PERFEITO)
+     PROJETOS PRINCIPAIS (COM CAPTURA REAL DA APLICAÇÃO V1.2.0)
      ============================================================ -->
 
 <section
@@ -1739,8 +1797,8 @@
                 <div class="featured-image">
 
                     <img
-                        src="img/transcricao-mockup.png"
-                        alt="Aplicação Transcrição em Texto - Python, Flask, Whisper"
+                        src="img/transcricao-concluido.png"
+                        alt="Interface Transcrição em Texto v1.2.0 em Execução"
                     >
 
                 </div>
@@ -1749,7 +1807,7 @@
                 <div class="featured-content">
 
                     <span class="project-type">
-                        Desenvolvimento
+                        Desenvolvimento • v1.2.0
                     </span>
 
                     <h3>
@@ -1757,7 +1815,7 @@
                     </h3>
 
                     <p>
-                        Aplicação Full-Stack para conversão automatizada de arquivos de áudio e vídeo em texto estruturado, utilizando modelos neurais de reconhecimento de fala.
+                        Aplicação Full-Stack para conversão automatizada de arquivos de áudio e vídeo em texto estruturado, utilizando o modelo neural Whisper e exportação direta para Microsoft Word.
                     </p>
 
 
@@ -1765,8 +1823,8 @@
 
                         <span>Python</span>
                         <span>Flask</span>
-                        <span>JavaScript</span>
-                        <span>Whisper</span>
+                        <span>SQLite</span>
+                        <span>Whisper Small</span>
                         <span>FFmpeg</span>
 
                     </div>
@@ -1846,7 +1904,7 @@
 
 
 <!-- ============================================================
-     MÉTODO (COM SEGUNDO FUNDO DISSOLVIDO SUAVEMENTE)
+     MÉTODO
      ============================================================ -->
 
 <section class="section section-alt">
@@ -2077,7 +2135,7 @@
 
 
 <!-- ============================================================
-     DESENVOLVIMENTO
+     DESENVOLVIMENTO & AUTOMOÇÃO (COM GALERIA NAVEGÁVEL DAS 4 CAPTURAS)
      ============================================================ -->
 
 <section class="section section-alt">
@@ -2100,19 +2158,56 @@
         <div class="development-grid">
 
 
-            <!-- TRANSCRIÇÃO EM TEXTO -->
+            <!-- TRANSCRIÇÃO EM TEXTO V1.2.0 COM GALERIA INTERATIVA -->
 
-            <a
-                href="python.html"
-                class="development-card"
-            >
+            <article class="development-card">
 
-                <div class="development-image">
+                <div class="development-viewer">
 
                     <img
-                        src="img/transcricao-mockup.png"
-                        alt="Interface da aplicação Transcrição em Texto"
+                        id="main-preview-img"
+                        src="img/transcricao-concluido.png"
+                        alt="Transcrição em Texto - Processamento Concluído"
                     >
+
+                </div>
+
+
+                <!-- MINIATURAS NAVEGÁVEIS -->
+
+                <div class="gallery-thumbs">
+
+                    <button
+                        class="thumb-btn active"
+                        onclick="switchGallery('img/transcricao-concluido.png', this)"
+                        title="Processamento Concluído e Exportação Word"
+                    >
+                        <img src="img/transcricao-concluido.png" alt="Concluído">
+                    </button>
+
+                    <button
+                        class="thumb-btn"
+                        onclick="switchGallery('img/transcricao-login.png', this)"
+                        title="Tela de Login e Acesso Seguro"
+                    >
+                        <img src="img/transcricao-login.png" alt="Login">
+                    </button>
+
+                    <button
+                        class="thumb-btn"
+                        onclick="switchGallery('img/transcricao-inicio.png', this)"
+                        title="Painel Inicial e Seleção de Ficheiros"
+                    >
+                        <img src="img/transcricao-inicio.png" alt="Início">
+                    </button>
+
+                    <button
+                        class="thumb-btn"
+                        onclick="switchGallery('img/transcricao-processando.png', this)"
+                        title="Fila de Processamento em Execução"
+                    >
+                        <img src="img/transcricao-processando.png" alt="Processando">
+                    </button>
 
                 </div>
 
@@ -2120,7 +2215,7 @@
                 <div class="development-content">
 
                     <span class="project-type">
-                        Python • Full Stack
+                        Python • Full Stack • v1.2.0
                     </span>
 
                     <h3>
@@ -2128,7 +2223,7 @@
                     </h3>
 
                     <p>
-                        Solução integrada com backend Flask e processamento neural, equipada com fila de execução e geração automática de relatórios.
+                        Solução local com backend Flask, processamento neural Whisper small, controlo de fila em processo independente e autenticação de utilizadores com encriptação hash via SQLite.
                     </p>
 
 
@@ -2136,22 +2231,24 @@
 
                         <span>Python</span>
                         <span>Flask</span>
-                        <span>JavaScript</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
                         <span>Whisper</span>
-                        <span>FFmpeg</span>
+                        <span>SQLite</span>
+                        <span>python-docx</span>
+                        <span>JavaScript</span>
 
                     </div>
 
 
-                    <span class="project-link">
+                    <a
+                        href="python.html"
+                        class="project-link"
+                    >
                         VER PROJETO COMPLETO →
-                    </span>
+                    </a>
 
                 </div>
 
-            </a>
+            </article>
 
 
             <!-- PRÓXIMO PROJETO -->
@@ -2262,7 +2359,7 @@
                 <ul>
                     <li>SQL Server</li>
                     <li>MySQL</li>
-                    <li>Oracle</li>
+                    <li>SQLite / Oracle</li>
                 </ul>
 
             </article>
@@ -2399,6 +2496,33 @@
     </strong>
 
 </footer>
+
+
+<!-- SCRIPT DE NAVEGAÇÃO DA GALERIA -->
+
+<script>
+
+    function switchGallery(imagePath, clickedBtn) {
+        var mainImg = document.getElementById('main-preview-img');
+        if (mainImg) {
+            mainImg.style.opacity = '0.3';
+            setTimeout(function() {
+                mainImg.src = imagePath;
+                mainImg.style.opacity = '1';
+            }, 150);
+        }
+
+        var buttons = document.querySelectorAll('.thumb-btn');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+
+        if (clickedBtn) {
+            clickedBtn.classList.add('active');
+        }
+    }
+
+</script>
 
 
 </body>
