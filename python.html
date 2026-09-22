@@ -12,11 +12,11 @@
 
     <meta
         name="description"
-        content="Projeto Transcrição em Texto v1.2.0 desenvolvido por Leandro A. Ferreira com Python, Flask, Whisper, SQLite, JavaScript e distribuição para Windows."
+        content="Projeto Transcrição em Texto v1.2.0 desenvolvido por Leandro Augusto Ferreira com Python, Flask, Whisper, SQLite, JavaScript e distribuição para Windows."
     >
 
     <title>
-        Transcrição em Texto v1.2.0 - Leandro A. Ferreira
+        Transcrição em Texto v1.2.0 - Leandro Augusto Ferreira
     </title>
 
 
@@ -41,37 +41,30 @@
         body {
             min-height: 100vh;
 
-            background:
-                #07172b;
+            background: #07172b;
 
-            color:
-                #ffffff;
+            color: #ffffff;
 
             font-family:
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            line-height:
-                1.6;
+            line-height: 1.6;
         }
 
 
         a {
-            color:
-                inherit;
+            color: inherit;
 
-            text-decoration:
-                none;
+            text-decoration: none;
         }
 
 
         img {
-            max-width:
-                100%;
+            max-width: 100%;
 
-            display:
-                block;
+            display: block;
         }
 
 
@@ -80,11 +73,9 @@
            ===================================================== */
 
         .container {
-            width:
-                min(1120px, calc(100% - 40px));
+            width: min(1120px, calc(100% - 40px));
 
-            margin:
-                0 auto;
+            margin: 0 auto;
         }
 
 
@@ -93,41 +84,31 @@
            ===================================================== */
 
         .topo {
-            padding:
-                28px 0;
+            padding: 28px 0;
 
-            border-bottom:
-                1px solid #1d3654;
+            border-bottom: 1px solid #1d3654;
         }
 
 
         .voltar {
-            display:
-                inline-flex;
+            display: inline-flex;
 
-            align-items:
-                center;
+            align-items: center;
 
-            gap:
-                8px;
+            gap: 8px;
 
-            color:
-                #45b5ff;
+            color: #45b5ff;
 
-            font-size:
-                14px;
+            font-size: 14px;
 
-            font-weight:
-                700;
+            font-weight: 700;
 
-            transition:
-                opacity 0.2s ease;
+            transition: opacity 0.2s ease;
         }
 
 
         .voltar:hover {
-            opacity:
-                0.75;
+            opacity: 0.75;
         }
 
 
@@ -136,113 +117,82 @@
            ===================================================== */
 
         .hero {
-            padding:
-                72px 0 54px;
+            padding: 72px 0 54px;
         }
 
 
         .tag {
-            display:
-                inline-block;
+            display: inline-block;
 
-            margin-bottom:
-                18px;
+            margin-bottom: 18px;
 
-            padding:
-                7px 12px;
+            padding: 7px 12px;
 
-            color:
-                #69baff;
+            color: #69baff;
 
-            background:
-                #102944;
+            background: #102944;
 
-            border:
-                1px solid #214b70;
+            border: 1px solid #214b70;
 
-            border-radius:
-                999px;
+            border-radius: 999px;
 
-            font-size:
-                12px;
+            font-size: 12px;
 
-            font-weight:
-                700;
+            font-weight: 700;
 
-            letter-spacing:
-                1px;
+            letter-spacing: 1px;
         }
 
 
         .hero h1 {
-            max-width:
-                850px;
+            max-width: 850px;
 
-            margin-bottom:
-                20px;
+            margin-bottom: 20px;
 
-            font-size:
-                clamp(36px, 6vw, 64px);
+            font-size: clamp(36px, 6vw, 64px);
 
-            line-height:
-                1.05;
+            line-height: 1.05;
         }
 
 
         .hero-descricao {
-            max-width:
-                850px;
+            max-width: 850px;
 
-            color:
-                #a9bed8;
+            color: #a9bed8;
 
-            font-size:
-                19px;
+            font-size: 19px;
 
-            line-height:
-                1.7;
+            line-height: 1.7;
         }
 
 
         .hero-acoes {
-            display:
-                flex;
+            display: flex;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                12px;
+            gap: 12px;
 
-            margin-top:
-                30px;
+            margin-top: 30px;
         }
 
 
         .botao {
-            min-height:
-                46px;
+            min-height: 46px;
 
-            padding:
-                0 20px;
+            padding: 0 20px;
 
-            display:
-                inline-flex;
+            display: inline-flex;
 
-            align-items:
-                center;
+            align-items: center;
 
-            justify-content:
-                center;
+            justify-content: center;
 
-            border-radius:
-                8px;
+            border-radius: 8px;
 
-            font-size:
-                14px;
+            font-size: 14px;
 
-            font-weight:
-                700;
+            font-weight: 700;
 
             transition:
                 transform 0.15s ease,
@@ -252,62 +202,49 @@
 
 
         .botao:hover {
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
 
 
         .botao-principal {
-            color:
-                #ffffff;
+            color: #ffffff;
 
-            background:
-                #087cff;
+            background: #087cff;
 
-            border:
-                1px solid #3396ff;
+            border: 1px solid #3396ff;
         }
 
 
         .botao-principal:hover {
-            background:
-                #168aff;
+            background: #168aff;
         }
 
 
         .botao-secundario {
-            color:
-                #d7e8fb;
+            color: #d7e8fb;
 
-            background:
-                #10243c;
+            background: #10243c;
 
-            border:
-                1px solid #294a6c;
+            border: 1px solid #294a6c;
         }
 
 
         .botao-secundario:hover {
-            background:
-                #17304e;
+            background: #17304e;
         }
 
 
         .botao-download {
-            color:
-                #05271e;
+            color: #05271e;
 
-            background:
-                #62e0a5;
+            background: #62e0a5;
 
-            border:
-                1px solid #84ecc0;
+            border: 1px solid #84ecc0;
         }
 
 
         .botao-download:hover {
-            background:
-                #75e8b3;
+            background: #75e8b3;
         }
 
 
@@ -316,30 +253,22 @@
            ===================================================== */
 
         .imagem-principal {
-            margin-bottom:
-                65px;
+            margin-bottom: 65px;
 
-            overflow:
-                hidden;
+            overflow: hidden;
 
-            background:
-                #11243d;
+            background: #11243d;
 
-            border:
-                1px solid #203d5e;
+            border: 1px solid #203d5e;
 
-            border-radius:
-                18px;
+            border-radius: 18px;
 
-            box-shadow:
-                0 24px 65px
-                rgba(0, 0, 0, 0.28);
+            box-shadow: 0 24px 65px rgba(0, 0, 0, 0.28);
         }
 
 
         .imagem-principal img {
-            width:
-                100%;
+            width: 100%;
         }
 
 
@@ -348,53 +277,40 @@
            ===================================================== */
 
         .secao {
-            padding:
-                58px 0;
+            padding: 58px 0;
 
-            border-top:
-                1px solid #162f4c;
+            border-top: 1px solid #162f4c;
         }
 
 
         .rotulo {
-            margin-bottom:
-                8px;
+            margin-bottom: 8px;
 
-            color:
-                #45adff;
+            color: #45adff;
 
-            font-size:
-                12px;
+            font-size: 12px;
 
-            font-weight:
-                700;
+            font-weight: 700;
 
-            letter-spacing:
-                1.3px;
+            letter-spacing: 1.3px;
         }
 
 
         .secao h2 {
-            margin-bottom:
-                24px;
+            margin-bottom: 24px;
 
-            font-size:
-                clamp(27px, 4vw, 38px);
+            font-size: clamp(27px, 4vw, 38px);
         }
 
 
         .texto {
-            max-width:
-                860px;
+            max-width: 860px;
 
-            color:
-                #afc1d8;
+            color: #afc1d8;
 
-            font-size:
-                17px;
+            font-size: 17px;
 
-            line-height:
-                1.8;
+            line-height: 1.8;
         }
 
 
@@ -403,56 +319,42 @@
            ===================================================== */
 
         .grid {
-            display:
-                grid;
+            display: grid;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
 
-            gap:
-                18px;
+            gap: 18px;
 
-            margin-top:
-                30px;
+            margin-top: 30px;
         }
 
 
         .card {
-            padding:
-                24px;
+            padding: 24px;
 
-            background:
-                #0f223a;
+            background: #0f223a;
 
-            border:
-                1px solid #1d3b5c;
+            border: 1px solid #1d3b5c;
 
-            border-radius:
-                14px;
+            border-radius: 14px;
         }
 
 
         .card h3 {
-            margin-bottom:
-                10px;
+            margin-bottom: 10px;
 
-            color:
-                #ffffff;
+            color: #ffffff;
 
-            font-size:
-                17px;
+            font-size: 17px;
         }
 
 
         .card p {
-            color:
-                #9fb5d0;
+            color: #9fb5d0;
 
-            font-size:
-                14px;
+            font-size: 14px;
 
-            line-height:
-                1.7;
+            line-height: 1.7;
         }
 
 
@@ -461,41 +363,30 @@
            ===================================================== */
 
         .stack {
-            display:
-                flex;
+            display: flex;
 
-            flex-wrap:
-                wrap;
+            flex-wrap: wrap;
 
-            gap:
-                10px;
+            gap: 10px;
 
-            margin-top:
-                26px;
+            margin-top: 26px;
         }
 
 
         .tecnologia {
-            padding:
-                8px 12px;
+            padding: 8px 12px;
 
-            color:
-                #a9d6ff;
+            color: #a9d6ff;
 
-            background:
-                #102944;
+            background: #102944;
 
-            border:
-                1px solid #214b70;
+            border: 1px solid #214b70;
 
-            border-radius:
-                7px;
+            border-radius: 7px;
 
-            font-size:
-                13px;
+            font-size: 13px;
 
-            font-weight:
-                700;
+            font-weight: 700;
         }
 
 
@@ -504,110 +395,87 @@
            ===================================================== */
 
         .arquitetura {
-            margin-top:
-                30px;
+            margin-top: 30px;
 
-            padding:
-                28px;
+            padding: 28px;
 
-            overflow-x:
-                auto;
+            overflow-x: auto;
 
-            background:
-                #091a2e;
+            background: #091a2e;
 
-            border:
-                1px solid #1c3b5c;
+            border: 1px solid #1c3b5c;
 
-            border-radius:
-                14px;
+            border-radius: 14px;
         }
 
 
         .arquitetura pre {
-            min-width:
-                550px;
+            min-width: 550px;
 
-            color:
-                #bcdcff;
+            color: #bcdcff;
 
             font-family:
                 Consolas,
                 "Courier New",
                 monospace;
 
-            font-size:
-                15px;
+            font-size: 15px;
 
-            line-height:
-                1.8;
+            line-height: 1.8;
         }
 
 
         /* =====================================================
-           SCREENSHOTS
+           SCREENSHOTS (GALERIA FLUXO SEQUENCIAL)
            ===================================================== */
 
         .galeria {
-            display:
-                grid;
+            display: grid;
 
-            grid-template-columns:
-                1fr;
+            grid-template-columns: 1fr;
 
-            gap:
-                30px;
+            gap: 30px;
 
-            margin-top:
-                30px;
+            margin-top: 30px;
         }
 
 
         .captura {
-            overflow:
-                hidden;
+            overflow: hidden;
 
-            background:
-                #10243c;
+            background: #10243c;
 
-            border:
-                1px solid #203f61;
+            border: 1px solid #203f61;
 
-            border-radius:
-                16px;
+            border-radius: 16px;
         }
 
 
         .captura img {
-            width:
-                100%;
+            width: 100%;
+
+            display: block;
         }
 
 
         .captura-legenda {
-            padding:
-                18px 20px;
+            padding: 18px 20px;
         }
 
 
         .captura-legenda strong {
-            display:
-                block;
+            display: block;
 
-            margin-bottom:
-                4px;
+            margin-bottom: 4px;
 
-            font-size:
-                15px;
+            font-size: 15px;
         }
 
 
         .captura-legenda span {
-            color:
-                #92aac7;
+            color: #92aac7;
 
-            font-size:
-                13px;
+            font-size: 13px;
         }
 
 
@@ -616,42 +484,29 @@
            ===================================================== */
 
         .destaque {
-            margin-top:
-                30px;
+            margin-top: 30px;
 
-            padding:
-                28px;
+            padding: 28px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #102b49,
-                    #0d2037
-                );
+            background: linear-gradient(135deg, #102b49, #0d2037);
 
-            border:
-                1px solid #25517a;
+            border: 1px solid #25517a;
 
-            border-radius:
-                15px;
+            border-radius: 15px;
         }
 
 
         .destaque h3 {
-            margin-bottom:
-                12px;
+            margin-bottom: 12px;
 
-            color:
-                #69bbff;
+            color: #69bbff;
         }
 
 
         .destaque p {
-            color:
-                #bad0e7;
+            color: #bad0e7;
 
-            line-height:
-                1.8;
+            line-height: 1.8;
         }
 
 
@@ -660,20 +515,16 @@
            ===================================================== */
 
         .lista {
-            margin-top:
-                24px;
+            margin-top: 24px;
 
-            padding-left:
-                20px;
+            padding-left: 20px;
 
-            color:
-                #afc1d8;
+            color: #afc1d8;
         }
 
 
         .lista li {
-            margin-bottom:
-                10px;
+            margin-bottom: 10px;
         }
 
 
@@ -682,35 +533,25 @@
            ===================================================== */
 
         .versao {
-            display:
-                inline-flex;
+            display: inline-flex;
 
-            align-items:
-                center;
+            align-items: center;
 
-            margin-top:
-                22px;
+            margin-top: 22px;
 
-            padding:
-                9px 14px;
+            padding: 9px 14px;
 
-            color:
-                #62e0a5;
+            color: #62e0a5;
 
-            background:
-                #0d3229;
+            background: #0d3229;
 
-            border:
-                1px solid #176047;
+            border: 1px solid #176047;
 
-            border-radius:
-                999px;
+            border-radius: 999px;
 
-            font-size:
-                13px;
+            font-size: 13px;
 
-            font-weight:
-                700;
+            font-weight: 700;
         }
 
 
@@ -719,50 +560,38 @@
            ===================================================== */
 
         .cta {
-            margin:
-                60px 0;
+            margin: 60px 0;
 
-            padding:
-                42px;
+            padding: 42px;
 
-            text-align:
-                center;
+            text-align: center;
 
-            background:
-                #10243c;
+            background: #10243c;
 
-            border:
-                1px solid #214362;
+            border: 1px solid #214362;
 
-            border-radius:
-                18px;
+            border-radius: 18px;
         }
 
 
         .cta h2 {
-            margin-bottom:
-                12px;
+            margin-bottom: 12px;
         }
 
 
         .cta p {
-            max-width:
-                670px;
+            max-width: 670px;
 
-            margin:
-                0 auto 24px;
+            margin: 0 auto 24px;
 
-            color:
-                #9fb4cd;
+            color: #9fb4cd;
         }
 
 
         .cta .hero-acoes {
-            justify-content:
-                center;
+            justify-content: center;
 
-            margin-top:
-                0;
+            margin-top: 0;
         }
 
 
@@ -771,17 +600,13 @@
            ===================================================== */
 
         footer {
-            padding:
-                28px 0 40px;
+            padding: 28px 0 40px;
 
-            text-align:
-                center;
+            text-align: center;
 
-            color:
-                #6f88a5;
+            color: #6f88a5;
 
-            font-size:
-                13px;
+            font-size: 13px;
         }
 
 
@@ -792,20 +617,17 @@
         @media (max-width: 850px) {
 
             .grid {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
 
             .hero {
-                padding-top:
-                    48px;
+                padding-top: 48px;
             }
 
 
             .cta {
-                padding:
-                    30px 20px;
+                padding: 30px 20px;
             }
         }
 
@@ -813,32 +635,27 @@
         @media (max-width: 550px) {
 
             .container {
-                width:
-                    min(100% - 24px, 1120px);
+                width: min(100% - 24px, 1120px);
             }
 
 
             .hero-descricao {
-                font-size:
-                    16px;
+                font-size: 16px;
             }
 
 
             .hero-acoes {
-                flex-direction:
-                    column;
+                flex-direction: column;
             }
 
 
             .botao {
-                width:
-                    100%;
+                width: 100%;
             }
 
 
             .secao {
-                padding:
-                    42px 0;
+                padding: 42px 0;
             }
         }
 
@@ -955,7 +772,7 @@
             <div class="imagem-principal">
 
                 <img
-                    src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
+                    src="img/resultado.jpeg"
                     alt="Interface principal do projeto Transcrição em Texto v1.2.0"
                 >
 
@@ -1355,7 +1172,7 @@ Documento Word
 
 
         <!-- =================================================
-             DEMONSTRAÇÃO
+             DEMONSTRAÇÃO (SEQUÊNCIA LÓGICA DO SISTEMA)
              ================================================= -->
 
         <section
@@ -1377,23 +1194,23 @@ Documento Word
                 <div class="galeria">
 
 
+                    <!-- PASSO 1: LOGIN -->
+
                     <article class="captura">
 
                         <img
-                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/interface-principal.png"
-                            alt="Interface principal do Transcrição em Texto"
+                            src="img/transcricao-mockup.jpeg"
+                            alt="Tela de login e autenticação segura do sistema"
                         >
 
                         <div class="captura-legenda">
 
                             <strong>
-                                1. Interface principal
+                                1. Autenticação e Acesso Seguro
                             </strong>
 
                             <span>
-                                Upload de arquivos, fila,
-                                controles de processamento
-                                e informações da aplicação.
+                                Sistema de login com validação de credenciais, perfis de usuário e armazenamento local protegido.
                             </span>
 
                         </div>
@@ -1401,23 +1218,23 @@ Documento Word
                     </article>
 
 
+                    <!-- PASSO 2: PAINEL INICIAL -->
+
                     <article class="captura">
 
                         <img
-                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/processamento.png"
-                            alt="Fila sendo processada"
+                            src="img/interface-principal.jpeg"
+                            alt="Interface principal do Transcrição em Texto v1.2.0"
                         >
 
                         <div class="captura-legenda">
 
                             <strong>
-                                2. Processamento
+                                2. Painel Principal
                             </strong>
 
                             <span>
-                                Progresso, cronômetros,
-                                visualizador Whisper e status
-                                atualizados durante a transcrição.
+                                Áreas de upload de mídias, fila vazia aguardando seleção e status dos serviços integrados.
                             </span>
 
                         </div>
@@ -1425,23 +1242,47 @@ Documento Word
                     </article>
 
 
+                    <!-- PASSO 3: PROCESSAMENTO -->
+
                     <article class="captura">
 
                         <img
-                            src="https://raw.githubusercontent.com/LeandroAugFerreira/transcricao-audio-web/main/docs/images/resultado.png"
-                            alt="Resultado da transcrição"
+                            src="img/processamento.jpeg"
+                            alt="Fila de transcrição sendo processada"
                         >
 
                         <div class="captura-legenda">
 
                             <strong>
-                                3. Resultado
+                                3. Processamento Ativo
                             </strong>
 
                             <span>
-                                Texto disponível para visualização
-                                e documento Word pronto para
-                                exportação.
+                                Fila dinâmica com cronômetros, progresso em tempo real e visualização das etapas pelo modelo Whisper small.
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PASSO 4: RESULTADO -->
+
+                    <article class="captura">
+
+                        <img
+                            src="img/resultado.jpeg"
+                            alt="Resultado da transcrição concluída"
+                        >
+
+                        <div class="captura-legenda">
+
+                            <strong>
+                                4. Transcrição Concluída e Exportação
+                            </strong>
+
+                            <span>
+                                Exibição do texto gerado e disponibilização do botão direto para exportação em documento Word (.docx).
                             </span>
 
                         </div>
@@ -1665,7 +1506,7 @@ Documento Word
             Desenvolvido por
 
             <strong>
-                Leandro A. Ferreira
+                Leandro Augusto Ferreira
             </strong>
 
         </div>
