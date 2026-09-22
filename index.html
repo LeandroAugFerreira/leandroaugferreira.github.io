@@ -1007,7 +1007,7 @@
 
 
         /* ============================================================
-           DESENVOLVIMENTO (GALERIA MAPEADA COM EXTENSÃO .JPEG)
+           DESENVOLVIMENTO (GALERIA NA ORDEM LÓGICA DO FLUXO)
            ============================================================ */
 
         .development-grid {
@@ -2134,7 +2134,7 @@
 
 
 <!-- ============================================================
-     DESENVOLVIMENTO & AUTOMAÇÃO (GALERIA MAPEADA COM EXTENSÃO .JPEG)
+     DESENVOLVIMENTO & AUTOMAÇÃO (GALERIA NA SEQUÊNCIA LÓGICA 1->4)
      ============================================================ -->
 
 <section class="section section-alt">
@@ -2157,7 +2157,7 @@
         <div class="development-grid">
 
 
-            <!-- TRANSCRIÇÃO EM TEXTO COM GALERIA MAPEADA (.JPEG) -->
+            <!-- TRANSCRIÇÃO EM TEXTO COM GALERIA NAVEGÁVEL EM ORDEM LÓGICA -->
 
             <article class="development-card">
 
@@ -2165,47 +2165,47 @@
 
                     <img
                         id="main-preview-img"
-                        src="img/resultado.jpeg"
-                        alt="Transcrição em Texto - Processamento Concluído"
+                        src="img/transcricao-mockup.jpeg"
+                        alt="Transcrição em Texto - Ecrã de Login"
                     >
 
                 </div>
 
 
-                <!-- MINIATURAS NAVEGÁVEIS (TODAS COM EXTENSÃO .JPEG) -->
+                <!-- MINIATURAS NAVEGÁVEIS (ORDEM SEQUENCIAL DO UTILIZADOR) -->
 
                 <div class="gallery-thumbs">
 
                     <button
                         class="thumb-btn active"
-                        onclick="switchGallery('img/resultado.jpeg', this)"
-                        title="resultado.jpeg - Processamento Concluído"
+                        onclick="switchGallery('img/transcricao-mockup.jpeg', this)"
+                        title="1. transcricao-mockup.jpeg - Autenticação / Login"
                     >
-                        <img src="img/resultado.jpeg" alt="Resultado">
+                        <img src="img/transcricao-mockup.jpeg" alt="1. Login">
                     </button>
 
                     <button
                         class="thumb-btn"
                         onclick="switchGallery('img/interface-principal.jpeg', this)"
-                        title="interface-principal.jpeg - Painel Inicial"
+                        title="2. interface-principal.jpeg - Painel Inicial"
                     >
-                        <img src="img/interface-principal.jpeg" alt="Interface Principal">
+                        <img src="img/interface-principal.jpeg" alt="2. Painel Inicial">
                     </button>
 
                     <button
                         class="thumb-btn"
                         onclick="switchGallery('img/processamento.jpeg', this)"
-                        title="processamento.jpeg - Fila em Execução"
+                        title="3. processamento.jpeg - Fila em Execução"
                     >
-                        <img src="img/processamento.jpeg" alt="Processamento">
+                        <img src="img/processamento.jpeg" alt="3. Processamento">
                     </button>
 
                     <button
                         class="thumb-btn"
-                        onclick="switchGallery('img/transcricao-mockup.jpeg', this)"
-                        title="transcricao-mockup.jpeg - Tela de Login"
+                        onclick="switchGallery('img/resultado.jpeg', this)"
+                        title="4. resultado.jpeg - Transcrição Concluída"
                     >
-                        <img src="img/transcricao-mockup.jpeg" alt="Mockup Login">
+                        <img src="img/resultado.jpeg" alt="4. Concluído">
                     </button>
 
                 </div>
@@ -2222,7 +2222,7 @@
                     </h3>
 
                     <p>
-                        Solução local com backend Flask, processamento neural Whisper small, controle de fila em processo independente e autenticação de usuários via SQLite.
+                        Solução local com backend Flask, processamento neural Whisper small, controlo de fila em processo independente e autenticação de utilizadores via SQLite.
                     </p>
 
 
