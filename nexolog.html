@@ -22,7 +22,7 @@
     @media(max-width:480px) { .container { width:calc(100% - 28px); } nav { gap:14px; } .author { font-size:11px; text-align:right; } .features { grid-template-columns:1fr; } .button { flex:1 1 180px; } .lead { font-size:19px; } }
   
     .nexolog-player { background:#030a16; border-bottom:1px solid #21435b; }
-    .nexolog-player video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#04101e; }
+    .nexolog-player video { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; background:#04101e; }
     .nexolog-controls { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:12px 16px; color:#adc2d7; font-size:12px; }
     .nexolog-controls select,.nexolog-controls button { font:inherit; color:#f0f6ff; background:#0a2033; border:1px solid #285269; padding:8px 10px; border-radius:7px; cursor:pointer; }
     .nexolog-controls button { color:#00c8f5; }
@@ -50,11 +50,11 @@
     </header>
     <section aria-label="Vídeo de apresentação"><h2>Conheça o NexoLog em vídeo</h2>
 <div class="nexolog-player" data-nexolog-player>
-  <video controls playsinline preload="metadata" poster="img/nexolog-dashboard.png" width="1280" height="720" aria-label="Apresentação do NexoLog">
-    <source src="media/nexolog-apresentacao.mp4" type="video/mp4">
-    <track kind="subtitles" src="media/nexolog-pt.vtt" srclang="pt-BR" label="Português BR" default>
-    <track kind="subtitles" src="media/nexolog-en.vtt" srclang="en" label="English">
-    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4">Baixar apresentação</a>.
+  <video controls playsinline preload="metadata" poster="img/nexolog-dashboard.png?v=31122cce4b8e" width="1920" height="1080" aria-label="Apresentação do NexoLog">
+    <source src="media/nexolog-apresentacao.mp4?v=e8fb7781e6af" type="video/mp4">
+    <track kind="subtitles" src="media/nexolog-pt.vtt?v=bf23080bff67" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/nexolog-en.vtt?v=3d61d6579cfa" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4?v=e8fb7781e6af">Baixar apresentação</a>.
   </video>
   <div class="nexolog-controls">
     <button type="button" data-video-toggle aria-label="Reproduzir apresentação">▶ Reproduzir</button>
@@ -63,7 +63,7 @@
   </div>
 </div>
 </section>
-    <section aria-label="Dashboard"><figure class="preview"><img src="img/nexolog-dashboard.png" alt="Dashboard do NexoLog com indicadores, gráfico de estoque, pedidos recentes e alertas"><figcaption>Indicadores conectados à operação, com listas que rolam dentro dos painéis.</figcaption></figure></section>
+    <section aria-label="Dashboard"><figure class="preview"><img src="img/nexolog-dashboard.png?v=31122cce4b8e" alt="Dashboard do NexoLog com indicadores, gráfico de estoque, pedidos recentes e alertas"><figcaption>Indicadores conectados à operação, com listas que rolam dentro dos painéis.</figcaption></figure></section>
     <section><h2>Da operação ao indicador</h2><div class="features">
       <article class="feature"><h3>Estoque e produtos</h3><p>Categoria, marca, variante e código de barras identificam cada item. O sistema controla saldos, reservas e movimentações.</p></article>
       <article class="feature"><h3>Pedidos em Kanban</h3><p>Processamento, expedição e entrega em um fluxo visual, com filtro de período e regras para cancelamentos e devoluções.</p></article>
