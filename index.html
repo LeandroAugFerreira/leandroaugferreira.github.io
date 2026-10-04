@@ -1650,7 +1650,18 @@
             }
         }
 
-    </style>
+
+    .nexolog-player { background:#030a16; border-bottom:1px solid #21435b; }
+    .nexolog-player video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#04101e; }
+    .nexolog-controls { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:12px 16px; color:#adc2d7; font-size:12px; }
+    .nexolog-controls select,.nexolog-controls button { font:inherit; color:#f0f6ff; background:#0a2033; border:1px solid #285269; padding:8px 10px; border-radius:7px; cursor:pointer; }
+    .nexolog-controls button { color:#00c8f5; }
+    .nexolog-controls select:focus-visible,.nexolog-controls button:focus-visible { outline:2px solid #00c8f5; outline-offset:3px; }
+    .nexolog-status { margin-left:auto; font-size:11px; }
+    .nexolog-downloads { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+    video::cue { background:rgba(0,8,18,.92); color:white; font-family:Segoe UI,sans-serif; }
+
+</style>
 
 </head>
 
@@ -2252,37 +2263,30 @@
 
             <!-- PRÓXIMO PROJETO -->
 
-            <article class="future-card">
+            <article class="development-card" id="nexolog">
 
-                <div class="future-content">
+<div class="nexolog-player" data-nexolog-player>
+  <video controls playsinline preload="metadata" poster="img/nexolog-dashboard.png" width="1280" height="720" aria-label="Apresentação do NexoLog">
+    <source src="media/nexolog-apresentacao.mp4" type="video/mp4">
+    <track kind="subtitles" src="media/nexolog-pt.vtt" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/nexolog-en.vtt" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4">Baixar apresentação</a>.
+  </video>
+  <div class="nexolog-controls">
+    <button type="button" data-video-toggle aria-label="Reproduzir apresentação">▶ Reproduzir</button>
+    <label>Idioma das legendas <select aria-label="Idioma das legendas" data-caption-language><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label>
+    <span class="nexolog-status">Áudio em português • Legendas PT / EN</span>
+  </div>
+</div>
 
-                    <div class="future-icon">
-                        +
-                    </div>
-
-
-                    <span class="future-status">
-                        Próximo projeto
-                    </span>
-
-
-                    <h3>
-                        Nova solução em desenvolvimento
-                    </h3>
-
-
-                    <p>
-                        Projeto em fase de construção focado em arquitetura de dados e APIs para integração de sistemas.
-                    </p>
-
-
-                    <span class="future-note">
-                        EM BREVE
-                    </span>
-
-                </div>
-
-            </article>
+  <div class="development-content">
+    <span class="project-type">Gestão logística • Full Stack • Windows</span>
+    <h3>NexoLog</h3>
+    <p>Estoque, pedidos e parceiros conectados em uma única operação. Kanban com filtro de período, entregas simuladas e indicadores alimentados pelas transações.</p>
+    <div class="project-tech"><span>React</span><span>FastAPI</span><span>Python</span><span>SQLite</span><span>SQLAlchemy</span></div>
+    <div class="nexolog-downloads"><a href="nexolog.html" class="project-link">CONHECER O PROJETO →</a><a href="downloads/NexoLog.exe" download class="project-link">BAIXAR PARA WINDOWS ↓</a></div>
+  </div>
+</article>
 
         </div>
 
@@ -2523,6 +2527,34 @@
 
 </script>
 
+
+
+<script>
+document.querySelectorAll('[data-nexolog-player]').forEach(function(player) {
+  const video = player.querySelector('video');
+  const language = player.querySelector('[data-caption-language]');
+  const toggle = player.querySelector('[data-video-toggle]');
+  function updateCaptions() {
+    Array.from(video.textTracks).forEach(function(track) {
+      track.mode = track.language === language.value ? 'showing' : 'disabled';
+    });
+  }
+  language.addEventListener('change', updateCaptions);
+  video.addEventListener('loadedmetadata', updateCaptions);
+  toggle.addEventListener('click', function() {
+    if (video.paused) video.play().catch(function() { toggle.textContent = '▶ Reproduzir'; });
+    else video.pause();
+  });
+  function updatePlayback() {
+    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
+    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação' : 'Pausar apresentação');
+  }
+  video.addEventListener('play', updatePlayback);
+  video.addEventListener('pause', updatePlayback);
+  video.addEventListener('ended', updatePlayback);
+  updateCaptions();
+});
+</script>
 
 </body>
 

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexoLog: gestão de estoque, pedidos e entregas. Conheça o projeto de Leandro Augusto Ferreira e experimente a versão Windows.">
+  <title>NexoLog | Leandro Augusto Ferreira</title>
+  <style>
+    :root { color-scheme: dark; --bg:#04101e; --panel:#0a2033; --line:#21435b; --text:#f0f6ff; --muted:#adc2d7; --accent:#00c8f5; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Inter,Segoe UI,sans-serif; background:radial-gradient(ellipse at 90% 0, #0a354e, transparent 55%),var(--bg); color:var(--text); line-height:1.65; }
+    a { color:var(--accent); text-decoration:none; } a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:5px; } .container { width:min(1180px,calc(100% - 40px)); margin:auto; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:22px 0; border-bottom:1px solid var(--line); } .author { color:var(--muted); font-size:13px; }
+    .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center; padding:64px 0 40px; } .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:700; }
+    h1 { margin:8px 0 12px; font-size:clamp(46px,7vw,78px); letter-spacing:-3px; line-height:1.1; } h1 span { color:var(--accent); } .lead { font-size:22px; margin:0 0 16px; } p { color:var(--muted); } .description { max-width:650px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; } .button { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border:1px solid var(--line); border-radius:9px; font-weight:700; font-size:14px; color:var(--text); }
+    .button.primary { background:var(--accent); border-color:var(--accent); color:#031321; } .button:hover { filter:brightness(1.12); } .tags { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; } .tags span { border:1px solid var(--line); border-radius:6px; padding:4px 10px; color:var(--muted); font-size:12px; }
+    .hero-aside { padding:28px; background:linear-gradient(145deg,#0d3045,#0a1c30); border:1px solid #24637c; border-radius:16px; box-shadow:0 0 40px #00bff010; } .hero-aside h2 { margin:0 0 12px; font-size:19px; } .numbers { display:grid; grid-template-columns:1fr 1fr; gap:20px; } .numbers strong { display:block; color:var(--accent); font-size:30px; line-height:1.2; } .numbers span { color:var(--muted); font-size:13px; }
+    .note { font-size:12px; margin:20px 0 0; } section { padding:30px 0; } h2 { font-size:26px; line-height:1.3; } .features { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; } .feature { padding:22px; border:1px solid var(--line); border-radius:12px; background:var(--panel); } .feature h3 { margin:0 0 8px; color:#e1f7ff; font-size:17px; } .feature p { margin:0; font-size:14px; }
+    .preview { margin:0; padding:8px; background:var(--panel); border:1px solid var(--line); border-radius:14px; } .preview img { display:block; width:100%; border-radius:8px; } figcaption { padding:10px 12px; color:var(--muted); font-size:13px; }
+    .gallery { display:grid; grid-template-columns:1fr 1fr; gap:18px; } .usage { padding:26px; border:1px solid var(--line); border-radius:12px; background:var(--panel); } .usage li { margin:8px 0; color:var(--muted); } code { color:#a1ecff; overflow-wrap:anywhere; } footer { margin-top:24px; padding:30px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media(max-width:800px) { .hero { grid-template-columns:1fr; gap:24px; padding-top:36px; } .features { grid-template-columns:1fr 1fr; } .gallery { grid-template-columns:1fr; } }
+    @media(max-width:480px) { .container { width:calc(100% - 28px); } nav { gap:14px; } .author { font-size:11px; text-align:right; } .features { grid-template-columns:1fr; } .button { flex:1 1 180px; } .lead { font-size:19px; } }
+  
+    .nexolog-player { background:#030a16; border-bottom:1px solid #21435b; }
+    .nexolog-player video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#04101e; }
+    .nexolog-controls { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:12px 16px; color:#adc2d7; font-size:12px; }
+    .nexolog-controls select,.nexolog-controls button { font:inherit; color:#f0f6ff; background:#0a2033; border:1px solid #285269; padding:8px 10px; border-radius:7px; cursor:pointer; }
+    .nexolog-controls button { color:#00c8f5; }
+    .nexolog-controls select:focus-visible,.nexolog-controls button:focus-visible { outline:2px solid #00c8f5; outline-offset:3px; }
+    .nexolog-status { margin-left:auto; font-size:11px; }
+    .nexolog-downloads { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+    video::cue { background:rgba(0,8,18,.92); color:white; font-family:Segoe UI,sans-serif; }
+
+</style>
+</head>
+<body>
+  <nav class="container"><a href="index.html">← Voltar ao portfólio</a><span class="author">Leandro Augusto Ferreira</span></nav>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Gestão logística • Aplicação completa</div>
+        <h1>Nexo<span>Log</span></h1>
+        <p class="lead">Sua operação conectada.</p>
+        <p class="description">Do cadastro do produto à entrega do pedido, o NexoLog conecta estoque, parceiros e indicadores. Cada operação mantém seus registros, permitindo acompanhar o negócio com clareza.</p>
+        <div class="tags"><span>React</span><span>FastAPI</span><span>Python</span><span>SQLite</span><span>SQLAlchemy</span><span>Windows</span></div>
+        <div class="actions"><a class="button primary" href="downloads/NexoLog.exe" download>Baixar para Windows</a><a class="button" href="downloads/NexoLog-codigo-fonte.zip" download>Baixar código-fonte</a></div>
+        <p class="note">Demonstração local com dados fictícios. O executável abre o sistema no navegador, sem instalar Python ou Node.</p>
+      </div>
+      <aside class="hero-aside"><h2>Uma operação para explorar</h2><div class="numbers"><div><strong>144</strong><span>Produtos e variantes</span></div><div><strong>408</strong><span>Pedidos na base inicial</span></div><div><strong>24</strong><span>Fornecedores</span></div><div><strong>48</strong><span>Clientes</span></div></div><p class="note">Histórico de 2024 a 2026, com movimentações conciliadas e auditoria das transações.</p></aside>
+    </header>
+    <section aria-label="Vídeo de apresentação"><h2>Conheça o NexoLog em vídeo</h2>
+<div class="nexolog-player" data-nexolog-player>
+  <video controls playsinline preload="metadata" poster="img/nexolog-dashboard.png" width="1280" height="720" aria-label="Apresentação do NexoLog">
+    <source src="media/nexolog-apresentacao.mp4" type="video/mp4">
+    <track kind="subtitles" src="media/nexolog-pt.vtt" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/nexolog-en.vtt" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4">Baixar apresentação</a>.
+  </video>
+  <div class="nexolog-controls">
+    <button type="button" data-video-toggle aria-label="Reproduzir apresentação">▶ Reproduzir</button>
+    <label>Idioma das legendas <select aria-label="Idioma das legendas" data-caption-language><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label>
+    <span class="nexolog-status">Áudio em português • Legendas PT / EN</span>
+  </div>
+</div>
+</section>
+    <section aria-label="Dashboard"><figure class="preview"><img src="img/nexolog-dashboard.png" alt="Dashboard do NexoLog com indicadores, gráfico de estoque, pedidos recentes e alertas"><figcaption>Indicadores conectados à operação, com listas que rolam dentro dos painéis.</figcaption></figure></section>
+    <section><h2>Da operação ao indicador</h2><div class="features">
+      <article class="feature"><h3>Estoque e produtos</h3><p>Categoria, marca, variante e código de barras identificam cada item. O sistema controla saldos, reservas e movimentações.</p></article>
+      <article class="feature"><h3>Pedidos em Kanban</h3><p>Processamento, expedição e entrega em um fluxo visual, com filtro de período e regras para cancelamentos e devoluções.</p></article>
+      <article class="feature"><h3>Entregas simuladas</h3><p>Mapa esquemático com caminhão animado e eventos automáticos. A simulação registra as etapas e o resultado da entrega.</p></article>
+      <article class="feature"><h3>Clientes e fornecedores</h3><p>Cadastros, contatos, filtros e informações organizados em painéis de consulta e edição.</p></article>
+      <article class="feature"><h3>Relatórios e auditoria</h3><p>Indicadores por período, exportações CSV e histórico das ações realizadas no sistema.</p></article>
+      <article class="feature"><h3>Acesso e persistência</h3><p>Autenticação, perfis de usuário e dados salvos localmente, mantendo a operação entre as execuções.</p></article>
+    </div></section>
+    <section><h2>Visibilidade em cada etapa</h2><div class="gallery"><figure class="preview"><img loading="lazy" src="img/nexolog-pedidos.png" alt="Kanban de pedidos e painel de rastreamento demonstrativo"><figcaption>Pedidos e rastreamento demonstrativo.</figcaption></figure><figure class="preview"><img loading="lazy" src="img/nexolog-relatorios.png" alt="Relatórios do NexoLog com gráficos e histórico de auditoria"><figcaption>Relatórios e trilha de auditoria.</figcaption></figure></div></section>
+    <section><div class="usage"><h2>Como experimentar</h2><ol><li>Baixe e abra <strong>NexoLog.exe</strong> em um computador Windows de 64 bits.</li><li>Aguarde o navegador e escolha <strong>Usar acesso demo</strong> na tela de login.</li><li>Explore os cadastros, crie pedidos e acompanhe as etapas no Kanban.</li><li>Para repetir uma entrega, abra os detalhes do rastreamento e escolha <strong>Simular outra entrega hoje</strong>.</li><li>Mantenha a janela do NexoLog aberta enquanto usa o sistema. Ao fechá-la, a API local é encerrada.</li></ol><p>Acesso público da demonstração: <code>demo@nexolog.app</code> / <code>NexoLog@2026</code>.</p><p class="note">O rastreamento é uma simulação, sem GPS ou conexão com transportadoras reais. Os dados ficam em <code>%LOCALAPPDATA%\NexoLog</code>.</p></div></section>
+  </main>
+  <footer><div class="container">NexoLog • Projeto de Leandro Augusto Ferreira • <a href="index.html">Conhecer outros projetos</a></div></footer>
+
+<script>
+document.querySelectorAll('[data-nexolog-player]').forEach(function(player) {
+  const video = player.querySelector('video');
+  const language = player.querySelector('[data-caption-language]');
+  const toggle = player.querySelector('[data-video-toggle]');
+  function updateCaptions() {
+    Array.from(video.textTracks).forEach(function(track) {
+      track.mode = track.language === language.value ? 'showing' : 'disabled';
+    });
+  }
+  language.addEventListener('change', updateCaptions);
+  video.addEventListener('loadedmetadata', updateCaptions);
+  toggle.addEventListener('click', function() {
+    if (video.paused) video.play().catch(function() { toggle.textContent = '▶ Reproduzir'; });
+    else video.pause();
+  });
+  function updatePlayback() {
+    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
+    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação' : 'Pausar apresentação');
+  }
+  video.addEventListener('play', updatePlayback);
+  video.addEventListener('pause', updatePlayback);
+  video.addEventListener('ended', updatePlayback);
+  updateCaptions();
+});
+</script>
+
+</body>
+</html>

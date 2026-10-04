@@ -1,0 +1,102 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:06.350
+Meet NexoLog, a management system connecting inventory,
+orders and deliveries.
+
+2
+00:00:06.700 --> 00:00:12.052
+Operations and their metrics come together in an
+organized interface.
+
+3
+00:00:13.308 --> 00:00:18.996
+The dashboard shows orders, order value, low stock and
+pending shipments.
+
+4
+00:00:19.346 --> 00:00:25.970
+Stock movements, recent orders and alerts help you
+monitor daily operations.
+
+5
+00:00:27.225 --> 00:00:33.513
+Each product has a category, brand, specification or
+variant, and barcode.
+
+6
+00:00:33.863 --> 00:00:39.503
+Stock balances, reservations and movements keep
+incoming and outgoing goods under control.
+
+7
+00:00:40.767 --> 00:00:46.743
+The Kanban board organizes orders into pending,
+processing, shipped and delivered.
+
+8
+00:00:47.093 --> 00:00:52.493
+Choose start and end dates to view a specific period
+while preserving the full history.
+
+9
+00:00:53.725 --> 00:00:59.581
+Tracking simulates the journey on a schematic map, with
+automatic delivery stages.
+
+10
+00:00:59.931 --> 00:01:07.323
+Events are saved and feed reports and the audit log.
+This demonstration does not use live GPS.
+
+11
+00:01:08.558 --> 00:01:14.438
+Suppliers are organized by category, contact, city and
+status.
+
+12
+00:01:14.788 --> 00:01:20.716
+Filters and a detail panel make it easier to find and
+maintain supplier records.
+
+13
+00:01:21.975 --> 00:01:27.735
+The customer area brings records, contact details and
+metrics together on one screen.
+
+14
+00:01:28.085 --> 00:01:33.605
+The list includes filters and internal scrolling to
+keep information accessible.
+
+15
+00:01:34.850 --> 00:01:40.898
+Reports show inventory turnover, fulfillment time and
+order value by category.
+
+16
+00:01:41.248 --> 00:01:47.080
+Select a period, export data and review the history of
+actions performed in the system.
+
+17
+00:01:48.350 --> 00:01:54.158
+User management controls roles, permissions and
+recorded activities.
+
+18
+00:01:54.508 --> 00:02:02.500
+The project combines React, FastAPI and SQLite to
+integrate the interface, rules and persistence.
+
+19
+00:02:03.767 --> 00:02:11.111
+The Windows version includes fictional transactions
+spanning 2024 to 2026.
+
+20
+00:02:11.461 --> 00:02:19.405
+Download the executable from the project card and
+choose the demo login. NexoLog: your operation,
+connected.
