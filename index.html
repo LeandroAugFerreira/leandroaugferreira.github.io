@@ -1126,7 +1126,8 @@
 
 
         .thumb-btn:hover,
-        .thumb-btn.active {
+        .thumb-btn.active,
+        .thumb-btn[aria-pressed="true"] {
             opacity: 1;
 
             border-color: var(--cyan-neon);
@@ -2196,27 +2197,6 @@
 
         <div class="development-grid">
 
-            <article class="development-card atelie-featured" id="atelie-verde">
-                <div class="atelie-gallery" data-atelie-gallery>
-                    <button class="atelie-preview-open" type="button" data-expand aria-label="Ampliar a loja do Ateliê Verde"><img data-preview src="img/atelie-verde/loja.webp" alt="Loja do Ateliê Verde com categorias, produtos e serviços de jardinagem" width="1440" height="900" loading="lazy"></button>
-                    <div class="atelie-tabs" role="group" aria-label="Prévia do Ateliê Verde">
-                        <button type="button" data-image="img/atelie-verde/loja.webp" data-caption="Loja · Catálogo, produtos e serviços." aria-pressed="true">Loja</button>
-                        <button type="button" data-image="img/atelie-verde/projetos.webp" data-caption="Projetos · Planejamento e acompanhamento do paisagismo." aria-pressed="false">Projetos</button>
-                        <button type="button" data-image="img/atelie-verde/dashboard.webp" data-caption="Gestão · Vendas, financeiro e estoque." aria-pressed="false">Gestão</button>
-                    </div>
-                    <p class="atelie-caption" data-caption aria-live="polite">Loja · Catálogo, produtos e serviços.</p>
-                </div>
-                <div class="development-content">
-                    <div class="atelie-card-brand"><img src="img/atelie-verde/logo.webp" alt="" width="58" height="58" loading="lazy"><div><span class="project-type">Python • Full Stack • IA</span><small>GreenScape · Jardinagem e paisagismo</small></div></div>
-                    <h3>Ateliê Verde</h3>
-                    <p>Loja e gestão de jardinagem conectadas a estoque, serviços, projetos e financeiro. O assistente Rafinha conversa com contexto, pesquisa fontes e analisa fotos por uma conexão ChatGPT autorizada.</p>
-                    <div class="project-tech"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLite</span><span>ChatGPT</span></div>
-                    <div class="atelie-card-actions"><a href="atelie-verde.html" class="project-link">VER PROJETO COMPLETO →</a><a class="atelie-card-download" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar para Windows ↓</a></div>
-                    <p class="atelie-card-note">Dados fictícios · Download de 232 MB · Rafinha com conta própria opcional.</p>
-                </div>
-            </article>
-
-
             <!-- TRANSCRIÇÃO EM TEXTO COM GALERIA NAVEGÁVEL EM ORDEM LÓGICA -->
 
             <article class="development-card">
@@ -2336,6 +2316,56 @@
     <a href="nexolog.html" class="project-link">VER PROJETO COMPLETO →</a>
   </div>
 </article>
+
+            <!-- ATELIÊ VERDE -->
+
+            <article class="development-card atelie-card" id="atelie-verde">
+                <div data-atelie-gallery>
+                    <button class="development-viewer atelie-preview-open" type="button" data-expand aria-label="Ampliar a loja do Ateliê Verde"><img data-preview src="img/atelie-verde/loja.webp" alt="Loja do Ateliê Verde com categorias, produtos e serviços de jardinagem" width="1440" height="900" loading="lazy"></button>
+                    <div class="gallery-thumbs" role="group" aria-label="Prévia do Ateliê Verde">
+                        <button class="thumb-btn" type="button" data-image="img/atelie-verde/loja.webp" data-caption="Loja · Catálogo, produtos e serviços." aria-label="Loja" title="Loja" aria-pressed="true"><img src="img/atelie-verde/loja.webp" alt="" width="68" height="42" loading="lazy"></button>
+                        <button class="thumb-btn" type="button" data-image="img/atelie-verde/projetos.webp" data-caption="Projetos · Planejamento e acompanhamento do paisagismo." aria-label="Projetos" title="Projetos" aria-pressed="false"><img src="img/atelie-verde/projetos.webp" alt="" width="68" height="42" loading="lazy"></button>
+                        <button class="thumb-btn" type="button" data-image="img/atelie-verde/dashboard.webp" data-caption="Gestão · Vendas, financeiro e estoque." aria-label="Gestão" title="Gestão" aria-pressed="false"><img src="img/atelie-verde/dashboard.webp" alt="" width="68" height="42" loading="lazy"></button>
+                    </div>
+                    <p class="atelie-caption" data-caption aria-live="polite">Loja · Catálogo, produtos e serviços.</p>
+                </div>
+                <div class="development-content">
+                    <span class="project-type">Python • Full Stack • IA</span>
+                    <h3>Ateliê Verde</h3>
+                    <p>Sistema de jardinagem e paisagismo com loja, estoque, serviços, projetos e financeiro. O assistente Rafinha usa uma conexão ChatGPT autorizada para conversar com contexto, pesquisar e analisar fotos.</p>
+                    <div class="project-tech"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLite</span><span>ChatGPT</span></div>
+                    <a href="atelie-verde.html" class="project-link">VER PROJETO COMPLETO →</a>
+                </div>
+            </article>
+
+            <!-- ESPAÇOS RESERVADOS: substitua cada article pelo próximo projeto. -->
+
+            <article class="future-card" id="novo-projeto-1" aria-label="Espaço reservado para novo projeto 1">
+                <div class="future-content">
+                    <div class="future-icon" aria-hidden="true">+</div>
+                    <span class="future-status">Espaço disponível</span>
+                    <h3>Novo projeto 01</h3>
+                    <p>Reservado para os próximos projetos.</p>
+                </div>
+            </article>
+
+            <article class="future-card" id="novo-projeto-2" aria-label="Espaço reservado para novo projeto 2">
+                <div class="future-content">
+                    <div class="future-icon" aria-hidden="true">+</div>
+                    <span class="future-status">Espaço disponível</span>
+                    <h3>Novo projeto 02</h3>
+                    <p>Reservado para os próximos projetos.</p>
+                </div>
+            </article>
+
+            <article class="future-card" id="novo-projeto-3" aria-label="Espaço reservado para novo projeto 3">
+                <div class="future-content">
+                    <div class="future-icon" aria-hidden="true">+</div>
+                    <span class="future-status">Espaço disponível</span>
+                    <h3>Novo projeto 03</h3>
+                    <p>Reservado para os próximos projetos.</p>
+                </div>
+            </article>
 
         </div>
 
