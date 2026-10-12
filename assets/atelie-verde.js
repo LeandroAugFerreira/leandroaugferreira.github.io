@@ -54,3 +54,28 @@ document.querySelectorAll('[data-atelie-gallery]').forEach((gallery, index) => {
   });
   select(0);
 });
+
+document.querySelectorAll('[data-atelie-player]').forEach((player) => {
+  const video = player.querySelector('video');
+  const language = player.querySelector('[data-caption-language]');
+  const toggle = player.querySelector('[data-video-toggle]');
+  function updateCaptions() {
+    Array.from(video.textTracks).forEach(track => { track.mode = 'disabled'; });
+    const chosen = Array.from(video.textTracks).find(track => track.language === language.value);
+    if (chosen) chosen.mode = 'showing';
+  }
+  function updatePlayback() {
+    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
+    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação do Ateliê Verde' : 'Pausar apresentação do Ateliê Verde');
+  }
+  language.addEventListener('change', updateCaptions);
+  video.addEventListener('loadedmetadata', updateCaptions);
+  toggle.addEventListener('click', () => {
+    if (video.paused) video.play().catch(updatePlayback);
+    else video.pause();
+  });
+  video.addEventListener('play', updatePlayback);
+  video.addEventListener('pause', updatePlayback);
+  video.addEventListener('ended', updatePlayback);
+  updateCaptions();
+});

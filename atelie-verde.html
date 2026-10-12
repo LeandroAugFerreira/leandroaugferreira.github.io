@@ -10,8 +10,8 @@
   <meta property="og:url" content="https://leandroaugferreira.github.io/atelie-verde.html">
   <meta property="og:image" content="https://leandroaugferreira.github.io/img/atelie-verde/loja.webp">
   <title>Ateliê Verde · GreenScape | Leandro Augusto Ferreira</title>
-  <link rel="stylesheet" href="assets/atelie-verde.css?v=b6e1acdc8620">
-  <script src="assets/atelie-verde.js" defer></script>
+  <link rel="stylesheet" href="assets/atelie-verde.css?v=431265299651">
+  <script src="assets/atelie-verde.js?v=88411ce11f74" defer></script>
 </head>
 <body class="atelie-project">
   <nav class="atelie-container atelie-nav" aria-label="Navegação do projeto">
@@ -27,8 +27,8 @@
         <p>Uma aplicação que conecta a experiência do cliente à operação da empresa. Produtos, pedidos, serviços e projetos se encontram com estoque, orçamentos e indicadores financeiros.</p>
         <div class="atelie-tags" aria-label="Tecnologias"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLAlchemy</span><span>SQLite</span><span>ChatGPT</span><span>Windows</span></div>
         <div class="atelie-actions">
-          <a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar para Windows · 232 MB ↓</a>
-          <a class="atelie-button" href="#telas">Explorar as telas →</a>
+          <a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.12/AtelieVerde-Windows.zip">Baixar para Windows · 232 MB ↓</a>
+          <a class="atelie-button" href="#apresentacao">Assistir à apresentação →</a>
         </div>
         <p class="atelie-note">Demonstração local com dados fictícios. Extraia o ZIP completo para executar, sem instalar Python ou Node.js.</p>
       </div>
@@ -37,6 +37,23 @@
         <div class="atelie-stats"><div><strong>61</strong><span>Produtos na demonstração</span></div><div><strong>40</strong><span>Espécies na biblioteca</span></div><div><strong>12</strong><span>Expressões do Rafinha</span></div></div>
       </aside>
     </header>
+
+    <section class="atelie-section" id="apresentacao" aria-labelledby="apresentacao-title">
+      <div class="atelie-section-intro"><p class="atelie-eyebrow">O projeto em uso</p><h2 id="apresentacao-title">Conheça o Ateliê Verde em vídeo</h2><p>Narração em português brasileiro, com legendas selecionáveis em Português BR e English.</p></div>
+<div class="atelie-player" data-atelie-player>
+  <video controls playsinline preload="metadata" poster="img/atelie-verde/video-capa.jpg?v=081e249cb445" width="1920" height="1080" aria-label="Apresentação do Ateliê Verde">
+    <source src="media/atelie-verde-apresentacao.mp4?v=2f7348070eb7" type="video/mp4">
+    <track kind="subtitles" src="media/atelie-verde-pt.vtt?v=9db073f62e6c" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/atelie-verde-en.vtt?v=069640f69733" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="media/atelie-verde-apresentacao.mp4?v=2f7348070eb7">Baixar apresentação</a>.
+  </video>
+  <div class="atelie-player-controls">
+    <button type="button" data-video-toggle aria-label="Reproduzir apresentação do Ateliê Verde">▶ Reproduzir</button>
+    <label>Legendas <select aria-label="Idioma das legendas do Ateliê Verde" data-caption-language><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label>
+    <span class="atelie-player-note">Áudio em português · Legendas PT / EN</span>
+  </div>
+</div>
+    </section>
 
     <section class="atelie-section" id="telas" aria-labelledby="telas-title">
       <div class="atelie-section-intro"><p class="atelie-eyebrow">Conheça a aplicação</p><h2 id="telas-title">Do portal do cliente ao painel de gestão</h2><p>Selecione uma tela para conhecer o fluxo. Clique na imagem para ver os detalhes em tamanho maior.</p></div>
@@ -48,7 +65,7 @@
           <button type="button" data-image="img/atelie-verde/planta.webp" data-caption="Detalhes da planta · Galeria ampliada, descrição e cuidados." aria-pressed="false">Detalhes da planta</button>
           <button type="button" data-image="img/atelie-verde/projetos.webp" data-caption="Projetos · Demonstrações de paisagismo organizadas por etapa." aria-pressed="false">Projetos</button>
           <button type="button" data-image="img/atelie-verde/servicos.webp" data-caption="Serviços · Consultoria, implantação, poda e agendamentos." aria-pressed="false">Serviços</button>
-          <button type="button" data-image="img/atelie-verde/dashboard.webp" data-caption="Gestão · Indicadores de receita, vendas, projetos e estoque." aria-pressed="false">Dashboard</button>
+          <button type="button" data-image="img/atelie-verde/dashboard.webp?v=2c11afa895ac" data-caption="Gestão · Indicadores de receita, vendas, projetos e estoque." aria-pressed="false">Dashboard</button>
         </div>
         <p class="atelie-caption" data-caption aria-live="polite">Loja · Produtos, categorias e serviços em uma única entrada.</p>
       </div>
@@ -92,8 +109,8 @@
         <p class="atelie-eyebrow">Experimente o projeto</p><h2 id="experimentar-title">Demonstração para Windows de 64 bits</h2>
         <ol><li>Baixe <strong>AtelieVerde-Windows.zip</strong> e extraia a pasta inteira.</li><li>Abra <strong>AtelieVerde.exe</strong>, mantendo a pasta <strong>_internal</strong> ao lado dele. O sistema abre no navegador.</li><li>Escolha <strong>Cliente</strong> para explorar o portal como Rafael, ou <strong>Administrador</strong> para testar a gestão como Leandro.</li><li>Para habilitar o ChatGPT no Rafinha, use <strong>Administrador → Configurações → Inteligência Artificial → Continuar com ChatGPT</strong> e autorize sua própria conta compatível.</li><li>Ao terminar, use <strong>EncerrarAtelieVerde.cmd</strong>. Seus dados de demonstração ficam salvos no computador.</li></ol>
         <p class="atelie-note">Os dados e as imagens de projetos são demonstrativos. O checkout não realiza cobrança online. O executável não possui assinatura digital; o Windows pode solicitar confirmação de origem.</p>
-        <div class="atelie-actions"><a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar demonstração · 232 MB ↓</a><a class="atelie-button" href="index.html#atelie-verde">Ver outros projetos →</a></div>
-        <details class="atelie-integrity"><summary>Versão e integridade do download</summary><p class="atelie-note">Distribuição de 11/10/2026 · SHA-256:</p><code>239cab82ed11be3d7a5f3c83688d095ebb4528fd0866b1691304d6905e80bd3a</code></details>
+        <div class="atelie-actions"><a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.12/AtelieVerde-Windows.zip">Baixar demonstração · 232 MB ↓</a><a class="atelie-button" href="index.html#atelie-verde">Ver outros projetos →</a></div>
+        <details class="atelie-integrity"><summary>Versão e integridade do download</summary><p class="atelie-note">Distribuição de 12/10/2026 · SHA-256:</p><code>d79532e3eaacf0f3d9545d9f91268def89f092229f6189aaf7d005f0424ab5c2</code></details>
       </div>
     </section>
   </main>
