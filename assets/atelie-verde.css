@@ -1,25 +1,15 @@
 /* Ateliê Verde: apresentação integrada ao portfólio. */
-.development-card.atelie-featured { grid-column:1 / -1; display:grid; grid-template-columns:1.25fr 1fr; min-height:0; border-color:rgba(98,224,165,.28); }
-.atelie-featured .development-content { padding:32px; justify-content:center; }
-.atelie-featured .development-content h3 { font-size:1.9rem; margin:8px 0 12px; }
-.atelie-featured .project-type { color:#88e7b3; }
-.atelie-featured .project-tech { margin-top:20px; }
-.atelie-card-brand { display:flex; align-items:center; gap:12px; }
-.atelie-card-brand img { width:58px; height:58px; object-fit:contain; }
-.atelie-card-brand small { display:block; color:#a1b4c8; font-size:12px; }
-.atelie-card-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:22px; }
-.atelie-card-actions .project-link { margin:0; color:#88e7b3; }
-.atelie-card-download { color:#d3dfec; font-size:12px; border:1px solid #2f5355; border-radius:7px; padding:8px 12px; }
-.atelie-card-note { margin-top:16px!important; font-size:11px!important; color:#a1b4c8!important; }
+.atelie-card .development-viewer img { object-fit:contain; object-position:center; aspect-ratio:auto; }
+.atelie-card .atelie-caption { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
 .atelie-gallery { min-width:0; background:#050e1b; border-radius:16px; overflow:hidden; border:1px solid #21435b; }
-.atelie-featured .atelie-gallery { border:0; border-radius:0; border-right:1px solid rgba(98,224,165,.2); display:flex; flex-direction:column; justify-content:center; }
 .atelie-preview-open { display:block; width:100%; padding:0; border:0; cursor:zoom-in; background:#04101e; }
 .atelie-preview-open img { display:block; width:100%; height:auto; aspect-ratio:8 / 5; object-fit:contain; }
 .atelie-tabs { display:flex; flex-wrap:wrap; gap:6px; padding:12px; }
 .atelie-tabs button { font:inherit; font-size:12px; padding:8px 12px; color:#b9cddd; background:#0b2031; border:1px solid #254658; border-radius:7px; cursor:pointer; }
 .atelie-tabs button[aria-pressed="true"] { color:#bff5d5; border-color:#67cd97; background:#163a31; }
 .atelie-caption { padding:0 16px 14px; margin:0; color:#b4c8da; font-size:12px; }
-.atelie-gallery button:focus-visible,.atelie-card-actions a:focus-visible { outline:2px solid #88e7b3; outline-offset:3px; }
+.atelie-gallery button:focus-visible { outline:2px solid #88e7b3; outline-offset:3px; }
+.atelie-card :is(button,a):focus-visible { outline:2px solid var(--cyan-neon); outline-offset:3px; }
 .atelie-project { --av-text:#f0f6ff; --av-muted:#adbed0; --av-green:#88e7b3; --av-line:#23434b; margin:0; color:var(--av-text); background:radial-gradient(ellipse at 90% 0,#123c33 0,transparent 48%),#04101e; font-family:Inter,Segoe UI,sans-serif; line-height:1.65; }
 .atelie-project * { box-sizing:border-box; }
 .atelie-project a { color:var(--av-green); text-decoration:none; }
@@ -82,8 +72,7 @@
 .atelie-lightbox img { display:block; width:100%; max-height:calc(100dvh - 166px); object-fit:contain; }
 .atelie-lightbox-caption { margin:12px 0 0; color:#b4c8da; font-size:13px; }
 @media(max-width:950px) {
-  .development-card.atelie-featured,.atelie-hero,.atelie-rafinha { grid-template-columns:1fr; }
-  .atelie-featured .atelie-gallery { border-right:0; border-bottom:1px solid #23434b; }
+  .atelie-hero,.atelie-rafinha { grid-template-columns:1fr; }
   .atelie-hero { gap:28px; padding-top:40px; }
   .atelie-brand-panel > img { width:160px; }
   .atelie-feature-grid { grid-template-columns:repeat(2,1fr); }
@@ -93,7 +82,7 @@
   .atelie-container { width:calc(100% - 32px); }
   .atelie-project h1 { letter-spacing:-1.5px; }
   .atelie-feature-grid,.atelie-flow { grid-template-columns:1fr; }
-  .atelie-featured .development-content,.atelie-rafinha,.atelie-usage { padding:22px; }
+  .atelie-rafinha,.atelie-usage { padding:22px; }
   .atelie-tabs { gap:6px; padding:10px; }
   .atelie-tabs button { font-size:11px; padding:7px 9px; }
   .atelie-nav { align-items:flex-start; flex-direction:column; }
