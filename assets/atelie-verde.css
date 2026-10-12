@@ -10,6 +10,20 @@
 .atelie-caption { padding:0 16px 14px; margin:0; color:#b4c8da; font-size:12px; }
 .atelie-gallery button:focus-visible { outline:2px solid #88e7b3; outline-offset:3px; }
 .atelie-card :is(button,a):focus-visible { outline:2px solid var(--cyan-neon); outline-offset:3px; }
+.atelie-player { background:#030a16; border-bottom:1px solid #21435b; }
+.atelie-player video { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; background:#052017; }
+.atelie-player-controls { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:12px 16px; color:#adc2d7; font-size:12px; }
+.atelie-player-controls label { display:flex; align-items:center; gap:6px; }
+.atelie-player-controls select,.atelie-player-controls button { font:inherit; color:#f0f6ff; background:#0a2033; border:1px solid #285269; padding:8px 10px; border-radius:7px; cursor:pointer; }
+.atelie-player-controls button { color:#00c8f5; }
+.atelie-player-controls :is(select,button):focus-visible { outline:2px solid #00c8f5; outline-offset:3px; }
+.atelie-player-note { color:#adc2d7; margin-left:auto; font-size:11px; }
+.atelie-player video::cue { background:rgba(0,8,18,.92); color:#fff; font-family:Segoe UI,Arial,sans-serif; }
+@media(min-width:951px) {
+  .atelie-card .atelie-player video { height:270px; aspect-ratio:auto; }
+  .atelie-card .atelie-player-controls { height:63px; }
+  .atelie-card .atelie-player-note { display:none; }
+}
 .atelie-project { --av-text:#f0f6ff; --av-muted:#adbed0; --av-green:#88e7b3; --av-line:#23434b; margin:0; color:var(--av-text); background:radial-gradient(ellipse at 90% 0,#123c33 0,transparent 48%),#04101e; font-family:Inter,Segoe UI,sans-serif; line-height:1.65; }
 .atelie-project * { box-sizing:border-box; }
 .atelie-project a { color:var(--av-green); text-decoration:none; }
