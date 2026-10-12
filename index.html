@@ -12,7 +12,7 @@
 
     <meta
         name="description"
-        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python, automação e desenvolvimento de aplicações."
+        content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python, aplicações React e FastAPI, automação e inteligência artificial. Conheça o Ateliê Verde e outros projetos."
     >
 
     <title>
@@ -23,6 +23,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
+
+    <link href="assets/atelie-verde.css" rel="stylesheet">
+    <script src="assets/atelie-verde.js" defer></script>
 
     <style>
 
@@ -312,6 +315,8 @@
         .hero-actions {
             display: flex;
 
+            flex-wrap: wrap;
+
             align-items: center;
 
             gap: 14px;
@@ -502,7 +507,7 @@
                     rgba(3, 10, 22, 0.4) 50%,
                     rgba(3, 10, 22, 0.7) 100%
                 ),
-                url('img/fundo-tech-2.jpeg');
+                url('img/fundo-tech.jpeg');
 
             background-size: cover;
 
@@ -1555,7 +1560,7 @@
         @media (max-width: 950px) {
 
             .hero {
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
 
                 text-align: center;
             }
@@ -1563,6 +1568,20 @@
 
             .hero-text {
                 align-items: center;
+
+                min-width: 0;
+            }
+
+            .hero h1 {
+                white-space: normal;
+            }
+
+            .availability {
+                max-width: 100%;
+            }
+
+            .status-dot {
+                flex-shrink: 0;
             }
 
 
@@ -1714,6 +1733,9 @@
                     <span>SQL</span>
                     <span>Power BI</span>
                     <span>Flask</span>
+                    <span>FastAPI</span>
+                    <span>React</span>
+                    <span>TypeScript</span>
                     <span>JavaScript</span>
 
                 </div>
@@ -2174,6 +2196,26 @@
 
         <div class="development-grid">
 
+            <article class="development-card atelie-featured" id="atelie-verde">
+                <div class="atelie-gallery" data-atelie-gallery>
+                    <button class="atelie-preview-open" type="button" data-expand aria-label="Ampliar a loja do Ateliê Verde"><img data-preview src="img/atelie-verde/loja.webp" alt="Loja do Ateliê Verde com categorias, produtos e serviços de jardinagem" width="1440" height="900" loading="lazy"></button>
+                    <div class="atelie-tabs" role="group" aria-label="Prévia do Ateliê Verde">
+                        <button type="button" data-image="img/atelie-verde/loja.webp" data-caption="Loja · Catálogo, produtos e serviços." aria-pressed="true">Loja</button>
+                        <button type="button" data-image="img/atelie-verde/projetos.webp" data-caption="Projetos · Planejamento e acompanhamento do paisagismo." aria-pressed="false">Projetos</button>
+                        <button type="button" data-image="img/atelie-verde/dashboard.webp" data-caption="Gestão · Vendas, financeiro e estoque." aria-pressed="false">Gestão</button>
+                    </div>
+                    <p class="atelie-caption" data-caption aria-live="polite">Loja · Catálogo, produtos e serviços.</p>
+                </div>
+                <div class="development-content">
+                    <div class="atelie-card-brand"><img src="img/atelie-verde/logo.webp" alt="" width="58" height="58" loading="lazy"><div><span class="project-type">Python • Full Stack • IA</span><small>GreenScape · Jardinagem e paisagismo</small></div></div>
+                    <h3>Ateliê Verde</h3>
+                    <p>Loja e gestão de jardinagem conectadas a estoque, serviços, projetos e financeiro. O assistente Rafinha conversa com contexto, pesquisa fontes e analisa fotos por uma conexão ChatGPT autorizada.</p>
+                    <div class="project-tech"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLite</span><span>ChatGPT</span></div>
+                    <div class="atelie-card-actions"><a href="atelie-verde.html" class="project-link">VER PROJETO COMPLETO →</a><a class="atelie-card-download" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar para Windows ↓</a></div>
+                    <p class="atelie-card-note">Dados fictícios · Download de 232 MB · Rafinha com conta própria opcional.</p>
+                </div>
+            </article>
+
 
             <!-- TRANSCRIÇÃO EM TEXTO COM GALERIA NAVEGÁVEL EM ORDEM LÓGICA -->
 
@@ -2268,7 +2310,7 @@
             </article>
 
 
-            <!-- PRÓXIMO PROJETO -->
+            <!-- NEXOLOG -->
 
             <article class="development-card" id="nexolog">
 

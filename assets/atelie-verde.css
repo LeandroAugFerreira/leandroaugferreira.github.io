@@ -1,0 +1,105 @@
+/* Ateliê Verde: apresentação integrada ao portfólio. */
+.development-card.atelie-featured { grid-column:1 / -1; display:grid; grid-template-columns:1.25fr 1fr; min-height:0; border-color:rgba(98,224,165,.28); }
+.atelie-featured .development-content { padding:32px; justify-content:center; }
+.atelie-featured .development-content h3 { font-size:1.9rem; margin:8px 0 12px; }
+.atelie-featured .project-type { color:#88e7b3; }
+.atelie-featured .project-tech { margin-top:20px; }
+.atelie-card-brand { display:flex; align-items:center; gap:12px; }
+.atelie-card-brand img { width:58px; height:58px; object-fit:contain; }
+.atelie-card-brand small { display:block; color:#a1b4c8; font-size:12px; }
+.atelie-card-actions { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:22px; }
+.atelie-card-actions .project-link { margin:0; color:#88e7b3; }
+.atelie-card-download { color:#d3dfec; font-size:12px; border:1px solid #2f5355; border-radius:7px; padding:8px 12px; }
+.atelie-card-note { margin-top:16px!important; font-size:11px!important; color:#a1b4c8!important; }
+.atelie-gallery { min-width:0; background:#050e1b; border-radius:16px; overflow:hidden; border:1px solid #21435b; }
+.atelie-featured .atelie-gallery { border:0; border-radius:0; border-right:1px solid rgba(98,224,165,.2); display:flex; flex-direction:column; justify-content:center; }
+.atelie-preview-open { display:block; width:100%; padding:0; border:0; cursor:zoom-in; background:#04101e; }
+.atelie-preview-open img { display:block; width:100%; height:auto; aspect-ratio:8 / 5; object-fit:contain; }
+.atelie-tabs { display:flex; flex-wrap:wrap; gap:6px; padding:12px; }
+.atelie-tabs button { font:inherit; font-size:12px; padding:8px 12px; color:#b9cddd; background:#0b2031; border:1px solid #254658; border-radius:7px; cursor:pointer; }
+.atelie-tabs button[aria-pressed="true"] { color:#bff5d5; border-color:#67cd97; background:#163a31; }
+.atelie-caption { padding:0 16px 14px; margin:0; color:#b4c8da; font-size:12px; }
+.atelie-gallery button:focus-visible,.atelie-card-actions a:focus-visible { outline:2px solid #88e7b3; outline-offset:3px; }
+.atelie-project { --av-text:#f0f6ff; --av-muted:#adbed0; --av-green:#88e7b3; --av-line:#23434b; margin:0; color:var(--av-text); background:radial-gradient(ellipse at 90% 0,#123c33 0,transparent 48%),#04101e; font-family:Inter,Segoe UI,sans-serif; line-height:1.65; }
+.atelie-project * { box-sizing:border-box; }
+.atelie-project a { color:var(--av-green); text-decoration:none; }
+.atelie-project img { display:block; max-width:100%; }
+.atelie-container { width:min(1180px,calc(100% - 40px)); margin:auto; }
+.atelie-nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; padding:22px 0; border-bottom:1px solid var(--av-line); font-size:14px; }
+.atelie-nav span { color:var(--av-muted); font-size:13px; }
+.atelie-project :is(a,button):focus-visible { outline:2px solid var(--av-green); outline-offset:4px; }
+.atelie-hero { display:grid; grid-template-columns:1.2fr .8fr; gap:56px; align-items:center; padding:64px 0 48px; }
+.atelie-eyebrow { margin:0 0 12px; color:var(--av-green); text-transform:uppercase; letter-spacing:1.8px; font-size:12px; font-weight:700; }
+.atelie-project h1 { font-size:clamp(44px,6vw,76px); margin:0 0 16px; letter-spacing:-2.5px; line-height:1.1; }
+.atelie-project h1 span { color:var(--av-green); }
+.atelie-project h2 { font-size:clamp(25px,3vw,34px); line-height:1.25; margin:0 0 14px; letter-spacing:-.6px; }
+.atelie-project h3 { font-size:18px; line-height:1.35; margin:0 0 10px; }
+.atelie-project p { color:var(--av-muted); margin:0 0 16px; }
+.atelie-project .atelie-lead { color:var(--av-text); font-size:22px; line-height:1.4; }
+.atelie-tags { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0; }
+.atelie-tags span { padding:4px 10px; border:1px solid var(--av-line); border-radius:6px; color:var(--av-muted); font-size:12px; }
+.atelie-actions { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 14px; }
+.atelie-button { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border:1px solid #356257; border-radius:9px; font-size:14px; font-weight:700; }
+.atelie-project .atelie-button-primary { background:var(--av-green); color:#041c13; border-color:var(--av-green); }
+.atelie-button:hover { filter:brightness(1.1); }
+.atelie-note { font-size:13px; }
+.atelie-brand-panel { border:1px solid #345b4f; border-radius:22px; padding:28px; background:linear-gradient(145deg,#173b31,#0a1c30); text-align:center; }
+.atelie-brand-panel > img { width:220px; aspect-ratio:1; object-fit:contain; margin:0 auto 24px; }
+.atelie-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; text-align:left; padding-top:24px; border-top:1px solid #345b4f; }
+.atelie-stats strong { display:block; color:var(--av-green); font-size:27px; line-height:1.2; }
+.atelie-stats span { display:block; color:var(--av-muted); font-size:12px; margin-top:7px; }
+.atelie-section { padding:36px 0; }
+.atelie-section-intro { max-width:780px; margin-bottom:24px; }
+.atelie-feature-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.atelie-feature { padding:26px; border:1px solid var(--av-line); border-radius:14px; background:#0a1e2d; }
+.atelie-feature p { font-size:14px; margin:0; }
+.atelie-feature-number { color:var(--av-green); font-size:12px; display:block; margin-bottom:16px; }
+.atelie-rafinha { display:grid; grid-template-columns:1fr 1.1fr; gap:32px; align-items:center; padding:32px; background:linear-gradient(120deg,#123629,#0a1c30); border:1px solid #345b4f; border-radius:20px; }
+.atelie-rafinha-heading { display:flex; align-items:center; gap:18px; margin-bottom:20px; }
+.atelie-rafinha-heading img { width:88px; height:110px; object-fit:contain; flex-shrink:0; }
+.atelie-rafinha-heading h2 { margin:0; }
+.atelie-rafinha ul { padding-left:20px; color:var(--av-muted); }
+.atelie-rafinha li { margin:10px 0; }
+.atelie-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; list-style:none; padding:0; counter-reset:flow; }
+.atelie-flow li { border-top:2px solid #4c8b6d; padding:20px 0; counter-increment:flow; }
+.atelie-flow li::before { content:"0" counter(flow); color:var(--av-green); font-size:12px; display:block; margin-bottom:12px; }
+.atelie-flow strong { display:block; font-size:16px; margin-bottom:8px; }
+.atelie-flow p { font-size:14px; }
+.atelie-usage { padding:32px; border:1px solid #345b4f; border-radius:16px; background:#0a2030; }
+.atelie-usage ol { padding-left:22px; color:var(--av-muted); }
+.atelie-usage li { padding:7px 0; }
+.atelie-usage strong { color:var(--av-text); }
+.atelie-integrity { border-top:1px solid var(--av-line); margin-top:24px; padding-top:18px; }
+.atelie-integrity summary { cursor:pointer; color:var(--av-green); }
+.atelie-integrity code { display:block; overflow-wrap:anywhere; font-size:12px; color:var(--av-muted); margin-top:12px; }
+.atelie-footer { border-top:1px solid var(--av-line); margin-top:48px; padding:26px 0; color:var(--av-muted); font-size:13px; }
+.atelie-lightbox { box-sizing:border-box; width:min(1500px,calc(100vw - 32px)); max-width:none; max-height:calc(100dvh - 32px); padding:16px; background:#04101e; color:#f0f6ff; border:1px solid #345b4f; border-radius:14px; }
+.atelie-lightbox::backdrop { background:rgba(0,5,12,.88); }
+.atelie-lightbox-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.atelie-lightbox-toolbar strong { font-size:14px; }
+.atelie-lightbox button { font:inherit; padding:8px 12px; color:#bff5d5; background:#163a31; border:1px solid #50876d; border-radius:7px; cursor:pointer; }
+.atelie-lightbox button:focus-visible { outline:2px solid #88e7b3; outline-offset:2px; }
+.atelie-lightbox img { display:block; width:100%; max-height:calc(100dvh - 166px); object-fit:contain; }
+.atelie-lightbox-caption { margin:12px 0 0; color:#b4c8da; font-size:13px; }
+@media(max-width:950px) {
+  .development-card.atelie-featured,.atelie-hero,.atelie-rafinha { grid-template-columns:1fr; }
+  .atelie-featured .atelie-gallery { border-right:0; border-bottom:1px solid #23434b; }
+  .atelie-hero { gap:28px; padding-top:40px; }
+  .atelie-brand-panel > img { width:160px; }
+  .atelie-feature-grid { grid-template-columns:repeat(2,1fr); }
+  .atelie-flow { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:560px) {
+  .atelie-container { width:calc(100% - 32px); }
+  .atelie-project h1 { letter-spacing:-1.5px; }
+  .atelie-feature-grid,.atelie-flow { grid-template-columns:1fr; }
+  .atelie-featured .development-content,.atelie-rafinha,.atelie-usage { padding:22px; }
+  .atelie-tabs { gap:6px; padding:10px; }
+  .atelie-tabs button { font-size:11px; padding:7px 9px; }
+  .atelie-nav { align-items:flex-start; flex-direction:column; }
+  .atelie-brand-panel { padding:22px; }
+  .atelie-stats { gap:12px; }
+  .atelie-actions .atelie-button { width:100%; }
+  .atelie-lightbox { padding:12px; }
+}
+@media(prefers-reduced-motion:reduce) { .atelie-project { scroll-behavior:auto; } }
