@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ateliê Verde / GreenScape: loja, gestão de jardinagem e paisagismo e assistente Rafinha. Um projeto de Leandro Augusto Ferreira, com demonstração para Windows.">
+  <meta property="og:title" content="Ateliê Verde | Leandro Augusto Ferreira">
+  <meta property="og:description" content="Da escolha da planta à gestão do jardim: catálogo, projetos, serviços, financeiro e o assistente Rafinha.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leandroaugferreira.github.io/atelie-verde.html">
+  <meta property="og:image" content="https://leandroaugferreira.github.io/img/atelie-verde/loja.webp">
+  <title>Ateliê Verde · GreenScape | Leandro Augusto Ferreira</title>
+  <link rel="stylesheet" href="assets/atelie-verde.css">
+  <script src="assets/atelie-verde.js" defer></script>
+</head>
+<body class="atelie-project">
+  <nav class="atelie-container atelie-nav" aria-label="Navegação do projeto">
+    <a href="index.html#atelie-verde">← Voltar ao portfólio</a>
+    <span>Leandro Augusto Ferreira · Dados & Desenvolvimento</span>
+  </nav>
+  <main class="atelie-container">
+    <header class="atelie-hero">
+      <div>
+        <p class="atelie-eyebrow">GreenScape · Jardinagem e paisagismo</p>
+        <h1>Ateliê <span>Verde</span></h1>
+        <p class="atelie-lead">Da primeira planta à gestão do jardim.</p>
+        <p>Uma aplicação que conecta a experiência do cliente à operação da empresa. Produtos, pedidos, serviços e projetos se encontram com estoque, orçamentos e indicadores financeiros.</p>
+        <div class="atelie-tags" aria-label="Tecnologias"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Python</span><span>SQLAlchemy</span><span>SQLite</span><span>ChatGPT</span><span>Windows</span></div>
+        <div class="atelie-actions">
+          <a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar para Windows · 232 MB ↓</a>
+          <a class="atelie-button" href="#telas">Explorar as telas →</a>
+        </div>
+        <p class="atelie-note">Demonstração local com dados fictícios. Extraia o ZIP completo para executar, sem instalar Python ou Node.js.</p>
+      </div>
+      <aside class="atelie-brand-panel" aria-label="Catálogo demonstrativo">
+        <img src="img/atelie-verde/logo.webp" width="220" height="220" alt="Logo Ateliê Verde — Jardinagem ao Paisagismo">
+        <div class="atelie-stats"><div><strong>61</strong><span>Produtos na demonstração</span></div><div><strong>40</strong><span>Espécies na biblioteca</span></div><div><strong>12</strong><span>Expressões do Rafinha</span></div></div>
+      </aside>
+    </header>
+
+    <section class="atelie-section" id="telas" aria-labelledby="telas-title">
+      <div class="atelie-section-intro"><p class="atelie-eyebrow">Conheça a aplicação</p><h2 id="telas-title">Do portal do cliente ao painel de gestão</h2><p>Selecione uma tela para conhecer o fluxo. Clique na imagem para ver os detalhes em tamanho maior.</p></div>
+      <div class="atelie-gallery" data-atelie-gallery>
+        <button class="atelie-preview-open" type="button" data-expand aria-label="Ampliar a loja"><img data-preview src="img/atelie-verde/loja.webp" alt="Portal do cliente com categorias, produtos e serviços do Ateliê Verde" width="1440" height="900"></button>
+        <div class="atelie-tabs" role="group" aria-label="Telas da aplicação">
+          <button type="button" data-image="img/atelie-verde/loja.webp" data-caption="Loja · Produtos, categorias e serviços em uma única entrada." aria-pressed="true">Loja</button>
+          <button type="button" data-image="img/atelie-verde/produtos.webp" data-caption="Produtos · Catálogo com filtros, fotos e informações de cultivo." aria-pressed="false">Produtos</button>
+          <button type="button" data-image="img/atelie-verde/planta.webp" data-caption="Detalhes da planta · Galeria ampliada, descrição e cuidados." aria-pressed="false">Detalhes da planta</button>
+          <button type="button" data-image="img/atelie-verde/projetos.webp" data-caption="Projetos · Demonstrações de paisagismo organizadas por etapa." aria-pressed="false">Projetos</button>
+          <button type="button" data-image="img/atelie-verde/servicos.webp" data-caption="Serviços · Consultoria, implantação, poda e agendamentos." aria-pressed="false">Serviços</button>
+          <button type="button" data-image="img/atelie-verde/dashboard.webp" data-caption="Gestão · Indicadores de receita, vendas, projetos e estoque." aria-pressed="false">Dashboard</button>
+        </div>
+        <p class="atelie-caption" data-caption aria-live="polite">Loja · Produtos, categorias e serviços em uma única entrada.</p>
+      </div>
+    </section>
+
+    <section class="atelie-section" aria-labelledby="recursos-title">
+      <div class="atelie-section-intro"><p class="atelie-eyebrow">O que o projeto resolve</p><h2 id="recursos-title">Uma operação com etapas conectadas</h2><p>As ações do cliente alimentam os registros administrativos. O projeto reúne interface, API, persistência e regras de negócio na mesma aplicação.</p></div>
+      <div class="atelie-feature-grid">
+        <article class="atelie-feature"><span class="atelie-feature-number">01 · Experiência do cliente</span><h3>Catálogo e compras</h3><p>Busca, filtros, fotos de cada item, informações botânicas, favoritos, carrinho e acompanhamento de pedidos.</p></article>
+        <article class="atelie-feature"><span class="atelie-feature-number">02 · Operação</span><h3>Estoque e fornecedores</h3><p>Entradas, saídas, alertas de saldo baixo, custos e auditoria. A confirmação de um pedido atualiza o estoque e cria o registro financeiro correspondente.</p></article>
+        <article class="atelie-feature"><span class="atelie-feature-number">03 · Atendimento</span><h3>Serviços e agenda</h3><p>Catálogo de serviços, agendamentos e responsáveis, com verificação de conflitos de horário.</p></article>
+        <article class="atelie-feature"><span class="atelie-feature-number">04 · Paisagismo</span><h3>Do orçamento ao projeto</h3><p>Solicitação com fotos e medidas, proposta, aprovação, espécies, materiais, cronograma e acompanhamento da execução.</p></article>
+        <article class="atelie-feature"><span class="atelie-feature-number">05 · Dados</span><h3>Financeiro e indicadores</h3><p>Receitas, despesas, vencimentos e baixas, dashboard por período, relatórios e exportações CSV.</p></article>
+        <article class="atelie-feature"><span class="atelie-feature-number">06 · Controle de acesso</span><h3>Perfis e dados privados</h3><p>Áreas distintas para cliente e administrador. Projetos, documentos, fotos e conversas respeitam o vínculo com o usuário.</p></article>
+      </div>
+    </section>
+
+    <section class="atelie-section" aria-labelledby="rafinha-title">
+      <div class="atelie-rafinha">
+        <div>
+          <div class="atelie-rafinha-heading"><img src="img/atelie-verde/rafinha-greeting.webp" alt="Rafinha acenando" width="88" height="110" loading="lazy"><div><p class="atelie-eyebrow">Assistente ilustrado</p><h2 id="rafinha-title">Converse com o Rafinha</h2></div></div>
+          <p>O Rafinha combina a identidade visual do Ateliê Verde com uma conexão ChatGPT autorizada na instalação. A conversa mantém contexto, recebe fotos e apresenta respostas progressivamente.</p>
+          <ul><li>Pesquisa na web quando útil, com fontes e imagens de referência quando disponíveis.</li><li>Expressões que acompanham a conversa e permanecem até a próxima mensagem.</li><li>Janela com minimização, histórico e encerramento da conversa.</li></ul>
+          <p class="atelie-note">A conexão é opcional e exige uma conta própria compatível. A conta do desenvolvedor não acompanha o download. Sem conexão, o catálogo continua disponível.</p>
+        </div>
+        <div class="atelie-gallery" data-atelie-gallery>
+          <button class="atelie-preview-open" type="button" data-expand aria-label="Ampliar a janela do Rafinha"><img data-preview src="img/atelie-verde/rafinha.webp" alt="Rafinha e sua janela de conversa no portal do cliente" width="1440" height="900" loading="lazy"></button>
+          <div class="atelie-tabs" role="group" aria-label="Tela do Rafinha"><button type="button" data-image="img/atelie-verde/rafinha.webp" data-caption="Rafinha · Personagem, balões de conversa e controles da janela." aria-pressed="true">Rafinha</button></div>
+          <p class="atelie-caption" data-caption aria-live="polite">Rafinha · Personagem, balões de conversa e controles da janela.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="atelie-section" aria-labelledby="arquitetura-title">
+      <div class="atelie-section-intro"><p class="atelie-eyebrow">Arquitetura</p><h2 id="arquitetura-title">Interface, regras e persistência</h2></div>
+      <ol class="atelie-flow"><li><strong>React + TypeScript</strong><p>Portal do cliente e ambiente administrativo, com componentes reutilizáveis e navegação por contexto.</p></li><li><strong>FastAPI + Python</strong><p>API REST, autenticação, validação e regras para pedidos, estoque, projetos e financeiro.</p></li><li><strong>SQLAlchemy + Alembic</strong><p>Dados relacionais e migrações. SQLite na demonstração local; configuração PostgreSQL disponível no projeto.</p></li><li><strong>Distribuição Windows</strong><p>Frontend e backend empacotados com PyInstaller. Dados locais persistentes e credenciais separadas do pacote.</p></li></ol>
+    </section>
+
+    <section class="atelie-section" id="experimentar" aria-labelledby="experimentar-title">
+      <div class="atelie-usage">
+        <p class="atelie-eyebrow">Experimente o projeto</p><h2 id="experimentar-title">Demonstração para Windows de 64 bits</h2>
+        <ol><li>Baixe <strong>AtelieVerde-Windows.zip</strong> e extraia a pasta inteira.</li><li>Abra <strong>AtelieVerde.exe</strong>, mantendo a pasta <strong>_internal</strong> ao lado dele. O sistema abre no navegador.</li><li>Escolha <strong>Cliente</strong> para explorar o portal como Rafael, ou <strong>Administrador</strong> para testar a gestão como Leandro.</li><li>Para habilitar o ChatGPT no Rafinha, use <strong>Administrador → Configurações → Inteligência Artificial → Continuar com ChatGPT</strong> e autorize sua própria conta compatível.</li><li>Ao terminar, use <strong>EncerrarAtelieVerde.cmd</strong>. Seus dados de demonstração ficam salvos no computador.</li></ol>
+        <p class="atelie-note">Os dados e as imagens de projetos são demonstrativos. O checkout não realiza cobrança online. O executável não possui assinatura digital; o Windows pode solicitar confirmação de origem.</p>
+        <div class="atelie-actions"><a class="atelie-button atelie-button-primary" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.11/AtelieVerde-Windows.zip">Baixar demonstração · 232 MB ↓</a><a class="atelie-button" href="index.html#atelie-verde">Ver outros projetos →</a></div>
+        <details class="atelie-integrity"><summary>Versão e integridade do download</summary><p class="atelie-note">Distribuição de 11/10/2026 · SHA-256:</p><code>239cab82ed11be3d7a5f3c83688d095ebb4528fd0866b1691304d6905e80bd3a</code></details>
+      </div>
+    </section>
+  </main>
+  <footer class="atelie-footer"><div class="atelie-container">Ateliê Verde / GreenScape · Projeto de Leandro Augusto Ferreira · <a href="index.html#atelie-verde">Voltar ao portfólio</a></div></footer>
+</body>
+</html>
