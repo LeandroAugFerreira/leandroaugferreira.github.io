@@ -6,15 +6,19 @@ A página inicial tem sete anúncios curtos. As páginas dos aplicativos oferece
 
 | Projeto | Anúncio na página inicial | Apresentação completa |
 | --- | --- | --- |
-| VoxTexto | 25.7 s | 128.2 s |
-| NexoLog | 23.9 s | 142.0 s |
-| Ateliê Verde | 22.4 s | 153.6 s |
-| Gestão Financeira | 23.1 s | Relatório interativo |
-| Logística e Frota | 21.0 s | Relatório interativo |
-| Análise Comercial | 22.0 s | Relatório interativo |
-| Análise de Churn | 21.6 s | Relatório interativo |
+| VoxTexto | 19.1 s | 108.7 s |
+| NexoLog | 17.4 s | 116.1 s |
+| Ateliê Verde | 16.0 s | 126.7 s |
+| Gestão Financeira | 16.7 s | Relatório interativo |
+| Logística e Frota | 14.8 s | Relatório interativo |
+| Análise Comercial | 15.7 s | Relatório interativo |
+| Análise de Churn | 15.3 s | Relatório interativo |
 
 Não há reprodução automática. Ao iniciar outro anúncio, o anterior é pausado. Os vídeos usam H.264/AAC e carregamento sob demanda.
+
+A narração é gerada como uma fala contínua para cada vídeo, com ritmo de conversa e sem intervalos acrescentados nas mudanças de cena. O áudio permanece em uma única faixa durante toda a apresentação. As legendas e as trocas de tela acompanham os tempos das palavras.
+
+Configuração da voz: `pt-BR-AntonioNeural`, ritmo `+3%` e tom `-2Hz`, com normalização de volume aplicada ao vídeo inteiro.
 
 O VoxTexto é apresentado pelo propósito e pelo fluxo do aplicativo: selecionar gravações, transcrever, consultar o histórico e exportar Word. As capturas usam uma base isolada e uma transcrição real de um áudio de teste.
 
