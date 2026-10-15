@@ -1,84 +1,71 @@
 WEBVTT
 
 1
-00:00:00.350 --> 00:00:07.766
-Meet VoxTexto, a project by Leandro Augusto Ferreira that
-turns audio and video into text documents.
+00:00:00.220 --> 00:00:10.156
+VoxTexto turns audio and video files into text to help you
+organize lectures, interviews, meetings and other
+recordings.
 
 2
-00:00:08.016 --> 00:00:15.864
-The application brings speech recognition, a file queue and
-history together in a web interface with local processing.
+00:00:10.406 --> 00:00:20.534
+Speech recognition runs on your computer. Follow the
+process in the interface and receive a Word document for
+further review.
 
 3
-00:00:17.225 --> 00:00:26.945
-Version 1.2.1 adds OGG support alongside MP3, WAV, MP4 and
-M4A.
+00:00:21.470 --> 00:00:28.982
+To get started, select files, choose a folder or drag your
+recordings into the upload area.
 
 4
-00:00:27.195 --> 00:00:34.827
-Select files or a folder, or drag media into the panel. The
-selection button and compact format badges are centered.
+00:00:29.232 --> 00:00:39.192
+The queue shows each file name, format, duration and size,
+so you can check what will be processed before starting.
 
 5
-00:00:36.183 --> 00:00:43.455
-In the queue, each file has its own status and processing
-time. Whisper runs in a separate process.
+00:00:40.137 --> 00:00:50.841
+Files are transcribed in sequence, with individual status
+and processing times. The dedicated panel helps you track
+the current file.
 
 6
-00:00:43.705 --> 00:00:51.505
-You can pause between files or cancel processing. A
-dedicated panel helps you follow the task sequence.
+00:00:51.091 --> 00:01:00.403
+You can pause between files or cancel processing. The time
+required depends on the recording and computer
+performance.
 
 7
-00:00:52.892 --> 00:01:00.956
-This sample OGG audio was actually transcribed. The result
-appears in the interface once speech recognition is
-complete.
+00:01:01.345 --> 00:01:11.545
+When transcription finishes, the text is displayed on
+screen. A Word document is generated automatically and can
+be downloaded with one click.
 
 8
-00:01:01.206 --> 00:01:10.398
-A Word document is generated automatically and can be
-downloaded for review. Processing time depends on the
-computer and the file.
+00:01:11.795 --> 00:01:22.067
+Check the recognized content and make any adjustments you
+need. This demonstration shows a short recording actually
+transcribed by the application.
 
 9
-00:01:11.767 --> 00:01:19.303
-History keeps records linked to each account, with the file
-name, status, size and processing time.
+00:01:23.012 --> 00:01:34.268
+History keeps records linked to your account. Search for a
+recording, filter results and check the details of each
+transcription.
 
 10
-00:01:19.553 --> 00:01:27.065
-Search for a transcription, filter results and reopen the
-text or Word document without running recognition again.
+00:01:34.518 --> 00:01:44.238
+Generated texts and documents remain available for
+consultation. The application includes sign-in and user
+and administrator roles.
 
 11
-00:01:28.433 --> 00:01:37.145
-Dark, Light and HUD themes let you adjust the visual
-experience. Interface preferences are saved for each user.
+00:01:45.178 --> 00:01:56.122
+Choose Dark, Light or HUD themes and adjust interface
+preferences. Statistics help you monitor your account
+results.
 
 12
-00:01:37.395 --> 00:01:44.091
-The application also includes sign-in, hashed passwords, and
-user and administrator roles.
-
-13
-00:01:45.475 --> 00:01:52.987
-Statistics summarize account results, including status
-distribution, volume and processing time.
-
-14
-00:01:53.237 --> 00:02:00.101
-OGG also appears in this view alongside the other supported
-formats.
-
-15
-00:02:01.475 --> 00:02:10.283
-VoxTexto combines Python, Flask, Whisper, FFmpeg and SQLite
-to connect media selection with document generation.
-
-16
-00:02:10.533 --> 00:02:19.797
-Explore the screens and source code in the portfolio. The
-OGG update is demonstrated here, and the new Windows
-installer is the next step.
+00:01:56.372 --> 00:02:07.532
+VoxTexto brings selection, transcription, history and
+export together in one workflow. Explore the project and
+turn your recordings into documents.

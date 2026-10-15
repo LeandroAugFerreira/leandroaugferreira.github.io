@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VoxTexto v1.2.1: áudio e vídeo em documentos Word, agora com OGG. Projeto de Leandro Augusto Ferreira com Python, Flask e Whisper local.">
+  <meta name="description" content="VoxTexto: transforme gravações, aulas, entrevistas e reuniões em texto e documentos Word, com processamento local. Projeto de Leandro Augusto Ferreira com Python, Flask e Whisper local.">
   <meta property="og:title" content="VoxTexto v1.2.1 | Leandro Augusto Ferreira">
-  <meta property="og:description" content="Do áudio ao Word: conheça o suporte a OGG, a fila de processamento e o histórico em uma apresentação com áudio em português e legendas PT/EN.">
+  <meta property="og:description" content="Da gravação ao documento: conheça a seleção de arquivos, a transcrição, o histórico e a exportação Word do VoxTexto.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://leandroaugferreira.github.io/python.html">
   <meta property="og:image" content="https://leandroaugferreira.github.io/img/transcricao/video-capa.jpg">
   <title>VoxTexto v1.2.1 | Leandro Augusto Ferreira</title>
-  <link rel="stylesheet" href="assets/transcricao.css?v=8e7a8d2ba139">
+  <link rel="stylesheet" href="assets/transcricao.css?v=49d7b4e740d1">
   <script src="assets/transcricao.js?v=3961e29becaf" defer></script>
 </head>
 <body class="transcricao-page">
@@ -30,22 +30,22 @@
           <a class="tc-button tc-primary" href="#apresentacao">Assistir à apresentação →</a>
           <a class="tc-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Ver código no GitHub</a>
         </div>
-        <p class="tc-note">Demonstração v1.2.1 com áudio OGG de teste. Processamento local, sem enviar as mídias para uma API de transcrição.</p>
+        <p class="tc-note">Demonstração do aplicativo com uma gravação curta de teste. Processamento local, sem enviar as mídias para uma API de transcrição.</p>
       </div>
       <aside class="tc-summary" aria-label="Novidades e recursos">
-        <img src="img/transcricao/logo.png" alt="Logo do VoxTexto" width="110" height="110">
-        <div><p class="tc-eyebrow">Novo na v1.2.1</p><h2>OGG no mesmo fluxo.</h2><p>Botão centralizado, formatos compactos e reconhecimento do OGG na fila e nas estatísticas.</p></div>
+        <img class="tc-mascote" src="img/transcricao/mascote-vox.png" alt="Vox, mascote apresentador do projeto VoxTexto" width="200" height="300">
+        <div><p class="tc-eyebrow">Conheça o aplicativo</p><h2>Sua voz, organizada em texto.</h2><p>Reúna suas gravações, acompanhe a transcrição e encontre seus documentos em um só lugar.</p></div>
         <div class="tc-summary-grid"><div><strong>5</strong><span>Formatos de entrada</span></div><div><strong>.docx</strong><span>Documento Word</span></div><div><strong>Local</strong><span>Whisper em CPU</span></div><div><strong>3</strong><span>Temas visuais</span></div></div>
       </aside>
     </header>
     <section class="tc-section" id="apresentacao" aria-labelledby="apresentacao-titulo">
-      <div class="tc-intro"><p class="tc-eyebrow">O projeto em uso</p><h2 id="apresentacao-titulo">Conheça o VoxTexto em vídeo</h2><p>Da seleção de um OGG ao documento gerado. Narração em português brasileiro, com legendas selecionáveis em Português BR e English.</p></div>
+      <div class="tc-intro"><p class="tc-eyebrow">O projeto em uso</p><h2 id="apresentacao-titulo">Conheça o VoxTexto em vídeo</h2><p>Da seleção das gravações à transcrição, ao histórico e à exportação Word.</p></div>
       <div class="transcricao-player" data-transcricao-player>
-  <video controls playsinline preload="metadata" poster="img/transcricao/video-capa.jpg?v=d193d75dbeca" width="1920" height="1080" aria-label="Apresentação do VoxTexto v1.2.1">
-    <source src="media/transcricao-apresentacao.mp4?v=98a36d9b13ca" type="video/mp4">
-    <track kind="subtitles" src="media/transcricao-pt.vtt?v=a5faa48feae4" srclang="pt-BR" label="Português BR" default>
-    <track kind="subtitles" src="media/transcricao-en.vtt?v=d7c0b7d9a271" srclang="en" label="English">
-    Seu navegador não reproduz este vídeo. <a href="media/transcricao-apresentacao.mp4?v=98a36d9b13ca">Baixar apresentação</a>.
+  <video controls playsinline preload="metadata" poster="img/transcricao/video-capa.jpg?v=442e5e54e42a" width="1280" height="720" aria-label="Apresentação do VoxTexto v1.2.1">
+    <source src="media/transcricao-apresentacao.mp4?v=3e2eba2bdb00" type="video/mp4">
+    <track kind="subtitles" src="media/transcricao-pt.vtt?v=0df679f3faae" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/transcricao-en.vtt?v=b9dd940f1917" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="media/transcricao-apresentacao.mp4?v=3e2eba2bdb00">Baixar apresentação</a>.
   </video>
   <div class="transcricao-controls">
     <button type="button" data-video-toggle aria-label="Reproduzir apresentação do VoxTexto">▶ Reproduzir</button>
@@ -57,10 +57,10 @@
     <section class="tc-section" aria-labelledby="recursos-titulo">
       <div class="tc-intro"><p class="tc-eyebrow">Recursos da aplicação</p><h2 id="recursos-titulo">Um fluxo completo para suas gravações</h2></div>
       <div class="tc-features">
-        <article class="tc-feature"><span>01 · ENTRADA</span><h3>Agora com OGG</h3><p>MP3, WAV, MP4, M4A e OGG. Adicione arquivos, selecione uma pasta ou arraste as mídias para a área de upload.</p></article>
+        <article class="tc-feature"><span>01 · ENTRADA</span><h3>Áudio e vídeo</h3><p>MP3, WAV, MP4, M4A e OGG. Adicione arquivos, selecione uma pasta ou arraste as mídias para a área de upload.</p></article>
         <article class="tc-feature"><span>02 · PROCESSAMENTO</span><h3>Fila sob controle</h3><p>Arquivos processados em sequência, com status individual, pausa entre arquivos e cancelamento do processamento.</p></article>
         <article class="tc-feature"><span>03 · SAÍDA</span><h3>Texto e documento Word</h3><p>Consulte a transcrição na interface e baixe o documento .docx formatado para continuar a revisão.</p></article>
-        <article class="tc-feature"><span>04 · CONSULTA</span><h3>Histórico e estatísticas</h3><p>Busque registros da sua conta, filtre por status e acompanhe volumes, tempos e formatos, incluindo OGG.</p></article>
+        <article class="tc-feature"><span>04 · CONSULTA</span><h3>Histórico e estatísticas</h3><p>Busque registros da sua conta, filtre por status e acompanhe volumes, tempos e formatos de arquivo.</p></article>
         <article class="tc-feature"><span>05 · ACESSO</span><h3>Usuários e perfis</h3><p>Login com senhas protegidas por hash, histórico vinculado ao usuário e administração de contas.</p></article>
         <article class="tc-feature"><span>06 · EXPERIÊNCIA</span><h3>Escuro, Claro e HUD</h3><p>Escolha o tema e ajuste preferências da interface. Na seleção, o botão e os formatos ficam centralizados.</p></article>
       </div>
@@ -72,13 +72,13 @@
     <section class="tc-section" id="demonstracao" aria-labelledby="telas-titulo">
       <div class="tc-intro"><p class="tc-eyebrow">Interface da v1.2.1</p><h2 id="telas-titulo">Explore as telas da demonstração</h2><p>Capturas reais com conta de demonstração e um áudio curto de teste. Clique na imagem para ampliar.</p></div>
       <div class="transcricao-gallery" data-transcricao-gallery>
-        <button class="tc-gallery-open" type="button" data-expand aria-label="Ampliar a tela de upload OGG"><img data-preview src="img/transcricao/fila-ogg.jpg?v=7b66dd87e505" width="1280" height="720" loading="lazy" alt="Arquivo OGG na fila de transcrição"></button>
-        <div class="tc-gallery-tabs" aria-label="Selecionar tela da aplicação"><button type="button" data-image="img/transcricao/fila-ogg.jpg?v=7b66dd87e505" data-caption="Arquivo OGG reconhecido na fila, com seleção centralizada e formatos compactos." aria-pressed="true">Upload OGG</button>
-<button type="button" data-image="img/transcricao/resultado-ogg.jpg?v=9b28da88ba9e" data-caption="Transcrição real do OGG concluída, com texto disponível e exportação Word habilitada." aria-pressed="false">Resultado</button>
+        <button class="tc-gallery-open" type="button" data-expand aria-label="Ampliar a seleção de arquivos"><img data-preview src="img/transcricao/fila-ogg.jpg?v=7b66dd87e505" width="1280" height="720" loading="lazy" alt="Gravação na fila de transcrição"></button>
+        <div class="tc-gallery-tabs" aria-label="Selecionar tela da aplicação"><button type="button" data-image="img/transcricao/fila-ogg.jpg?v=7b66dd87e505" data-caption="Seleção de gravações e organização dos arquivos na fila de transcrição." aria-pressed="true">Arquivos</button>
+<button type="button" data-image="img/transcricao/resultado-ogg.jpg?v=9b28da88ba9e" data-caption="Gravação transcrita, com texto disponível na interface e exportação Word habilitada." aria-pressed="false">Resultado</button>
 <button type="button" data-image="img/transcricao/historico.jpg?v=1134fa425499" data-caption="Histórico da conta de demonstração, com visualização do texto e download do Word." aria-pressed="false">Histórico</button>
-<button type="button" data-image="img/transcricao/estatisticas.jpg?v=88bdf10c6692" data-caption="OGG identificado nas estatísticas, com distribuição por formato e status." aria-pressed="false">Estatísticas</button>
+<button type="button" data-image="img/transcricao/estatisticas.jpg?v=88bdf10c6692" data-caption="Resultados da conta organizados por status e formato de arquivo." aria-pressed="false">Estatísticas</button>
 <button type="button" data-image="img/transcricao/tema-claro.jpg?v=8331d12a9795" data-caption="Tema Claro da aplicação. Também estão disponíveis os temas Escuro e HUD." aria-pressed="false">Tema Claro</button></div>
-        <p class="tc-caption" data-caption aria-live="polite">Arquivo OGG reconhecido na fila.</p>
+        <p class="tc-caption" data-caption aria-live="polite">Seleção de arquivos e fila de transcrição.</p>
       </div>
     </section>
     <section class="tc-section" aria-labelledby="tecnica-titulo">

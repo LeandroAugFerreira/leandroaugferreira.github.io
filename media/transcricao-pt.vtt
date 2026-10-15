@@ -1,85 +1,72 @@
 WEBVTT
 
 1
-00:00:00.350 --> 00:00:07.766
-Conheça o VoxTexto, um projeto de Leandro Augusto Ferreira
-para transformar áudio e vídeo em documentos de texto.
+00:00:00.220 --> 00:00:10.156
+O VoxTexto transforma arquivos de áudio e vídeo em texto,
+para ajudar você a organizar aulas, entrevistas, reuniões
+e outras gravações.
 
 2
-00:00:08.016 --> 00:00:15.864
-A aplicação reúne reconhecimento de fala, fila de arquivos e
-histórico em uma interface web com processamento local.
+00:00:10.406 --> 00:00:20.534
+O reconhecimento acontece no seu computador. Você
+acompanha o trabalho pela interface e recebe um documento
+Word para continuar a revisão.
 
 3
-00:00:17.225 --> 00:00:26.945
-A versão um ponto dois ponto um adiciona suporte ao formato
-OGG, junto de MP3, WAV, MP4 e M4A.
+00:00:21.470 --> 00:00:28.982
+Para começar, selecione os arquivos, escolha uma pasta ou
+arraste suas gravações para a área de upload.
 
 4
-00:00:27.195 --> 00:00:34.827
-Selecione arquivos ou uma pasta, ou arraste as mídias para o
-painel. O botão e os formatos ficam centralizados.
+00:00:29.232 --> 00:00:39.192
+A fila mostra nome, formato, duração e tamanho de cada
+mídia. Assim, você confere o que será processado antes de
+iniciar.
 
 5
-00:00:36.183 --> 00:00:43.455
-Na fila, cada arquivo tem seu status e tempo de
-processamento. O Whisper trabalha em um processo separado.
+00:00:40.137 --> 00:00:50.841
+Os arquivos são transcritos em sequência, com status e
+tempo de processamento individuais. O painel dedicado
+ajuda a acompanhar o arquivo atual.
 
 6
-00:00:43.705 --> 00:00:51.505
-É possível pausar entre arquivos ou cancelar a execução. O
-painel dedicado ajuda a acompanhar a sequência das tarefas.
+00:00:51.091 --> 00:01:00.403
+Você pode pausar entre arquivos ou cancelar a execução. O
+tempo necessário depende da gravação e do desempenho do
+computador.
 
 7
-00:00:52.892 --> 00:01:00.956
-Este áudio OGG de teste foi transcrito de verdade. O
-resultado aparece na interface assim que o reconhecimento
-termina.
+00:01:01.345 --> 00:01:11.545
+Quando a transcrição termina, o texto fica disponível na
+tela. O documento Word é gerado automaticamente e pode ser
+baixado com um clique.
 
 8
-00:01:01.206 --> 00:01:10.398
-O documento Word é gerado automaticamente e pode ser baixado
-para revisão. A duração do processamento depende do
-computador e do arquivo.
+00:01:11.795 --> 00:01:22.067
+Confira o conteúdo reconhecido e faça os ajustes que
+precisar. A demonstração mostra uma gravação curta
+transcrita de verdade pelo aplicativo.
 
 9
-00:01:11.767 --> 00:01:19.303
-O histórico mantém os registros vinculados à conta, com nome
-do arquivo, status, tamanho e tempo de processamento.
+00:01:23.012 --> 00:01:34.268
+O histórico mantém os registros vinculados à sua conta.
+Você pode buscar uma gravação, filtrar os resultados e
+consultar os detalhes de cada transcrição.
 
 10
-00:01:19.553 --> 00:01:27.065
-Busque uma transcrição, filtre os resultados e volte ao
-texto ou ao documento Word sem refazer o reconhecimento.
+00:01:34.518 --> 00:01:44.238
+Os textos e documentos gerados continuam disponíveis para
+consulta. A aplicação possui login e perfis de usuário e
+administrador.
 
 11
-00:01:28.433 --> 00:01:37.145
-Os temas Escuro, Claro e HUD permitem ajustar a experiência
-visual. As preferências da interface ficam salvas por
-usuário.
+00:01:45.178 --> 00:01:56.122
+Escolha entre os temas Escuro, Claro e HUD e ajuste as
+preferências da interface. As estatísticas ajudam a
+acompanhar os resultados da sua conta.
 
 12
-00:01:37.395 --> 00:01:44.091
-A aplicação também possui login, senhas protegidas por hash
-e perfis de usuário e administrador.
-
-13
-00:01:45.475 --> 00:01:52.987
-As estatísticas reúnem os resultados da conta, com
-distribuição por status, volume e tempo de processamento.
-
-14
-00:01:53.237 --> 00:02:00.101
-O formato OGG também aparece nessa visão, junto dos demais
-formatos aceitos pela aplicação.
-
-15
-00:02:01.475 --> 00:02:10.283
-O VoxTexto integra Python, Flask, Whisper, FFmpeg e SQLite
-para conectar a seleção de mídias à geração de documentos.
-
-16
-00:02:10.533 --> 00:02:19.797
-Conheça as telas e o código no portfólio. A atualização com
-OGG já está demonstrada, e o novo instalador Windows é o
-próximo passo.
+00:01:56.372 --> 00:02:07.532
+O VoxTexto reúne seleção, transcrição, histórico e
+exportação em um único fluxo. Conheça o projeto e
+transforme suas gravações em documentos.

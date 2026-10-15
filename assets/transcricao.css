@@ -95,3 +95,7 @@
   .tc-usage { padding: 22px; }
   .transcricao-player-note { width: 100%; margin: 0; }
 }
+
+/* Mascote usado na apresentação do projeto, fora da interface do aplicativo. */
+.tc-summary > .tc-mascote { width: 160px; height: 240px; margin: 0 auto 20px; object-fit: contain; }
+@media (max-width: 950px) { .tc-summary > .tc-mascote { width: 110px; height: 165px; } }

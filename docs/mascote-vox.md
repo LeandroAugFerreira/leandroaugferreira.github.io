@@ -1,0 +1,9 @@
+# Mascote apresentador do portfólio
+
+Arquivo: `img/transcricao/mascote-vox.png`.
+
+Gerado com a ferramenta integrada de geração de imagens. A imagem original e seu canal alfa foram preservados. O personagem aparece pequeno no canto inferior esquerdo dos vídeos, sobre a captura completa do sistema. A animação do visor acompanha o nível da narração, enquanto o enquadramento permanece fixo. Não há rótulos do apresentador nem contadores de cenas.
+
+## Prompt utilizado
+
+Use case: ads-marketing. Asset type: original transparent mascot character for an animated video advertisement for a Brazilian transcription web app named VoxTexto. Create a premium, polished 3D stylized friendly virtual presenter robot, full body, centered, facing the viewer, a single character with a clean readable silhouette and warm personable presence. Pearl white matte rounded shell, deep navy joints and a few restrained cyan glowing accents, black glossy rounded face display with two friendly expressive cyan eyes. The lower half of the black face display must be blank, with NO mouth, so a talking mouth can later be animated as a separate vector layer. Compact rounded body with a small cyan audio waveform on the chest, subtle headset microphone, relaxed open hand gesturing toward screen right like a presenter introducing the app. Comfortable calm welcoming posture, professional friendly advertising quality, sophisticated soft studio light and subtle dimensional shading. Transparent background with true alpha, no room, no scenery, no floor, no objects separate from the character. Keep all limbs, antenna or headset, and entire feet fully within frame with generous clear padding. Portrait composition, high resolution. No text, no letters, no logos, no watermark, no extra characters. Original design, no resemblance to any known character.
