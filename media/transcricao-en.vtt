@@ -1,0 +1,84 @@
+WEBVTT
+
+1
+00:00:00.350 --> 00:00:07.766
+Meet VoxTexto, a project by Leandro Augusto Ferreira that
+turns audio and video into text documents.
+
+2
+00:00:08.016 --> 00:00:15.864
+The application brings speech recognition, a file queue and
+history together in a web interface with local processing.
+
+3
+00:00:17.225 --> 00:00:26.945
+Version 1.2.1 adds OGG support alongside MP3, WAV, MP4 and
+M4A.
+
+4
+00:00:27.195 --> 00:00:34.827
+Select files or a folder, or drag media into the panel. The
+selection button and compact format badges are centered.
+
+5
+00:00:36.183 --> 00:00:43.455
+In the queue, each file has its own status and processing
+time. Whisper runs in a separate process.
+
+6
+00:00:43.705 --> 00:00:51.505
+You can pause between files or cancel processing. A
+dedicated panel helps you follow the task sequence.
+
+7
+00:00:52.892 --> 00:01:00.956
+This sample OGG audio was actually transcribed. The result
+appears in the interface once speech recognition is
+complete.
+
+8
+00:01:01.206 --> 00:01:10.398
+A Word document is generated automatically and can be
+downloaded for review. Processing time depends on the
+computer and the file.
+
+9
+00:01:11.767 --> 00:01:19.303
+History keeps records linked to each account, with the file
+name, status, size and processing time.
+
+10
+00:01:19.553 --> 00:01:27.065
+Search for a transcription, filter results and reopen the
+text or Word document without running recognition again.
+
+11
+00:01:28.433 --> 00:01:37.145
+Dark, Light and HUD themes let you adjust the visual
+experience. Interface preferences are saved for each user.
+
+12
+00:01:37.395 --> 00:01:44.091
+The application also includes sign-in, hashed passwords, and
+user and administrator roles.
+
+13
+00:01:45.475 --> 00:01:52.987
+Statistics summarize account results, including status
+distribution, volume and processing time.
+
+14
+00:01:53.237 --> 00:02:00.101
+OGG also appears in this view alongside the other supported
+formats.
+
+15
+00:02:01.475 --> 00:02:10.283
+VoxTexto combines Python, Flask, Whisper, FFmpeg and SQLite
+to connect media selection with document generation.
+
+16
+00:02:10.533 --> 00:02:19.797
+Explore the screens and source code in the portfolio. The
+OGG update is demonstrated here, and the new Windows
+installer is the next step.
