@@ -1,27 +1,3 @@
-document.querySelectorAll('[data-transcricao-player]').forEach((player) => {
-  const video = player.querySelector('video');
-  const language = player.querySelector('[data-caption-language]');
-  const toggle = player.querySelector('[data-video-toggle]');
-  if (!video || !language || !toggle) return;
-  function updateCaptions() {
-    Array.from(video.textTracks).forEach((track) => {
-      track.mode = track.language === language.value ? 'showing' : 'disabled';
-    });
-  }
-  function updatePlayback() {
-    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
-    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação do VoxTexto' : 'Pausar apresentação do VoxTexto');
-  }
-  language.addEventListener('change', updateCaptions);
-  video.addEventListener('loadedmetadata', updateCaptions);
-  toggle.addEventListener('click', () => {
-    if (video.paused) video.play().catch(updatePlayback);
-    else video.pause();
-  });
-  ['play', 'pause', 'ended'].forEach((event) => video.addEventListener(event, updatePlayback));
-  updateCaptions();
-});
-
 document.querySelectorAll('[data-transcricao-gallery]').forEach((gallery, index) => {
   const preview = gallery.querySelector('[data-preview]');
   const caption = gallery.querySelector('.tc-caption[data-caption]');

@@ -39,6 +39,8 @@
     video::cue { background:rgba(0,8,18,.92); color:white; font-family:Segoe UI,sans-serif; }
 
 </style>
+  <link rel="stylesheet" href="assets/video-player.css?v=044e65f4747b">
+  <script src="assets/video-player.js?v=b245e9fecb80" defer></script>
 </head>
 <body>
   <nav class="container"><a href="index.html">← Voltar ao portfólio</a><span class="author">Leandro Augusto Ferreira</span></nav>
@@ -56,12 +58,12 @@
       <aside class="hero-aside"><h2>Uma operação para explorar</h2><div class="numbers"><div><strong>144</strong><span>Produtos e variantes</span></div><div><strong>408</strong><span>Pedidos na base inicial</span></div><div><strong>24</strong><span>Fornecedores</span></div><div><strong>48</strong><span>Clientes</span></div></div><p class="note">Histórico de 2024 a 2026, com movimentações conciliadas e auditoria das transações.</p></aside>
     </header>
     <section aria-label="Vídeo de apresentação"><h2>Conheça o NexoLog em vídeo</h2>
-<div class="nexolog-player" data-nexolog-player>
-  <video controls playsinline preload="metadata" poster="img/teasers/nexolog-completo.jpg?v=6e705dca7fb9" width="1280" height="720" aria-label="Apresentação do NexoLog">
-    <source src="media/nexolog-apresentacao.mp4?v=62e5aee9c157" type="video/mp4">
+<div class="nexolog-player" data-nexolog-player data-scenes="media/nexolog-apresentacao-cenas.json?v=5f1160bf7c46">
+  <video controls playsinline preload="metadata" poster="img/teasers/nexolog-completo.jpg?v=d972c2bfff1b" width="1280" height="720" aria-label="Apresentação do NexoLog">
+    <source src="media/nexolog-apresentacao.mp4?v=33ffe460da02" type="video/mp4">
     <track kind="subtitles" src="media/nexolog-pt.vtt?v=ac1049b0d284" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/nexolog-en.vtt?v=29fdcd6689c5" srclang="en" label="English">
-    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4?v=62e5aee9c157">Baixar apresentação</a>.
+    Seu navegador não reproduz este vídeo. <a href="media/nexolog-apresentacao.mp4?v=33ffe460da02">Baixar apresentação</a>.
   </video>
   <div class="nexolog-controls">
     <button type="button" data-video-toggle aria-label="Reproduzir apresentação">▶ Reproduzir</button>
@@ -84,32 +86,7 @@
   </main>
   <footer><div class="container">NexoLog • Projeto de Leandro Augusto Ferreira • <a href="index.html">Conhecer outros projetos</a></div></footer>
 
-<script>
-document.querySelectorAll('[data-nexolog-player]').forEach(function(player) {
-  const video = player.querySelector('video');
-  const language = player.querySelector('[data-caption-language]');
-  const toggle = player.querySelector('[data-video-toggle]');
-  function updateCaptions() {
-    Array.from(video.textTracks).forEach(function(track) {
-      track.mode = track.language === language.value ? 'showing' : 'disabled';
-    });
-  }
-  language.addEventListener('change', updateCaptions);
-  video.addEventListener('loadedmetadata', updateCaptions);
-  toggle.addEventListener('click', function() {
-    if (video.paused) video.play().catch(function() { toggle.textContent = '▶ Reproduzir'; });
-    else video.pause();
-  });
-  function updatePlayback() {
-    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
-    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação' : 'Pausar apresentação');
-  }
-  video.addEventListener('play', updatePlayback);
-  video.addEventListener('pause', updatePlayback);
-  video.addEventListener('ended', updatePlayback);
-  updateCaptions();
-});
-</script>
+
 
 </body>
 </html>

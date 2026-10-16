@@ -2,7 +2,7 @@
 
 Arquivo: `img/transcricao/mascote-vox.png`.
 
-Gerado com a ferramenta integrada de geração de imagens. A imagem original e seu canal alfa foram preservados. O personagem aparece pequeno no canto inferior esquerdo dos vídeos, sobre a captura completa do sistema. A animação do visor acompanha o nível da narração, enquanto o enquadramento permanece fixo. Não há rótulos do apresentador nem contadores de cenas.
+Gerado com a ferramenta integrada de geração de imagens. A imagem original e seu canal alfa foram preservados. O personagem aparece no canto inferior esquerdo dos vídeos, sobre a captura completa do sistema, com altura de 243 pixels em um quadro de 1280 × 720. A animação do visor acompanha o nível da narração, enquanto o enquadramento permanece fixo. Não há rótulos do apresentador nem contadores de cenas; títulos e legendas ficam fora da imagem, no player.
 
 ## Prompt utilizado
 

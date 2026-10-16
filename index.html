@@ -24,8 +24,8 @@
         rel="stylesheet"
     >
 
-    <link href="assets/atelie-verde.css?v=431265299651" rel="stylesheet">
-    <script src="assets/atelie-verde.js?v=88411ce11f74" defer></script>
+    <link href="assets/atelie-verde.css?v=ac8f6d32a4a3" rel="stylesheet">
+    <script src="assets/atelie-verde.js?v=ea459d3e805b" defer></script>
 
     <style>
 
@@ -1691,9 +1691,10 @@
 </style>
 
     <link rel="stylesheet" href="assets/transcricao.css?v=49d7b4e740d1">
-    <script src="assets/transcricao.js?v=3961e29becaf" defer></script>
+    <script src="assets/transcricao.js?v=1f0cce69ae0e" defer></script>
     <link rel="stylesheet" href="assets/teasers.css?v=d693da9483aa">
-    <script src="assets/teasers.js?v=84cf6bb0c9bf" defer></script>
+  <link rel="stylesheet" href="assets/video-player.css?v=044e65f4747b">
+  <script src="assets/video-player.js?v=b245e9fecb80" defer></script>
 </head>
 
 
@@ -1833,22 +1834,23 @@
 
             <!-- 1. DESENVOLVIMENTO (À ESQUERDA) -->
 
-            <a
-                href="python.html"
-                class="featured-card"
-            >
+            <article class="featured-card">
 
-                <div class="featured-image">
+                <div class="teaser-player" data-teaser-player data-project-name="VoxTexto" data-teaser-context="em destaque" data-duration="20" data-scenes="media/transcricao-resumo-cenas.json?v=5dc0a57048d0">
+  <video controls playsinline preload="none" poster="img/teasers/transcricao.jpg?v=ddca3974bcb3" width="1280" height="720" aria-label="Resumo de VoxTexto em 20 segundos">
+    <source src="media/transcricao-resumo.mp4?v=877093f263a0" type="video/mp4">
+    <track kind="subtitles" src="media/transcricao-resumo-pt.vtt?v=dc0690d85424" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/transcricao-resumo-en.vtt?v=5b8fed1ac93f" srclang="en" label="English">
+    Seu navegador não reproduz este vídeo. <a href="python.html">Conhecer VoxTexto</a>.
+  </video>
+  <div class="teaser-controls">
+    <button type="button" data-teaser-toggle aria-label="Reproduzir resumo de VoxTexto">▶ Resumo · 20s</button>
+    <label>Legendas <select data-teaser-language aria-label="Idioma das legendas do destaque de VoxTexto"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label>
+  </div>
+</div>
 
-                    <img
-                        src="img/transcricao/resultado-ogg.jpg?v=9b28da88ba9e"
-                        alt="VoxTexto com transcrição concluída e exportação Word"
-                    >
 
-                </div>
-
-
-                <div class="featured-content">
+                <a href="python.html" class="featured-content project-card-content">
 
                     <span class="project-type">
                         Desenvolvimento • v1.2.1
@@ -1878,18 +1880,18 @@
                         EXPLORAR SOLUÇÃO →
                     </span>
 
-                </div>
+                </a>
 
-            </a>
+            </article>
 
 
             <!-- 2. DATA & ANALYTICS - POWER BI EMBUTIDO (À DIREITA) -->
 
             <article class="featured-card">
 
-                <div class="teaser-player" data-teaser-player data-project-name="Análise de Churn" data-duration="16">
-  <video controls playsinline preload="none" poster="img/teasers/churn.jpg?v=185a525d8bc9" width="1280" height="720" aria-label="Resumo de Análise de Churn em 16 segundos">
-    <source src="media/churn-resumo.mp4?v=58a342f97962" type="video/mp4">
+                <div class="teaser-player" data-teaser-player data-project-name="Análise de Churn" data-duration="16" data-scenes="media/churn-resumo-cenas.json?v=5ad79de517da">
+  <video controls playsinline preload="none" poster="img/teasers/churn.jpg?v=4b34e846cc3a" width="1280" height="720" aria-label="Resumo de Análise de Churn em 16 segundos">
+    <source src="media/churn-resumo.mp4?v=e07ca538d498" type="video/mp4">
     <track kind="subtitles" src="media/churn-resumo-pt.vtt?v=4dccc30d06b1" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/churn-resumo-en.vtt?v=3141cbfc0418" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9">Conhecer Análise de Churn</a>.
@@ -2077,9 +2079,9 @@
             <!-- FINANCEIRO -->
 
             <article class="project-card" id="financeiro">
-<div class="teaser-player" data-teaser-player data-project-name="Gestão Financeira" data-duration="17">
-  <video controls playsinline preload="none" poster="img/teasers/financeiro.jpg?v=a268f58d80bb" width="1280" height="720" aria-label="Resumo de Gestão Financeira em 17 segundos">
-    <source src="media/financeiro-resumo.mp4?v=c086cd32ebe2" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="Gestão Financeira" data-duration="17" data-scenes="media/financeiro-resumo-cenas.json?v=0c40907cbeeb">
+  <video controls playsinline preload="none" poster="img/teasers/financeiro.jpg?v=b9a4883f27e5" width="1280" height="720" aria-label="Resumo de Gestão Financeira em 17 segundos">
+    <source src="media/financeiro-resumo.mp4?v=f1cdd2928ed8" type="video/mp4">
     <track kind="subtitles" src="media/financeiro-resumo-pt.vtt?v=fb2ab56da9ee" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/financeiro-resumo-en.vtt?v=298439e72dce" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="financeiro.html">Conhecer Gestão Financeira</a>.
@@ -2096,9 +2098,9 @@
             <!-- LOGÍSTICA -->
 
             <article class="project-card" id="transporte">
-<div class="teaser-player" data-teaser-player data-project-name="Logística e Frota" data-duration="15">
-  <video controls playsinline preload="none" poster="img/teasers/transporte.jpg?v=93402bf25b9f" width="1280" height="720" aria-label="Resumo de Logística e Frota em 15 segundos">
-    <source src="media/transporte-resumo.mp4?v=dea467166e46" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="Logística e Frota" data-duration="15" data-scenes="media/transporte-resumo-cenas.json?v=9374151720d2">
+  <video controls playsinline preload="none" poster="img/teasers/transporte.jpg?v=5e7dab32ff36" width="1280" height="720" aria-label="Resumo de Logística e Frota em 15 segundos">
+    <source src="media/transporte-resumo.mp4?v=fa2761e837c4" type="video/mp4">
     <track kind="subtitles" src="media/transporte-resumo-pt.vtt?v=cbe170ceeac4" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/transporte-resumo-en.vtt?v=dbf91b811011" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="transporte.html">Conhecer Logística e Frota</a>.
@@ -2115,9 +2117,9 @@
             <!-- COMERCIAL -->
 
             <article class="project-card" id="venda">
-<div class="teaser-player" data-teaser-player data-project-name="Análise Comercial" data-duration="16">
-  <video controls playsinline preload="none" poster="img/teasers/venda.jpg?v=28a6f7bfb6fd" width="1280" height="720" aria-label="Resumo de Análise Comercial em 16 segundos">
-    <source src="media/venda-resumo.mp4?v=ff12a2d82675" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="Análise Comercial" data-duration="16" data-scenes="media/venda-resumo-cenas.json?v=24328b1f82a0">
+  <video controls playsinline preload="none" poster="img/teasers/venda.jpg?v=1329b1691c42" width="1280" height="720" aria-label="Resumo de Análise Comercial em 16 segundos">
+    <source src="media/venda-resumo.mp4?v=2163673ef1f9" type="video/mp4">
     <track kind="subtitles" src="media/venda-resumo-pt.vtt?v=1e98e4a038c4" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/venda-resumo-en.vtt?v=77c52712f2c7" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="venda.html">Conhecer Análise Comercial</a>.
@@ -2162,9 +2164,9 @@
 
             <!-- TRANSCRIÇÃO EM TEXTO -->
             <article class="development-card transcricao-card" id="transcricao">
-<div class="teaser-player" data-teaser-player data-project-name="VoxTexto" data-duration="20">
-  <video controls playsinline preload="none" poster="img/teasers/transcricao.jpg?v=9dfb53b1c506" width="1280" height="720" aria-label="Resumo de VoxTexto em 20 segundos">
-    <source src="media/transcricao-resumo.mp4?v=6b9f113532ea" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="VoxTexto" data-duration="20" data-scenes="media/transcricao-resumo-cenas.json?v=5dc0a57048d0">
+  <video controls playsinline preload="none" poster="img/teasers/transcricao.jpg?v=ddca3974bcb3" width="1280" height="720" aria-label="Resumo de VoxTexto em 20 segundos">
+    <source src="media/transcricao-resumo.mp4?v=877093f263a0" type="video/mp4">
     <track kind="subtitles" src="media/transcricao-resumo-pt.vtt?v=dc0690d85424" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/transcricao-resumo-en.vtt?v=5b8fed1ac93f" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="python.html">Conhecer VoxTexto</a>.
@@ -2187,9 +2189,9 @@
 
             <article class="development-card" id="nexolog">
 
-<div class="teaser-player" data-teaser-player data-project-name="NexoLog" data-duration="18">
-  <video controls playsinline preload="none" poster="img/teasers/nexolog.jpg?v=6e705dca7fb9" width="1280" height="720" aria-label="Resumo de NexoLog em 18 segundos">
-    <source src="media/nexolog-resumo.mp4?v=5fb53420f42c" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="NexoLog" data-duration="18" data-scenes="media/nexolog-resumo-cenas.json?v=c6bf766b2556">
+  <video controls playsinline preload="none" poster="img/teasers/nexolog.jpg?v=d972c2bfff1b" width="1280" height="720" aria-label="Resumo de NexoLog em 18 segundos">
+    <source src="media/nexolog-resumo.mp4?v=6d9d11b7b06d" type="video/mp4">
     <track kind="subtitles" src="media/nexolog-resumo-pt.vtt?v=6b11292bf3a9" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/nexolog-resumo-en.vtt?v=47eee5da46d5" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="nexolog.html">Conhecer NexoLog</a>.
@@ -2212,9 +2214,9 @@
             <!-- ATELIÊ VERDE -->
 
             <article class="development-card atelie-card" id="atelie-verde">
-<div class="teaser-player" data-teaser-player data-project-name="Ateliê Verde" data-duration="17">
-  <video controls playsinline preload="none" poster="img/teasers/atelie-verde.jpg?v=952dd8d89e8b" width="1280" height="720" aria-label="Resumo de Ateliê Verde em 17 segundos">
-    <source src="media/atelie-verde-resumo.mp4?v=95003a34eb2b" type="video/mp4">
+<div class="teaser-player" data-teaser-player data-project-name="Ateliê Verde" data-duration="17" data-scenes="media/atelie-verde-resumo-cenas.json?v=ae9adfb1fe99">
+  <video controls playsinline preload="none" poster="img/teasers/atelie-verde.jpg?v=57533faf6b2b" width="1280" height="720" aria-label="Resumo de Ateliê Verde em 17 segundos">
+    <source src="media/atelie-verde-resumo.mp4?v=76b39d3864bf" type="video/mp4">
     <track kind="subtitles" src="media/atelie-verde-resumo-pt.vtt?v=7356ea5d213f" srclang="pt-BR" label="Português BR" default>
     <track kind="subtitles" src="media/atelie-verde-resumo-en.vtt?v=d9ca903434aa" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="atelie-verde.html">Conhecer Ateliê Verde</a>.
@@ -2503,32 +2505,7 @@
 
 
 
-<script>
-document.querySelectorAll('[data-nexolog-player]').forEach(function(player) {
-  const video = player.querySelector('video');
-  const language = player.querySelector('[data-caption-language]');
-  const toggle = player.querySelector('[data-video-toggle]');
-  function updateCaptions() {
-    Array.from(video.textTracks).forEach(function(track) {
-      track.mode = track.language === language.value ? 'showing' : 'disabled';
-    });
-  }
-  language.addEventListener('change', updateCaptions);
-  video.addEventListener('loadedmetadata', updateCaptions);
-  toggle.addEventListener('click', function() {
-    if (video.paused) video.play().catch(function() { toggle.textContent = '▶ Reproduzir'; });
-    else video.pause();
-  });
-  function updatePlayback() {
-    toggle.textContent = video.paused ? '▶ Reproduzir' : 'Ⅱ Pausar';
-    toggle.setAttribute('aria-label', video.paused ? 'Reproduzir apresentação' : 'Pausar apresentação');
-  }
-  video.addEventListener('play', updatePlayback);
-  video.addEventListener('pause', updatePlayback);
-  video.addEventListener('ended', updatePlayback);
-  updateCaptions();
-});
-</script>
+
 
 </body>
 

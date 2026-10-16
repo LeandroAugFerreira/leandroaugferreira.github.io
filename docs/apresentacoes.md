@@ -1,8 +1,8 @@
 # Apresentações dos projetos
 
-Todos os vídeos usam o mesmo mascote como apresentador, voz masculina neural em português brasileiro (Antonio) e legendas PT-BR e inglês. A captura do sistema ocupa o quadro, preservando sua proporção, com o mascote pequeno no canto inferior esquerdo. O título de cada cena aparece em uma faixa compacta no canto superior direito, separado das legendas inferiores. Não há painel lateral, rótulos do apresentador nem contadores de cenas. A câmera e as capturas permanecem fixas; o visor do personagem acompanha a voz.
+Todos os vídeos usam o mesmo mascote como apresentador, voz masculina neural em português brasileiro (Antonio) e legendas PT-BR e inglês. A captura inteira do sistema ocupa o quadro, preservando sua proporção, com o mascote no canto inferior esquerdo. Sua altura passou de 180 para 243 pixels, um aumento de 35%. Os títulos, as legendas e os controles ficam em áreas próprias do player, fora da imagem do sistema, inclusive em tela cheia. Não há painel lateral, rótulos do apresentador nem contadores de cenas. As capturas permanecem fixas, com cortes diretos e sem escurecer o quadro final; o visor do personagem acompanha a voz.
 
-A página inicial tem sete anúncios curtos. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
+A página inicial tem sete anúncios curtos; o VoxTexto também possui um player no cartão de destaque. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
 
 | Projeto | Anúncio na página inicial | Apresentação completa |
 | --- | --- | --- |
@@ -19,6 +19,10 @@ Não há reprodução automática. Ao iniciar outro anúncio, o anterior é paus
 A narração é gerada como uma fala contínua para cada vídeo, com ritmo de conversa e sem intervalos acrescentados nas mudanças de cena. O áudio permanece em uma única faixa durante toda a apresentação. As legendas e as trocas de tela acompanham os tempos das palavras.
 
 Configuração da voz: `pt-BR-AntonioNeural`, ritmo `+3%` e tom `-2Hz`, com normalização de volume aplicada ao vídeo inteiro.
+
+O player compartilhado está em `assets/video-player.js` e `assets/video-player.css`. Cada vídeo possui um arquivo `*-cenas.json` para sincronizar os títulos. As legendas selecionadas usam os tempos do WebVTT e são exibidas abaixo do vídeo. O modo de tela cheia abrange o player inteiro, preservando a separação entre imagem, textos e controles.
+
+As capturas do Churn foram refeitas após carregar os visuais e os componentes personalizados. A página de risco inclui os gráficos, os insights e a tabela de clientes preenchida.
 
 O VoxTexto é apresentado pelo propósito e pelo fluxo do aplicativo: selecionar gravações, transcrever, consultar o histórico e exportar Word. As capturas usam uma base isolada e uma transcrição real de um áudio de teste.
 
