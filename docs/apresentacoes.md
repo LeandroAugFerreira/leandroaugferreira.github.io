@@ -2,12 +2,13 @@
 
 Todos os vídeos usam o mesmo mascote como apresentador, voz masculina neural em português brasileiro (Antonio) e legendas PT-BR e inglês. A captura inteira do sistema ocupa o quadro, preservando sua proporção, com o mascote no canto inferior esquerdo. Sua altura passou de 180 para 243 pixels, um aumento de 35%. Os títulos, as legendas e os controles ficam em áreas próprias do player, fora da imagem do sistema, inclusive em tela cheia. Não há painel lateral, rótulos do apresentador nem contadores de cenas. As capturas permanecem fixas, com cortes diretos e sem escurecer o quadro final; o visor do personagem acompanha a voz.
 
-A página inicial tem sete anúncios curtos; o VoxTexto também possui um player no cartão de destaque. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
+A página inicial tem oito anúncios curtos; o VoxTexto também possui um player no cartão de destaque. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
 
 | Projeto | Anúncio na página inicial | Apresentação completa |
 | --- | --- | --- |
 | VoxTexto | 19.1 s | 108.7 s |
 | NexoLog | 17.4 s | 116.1 s |
+| NexoFiscal | 19.9 s | 95.3 s |
 | Ateliê Verde | 16.0 s | 126.7 s |
 | Gestão Financeira | 16.7 s | Relatório interativo |
 | Logística e Frota | 14.8 s | Relatório interativo |
@@ -31,3 +32,5 @@ O conteúdo explicativo do NexoLog e Ateliê Verde foi preservado e reapresentad
 O instalador do VoxTexto v1.2.1 será gerado em uma etapa posterior; a página identifica o instalador v1.2.0 que está disponível.
 
 A imagem original e o prompt do mascote estão documentados em [mascote-vox.md](mascote-vox.md).
+
+NexoFiscal incluído em 18/10/2026: capturas atuais de instalação isolada, dados fictícios, resumo e apresentação com os mesmos mascote e voz. Código-fonte distribuído sem banco/configurações locais; instalação e 60 testes aprovados. A página apresenta emissão simulada, sem validade fiscal e sem API pública.

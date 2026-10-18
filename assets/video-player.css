@@ -12,7 +12,7 @@
 .portfolio-video:fullscreen video { width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; object-fit: contain; }
 .portfolio-video:fullscreen .video-scene-title { font-size: 18px; padding: 10px 18px; }
 .portfolio-video:fullscreen .video-subtitles { min-height: 3.4em; padding: 8px 20px; font-size: clamp(16px, 1.4vw, 22px); }
-.portfolio-video:fullscreen :is(.teaser-controls, .transcricao-controls, .nexolog-controls, .atelie-player-controls) { min-height: auto; height: auto; padding: 8px 16px; }
+.portfolio-video:fullscreen :is(.teaser-controls, .transcricao-controls, .nexolog-controls, .atelie-player-controls, .nexofiscal-controls) { min-height: auto; height: auto; padding: 8px 16px; }
 @media (max-width: 600px) {
   .video-scene-title { padding: 10px 12px; font-size: 14px; }
   .video-subtitles { padding: 10px 12px; font-size: 13px; }

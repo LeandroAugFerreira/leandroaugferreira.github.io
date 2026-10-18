@@ -1,0 +1,41 @@
+WEBVTT
+
+1
+00:00:00.099 --> 00:00:08.167
+This is NexoFiscal, a portfolio project that organizes service invoicing, from client registration to the document.
+
+2
+00:00:09.005 --> 00:00:16.881
+Clients can be individuals or businesses from different sectors. All data in this presentation is fictional.
+
+3
+00:00:17.718 --> 00:00:26.468
+For a standalone invoice, choose a service and enter the amount, reporting month and description. No contract or payment is required.
+
+4
+00:00:27.306 --> 00:00:35.570
+Review the details before confirming. The server checks the client and service, with duplicate protection for each request.
+
+5
+00:00:36.408 --> 00:00:45.000
+View the document in the system or download its PDF. The watermark identifies this as a demonstration with no tax validity.
+
+6
+00:00:45.837 --> 00:00:55.473
+Administrators and Finance users can email the PDF when a sender is configured. Visitors can prepare a message, but cannot send it.
+
+7
+00:00:56.311 --> 00:01:04.539
+You can also simulate a rejection, address the issue and retry. Each attempt stays in the history so its result can be reviewed.
+
+8
+00:01:05.376 --> 00:01:14.976
+Six routines help prepare deliveries, check due dates and consolidate results. They run locally or through an n8n connection.
+
+9
+00:01:15.813 --> 00:01:24.757
+Each role has its own permissions. The app also provides user management, account settings and lists with five items per page.
+
+10
+00:01:25.595 --> 00:01:34.466
+Explore the screens and download the source to run it locally. Invoicing is simulated, with no submission to municipalities or government authorization.

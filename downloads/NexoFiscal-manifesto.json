@@ -1,0 +1,14 @@
+{
+  "archive": "NexoFiscal-codigo-fonte.zip",
+  "files": 167,
+  "bytes": 296589,
+  "sha256": "b7192a74d8d25169bd3a408a66d26cebb852aa7f2c8960a644843c1f17465b72",
+  "exclusions": [
+    "credenciais locais",
+    "bancos",
+    "backups",
+    "logs",
+    "dependências",
+    "runtime n8n"
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "start": 0,
+    "end": 8.586166,
+    "title": "Emissão no centro da operação."
+  },
+  {
+    "start": 8.586166,
+    "end": 17.2997705,
+    "title": "Clientes pessoa física e jurídica."
+  },
+  {
+    "start": 17.2997705,
+    "end": 26.887145,
+    "title": "Serviço, valor e competência."
+  },
+  {
+    "start": 26.887145,
+    "end": 35.989083,
+    "title": "Revise antes de emitir."
+  },
+  {
+    "start": 35.989083,
+    "end": 45.418687000000006,
+    "title": "PDF com marca-d’água."
+  },
+  {
+    "start": 45.418687000000006,
+    "end": 55.8919785,
+    "title": "Entrega com PDF e permissões."
+  },
+  {
+    "start": 55.8919785,
+    "end": 64.9575205,
+    "title": "Rejeição e reprocessamento."
+  },
+  {
+    "start": 64.9575205,
+    "end": 75.394437,
+    "title": "Rotinas locais e n8n."
+  },
+  {
+    "start": 75.394437,
+    "end": 85.17595750000001,
+    "title": "Acesso por perfil."
+  },
+  {
+    "start": 85.17595750000001,
+    "end": 95.304,
+    "title": "Experimente a demonstração local."
+  }
+]

@@ -1,4 +1,4 @@
-const portfolioPlayers = Array.from(document.querySelectorAll('[data-teaser-player], [data-transcricao-player], [data-nexolog-player], [data-atelie-player]'));
+const portfolioPlayers = Array.from(document.querySelectorAll('[data-teaser-player], [data-transcricao-player], [data-nexolog-player], [data-atelie-player], [data-project-player]'));
 
 portfolioPlayers.forEach((player) => {
   const video = player.querySelector('video');
