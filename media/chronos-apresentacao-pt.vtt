@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.099 --> 00:00:11.905
+Este é um guia do Chronos, um projeto para conectar pessoas, jornadas e planejamento. O Hospital Horizonte é o cenário fictício, com trezentos e cinquenta colaboradores em dezenove setores.
+
+2
+00:00:12.743 --> 00:00:27.051
+A estrutura é configurável para diferentes empresas. Contratos, competências, qualificações e indisponibilidades ajudam a definir quem pode realizar cada atividade. Cadastrar uma regra não confirma sua validade jurídica.
+
+3
+00:00:27.888 --> 00:00:38.265
+Os cenários congelam as hipóteses e permitem comparar jornadas. A capacidade agregada mostra uma estimativa de horas, mas não substitui uma escala viável por posto e turno.
+
+4
+00:00:39.102 --> 00:00:51.116
+No financeiro, as parcelas têm fontes e uma projeção de doze meses. Os cálculos preservam centavos e salários contratuais. Resultados projetados não são economia comprovada.
+
+5
+00:00:51.954 --> 00:01:05.570
+O otimizador considera demanda, habilitações, disponibilidade e descansos. Lacunas ficam visíveis. A proposta mantém sua versão e precisa de revisão humana; o autor não aprova sua própria execução.
+
+6
+00:01:06.408 --> 00:01:21.444
+Na página do projeto, consulte o manual, as instruções de execução e o código-fonte. A conta demo permite consultar o painel e a estrutura. O sistema é local; esta página apresenta o projeto, sem hospedar uma API pública.

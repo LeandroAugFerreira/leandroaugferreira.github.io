@@ -1,0 +1,32 @@
+[
+  {
+    "start": 0,
+    "end": 12.3240205,
+    "title": "Chronos 1.0 • Gestão inteligente de jornadas e escalas"
+  },
+  {
+    "start": 12.3240205,
+    "end": 27.4696455,
+    "title": "Cadastros e regras com fontes"
+  },
+  {
+    "start": 27.4696455,
+    "end": 38.683270500000006,
+    "title": "Cenários independentes e versões preservadas"
+  },
+  {
+    "start": 38.683270500000006,
+    "end": 51.53518699999999,
+    "title": "Projeções financeiras em 12 meses"
+  },
+  {
+    "start": 51.53518699999999,
+    "end": 65.98906249999999,
+    "title": "Otimização com restrições e revisão humana"
+  },
+  {
+    "start": 65.98906249999999,
+    "end": 82.272,
+    "title": "Manual e demonstração local"
+  }
+]

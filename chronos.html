@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronos 1.0 | Leandro Augusto Ferreira</title>
+<meta name="description" content="Chronos: Gestão Inteligente de Jornadas e Escalas. Conheça o projeto, o cenário fictício Hospital Horizonte, os vídeos explicativos e o manual completo.">
+<link rel="canonical" href="https://leandroaugferreira.github.io/chronos.html"><meta property="og:type" content="website"><meta property="og:title" content="Chronos 1.0 | Gestão Inteligente de Jornadas e Escalas"><meta property="og:description" content="Pessoas, jornadas, cenários e cobertura. Explore o projeto e o manual completo de uso."><meta property="og:url" content="https://leandroaugferreira.github.io/chronos.html"><meta property="og:image" content="https://leandroaugferreira.github.io/img/teasers/chronos.jpg"><meta property="og:image:alt" content="Guia ilustrado Chronos 1.0, com mascote e dados fictícios de demonstração"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/chronos.css?v=a858d9fa74ad"><link rel="stylesheet" href="assets/video-player.css?v=8a4adeee32d9"><script src="assets/video-player.js?v=221f6fa349ed" defer></script></head>
+<body><a class="skip" href="#conteudo">Pular para o conteúdo</a><nav class="container" aria-label="Navegação do projeto"><a href="index.html#chronos">← Voltar ao portfólio</a><a href="#manual">Manual de uso</a><span class="author">Leandro Augusto Ferreira</span></nav>
+<main class="container" id="conteudo"><header class="hero"><div><div class="eyebrow">Python • Full Stack • Chronos 1.0</div><h1>Chro<span>nos</span></h1><p class="lead">Gestão Inteligente de Jornadas e Escalas.</p><p>Conecte estrutura, pessoas e hipóteses de jornada. Compare cenários e custos, identifique lacunas de cobertura e mantenha as propostas ligadas às suas fontes e versões.</p><div class="tags"><span>React</span><span>FastAPI</span><span>Python</span><span>OR-Tools</span><span>SQLAlchemy</span><span>PostgreSQL / SQLite local</span></div><div class="actions"><a class="button primary" href="#manual">Ler manual de uso →</a><a class="button" href="#apresentacao">Assistir à apresentação</a></div><p class="note">Projeto de demonstração local, com dados fictícios. A arquitetura atende empresas de diferentes segmentos; Hospital Horizonte é o cenário apresentado.</p></div>
+<aside class="hero-aside" aria-label="Cenário e documentação"><h2>Planejamento com contexto</h2><div class="numbers"><div><strong>350</strong><span>Colaboradores fictícios</span></div><div><strong>19</strong><span>Setores configuráveis</span></div><div><strong>12</strong><span>Meses na projeção financeira</span></div><div><strong>9</strong><span>Páginas no manual de uso</span></div></div><p class="note">Operação 24 horas na instituição fictícia. Os quantitativos são premissas de demonstração, sem dimensionamento profissional universal.</p></aside></header>
+<section id="apresentacao" aria-labelledby="apresentacao-titulo"><h2 id="apresentacao-titulo">Conheça o projeto em vídeo</h2><div class="chronos-player" data-project-player data-project-name="Chronos 1.0" data-scenes="media/chronos-apresentacao-cenas.json?v=858860ef435c">
+<video controls playsinline preload="metadata" poster="img/teasers/chronos-completo.jpg?v=67b6add256a2" width="1280" height="720" aria-label="Guia ilustrado de apresentação do Chronos 1.0"><source src="media/chronos-apresentacao.mp4?v=ce2c97fc4a4d" type="video/mp4"><track kind="subtitles" src="media/chronos-apresentacao-pt.vtt?v=d60a3bade601" srclang="pt-BR" label="Português BR" default><track kind="subtitles" src="media/chronos-apresentacao-en.vtt?v=6a46d5dd8818" srclang="en" label="English">Seu navegador não reproduz este vídeo. <a href="media/chronos-apresentacao.mp4?v=ce2c97fc4a4d">Baixar apresentação</a>.</video>
+<div class="chronos-controls"><button type="button" data-video-toggle aria-label="Reproduzir apresentação de Chronos">▶ Reproduzir</button><label>Legendas <select data-caption-language aria-label="Idioma das legendas do Chronos"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label></div></div><p class="note">Apresentação com diagramas explicativos e dados fictícios, baseada nas funções e no manual do projeto. Não é uma gravação da interface. Narração contínua em português, com o mascote e os controles utilizados nos demais projetos.</p></section>
+<section aria-labelledby="recursos-titulo"><h2 id="recursos-titulo">Da estrutura à proposta</h2><div class="features">
+<article class="feature"><h3>Pessoas e condições</h3><p>Contratos, competências, qualificações com validade e indisponibilidades. Setores, cargos e turnos configuráveis.</p></article>
+<article class="feature"><h3>Jornadas e regras</h3><p>Calendário, pausas, descansos e critérios com fonte e vigência. O nome de um regime não confirma sua validade jurídica.</p></article>
+<article class="feature"><h3>Cenários versionados</h3><p>Hipóteses independentes de capacidade e demanda. Alterações relevantes ficam em novas versões, preservando a origem.</p></article>
+<article class="feature"><h3>Financeiro</h3><p>Projeções de 12 meses em centavos/Decimal, parcelas e comparação de premissas, sem redução automática de salários.</p></article>
+<article class="feature"><h3>Otimização e revisão</h3><p>OR-Tools, elegibilidade, descansos, cobertura e lacunas. Propostas com revisão humana e aprovação por outro responsável.</p></article>
+<article class="feature"><h3>Analytics e exportações</h3><p>CSV/XLSX autorizados, dados para Power BI e auditoria. O núcleo de automações funciona sem depender do n8n.</p></article></div></section>
+<section id="manual" aria-labelledby="manual-titulo"><p class="eyebrow">Documentação para explorar</p><h2 id="manual-titulo">Manual completo de uso</h2><p>Leia o passo a passo de acesso, cadastros, jornadas, cenários, projeções, otimização, relatórios e operação local. A edição pública usa instruções de instalação próprias, sem caminhos particulares ou credenciais administrativas do autor.</p>
+<div class="actions"><a class="button primary" href="downloads/Chronos-1.0-Manual-de-Uso.pdf?v=1d32730f1d7c" target="_blank" rel="noopener noreferrer">Abrir manual em nova aba</a><a class="button" href="downloads/Chronos-1.0-Manual-de-Uso.pdf?v=1d32730f1d7c" download>Baixar manual PDF</a></div>
+<object class="manual-reader" data="downloads/Chronos-1.0-Manual-de-Uso.pdf?v=1d32730f1d7c#view=FitH" type="application/pdf" aria-label="Manual de uso do Chronos 1.0 em PDF"><p>Se o visualizador não estiver disponível, <a href="downloads/Chronos-1.0-Manual-de-Uso.pdf?v=1d32730f1d7c">abra ou baixe o manual PDF</a>, ou leia a versão em texto abaixo.</p></object>
+<details class="manual-text"><summary>Ler a versão em texto do manual</summary><article aria-label="Manual do Chronos em texto"><h2>Chronos 1.0</h2>
+<p>Manual de instruções - edição para portfólio</p>
+<p>Gestão Inteligente de Jornadas e Escalas</p>
+<p>Edição de 27/10/2026. Cenário fictício: Hospital Horizonte.</p>
+<h3>1. Conheça a plataforma e os acessos</h3>
+<p>Este manual apresenta os módulos do Chronos e a execução local do projeto. A página do portfólio exibe a apresentação e a documentação; ela não hospeda uma API pública ou um ambiente online de login.</p>
+<p>Na instalação local, abra <strong>http://127.0.0.1:5187</strong>. O administrador é criado pelo operador durante o setup, com usuário e senha escolhidos por ele. Não há conta administrativa pessoal incluída no código-fonte.</p>
+<h4>Acesso genérico de apresentação</h4>
+<ul>
+<li><strong>Organização:</strong> horizonte.</li>
+<li><strong>Usuário:</strong> demo.</li>
+<li><strong>Senha demonstrativa:</strong> ChronosDemo@2026.</li>
+<li><strong>Perfil:</strong> Demonstração, com consulta ao dashboard, unidades, setores e catálogos.</li>
+</ul>
+<p>Essa conta está configurada no ambiente de apresentação do autor. Para reproduzi-la numa instalação nova, o administrador deve usar <strong>Acessos → Novo acesso</strong>, selecionar <strong>Demonstração</strong> e cadastrar as credenciais acima. O pacote não transporta contas ou banco ativo. Não confunda essa conta de consulta com um administrador.</p>
+<p>Em <strong>Visão geral</strong>, a base inicial contém <strong>350 colaboradores e 19 setores</strong> fictícios. São contagens de cadastro; cobertura e custos dependem dos cálculos solicitados. O uso de e-mail como usuário não ativa login Google nem envia mensagens.</p>
+<h4>Roteiro inicial</h4>
+<ol>
+<li>Confira os totais em <strong>Visão geral</strong>.</li>
+<li>Consulte <strong>Unidades</strong>, <strong>Setores</strong> e <strong>Catálogos</strong>.</li>
+<li>Alterne os temas claro/escuro no botão de sol/lua.</li>
+<li>Com um perfil operacional autorizado, siga as próximas páginas para pessoas, calendário, cenários, financeiro e otimização.</li>
+<li>Use <strong>Sair da plataforma</strong> ao terminar. Fechar a aba não desliga os servidores.</li>
+</ol>
+<p>Os módulos e os botões seguem o perfil e a unidade autorizada. A conta demo não altera dados, consulta salários, exporta pessoas ou aprova escalas. As páginas seguintes descrevem também as funções dos perfis operacionais. O administrador continua sujeito à exigência de outro responsável para aprovar sua própria proposta.</p>
+<h3>2. Estrutura, colaboradores e CSV</h3>
+<h4>Organize a estrutura</h4>
+<p>Em <strong>Unidades</strong>, <strong>Setores</strong> e <strong>Catálogos</strong>, confira unidade, fuso, setores, funções, competências e qualificações. Os registros são configuráveis para outros segmentos. Hospital Horizonte é a demonstração, não uma limitação da marca Chronos.</p>
+<p>Antes de cadastrar uma pessoa, confirme que seu setor pertence à unidade escolhida e que a função existe no catálogo. O fuso da unidade será usado nos registros de horários.</p>
+<h4>Cadastre ou consulte uma pessoa</h4>
+<ol>
+<li>Abra <strong>Colaboradores</strong>. Use busca por nome/matrícula, unidade, setor e situação.</li>
+<li>Para incluir uma pessoa fictícia, clique em <strong>Novo colaborador</strong>.</li>
+<li>Preencha nome, matrícula única, unidade, setor e função. Salve e confira a mensagem de confirmação.</li>
+<li>Para consultar vínculos, clique no nome da pessoa. Para editar os campos básicos, use o ícone de lápis, quando autorizado.</li>
+</ol>
+<p>Use nomes e identificadores fictícios, por exemplo <strong>Pessoa de demonstração</strong> e uma matrícula ainda não utilizada. Não use CPF, dados de pacientes ou documentos profissionais reais nesta demonstração.</p>
+<p>Se outra operação alterar o registro, o sistema pode recusar o salvamento por conflito. Recarregue a lista e reveja os valores antes de tentar de novo. Não há importação genérica de planilhas concluída neste checkpoint.</p>
+<h4>Exporte o cadastro básico</h4>
+<ol>
+<li>Ajuste os filtros e a ordenação na lista.</li>
+<li>Clique em <strong>Exportar CSV</strong> e aguarde a confirmação de arquivo verificado.</li>
+<li>O arquivo inclui <strong>todas as páginas</strong> da seleção, dentro do seu escopo de acesso.</li>
+</ol>
+<p>O limite é <strong>20.000 registros e 8 MiB</strong>. Se exceder, refine os filtros; não há truncamento silencioso. Uma seleção vazia gera somente o cabeçalho.</p>
+<p>O CSV contém IDs, nome, matrícula, situação, marcação sintética e revisão. Não inclui salários, contratos, evidências ou ausências. Unidade, setor e função são IDs para relacionamento com seus catálogos.</p>
+<p>Ao importar, escolha <strong>UTF-8</strong>, separador <strong>vírgula</strong> e tipo <strong>texto</strong> para matrícula e IDs. Campos que poderiam iniciar fórmulas recebem apóstrofo de proteção. Proteja a pasta do download: o arquivo salvo não mantém as permissões do Chronos.</p>
+<h3>3. Contratos, habilitações e indisponibilidade</h3>
+<p>Abra o detalhe do colaborador pelo seu nome na lista. Os botões dependem das permissões da unidade e dos catálogos. Contratos e salários também exigem acesso financeiro.</p>
+<h4>Adicione um contrato</h4>
+<ol>
+<li>Clique em <strong>Adicionar contrato</strong> e selecione a jornada de referência.</li>
+<li>Informe carga semanal em minutos, salário-base, tipo de vínculo e vigência.</li>
+<li>Registre a fonte do contrato e salve. Confira o novo item na lista.</li>
+</ol>
+<p><strong>Exemplos de preenchimento, sem validade jurídica automática:</strong> 40 horas semanais correspondem a <strong>2400 minutos</strong>; salário de R$ 1.500,01 deve ser digitado como <strong>1500,01</strong> ou <strong>1500.01</strong>, sem separador de milhar.</p>
+<p>O fim da vigência é <strong>exclusivo</strong>: um vínculo com fim em 02/11/2026 não cobre esse dia. O fim pode ficar vazio quando não houver data definida. O cadastro recusa sobreposição com contrato existente e não encerra o anterior automaticamente. Crie um colaborador fictício sem contrato para experimentar esse fluxo sem conflito.</p>
+<p>Novos contratos ficam <strong>pendentes de revisão</strong>. Reduzir a carga de um cenário não reduz automaticamente o salário do contrato.</p>
+<h4>Registre qualificação ou competência</h4>
+<ul>
+<li><strong>Adicionar qualificação:</strong> escolha o catálogo, início, fim exclusivo e evidência fictícia. O registro fica pendente de verificação.</li>
+<li><strong>Adicionar competência:</strong> escolha uma competência disponível e salve. Esse vínculo não substitui habilitação profissional.</li>
+</ul>
+<p>Uma validade cadastrada não equivale a credencial conferida. A tela mostra o estado retornado pela API; registros sintéticos continuam identificados. Edição/exclusão ampla de vínculos e encerramento contratual ainda não estão disponíveis nessa tela.</p>
+<h4>Informe indisponibilidade</h4>
+<p>No painel correspondente, informe <strong>Início da indisponibilidade</strong>, <strong>Fim da indisponibilidade</strong> e, se necessário, um motivo operacional genérico. Confirme e confira os horários exibidos. Os horários de entrada seguem o fuso da unidade.</p>
+<p>Use indisponibilidade para registrar quando a pessoa não pode ser alocada. Não escreva diagnóstico ou motivo médico. Alterar a disponibilidade não recalcula nem aprova uma proposta automaticamente; os cenários já congelados preservam seu histórico.</p>
+<h3>4. Jornadas, regras e calendário</h3>
+<h4>Consulte as jornadas e as regras</h4>
+<p>Em <strong>Jornadas e regras</strong>, examine os regimes cadastrados, sua configuração e estado de revisão. Modalidades como 5x2, 4x3, 12x36 e plantões são configurações de jornada. O nome, por si só, não prova que uma modalidade é válida para determinada função.</p>
+<p>Para cadastrar uma hipótese de jornada, informe nome, descrição, dias de trabalho/descanso e duração do plantão. Não atribua validade jurídica apenas para facilitar a simulação.</p>
+<p>Ao registrar uma regra, defina critério, limite, fonte, condições de aplicação, vigência e escopo. Confira unidade, função, contrato ou instrumento coletivo, quando aplicável. A vigência do formulário de regras é informada em <strong>UTC</strong>, conforme o rótulo da tela.</p>
+<p>Uma regra alterada exige nova versão e revisão; o histórico não deve ser sobrescrito. Falta de regra aplicável ou de evidência deve permanecer visível.</p>
+<h4>Crie um plantão no calendário</h4>
+<ol>
+<li>Abra <strong>Calendário</strong> e selecione unidade, setor/pessoa e data de referência.</li>
+<li>Escolha o colaborador e o setor de atuação. Preencha título, início e fim.</li>
+<li>Acrescente pausas e sua condição de remuneração, conforme os campos disponíveis.</li>
+<li>Solicite a <strong>prévia</strong> e leia a avaliação antes de confirmar o salvamento.</li>
+<li>Se mudar qualquer dado, faça uma nova prévia. Confira o registro e sua situação no calendário.</li>
+</ol>
+<p>Para plantão que cruza a meia-noite, informe o fim no dia seguinte. Confira sempre o fuso e o intervalo entre início e fim. Um rascunho não equivale a escala aprovada.</p>
+<h4>Como interpretar a avaliação</h4>
+<p>Leia o resultado junto da fonte e das regras avaliadas. Pendência não deve ser interpretada como aprovação. As avaliações cobrem os critérios configurados e o planejamento conhecido, inclusive bordas temporais aplicáveis; não certificam todo o enquadramento jurídico ou profissional.</p>
+<p>Indisponibilidade e falta de habilitação devem ser resolvidas na origem. Não remova uma restrição apenas para eliminar uma mensagem. Cadastros de regras e quantitativos hospitalares precisam das fontes e das condições do caso concreto; o sistema não fornece mínimos universais.</p>
+<h3>5. Crie e compare cenários</h3>
+<p>Um cenário congela a população, os dados e as hipóteses de um mês. Ele permite comparar capacidade e demanda; não monta, sozinho, uma escala viável por posto.</p>
+<h4>Exemplo guiado de capacidade</h4>
+<ol>
+<li>Em <strong>Cenários</strong>, clique em <strong>Novo cenário</strong>.</li>
+<li>Use um nome como <strong>Demonstração administrativa - novembro</strong> e o grupo <strong>demo-adm-2026-11</strong>. O grupo aceita letras minúsculas, números, ponto, hífen e sublinhado.</li>
+<li>Escolha a unidade, um setor administrativo e o mês <strong>11/2026</strong>.</li>
+<li>Em <strong>Origem da capacidade</strong>, escolha <strong>Hipótese de ciclo</strong> para testar um regime estruturado. A opção <strong>Plantões já cadastrados</strong> depende do que existir no calendário.</li>
+<li>Selecione o <strong>Regime estruturado</strong>, a <strong>Âncora comum do ciclo</strong>, o início local e o intervalo não remunerado em minutos. A âncora é o primeiro dia do ciclo escolhido.</li>
+<li>Para testar uma meta de 40 horas semanais, informe <strong>40</strong> em <strong>Meta semanal em horas</strong>. Isso é uma hipótese de cálculo, não uma autorização de jornada.</li>
+<li>Para explorar a fixture, escolha habilitações sintéticas como <strong>hipótese</strong>. Em uso com comprovação, mantenha somente habilitações comprovadas e vigentes.</li>
+<li>Descreva em <strong>Fonte e condições da hipótese</strong> que se trata de um exercício fictício e salve o cenário.</li>
+</ol>
+<p>Sem plantões no calendário, a capacidade baseada em plantões pode ficar vazia ou gerar avisos. Isso não indica que todos os colaboradores estejam livres ou que a demanda esteja coberta.</p>
+<h4>Declare a demanda para otimizar</h4>
+<p>Adicione atividades e informe setor, horário de início, duração em minutos, dias da semana, pessoas exigidas, competências/habilitações e fonte. <strong>1440 minutos</strong> representam 24 horas.</p>
+<p>Para testar o fluxo, você pode declarar uma atividade administrativa com uma pessoa como <strong>hipótese didática</strong>, sem tratá-la como dimensionamento real. Cobertura hospitalar deve ser definida por atividade, turno e norma aplicável, com sua fonte própria.</p>
+<h4>Compare versões</h4>
+<p>Selecione <strong>Cenário base</strong> e <strong>Cenário alternativo</strong> e use <strong>Comparar capacidade</strong>. Para mudar uma hipótese, use <strong>Criar próxima versão</strong>. Preserve população e período compatíveis ao interpretar as diferenças. Déficit agregado em horas não determina, sozinho, quantas pessoas contratar ou se uma escala é viável.</p>
+<h3>6. Use o simulador financeiro</h3>
+<p>O simulador calcula uma projeção de <strong>12 meses</strong>, com valores exatos em centavos e premissas identificadas. Projeção não é despesa realizada nem comprovação de economia.</p>
+<h4>Gere uma projeção</h4>
+<ol>
+<li>Abra <strong>Simulador financeiro</strong> e selecione o <strong>Cenário de origem</strong>.</li>
+<li>Inicie uma nova projeção, dê um nome e descreva a <strong>Fonte e escopo financeiro</strong>.</li>
+<li>Preencha as parcelas aplicáveis: categoria, base de incidência, valor ou percentual, recorrência e fonte.</li>
+<li>Declare contratações hipotéticas, treinamento ou transição somente quando fizerem parte do estudo.</li>
+<li>Revise os meses de incidência e as categorias ainda não informadas. Solicite o cálculo e selecione a projeção gerada para consultar.</li>
+</ol>
+<p>Os nomes dos botões e os campos adicionais acompanham a modalidade da parcela escolhida. Não preencha valores normativos ou pisos profissionais por suposição; registre a fonte pertinente.</p>
+<h4>Leia o resultado</h4>
+<ul>
+<li><strong>Total em 12 meses:</strong> soma da projeção configurada.</li>
+<li><strong>Salários-base:</strong> origem contratual congelada e contratações hipotéticas, conforme a seleção.</li>
+<li><strong>Média mensal:</strong> total dividido pelo período; não significa que todos os meses tenham o mesmo custo.</li>
+<li><strong>Categorias pendentes:</strong> parcelas sem informação suficiente; não devem ser tratadas como custo zero comprovado.</li>
+</ul>
+<p>Confira a tabela mensal e expanda as parcelas para reconciliar salários existentes, contratações e componentes. Observe avisos de falta de contrato, cobertura de período, remuneração de intervalos e arredondamento.</p>
+<h4>Compare e teste sensibilidade</h4>
+<p>Selecione uma projeção base e uma alternativa compatível. Para sensibilidade, escolha a premissa, informe a variação permitida na tela e leia o novo resultado como uma hipótese adicional.</p>
+<p>Alterar a meta semanal do cenário <strong>não reduz salários automaticamente</strong>. Uma contratação inserida no financeiro <strong>não cria um colaborador habilitado</strong> no cadastro ou no otimizador. Esses efeitos precisam ser modelados separadamente e revisados.</p>
+<p>Salários e projeções dependem de permissão financeira na unidade. Se o módulo ou um valor não aparecer, confira o perfil e o escopo do acesso antes de tentar repetir a operação.</p>
+<h3>7. Otimize e revise propostas</h3>
+<p>O worker de otimização precisa estar ativo. Inicie-o no ambiente local conforme as instruções da página 9. O cálculo usa OR-Tools e as entradas da versão selecionada.</p>
+<h4>Envie um cálculo</h4>
+<ol>
+<li>Em <strong>Otimização de escalas</strong>, escolha o <strong>Cenário de origem</strong>. Ele precisa ter demanda definida.</li>
+<li>Informe o nome do cálculo e o início/fim do horizonte. O <strong>fim é exclusivo</strong>.</li>
+<li>Escolha cobertura <strong>Estrita</strong> para exigir toda a demanda ou <strong>Diagnóstico</strong> para quantificar lacunas sem esconder o déficit.</li>
+<li>Escolha a política de habilitações. Registros sintéticos só devem ser aceitos como hipótese de demonstração.</li>
+<li>Defina plantões candidatos: início, duração, pausa, posição da pausa, dias da semana e remuneração do intervalo.</li>
+<li>Revise limites, fontes, descanso, histórico anterior/posterior, cargos autorizados por atividade e datas iniciais dos ciclos contratuais. Custos são opcionais e exigem permissão/fonte.</li>
+<li>Clique em <strong>Enviar para cálculo</strong> e acompanhe o processamento selecionado.</li>
+</ol>
+<p>Não aceite limites predefinidos como regra jurídica universal. Não marque revisão como concluída sem a evidência correspondente.</p>
+<h4>Leia o processamento</h4>
+<ul>
+<li><strong>Na fila / queued:</strong> aguarda o worker.</li>
+<li><strong>Em execução / running:</strong> cálculo em andamento.</li>
+<li><strong>OPTIMAL ou FEASIBLE:</strong> resultado numérico do modelo configurado. Confira verificação independente, cobertura, lacunas e pendências.</li>
+<li><strong>Inviável / INFEASIBLE:</strong> não foi encontrada solução que cumpra o conjunto de restrições. Reveja demanda, períodos e dados; não relaxe habilitação ou descanso apenas para obter resultado.</li>
+<li><strong>Falha ou cancelamento:</strong> consulte o motivo e corrija a origem antes de reenviar.</li>
+</ul>
+<h4>Revise e decida</h4>
+<p>Use <strong>Registrar revisão individual de premissas</strong> para contratos, jornadas, habilitações ou cenário, com fonte e evidência. Gere novo cálculo para incorporar alterações.</p>
+<p>Submeta uma proposta elegível com justificativa. <strong>Outro usuário autorizado</strong> deve aprovar ou rejeitar; o autor não aprova sua própria execução. Se houver mudança de insumos, crie nova versão e revise novamente. Aprovação não grava automaticamente todos os turnos no calendário. A publicação final interna e a publicação externa não estão liberadas neste checkpoint.</p>
+<h3>8. Automações, analytics e acessos</h3>
+<h4>Automações internas</h4>
+<p>Em <strong>Central de automações</strong>, selecione a unidade e consulte rotinas A01-A07, execuções, avisos e sugestões. As definições começam <strong>desativadas</strong>.</p>
+<p>Para um teste autorizado, configure a rotina, informe responsável e parâmetros e habilite somente o necessário. O botão <strong>Executar</strong> depende da rotina habilitada e das permissões do responsável. A agenda depende do scheduler, que deve ser habilitado separadamente. Inicie o consumidor local para processar os eventos autorizados.</p>
+<p>Dar ciência a um aviso não resolve sua causa. Sugestão de recálculo não aprova ou substitui uma escala. Nenhuma rotina valida regras ou aprova propostas automaticamente. <strong>n8n permanece bloqueado</strong> pela auditoria de dependências; não o inicie para seguir este manual.</p>
+<h4>Analytics e relatórios</h4>
+<ol>
+<li>Abra <strong>Analytics e exportações</strong> e escolha unidade, mês opcional e versão de cenário.</li>
+<li>Acrescente otimização e projeção da mesma versão, se disponíveis e autorizadas.</li>
+<li>Confira origem, período, metodologia e os dados das tabelas.</li>
+<li>Use <strong>CSV e Power BI</strong> para baixar um ZIP de tabelas, manifest e preparação de importação; ou <strong>Exportar XLSX</strong> para uma planilha com resumo e fontes.</li>
+</ol>
+<p>Atribuições individuais são opcionais e exigem leitura de pessoas. Os limites são 20.000 registros e 8 MiB. O download é conferido por hash/tamanho. O pacote de CSV não é um painel Power BI publicado nem um PBIX validado.</p>
+<p>Capacidade é mensal; cobertura corresponde ao horizonte do solver; financeiro cobre seus 12 meses. Não some versões alternativas como se fossem operações adicionais. Dado ausente não é zero. As explicações gratuitas são determinísticas e não enviam dados a IA externa.</p>
+<h4>Gerencie acessos e auditoria</h4>
+<p>Em <strong>Acessos</strong>, use <strong>Novo acesso</strong>, informe usuário ou e-mail, senha inicial, perfil e escopo da unidade e clique em <strong>Criar acesso</strong>. São aceitos identificadores de 3 a 80 caracteres; a senha tem de 12 a 128. O identificador é normalizado para minúsculas. Usar e-mail não verifica titularidade nem envia convite.</p>
+<p>Para aprovação por outra pessoa, crie uma conta própria para esse responsável. Não compartilhe a conta administrativa. Em <strong>Auditoria</strong>, consulte data, evento e referência da operação. O sistema ainda não oferece troca de senha/edição de perfil pela tela de acessos; isso depende de manutenção administrativa.</p>
+<h3>9. Instalação e operação local</h3>
+<h4>Prepare uma instalação nova</h4>
+<p>O pacote contém código-fonte para avaliação técnica, não um instalador. Use Windows, Python 3.13 e Node.js compatível com o frontend (a validação utilizou Node 22.14). Extraia numa pasta nova e confira o hash do download. Exemplo de pasta: <strong>C:\Projetos\Chronos-1.0</strong>.</p>
+<p>No PowerShell, entre na pasta extraída e defina um runtime fora do projeto e do OneDrive:</p>
+<pre><code>Set-Location &#x27;C:\Projetos\Chronos-1.0&#x27;
+$env:CHRONOS_RUNTIME_DIR =
+  Join-Path $env:LOCALAPPDATA &#x27;Chronos\1.0&#x27;
+.\scripts\setup.ps1 -RuntimeDir $env:CHRONOS_RUNTIME_DIR
+.\scripts\create-admin.ps1 -RuntimeDir $env:CHRONOS_RUNTIME_DIR</code></pre>
+<p>Escolha as credenciais do seu administrador. O setup instala dependências, prepara o banco local e importa os dados fictícios. O pacote não contém bancos ativos, contas do autor, segredos ou runtimes. Confira <strong>docs/release/handover.md</strong> para requisitos e opções de banco.</p>
+<h4>Inicie os componentes</h4>
+<p>Abra três terminais na raiz do projeto. Repita a definição de <strong>CHRONOS_RUNTIME_DIR</strong> em cada terminal e execute <strong>um comando por terminal</strong>:</p>
+<pre><code>.\scripts\start-backend.ps1 -RuntimeDir $env:CHRONOS_RUNTIME_DIR</code></pre>
+<pre><code>.\scripts\start-frontend.ps1</code></pre>
+<pre><code>.\scripts\start-worker.ps1 -RuntimeDir $env:CHRONOS_RUNTIME_DIR</code></pre>
+<p>Abra <strong>http://127.0.0.1:5187</strong>, organização <strong>horizonte</strong>, com seu administrador. Para criar o visitante demo, siga a página 1. O consumidor de automações é opcional e usa <strong>scripts/start-automations.ps1</strong>; as definições continuam desativadas por padrão. <strong>n8n permanece bloqueado</strong> pela revisão de dependências.</p>
+<h4>Encerre ou resolva um problema</h4>
+<p>Use <strong>Sair da plataforma</strong> e <strong>Ctrl+C</strong> em cada terminal. Não restaure o banco apenas para abrir novamente o projeto. Faça backup antes de intervenções, conforme <strong>docs/operations/recovery.md</strong>.</p>
+<ul>
+<li><strong>Página não abre:</strong> confirme os servidores e o endereço local. <strong>401:</strong> entre novamente. <strong>403/404:</strong> confira perfil e unidade.</li>
+<li><strong>409:</strong> reveja conflito, sobreposição ou insumos alterados. <strong>Cálculo na fila:</strong> confirme o worker.</li>
+<li><strong>503/500:</strong> consulte <strong>http://127.0.0.1:8017/api/v1/health/ready</strong> e informe a correlação ao suporte. Não compartilhe segredos ou dumps.</li>
+</ul>
+<p>O núcleo funciona sem n8n. QA visual de navegador, Power BI Desktop e liberação de produção continuam pendentes. Uma página estática de portfólio não equivale a uma implantação operacional do sistema.</p></article></details></section>
+<section aria-labelledby="execucao-titulo"><div class="usage"><h2 id="execucao-titulo">Como experimentar localmente</h2><ol><li>Baixe o código-fonte e extraia numa pasta nova.</li><li>Use Python 3.13 e Node.js compatível; siga a preparação da página 9 do manual e o handover incluído.</li><li>Crie seu administrador, inicie API, frontend e worker e abra o endereço local indicado no manual.</li><li>Para um visitante, crie um acesso com perfil <strong>Demonstração</strong>. Ele consulta o dashboard, unidades, setores e catálogos.</li></ol><p>Credenciais genéricas de apresentação: organização <code>horizonte</code>, usuário <code>demo</code>, senha <code>ChronosDemo@2026</code>. Essa conta está configurada no ambiente local do autor; numa instalação nova, deve ser cadastrada pelo seu administrador. Não permite alterações, salários ou administração de acessos.</p><p class="notice">Esta página é a apresentação pública do projeto. Ela não hospeda a API nem um login online. O download é um pacote de avaliação técnica, sem instalador, banco ativo, contas pessoais ou runtimes.</p><div class="actions"><a class="button primary" href="downloads/Chronos-1.0-codigo-fonte.zip?v=04e6f11b99e4" download>Baixar código-fonte</a><a class="button" href="downloads/Chronos-1.0-manifesto.json?v=297421c577fd">Consultar integridade do pacote</a></div><p class="note">SHA-256 do pacote: <code>04e6f11b99e4656e5c0aa475c76ded02a3757cada0ad7d26bcbfad55c0f1255a</code></p><p class="note">n8n permanece bloqueado por revisão de dependências. QA visual de navegador, Power BI Desktop e liberação operacional de produção continuam pendentes. Resultados de cobertura, custos e conformidade dependem dos insumos e das revisões aplicáveis; não são certificação jurídica ou economia comprovada.</p></div></section>
+</main><footer><div class="container">Chronos 1.0 • Projeto de Leandro Augusto Ferreira • <a href="index.html#projetos">Conhecer outros projetos</a></div></footer></body></html>

@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.099 --> 00:00:11.905
+This is a guide to Chronos, a project connecting people, working hours and planning. Hospital Horizonte is the fictional scenario, with 350 employees across 19 departments.
+
+2
+00:00:12.743 --> 00:00:27.051
+The structure is configurable for different companies. Contracts, skills, qualifications and unavailability help define who can perform each activity. Registering a rule does not establish legal validity.
+
+3
+00:00:27.888 --> 00:00:38.265
+Scenarios freeze assumptions and allow working-time comparisons. Aggregate capacity estimates hours, but does not replace a feasible schedule for each position and shift.
+
+4
+00:00:39.102 --> 00:00:51.116
+Financial components have documented sources and a 12-month projection. Calculations preserve cents and contractual salaries. Projected results are not demonstrated savings.
+
+5
+00:00:51.954 --> 00:01:05.570
+The optimizer considers demand, qualifications, availability and rest. Coverage gaps remain visible. Proposals retain their version and require human review; authors cannot approve their own run.
+
+6
+00:01:06.408 --> 00:01:21.444
+The project page provides the manual, setup instructions and source code. The demo account can view the dashboard and structure. The system runs locally; this page presents the project without hosting a public API.

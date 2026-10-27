@@ -1,0 +1,11 @@
+{
+  "archive_bytes": 1204522,
+  "archive_sha256": "04e6f11b99e4656e5c0aa475c76ded02a3757cada0ad7d26bcbfad55c0f1255a",
+  "file_count": 258,
+  "manifest_sha256": "2d1483d54a8fc625324447eb9dc5deb6a077545826131273a99f810e8cdb054a",
+  "package_kind": "local-review-package",
+  "product": "Chronos 1.0",
+  "published": false,
+  "release_ready": false,
+  "verified": true
+}

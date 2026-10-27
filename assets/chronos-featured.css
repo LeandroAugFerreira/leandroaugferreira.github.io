@@ -1,0 +1,8 @@
+.chronos-featured { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,1fr); min-height:0; scroll-margin-top:90px; }
+.chronos-featured .teaser-player { align-self:center; border:0; border-right:1px solid var(--border-subtle); }
+.chronos-featured .featured-content { display:flex; flex-direction:column; justify-content:center; padding:32px; }
+.chronos-featured .featured-content h3 { font-size:clamp(26px,3vw,38px); }
+.chronos-featured .project-link { margin-top:24px; align-self:flex-start; }
+.chronos-featured .chronos-card-note { margin-top:18px; font-size:12px; color:var(--text-body); }
+@media(max-width:950px) { .chronos-featured { grid-template-columns:1fr; } .chronos-featured .teaser-player { border-right:0; border-bottom:1px solid var(--border-subtle); } }
+@media(max-width:480px) { .chronos-featured .featured-content { padding:24px; } }

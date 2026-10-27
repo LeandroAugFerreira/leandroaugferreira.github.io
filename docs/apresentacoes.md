@@ -2,10 +2,11 @@
 
 Todos os vídeos usam o mesmo mascote como apresentador, voz masculina neural em português brasileiro (Antonio) e legendas PT-BR e inglês. A captura inteira do sistema ocupa o quadro, preservando sua proporção, com o mascote no canto inferior esquerdo. Sua altura passou de 180 para 243 pixels, um aumento de 35%. Os títulos, as legendas e os controles ficam em áreas próprias do player, fora da imagem do sistema, inclusive em tela cheia. Não há painel lateral, rótulos do apresentador nem contadores de cenas. As capturas permanecem fixas, com cortes diretos e sem escurecer o quadro final; o visor do personagem acompanha a voz.
 
-A página inicial tem oito anúncios curtos; o VoxTexto também possui um player no cartão de destaque. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
+A página inicial tem anúncios curtos dos projetos; Chronos e VoxTexto também possuem players nos cartões de destaque. As páginas dos aplicativos oferecem apresentações mais detalhadas; as páginas dos dashboards mantêm os relatórios interativos.
 
 | Projeto | Anúncio na página inicial | Apresentação completa |
 | --- | --- | --- |
+| Chronos 1.0 | 21.4 s | 82.3 s |
 | VoxTexto | 19.1 s | 108.7 s |
 | NexoLog | 17.4 s | 116.1 s |
 | NexoFiscal | 19.9 s | 95.3 s |
@@ -34,3 +35,5 @@ O instalador do VoxTexto v1.2.1 será gerado em uma etapa posterior; a página i
 A imagem original e o prompt do mascote estão documentados em [mascote-vox.md](mascote-vox.md).
 
 NexoFiscal incluído em 18/10/2026: capturas atuais de instalação isolada, dados fictícios, resumo e apresentação com os mesmos mascote e voz. Código-fonte distribuído sem banco/configurações locais; instalação e 60 testes aprovados. A página apresenta emissão simulada, sem validade fiscal e sem API pública.
+
+Chronos 1.0 incluído em 27/10/2026: destaque na página inicial e página própria com manual público incorporado, texto acessível, PDF e código-fonte para avaliação. Os dois vídeos mantêm mascote de 243 pixels, Antonio, fala contínua, legendas PT/EN e controles fora da imagem. Seus visuais são diagramas explicativos identificados como ilustrativos, não capturas da aplicação. A página não hospeda o backend nem publica o administrador pessoal; a conta demo de consulta é descrita como acesso local a configurar em instalações novas. n8n e a liberação operacional de produção permanecem pendentes no projeto.

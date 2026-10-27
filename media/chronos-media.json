@@ -1,0 +1,18 @@
+{
+  "resumo": {
+    "duration": 21.408,
+    "voice": "pt-BR-AntonioNeural",
+    "rate": "+3%",
+    "pitch": "-2Hz",
+    "continuous_audio": true,
+    "visuals": "explanatory diagrams; not application screenshots"
+  },
+  "apresentacao": {
+    "duration": 82.272,
+    "voice": "pt-BR-AntonioNeural",
+    "rate": "+3%",
+    "pitch": "-2Hz",
+    "continuous_audio": true,
+    "visuals": "explanatory diagrams; not application screenshots"
+  }
+}
