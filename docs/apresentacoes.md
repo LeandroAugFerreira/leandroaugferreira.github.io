@@ -30,7 +30,7 @@ O VoxTexto é apresentado pelo propósito e pelo fluxo do aplicativo: selecionar
 
 O conteúdo explicativo do NexoLog e Ateliê Verde foi preservado e reapresentado com o mascote.
 
-O instalador do VoxTexto v1.2.1 será gerado em uma etapa posterior; a página identifica o instalador v1.2.0 que está disponível.
+A numeração pública do VoxTexto passou a V1.0 (antiga v1.2.0) e V2.0 (antiga v1.2.1). O download principal oferece o instalador V2.0, correspondente à interface demonstrada. A versão anterior V1.0 mantém o link histórico v1.2.0.
 
 A imagem original e o prompt do mascote estão documentados em [mascote-vox.md](mascote-vox.md).
 

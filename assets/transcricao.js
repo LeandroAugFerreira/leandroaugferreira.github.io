@@ -9,7 +9,7 @@ document.querySelectorAll('[data-transcricao-gallery]').forEach((gallery, index)
   const dialog = document.createElement('dialog');
   dialog.className = 'tc-lightbox';
   dialog.setAttribute('aria-labelledby', `tc-lightbox-title-${index}`);
-  dialog.innerHTML = `<div class="tc-lightbox-bar"><strong id="tc-lightbox-title-${index}">VoxTexto · v1.2.1</strong><button type="button" data-close autofocus>Fechar ×</button></div><img data-full-image alt=""><div class="tc-lightbox-bar"><button type="button" data-previous aria-label="Imagem anterior">← Anterior</button><button type="button" data-next aria-label="Próxima imagem">Próxima →</button></div><p data-full-caption aria-live="polite"></p>`;
+  dialog.innerHTML = `<div class="tc-lightbox-bar"><strong id="tc-lightbox-title-${index}">VoxTexto · V2.0</strong><button type="button" data-close autofocus>Fechar ×</button></div><img data-full-image alt=""><div class="tc-lightbox-bar"><button type="button" data-previous aria-label="Imagem anterior">← Anterior</button><button type="button" data-next aria-label="Próxima imagem">Próxima →</button></div><p data-full-caption aria-live="polite"></p>`;
   document.body.append(dialog);
   const fullImage = dialog.querySelector('[data-full-image]');
   const fullCaption = dialog.querySelector('[data-full-caption]');
