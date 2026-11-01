@@ -6,3 +6,6 @@
 .chronos-featured .chronos-card-note { margin-top:18px; font-size:12px; color:var(--text-body); }
 @media(max-width:950px) { .chronos-featured { grid-template-columns:1fr; } .chronos-featured .teaser-player { border-right:0; border-bottom:1px solid var(--border-subtle); } }
 @media(max-width:480px) { .chronos-featured .featured-content { padding:24px; } }
+
+/* Chronos 1.0 — assinatura visual do projeto */
+.chronos-featured .featured-content h3,.chronos-featured .project-type,.chronos-featured .project-link,#chronos-aplicacao .project-type,#chronos-aplicacao .project-link { color:#e9b98c; }

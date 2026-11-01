@@ -1,0 +1,84 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manual do Chronos 1.0 | Leandro Augusto Ferreira</title><meta name="description" content="Como baixar, abrir e explorar o Chronos. Guia com acesso de demonstração, roteiro rápido e explicações para visitantes e recrutadores."><meta name="author" content="Leandro Augusto Ferreira"><meta name="theme-color" content="#101f2a">
+<link rel="canonical" href="https://leandroaugferreira.github.io/chronos-manual.html"><link rel="icon" href="img/chronos-mark.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:title" content="Manual do Chronos 1.0"><meta property="og:description" content="Como baixar, abrir e explorar o Chronos. Guia com acesso de demonstração, roteiro rápido e explicações para visitantes e recrutadores."><meta property="og:url" content="https://leandroaugferreira.github.io/chronos-manual.html"><meta property="og:image" content="https://leandroaugferreira.github.io/img/chronos-social.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="assets/chronos.css?v=05e32618f8f7"></head><body class="manual-page"><a class="skip" href="#conteudo">Pular para o conteúdo</a><nav class="container project-nav" aria-label="Navegação do projeto"><a class="wordmark" href="https://leandroaugferreira.github.io/chronos.html"><img src="img/chronos-mark.svg" width="38" height="38" alt="">chronos<span>.</span></a><div><a href="https://leandroaugferreira.github.io/chronos.html">O projeto</a><a aria-current="page" href="chronos-manual.html" >Manual de uso</a><a href="https://leandroaugferreira.github.io/#chronos">Portfólio ↗</a></div></nav><main class="container" id="conteudo"><header class="manual-heading"><p class="eyebrow">CHRONOS 1.0 / GUIA DE USO</p><h1>Conheça. Explore.<br><em>Entenda o projeto.</em></h1><p>Do primeiro acesso às decisões de desenvolvimento. Um guia de leitura direta, com um roteiro rápido para começar.</p><a class="button primary" href="https://leandroaugferreira.github.io/chronos.html#download">Ir para o download do aplicativo →</a></header><div class="manual-layout"><aside class="manual-index" aria-label="Índice do manual"><p class="eyebrow">NESTE GUIA</p><a href="#comece-por-aqui">Comece por aqui</a><a href="#baixe-e-abra-o-aplicativo">Baixe e abra o aplicativo</a><a href="#entre-com-o-acesso-de-demonstracao">Entre com o acesso de demonstração</a><a href="#roteiro-de-cinco-minutos">Roteiro de cinco minutos</a><a href="#crie-seu-administrador-local">Crie seu administrador local</a><a href="#pessoas-estrutura-e-jornadas">Pessoas, estrutura e jornadas</a><a href="#cenarios-custos-e-otimizacao">Cenários, custos e otimização</a><a href="#relatorios-acessos-e-automacoes">Relatórios, acessos e automações</a><a href="#salve-seu-progresso-e-encerre">Salve seu progresso e encerre</a><a href="#se-algo-nao-funcionar">Se algo não funcionar</a><a href="#para-quem-avalia-a-implementacao">Para quem avalia a implementação</a></aside><article class="manual-content" aria-label="Instruções de uso do Chronos"><p>Um guia para conhecer o projeto, experimentar o aplicativo e entender as principais decisões de desenvolvimento.</p>
+<h2 id="comece-por-aqui">Comece por aqui</h2>
+<p>O Chronos ajuda a organizar equipes, jornadas e escalas. Ele reúne os dados das pessoas, as necessidades de cada setor e as regras de trabalho para apoiar o planejamento.</p>
+<p>Para demonstrar essas funções, criei o <strong>Hospital Horizonte</strong>, uma instituição fictícia com <strong>350 colaboradores e 19 setores</strong>. O hospital é um exemplo de uso: a estrutura do sistema também permite configurar empresas de outros segmentos.</p>
+<p><strong>Para recrutadores:</strong> o roteiro de cinco minutos abaixo mostra a interface, a organização dos dados e o controle de acesso. Os tópicos seguintes explicam os módulos e as escolhas técnicas, sem exigir que você configure um ambiente de desenvolvimento.</p>
+<h2 id="baixe-e-abra-o-aplicativo">Baixe e abra o aplicativo</h2>
+<ol>
+<li>Na página do projeto, escolha <strong>Baixar para Windows (.exe)</strong>.</li>
+<li>Salve o arquivo <strong>Chronos.exe</strong> em uma pasta do seu computador.</li>
+<li>Abra o arquivo e aguarde a preparação da primeira execução. Não é necessário instalar Python ou Node.js para usar o executável.</li>
+<li>Quando a janela do Chronos indicar que está pronto, o aplicativo abrirá no seu navegador. Se isso não acontecer, clique em <strong>Abrir Chronos</strong>.</li>
+<li>Mantenha a janela do Chronos aberta enquanto utiliza o aplicativo.</li>
+</ol>
+<p>Esta edição foi preparada para <strong>Windows de 64 bits</strong>. O aplicativo funciona no seu computador; o endereço exibido na janela é local e pode variar se a porta padrão estiver ocupada. A página do portfólio apresenta o projeto e oferece o download.</p>
+<p>O executável não possui assinatura digital. Se o Windows ou a política da sua empresa impedir a abertura, confira a origem e as informações de integridade na página de download ou procure o responsável pelo computador. Não é necessário desativar proteções para ler o projeto e este manual.</p>
+<h2 id="entre-com-o-acesso-de-demonstracao">Entre com o acesso de demonstração</h2>
+<ul>
+<li><strong>Organização:</strong> <code>horizonte</code></li>
+<li><strong>Usuário:</strong> <code>demo</code></li>
+<li><strong>Senha de demonstração:</strong> <code>ChronosDemo@2026</code></li>
+</ul>
+<p>O executável cria essa conta na primeira abertura, junto com os dados fictícios. Ela permite consultar a visão geral, os setores, as unidades e os catálogos. Assim, o visitante conhece a organização da plataforma sem alterar os cadastros.</p>
+<p>Essa conta não acessa salários, dados individuais dos colaboradores, administração de usuários ou aprovação de escalas. Por isso, o menu apresenta menos opções do que o menu de um administrador.</p>
+<p>Para testar os recursos de edição e simulação, veja <strong>Crie seu administrador local</strong>. As credenciais de demonstração são públicas; não as utilize em outros serviços.</p>
+<h2 id="roteiro-de-cinco-minutos">Roteiro de cinco minutos</h2>
+<ol>
+<li><strong>Visão geral:</strong> confira os colaboradores, setores e unidades cadastrados. Observe a distribuição das equipes e das jornadas contratuais.</li>
+<li><strong>Filtro de unidade:</strong> selecione uma unidade e acompanhe a atualização dos indicadores. Os números vêm da base local, conforme seu acesso.</li>
+<li><strong>Setores:</strong> veja como áreas assistenciais, administrativas e operacionais possuem estruturas próprias.</li>
+<li><strong>Catálogos:</strong> consulte funções, competências, qualificações e modalidades de jornada. Esses cadastros ajudam a distinguir quem pode exercer cada atividade.</li>
+<li><strong>Tema e navegação:</strong> alterne entre claro e escuro pelo botão de sol/lua e percorra o menu. No celular ou em uma janela estreita, use o botão de menu.</li>
+</ol>
+<p>As contagens do dashboard descrevem os cadastros. Elas não comprovam que a cobertura de um setor está adequada. Cobertura, custos e conformidade são avaliados nos módulos específicos, com as premissas informadas pelo operador.</p>
+<h2 id="crie-seu-administrador-local">Crie seu administrador local</h2>
+<ol>
+<li>Na janela de controle do aplicativo, clique em <strong>Criar administrador local</strong>.</li>
+<li>Escolha seu usuário ou e-mail e uma senha entre <strong>12 e 128 caracteres</strong>. Confirme a senha e salve.</li>
+<li>No navegador, saia da conta de demonstração, se estiver conectado.</li>
+<li>Entre com organização <strong>horizonte</strong>, o usuário escolhido e sua senha.</li>
+</ol>
+<p>Essa criação é permitida somente enquanto a instalação ainda não possui administrador. Depois, a gestão de novos acessos acontece no menu <strong>Acessos</strong>, com uma conta autorizada. Usar um e-mail como nome de usuário não envia mensagens nem conecta uma conta Google.</p>
+<p>O administrador e os dados pertencem à sua instalação. Nenhuma conta pessoal do autor acompanha o download. Use apenas informações fictícias durante a avaliação.</p>
+<h2 id="pessoas-estrutura-e-jornadas">Pessoas, estrutura e jornadas</h2>
+<p><strong>Unidades, Setores e Catálogos:</strong> organize os locais de trabalho, as áreas, os cargos, as competências e as qualificações. Confirme esses cadastros antes de adicionar pessoas.</p>
+<p><strong>Colaboradores:</strong> use a busca e os filtros para localizar uma pessoa fictícia. Clique no nome para consultar seus vínculos. O botão <strong>Novo colaborador</strong> permite informar nome, matrícula, unidade, setor e função. As opções de edição dependem do perfil e da unidade autorizada.</p>
+<p><strong>Contratos e habilitações:</strong> no detalhe do colaborador, registre o contrato, a jornada, as competências e as qualificações com suas datas de validade. Informe as fontes e evidências quando solicitadas. O acesso a contratos e salários também depende da permissão financeira.</p>
+<p><strong>Indisponibilidades:</strong> registre o período em que a pessoa não pode ser alocada. O planejamento usa essas informações para evitar atribuições incompatíveis.</p>
+<p><strong>Calendário:</strong> escolha a unidade e o período, consulte os plantões e cadastre turnos quando autorizado. Confira datas, horários e pausas antes de salvar. Os registros podem indicar pendências ou conflitos que precisam ser revistos.</p>
+<p><strong>Jornadas e regras:</strong> modalidades como 5x2, 12x36 ou 4x3 são configurações possíveis de cadastro ou simulação. A seleção de um nome não confirma sua validade para qualquer cargo. A avaliação depende de regras, contratos, acordos, fontes e vigências aplicáveis.</p>
+<h2 id="cenarios-custos-e-otimizacao">Cenários, custos e otimização</h2>
+<p><strong>Cenários:</strong> crie uma hipótese de planejamento. Defina unidade, setor, período, necessidades de cobertura e origem das informações. Gere novas versões para comparar mudanças sem perder o contexto anterior.</p>
+<p><strong>Simulador financeiro:</strong> selecione o cenário e informe as premissas da projeção. Compare os valores estimados para os 12 meses e revise os componentes usados no cálculo. Os resultados dependem dos dados informados; não representam economia comprovada ou redução automática de salários.</p>
+<p><strong>Otimização de escalas:</strong> selecione um cenário, defina o período e as opções de geração e solicite o cálculo. O aplicativo inclui um processador local para consumir a fila enquanto sua janela estiver aberta. O algoritmo considera disponibilidade, habilitações, descansos e requisitos cadastrados.</p>
+<p>Uma execução pode encontrar uma proposta, apontar lacunas ou informar que não há solução para as condições escolhidas. Reveja os resultados e as pendências antes de seguir. O sistema preserva versões e exige revisão humana; quem criou uma proposta não aprova sua própria proposta no fluxo que exige outro responsável.</p>
+<p>Os quantitativos do Hospital Horizonte são exemplos. O projeto não estabelece mínimos profissionais universais e não oferece certificação jurídica de escalas.</p>
+<h2 id="relatorios-acessos-e-automacoes">Relatórios, acessos e automações</h2>
+<p><strong>Analytics e exportações:</strong> consulte os resultados calculados e sua origem. Os arquivos CSV/XLSX dependem da permissão do usuário e do conjunto de dados selecionado. Há preparação de dados para Power BI; a apresentação no Power BI Desktop continua como etapa de avaliação separada.</p>
+<p><strong>Exportação de colaboradores:</strong> ajuste os filtros e escolha <strong>Exportar CSV</strong>. A seleção inclui todas as páginas permitidas. Se o limite de exportação for excedido, refine os filtros. O cadastro básico exportado não inclui salários, contratos ou ausências.</p>
+<p><strong>Acessos e Auditoria:</strong> o administrador pode gerenciar contas e consultar registros das ações. As permissões são aplicadas também na API, além do que aparece na interface.</p>
+<p><strong>Central de automações:</strong> reúne definições e eventos locais. A edição de demonstração mantém o agendamento automático desativado. A integração com n8n permanece bloqueada pela revisão de dependências; ela não é necessária para abrir o aplicativo nem para testar o núcleo de planejamento.</p>
+<h2 id="salve-seu-progresso-e-encerre">Salve seu progresso e encerre</h2>
+<p>As alterações confirmadas são gravadas na base local. Na próxima abertura, o Chronos reutiliza os dados da mesma instalação; não recria os 350 colaboradores por cima das suas alterações.</p>
+<ol>
+<li>Use <strong>Sair da plataforma</strong> para encerrar a sessão.</li>
+<li>Feche a janela de controle do Chronos ou clique em <strong>Encerrar</strong>. Isso desliga os serviços locais iniciados pelo aplicativo.</li>
+<li>Para continuar depois, abra <strong>Chronos.exe</strong> novamente.</li>
+</ol>
+<p>O botão <strong>Pasta de dados</strong> abre o local usado pela demonstração: <code>%LOCALAPPDATA%\Chronos\1.0-demo</code>. Antes de fazer uma cópia de segurança, encerre o aplicativo e copie a pasta completa. Ela inclui o banco e a configuração da sua instalação. Não publique essa pasta nem a envie como código-fonte.</p>
+<h2 id="se-algo-nao-funcionar">Se algo não funcionar</h2>
+<ul>
+<li><strong>O navegador não abriu:</strong> use <strong>Abrir Chronos</strong> na janela do aplicativo e confira o endereço mostrado nela. Não use o endereço de outra instalação ou do ambiente do autor.</li>
+<li><strong>O menu parece incompleto:</strong> confira se entrou com <code>demo</code> ou com seu administrador. O perfil de demonstração possui acesso de consulta limitado.</li>
+<li><strong>Não consegui entrar:</strong> confirme organização, usuário e senha. O botão de olho permite conferir a senha digitada. Após uma falha, ela é limpa.</li>
+<li><strong>Uma alteração foi recusada:</strong> confira os campos, o perfil e possíveis conflitos. Se outro registro foi atualizado, recarregue a página antes de tentar de novo.</li>
+<li><strong>O cálculo não termina:</strong> mantenha a janela do Chronos aberta. Consulte o estado da execução e os avisos. A duração depende das condições do cenário e do computador.</li>
+<li><strong>Preciso analisar um erro:</strong> o arquivo <code>chronos.log</code> fica na pasta de dados. Informe a mensagem e a correlação da operação, quando exibida. Evite compartilhar senhas ou o banco completo.</li>
+</ul>
+<h2 id="para-quem-avalia-a-implementacao">Para quem avalia a implementação</h2>
+<p>O frontend usa <strong>React e TypeScript</strong>; a API, <strong>Python e FastAPI</strong>. A persistência utiliza <strong>SQLAlchemy e migrações Alembic</strong>. O projeto prevê PostgreSQL, enquanto o executável de demonstração utiliza SQLite local. A otimização de escalas usa <strong>OR-Tools</strong>.</p>
+<p>As decisões que podem ser avaliadas incluem controle de acesso por perfil e unidade, cálculo financeiro com precisão decimal, verificação de elegibilidade para atividades, processamento separado do otimizador, versionamento dos cenários e rastreabilidade das operações.</p>
+<p>A interface possui identidade própria — azul profundo, cobre, tons de papel e grafismos de tempo — com assinatura de <strong>Leandro Augusto Ferreira</strong>. Ela oferece temas claro e escuro e componentes compartilhados entre os módulos.</p>
+<p>Esta é uma demonstração para avaliação. Não utiliza dados de pacientes ou colaboradores reais e não é apresentada como sistema liberado para uma operação hospitalar de produção. O código-fonte e as informações de integridade ficam disponíveis na página do projeto para uma avaliação mais aprofundada.</p></article></div></main><footer class="container"><div class="signature"><span class="monogram" aria-hidden="true">lf.</span><span><small>DESIGN & DESENVOLVIMENTO</small><b>Leandro Augusto Ferreira</b></span></div><p>Chronos 1.0 · Guia atualizado em 01/11/2026</p></footer></body></html>

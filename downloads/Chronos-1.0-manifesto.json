@@ -1,8 +1,8 @@
 {
-  "archive_bytes": 1204522,
-  "archive_sha256": "04e6f11b99e4656e5c0aa475c76ded02a3757cada0ad7d26bcbfad55c0f1255a",
-  "file_count": 258,
-  "manifest_sha256": "2d1483d54a8fc625324447eb9dc5deb6a077545826131273a99f810e8cdb054a",
+  "archive_bytes": 1291396,
+  "archive_sha256": "915f63d09105000c56c61027d363757752d4ef1bf5dcf68928cef50c5ac5281e",
+  "file_count": 284,
+  "manifest_sha256": "d192a753361ed0f1b6d7dbe0dfeb1c4aab31984de489702872e2bd483d6893f6",
   "package_kind": "local-review-package",
   "product": "Chronos 1.0",
   "published": false,
