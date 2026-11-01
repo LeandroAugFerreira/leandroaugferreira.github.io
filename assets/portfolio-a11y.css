@@ -1,0 +1,8 @@
+/* Correções de foco usam as cores já presentes em cada página. */
+.portfolio-skip{position:absolute;top:-100px;left:18px;z-index:100;padding:12px;background:var(--cyan-neon);color:var(--bg-dark)}
+.portfolio-skip:focus{top:10px}
+body.portfolio-project a.case-skip{color:#071827}
+body.case-guide a.case-skip{color:#fffdf7}
+.portfolio-standard :is(a,button,select,summary):focus-visible{outline:2px solid var(--cyan-neon);outline-offset:4px}
+/* As novas dimensões intrínsecas preservam a altura fluida original das capturas. */
+.portfolio-project img[data-intrinsic-size]{height:auto}

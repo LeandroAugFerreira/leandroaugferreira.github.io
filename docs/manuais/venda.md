@@ -50,3 +50,9 @@ Você pode consultar a apresentação e a imagem do projeto enquanto o relatóri
 ## Para quem avalia a análise
 
 Observe a hierarquia entre indicadores, evolução mensal, composição por produto/canal e detalhamento geográfico. O projeto utiliza **Power BI** para oferecer uma sequência de leitura comercial, da visão executiva às comparações que sustentam uma investigação.
+
+## Dados, metodologia e limites
+
+O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+
+O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.

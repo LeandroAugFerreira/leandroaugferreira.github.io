@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import unicodedata
+from audit_metadata import complete as complete_metadata
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC='https://leandroaugferreira.github.io/'
@@ -74,7 +75,9 @@ def download(p):
  extras=''
  if p.get('source'):extras+='<a class="case-button" href="'+p['source']+'" '+('target="_blank" rel="noopener noreferrer"' if p['source'].startswith('https:') else 'download')+'>Código-fonte e documentação</a>'
  if p['slug']=='voxtexto':extras+='<a class="case-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Versão anterior: V1.0</a>'
- if p['slug']=='nexofiscal':extras+='<a class="case-button" href="downloads/NexoFiscal-documento-demonstrativo.pdf" target="_blank" rel="noopener noreferrer">Examinar documento simulado (PDF)</a>'
+ if p['slug']=='nexofiscal':
+  extras+='<a class="case-button" href="downloads/NexoFiscal-documento-demonstrativo.pdf" target="_blank" rel="noopener noreferrer">Examinar documento simulado (PDF)</a>'
+  extras+='<a class="case-button" href="downloads/NexoFiscal-testes-backend.json" target="_blank" rel="noopener noreferrer">Registro dos 60 testes de backend</a>'
  if p['slug'] in ('nexolog','nexofiscal'):extras+='<a class="case-button" href="downloads/'+('NexoLog' if p['slug']=='nexolog' else 'NexoFiscal')+'-Windows-manifesto.json">Integridade do aplicativo</a>'
  if p['slug']=='atelie-verde':extras+='<a class="case-button" href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/tag/atelie-verde-2026.10.12-clientes" target="_blank" rel="noopener noreferrer">Distribuição e arquivos</a>'
  section='<section class="case-section" id="download" aria-labelledby="download-titulo"><div class="case-download"><div><p class="case-eyebrow">EXPERIMENTE NO WINDOWS</p><h2 id="download-titulo">'+title+'</h2><p>'+escape(copy)+'</p><div class="case-actions"><a class="case-button case-primary" href="'+p['download']+'" '+('target="_blank" rel="noopener noreferrer"' if p['download'].startswith('https:') else 'download')+'>'+p['download_label']+' ↓</a><a class="case-button" href="'+p['manual']+'" target="_blank" rel="noopener noreferrer">Como usar ↗</a></div><p class="case-note">'+escape(p.get('version','Demonstração Windows'))+' · Leia o guia antes de começar. Se a política do computador impedir a abertura, confira a origem e procure o responsável pelo equipamento.</p></div><div class="case-download-side"><h3>Seu primeiro teste</h3><ol>'+''.join('<li>'+escape(s)+'</li>' for s in steps)+'</ol><p class="case-note">'+escape(credentials)+'</p></div></div><details class="case-code"><summary>Código, versões e informações técnicas</summary><p>Estes links complementam a avaliação. O aplicativo é o caminho de experimentação; o código é destinado à análise técnica.</p><div class="case-actions">'+extras+'</div></details></section>'
@@ -160,6 +163,7 @@ def dashboard(p):
  if p['slug']=='churn':
   gallery='<section class="case-section" aria-labelledby="paginas-titulo"><p class="case-eyebrow">PÁGINAS DA ANÁLISE</p><h2 id="paginas-titulo">Do cancelamento aos grupos em risco.</h2><div class="case-report-gallery">'+''.join('<figure><a href="'+resource(image)+'" target="_blank" rel="noopener noreferrer"><img src="'+resource(image)+'" alt="'+caption+'" loading="lazy"></a><figcaption>'+caption+'</figcaption></figure>' for image,caption in [('img/churn-impacto.jpg','Impacto financeiro dos cancelamentos na base demonstrativa.'),('img/churn-risco.jpg','Segmentos e clientes destacados na leitura de risco do relatório.')])+'</div></section>'
  body=head(p,p['title'],p['summary']+' Relatório interativo e guia de leitura por Leandro Augusto Ferreira.',p['page'])+f'<body class="portfolio-project dashboard-project" style="--project-accent:{p["accent"]}">'+nav(p)+'<main class="case-shell" id="conteudo"><header class="case-hero"><div><p class="case-eyebrow">DATA & ANALYTICS / POWER BI</p><h1>'+escape(p['title'])+'</h1><p class="case-lead">'+escape(p['tagline'])+'</p><p>'+escape(p['summary'])+'</p><div class="case-actions"><a class="case-button case-primary" href="#relatorio">Explorar dashboard →</a><a class="case-button" href="'+p['manual']+'" target="_blank" rel="noopener noreferrer">Guia de leitura ↗</a></div><div class="case-tags">'+''.join('<span>'+escape(t)+'</span>' for t in p['tech'])+'</div></div><figure><a href="'+resource(p['image'])+'" target="_blank" rel="noopener noreferrer"><img src="'+resource(p['image'])+'" alt="Captura do dashboard de '+escape(p['title'],quote=True)+'" width="1340" height="750"></a><figcaption>Captura do projeto. Clique para ampliar ou explore o relatório interativo abaixo.</figcaption></figure></header>'+overview(p)+'<section class="case-section" id="relatorio" aria-labelledby="relatorio-titulo"><div class="case-report-header"><div><p class="case-eyebrow">EXPERIMENTE NO NAVEGADOR</p><h2 id="relatorio-titulo">Explore os indicadores.</h2><p>Confira as seleções e navegue pelas páginas do Power BI. O guia oferece um roteiro para iniciar a leitura e interpretar os recortes.</p></div><a class="case-button" href="'+escape(p['report_url'],quote=True)+'" target="_blank" rel="noopener noreferrer">Abrir relatório em nova aba ↗</a></div><iframe class="case-report-frame" src="'+escape(p['report_url'],quote=True)+'" title="Relatório interativo de '+escape(p['title'],quote=True)+'" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe><p class="case-report-footnote">A versão interativa depende de internet e da disponibilidade do Power BI. Não é necessário instalar um executável para essa avaliação. Valores e indicadores variam conforme página e filtros.</p></section>'+manual_callout(p)+gallery+'<section class="case-section" id="apresentacao" aria-labelledby="video-titulo"><p class="case-eyebrow">APRESENTAÇÃO RÁPIDA</p><h2 id="video-titulo">Uma visão do projeto em vídeo.</h2>'+player+'</section><section class="case-section" aria-labelledby="leitura-titulo"><p class="case-eyebrow">LEITURA COM CONTEXTO</p><h2 id="leitura-titulo">Da informação à investigação.</h2><p>'+escape(p['evaluate'])+'</p><p>As contribuições descritas são possibilidades de análise. O portfólio não atribui ao projeto ganhos comprovados de uma implantação real. As imagens registram recortes específicos do relatório.</p></section></main>'+footer(p)+'</body></html>'
+ body=body.replace('As contribuições descritas são possibilidades de análise. O portfólio não atribui ao projeto ganhos comprovados de uma implantação real. As imagens registram recortes específicos do relatório.','As imagens registram recortes específicos do relatório. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam deste repositório do portfólio. A apresentação permite avaliar a leitura dos indicadores; a reprodução dos cálculos depende desses materiais. Não são atribuídos ganhos comprovados de uma implantação real.')
  (ROOT/p['page']).write_text(body,encoding='utf-8')
 
 def home():
@@ -176,9 +180,8 @@ def home():
  def wrap(ident,label,title,description,cards,extra=''):
   return '<section class="section'+(' section-divider' if ident=='projetos' else ' section-alt' if ident=='aplicativos' else '')+'" id="'+ident+'"><div class="container"><p class="section-label">'+label+'</p><h2 class="section-title">'+title+'</h2><p class="section-description">'+description+'</p>'+extra+'<div class="portfolio-project-grid'+(' portfolio-bi-grid' if ident=='dashboards' else '')+'">'+cards+'</div></div></section>'
  featured=[next(p for p in CATALOG if p['slug']==name) for name in ('chronos','voxtexto','churn')]
- directory='<div class="project-directory"><p><b>9 projetos publicados</b> · 5 aplicativos Windows · 4 relatórios Power BI</p><nav aria-label="Explorar os projetos por categoria"><a href="#aplicativos">Aplicativos Windows ↓</a><a href="#dashboards">Dashboards Power BI ↓</a></nav></div>'
  blocks={
-  'featured':wrap('projetos','PORTFÓLIO / SELEÇÃO','Projetos em destaque','Duas frentes de atuação: aplicações para organizar rotinas e análises para investigar perguntas de negócio. Cada projeto reúne contexto, demonstração e um guia online.',''.join(card(p,True) for p in featured),directory),
+  'featured':wrap('projetos','PORTFÓLIO / SELEÇÃO','Projetos em destaque','Duas frentes de atuação: aplicações para organizar rotinas e análises para investigar perguntas de negócio. Cada projeto reúne contexto, demonstração e um guia online.',''.join(card(p,True) for p in featured)),
   'apps':wrap('aplicativos','DESENVOLVIMENTO & AUTOMAÇÃO','Aplicativos para experimentar','Conheça o problema, veja o sistema e teste a distribuição Windows. Os manuais explicam o primeiro acesso e os pontos técnicos de cada implementação.',''.join(card(p) for p in CATALOG if p['kind']=='app')),
   'bi':wrap('dashboards','DATA & ANALYTICS','Dashboards para explorar','Indicadores com contexto, relatórios interativos e guias de leitura. Escolha uma pergunta de negócio e percorra a análise no navegador.',''.join(card(p) for p in CATALOG if p['kind']=='bi'))}
  found=set()
@@ -215,11 +218,13 @@ def refresh_versions():
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--guides-only',action='store_true');args=parser.parse_args()
  guides()
- if args.guides_only:return
+ if args.guides_only:
+  complete_metadata(ROOT,CATALOG)
+  return
  improve_apps()
  for p in CATALOG:
   if p['kind']=='bi':dashboard(p)
- home();linkedin();refresh_versions()
+ home();linkedin();complete_metadata(ROOT,CATALOG);refresh_versions()
  print(json.dumps({'projects':len(CATALOG),'manuals':len(CATALOG),'apps':5,'dashboards':4,'placeholders':0}))
 
 if __name__=='__main__':main()

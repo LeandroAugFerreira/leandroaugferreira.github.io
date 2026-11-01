@@ -1,0 +1,22 @@
+{
+  "project": "NexoFiscal",
+  "scope": "Testes automatizados do backend; base isolada de teste; nao certifica emissao fiscal real nem o frontend.",
+  "record_type": "Revisao de resultado existente, sem nova execucao nesta auditoria do portfolio.",
+  "executed_at": "2026-11-01T18:11:10.622384-03:00",
+  "tests": 60,
+  "passed": 60,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 151.446,
+  "framework": "pytest",
+  "python": "3.13",
+  "junit_sanitized": "NexoFiscal-testes-backend.xml",
+  "junit_sanitized_sha256": "652298377ba0cb42dd85ce211cec3bf810f6e462d37429a031a0811d35cdc29a",
+  "original_junit_sha256": "c25c3d10e5f4922cee4f307f0853792faa08567d900fad08067a679a8583d95b",
+  "source_package_at_audit": {
+    "file": "NexoFiscal-codigo-fonte.zip",
+    "sha256": "3a878f7ab01114cd9c19d58993b492028142e0812c89b00ac4f31db46e2295d8"
+  },
+  "privacy": "Resumo sem hostname, caminhos locais, credenciais ou dados operacionais."
+}

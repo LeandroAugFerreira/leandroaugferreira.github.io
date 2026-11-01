@@ -30,8 +30,14 @@ portfolioPlayers.forEach((player) => {
   captions.after(timeline);
   let scenes = [];
   let scenesLoading;
+  let playbackError = '';
 
   function renderCaption() {
+    if (playbackError) {
+      captions.textContent = playbackError;
+      captions.style.visibility = 'visible';
+      return;
+    }
     const track = Array.from(video.textTracks).find((item) => item.language === language.value);
     const active = track?.activeCues;
     captions.textContent = active ? Array.from(active).map((cue) => cue.text).join(' ').replace(/\s+/g, ' ') : '';
@@ -60,8 +66,15 @@ portfolioPlayers.forEach((player) => {
     toggle.setAttribute('aria-label', `${video.paused ? 'Reproduzir' : 'Pausar'} ${teaser ? 'resumo de' : 'apresentação de'} ${name}${context}`);
   }
   function togglePlayback() {
-    if (video.paused) video.play().catch(updatePlayback);
+    if (video.paused) video.play().catch(showPlaybackError);
     else video.pause();
+  }
+  function showPlaybackError(error) {
+    if (error?.name === 'AbortError') return;
+    playbackError = 'Não foi possível reproduzir o vídeo. Tente novamente ou consulte as imagens e o manual do projeto.';
+    captions.setAttribute('role', 'status');
+    renderCaption();
+    updatePlayback();
   }
   function formatTime(value) {
     const seconds = Number.isFinite(value) ? Math.floor(value) : 0;
@@ -80,11 +93,14 @@ portfolioPlayers.forEach((player) => {
     if (event.key === ' ' || event.key === 'Enter') { event.preventDefault(); togglePlayback(); }
   });
   video.addEventListener('play', () => {
+    playbackError = '';
+    captions.removeAttribute('role');
     portfolioPlayers.forEach((other) => { if (other !== player) other.querySelector('video')?.pause(); });
     loadScenes();
     updateCaptions();
     updatePlayback();
   });
+  video.addEventListener('error', showPlaybackError);
   ['pause', 'ended'].forEach((event) => video.addEventListener(event, updatePlayback));
   video.addEventListener('timeupdate', () => { updateTitle(); updateTimeline(); });
   video.addEventListener('seeked', () => { updateTitle(); renderCaption(); });

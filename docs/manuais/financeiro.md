@@ -46,3 +46,9 @@ A imagem e o resumo em vídeo continuam disponíveis na página de apresentaçã
 Observe a seleção dos indicadores, a leitura de composição do resultado e a comparação com o planejamento. O projeto demonstra uma experiência de consulta em **Power BI**, com foco em perguntas de negócio e comunicação visual.
 
 As contribuições apresentadas são possibilidades de uso da análise, sem atribuir ganhos financeiros comprovados a uma implantação real.
+
+## Dados, metodologia e limites
+
+O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+
+O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.

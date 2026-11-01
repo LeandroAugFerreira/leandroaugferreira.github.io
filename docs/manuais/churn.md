@@ -52,3 +52,9 @@ A página do projeto também reúne um resumo em vídeo e imagens das principais
 Observe como o projeto conecta visão executiva, segmentação e impacto financeiro em **Power BI**. O foco está em construir uma sequência de perguntas de negócio e tornar comparações acessíveis, mantendo a interpretação ligada ao recorte analisado.
 
 Os segmentos apresentados são parte de uma análise exploratória. O portfólio não atribui a este trabalho um ganho real comprovado de retenção ou um modelo preditivo validado.
+
+## Dados, metodologia e limites
+
+O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+
+O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.

@@ -1612,6 +1612,11 @@
                 gap: 25px;
             }
 
+            /* Foto primeiro na leitura mobile; composição desktop preservada. */
+            .hero > .profile-wrapper {
+                grid-row: 1;
+            }
+
 
             .hero-text {
                 padding: 10px 0;
@@ -1694,12 +1699,12 @@
     <script src="assets/transcricao.js?v=b41f3523a2a3" defer></script>
     <link rel="stylesheet" href="assets/teasers.css?v=d693da9483aa">
   <link rel="stylesheet" href="assets/video-player.css?v=53644a1de1f4">
-  <script src="assets/video-player.js?v=177390994c99" defer></script>
+  <script src="assets/video-player.js?v=87f25185b657" defer></script>
 <link id="chronos-featured-style" rel="stylesheet" href="assets/chronos-featured.css?v=d8d0336e328a">
-<link rel="stylesheet" href="assets/project-standard.css?v=10e7f4dab0f4"><link rel="stylesheet" href="assets/portfolio-cards.css?v=302b7509d63c"></head>
+<link rel="stylesheet" href="assets/methodology.css?v=43f38b7cba7e"><script src="assets/methodology.js?v=391b50ba4019" defer></script><meta name="author" content="Leandro Augusto Ferreira"><link rel="canonical" href="https://leandroaugferreira.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Leandro Augusto Ferreira | Dados &amp; Desenvolvimento"><meta property="og:description" content="Portfólio de Leandro Augusto Ferreira - Dados, Business Intelligence, Python, aplicações React e FastAPI, automação e inteligência artificial. Conheça o Chronos, o NexoFiscal, o Ateliê Verde e outros projetos."><meta property="og:url" content="https://leandroaugferreira.github.io/"><meta property="og:image" content="https://leandroaugferreira.github.io/img/foto.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="assets/project-standard.css?v=10e7f4dab0f4"><link rel="stylesheet" href="assets/portfolio-cards.css?v=302b7509d63c"><link rel="stylesheet" href="assets/portfolio-a11y.css?v=2fad2770bce6"></head>
 
 
-<body class="portfolio-standard">
+<body class="portfolio-standard"><a class="portfolio-skip" href="#conteudo">Pular para o conteúdo</a>
 
 
 <!-- ============================================================
@@ -1788,7 +1793,7 @@
                             src="img/foto.png"
                             class="profile-pic"
                             alt="Leandro Augusto Ferreira"
-                        >
+                         width="1024" height="1536" data-intrinsic-size>
 
                     </div>
 
@@ -1803,14 +1808,14 @@
 </div>
 
 
-<main>
+<main id="conteudo" tabindex="-1">
 
 
 <!-- ============================================================
      PROJETOS PRINCIPAIS (COM A IMAGEM resultado.jpeg)
      ============================================================ -->
 
-<section class="section section-divider" id="projetos"><div class="container"><p class="section-label">PORTFÓLIO / SELEÇÃO</p><h2 class="section-title">Projetos em destaque</h2><p class="section-description">Duas frentes de atuação: aplicações para organizar rotinas e análises para investigar perguntas de negócio. Cada projeto reúne contexto, demonstração e um guia online.</p><div class="project-directory"><p><b>9 projetos publicados</b> · 5 aplicativos Windows · 4 relatórios Power BI</p><nav aria-label="Explorar os projetos por categoria"><a href="#aplicativos">Aplicativos Windows ↓</a><a href="#dashboards">Dashboards Power BI ↓</a></nav></div><div class="portfolio-project-grid"><!-- CHRONOS FEATURED START -->
+<section class="section section-divider" id="projetos"><div class="container"><p class="section-label">PORTFÓLIO / SELEÇÃO</p><h2 class="section-title">Projetos em destaque</h2><p class="section-description">Duas frentes de atuação: aplicações para organizar rotinas e análises para investigar perguntas de negócio. Cada projeto reúne contexto, demonstração e um guia online.</p><div class="portfolio-project-grid"><!-- CHRONOS FEATURED START -->
 <article class="project-tile chronos-featured" id="chronos" style="--project-accent:#e9b98c"><div class="teaser-player" data-teaser-player data-project-name="Chronos" data-duration="21" data-scenes="media/chronos-resumo-cenas.json?v=c2567da5c63c"><video controls playsinline preload="none" poster="img/teasers/chronos.jpg?v=01100ad4dd61" width="1280" height="720" aria-label="Resumo de Chronos"><source src="media/chronos-resumo.mp4?v=3ec4fc35f82b" type="video/mp4"><track kind="subtitles" src="media/chronos-resumo-pt.vtt?v=70b84c810c45" srclang="pt-BR" label="Português BR" default><track kind="subtitles" src="media/chronos-resumo-en.vtt?v=b794e567c71e" srclang="en" label="English">Seu navegador não reproduz este vídeo. <a href="chronos.html">Conhecer Chronos</a>.</video><div class="teaser-controls"><button type="button" data-teaser-toggle aria-label="Reproduzir resumo de Chronos">▶ Reproduzir resumo</button><label>Legendas <select data-teaser-language aria-label="Idioma das legendas de Chronos em destaque"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label></div></div><div class="tile-content"><div class="tile-meta"><span>Windows · Aplicativo</span><span>1.0</span></div><h3>Chronos</h3><p>Planejamento de equipes, jornadas e escalas, com cenários, custos e revisão das propostas.</p><div class="tile-tech"><span>Python</span><span>React</span><span>FastAPI</span><span>OR-Tools</span></div><div class="tile-actions"><a href="chronos.html">VER PROJETO COMPLETO →</a><a href="chronos-manual.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir manual de Chronos em nova aba">Manual online ↗</a></div></div></article>
 <!-- CHRONOS FEATURED END --><article class="project-tile" id="featured-voxtexto" style="--project-accent:#57deff"><div class="teaser-player" data-teaser-player data-project-name="VoxTexto" data-duration="19" data-scenes="media/transcricao-resumo-cenas.json?v=8f548cb5f761"><video controls playsinline preload="none" poster="img/teasers/transcricao.jpg?v=ddca3974bcb3" width="1280" height="720" aria-label="Resumo de VoxTexto"><source src="media/transcricao-resumo.mp4?v=877093f263a0" type="video/mp4"><track kind="subtitles" src="media/transcricao-resumo-pt.vtt?v=d908ba3b47a9" srclang="pt-BR" label="Português BR" default><track kind="subtitles" src="media/transcricao-resumo-en.vtt?v=bae612cba5d0" srclang="en" label="English">Seu navegador não reproduz este vídeo. <a href="python.html">Conhecer VoxTexto</a>.</video><div class="teaser-controls"><button type="button" data-teaser-toggle aria-label="Reproduzir resumo de VoxTexto">▶ Reproduzir resumo</button><label>Legendas <select data-teaser-language aria-label="Idioma das legendas de VoxTexto em destaque"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label></div></div><div class="tile-content"><div class="tile-meta"><span>Windows · Aplicativo</span><span>V2.0</span></div><h3>VoxTexto</h3><p>Transcrição local de áudio e vídeo, com fila, histórico por usuário e exportação Word.</p><div class="tile-tech"><span>Python</span><span>Flask</span><span>Whisper</span><span>FFmpeg</span></div><div class="tile-actions"><a href="python.html">VER PROJETO COMPLETO →</a><a href="voxtexto-manual.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir manual de VoxTexto em nova aba">Manual online ↗</a></div></div></article><article class="project-tile" id="featured-churn" style="--project-accent:#f2aaa4"><div class="teaser-player" data-teaser-player data-project-name="Análise de Churn" data-duration="15" data-scenes="media/churn-resumo-cenas.json?v=d95941fff218"><video controls playsinline preload="none" poster="img/teasers/churn.jpg?v=4b34e846cc3a" width="1280" height="720" aria-label="Resumo de Análise de Churn"><source src="media/churn-resumo.mp4?v=e07ca538d498" type="video/mp4"><track kind="subtitles" src="media/churn-resumo-pt.vtt?v=e815a571bca6" srclang="pt-BR" label="Português BR" default><track kind="subtitles" src="media/churn-resumo-en.vtt?v=c20f02585be1" srclang="en" label="English">Seu navegador não reproduz este vídeo. <a href="churn.html">Conhecer Análise de Churn</a>.</video><div class="teaser-controls"><button type="button" data-teaser-toggle aria-label="Reproduzir resumo de Análise de Churn">▶ Reproduzir resumo</button><label>Legendas <select data-teaser-language aria-label="Idioma das legendas de Análise de Churn em destaque"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label></div></div><div class="tile-content"><div class="tile-meta"><span>Power BI · Relatório</span><span>Online</span></div><h3>Análise de Churn</h3><p>Cancelamentos, impacto financeiro e grupos em risco para investigar padrões de retenção.</p><div class="tile-tech"><span>Power BI</span><span>Retenção</span><span>Segmentação</span></div><div class="tile-actions"><a href="churn.html">VER PROJETO COMPLETO →</a><a href="churn-manual.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir manual de Análise de Churn em nova aba">Manual online ↗</a></div></div></article></div></div></section>
 
@@ -1819,7 +1824,7 @@
      MÉTODO
      ============================================================ -->
 
-<section class="section section-alt">
+<section class="section section-alt" id="metodo" data-methodology aria-labelledby="metodo-titulo">
 
     <div class="container">
 
@@ -1827,7 +1832,7 @@
             Método
         </p>
 
-        <h2 class="section-title">
+        <h2 class="section-title" id="metodo-titulo">
             Como transformo problemas em soluções
         </h2>
 
@@ -1836,82 +1841,51 @@
         </p>
 
 
+        <fieldset class="method-selector" disabled><legend class="method-sr-only">Escolha a metodologia</legend><label><input type="radio" name="methodology" value="dados" aria-controls="method-cards" checked><span>Dados &amp; BI</span></label><label><input type="radio" name="methodology" value="desenvolvimento" aria-controls="method-cards"><span>Desenvolvimento &amp; Automação</span></label></fieldset><p class="method-sr-only" role="status" data-method-status></p>
+
         <div class="process-wrapper">
 
             <div class="process-line"></div>
 
 
-            <div class="process-grid">
-
-
-                <article class="process-card">
-
-                    <span class="process-number">
+            <div class="process-grid" id="method-cards">
+<article class="process-card"><span class="process-number">
                         01
-                    </span>
-
-                    <h3>
+                    </span><div class="method-copy"><div class="method-content" data-method-content="original" aria-hidden="true"><h3>
                         Entendimento
                     </h3>
 
                     <p>
                         Mapeamento das dores operacionais, necessidades dos usuários e objetivos estratégicos do negócio.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card">
-
-                    <span class="process-number">
+                    </p></div><div class="method-content" data-method-content="dados" aria-hidden="false"><h3>Entendimento do Negócio</h3><p>Identificação das perguntas de negócio, objetivos e indicadores.</p></div><div class="method-content" data-method-content="desenvolvimento" aria-hidden="true"><h3>Análise de Requisitos</h3><p>Mapeamento de processos, necessidades, usuários e regras de negócio.</p></div></div></article>
+<article class="process-card"><span class="process-number">
                         02
-                    </span>
-
-                    <h3>
+                    </span><div class="method-copy"><div class="method-content" data-method-content="original" aria-hidden="true"><h3>
                         Arquitetura
                     </h3>
 
                     <p>
                         Modelagem de dados, definição de métricas cruciais (KPIs) e estruturação de dados confiáveis.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card">
-
-                    <span class="process-number">
+                    </p></div><div class="method-content" data-method-content="dados" aria-hidden="false"><h3>Preparação e Modelagem</h3><p>Tratamento, integração e estruturação de dados confiáveis.</p></div><div class="method-content" data-method-content="desenvolvimento" aria-hidden="true"><h3>Arquitetura da Solução</h3><p>Planejamento do frontend, backend, integrações e banco de dados.</p></div></div></article>
+<article class="process-card"><span class="process-number">
                         03
-                    </span>
-
-                    <h3>
+                    </span><div class="method-copy"><div class="method-content" data-method-content="original" aria-hidden="true"><h3>
                         Construção
                     </h3>
 
                     <p>
                         Desenvolvimento de dashboards interativos, rotinas de automação e aplicações com interface web.
-                    </p>
-
-                </article>
-
-
-                <article class="process-card">
-
-                    <span class="process-number">
+                    </p></div><div class="method-content" data-method-content="dados" aria-hidden="false"><h3>Análise e Visualização</h3><p>Construção de métricas, dashboards e análises exploratórias.</p></div><div class="method-content" data-method-content="desenvolvimento" aria-hidden="true"><h3>Desenvolvimento</h3><p>Implementação, integração, automação e controle de versões.</p></div></div></article>
+<article class="process-card"><span class="process-number">
                         04
-                    </span>
-
-                    <h3>
+                    </span><div class="method-copy"><div class="method-content" data-method-content="original" aria-hidden="true"><h3>
                         Entrega de Valor
                     </h3>
 
                     <p>
                         Disponibilização de ferramentas para acompanhar indicadores, automatizar tarefas e apoiar decisões.
-                    </p>
-
-                </article>
-
-            </div>
+                    </p></div><div class="method-content" data-method-content="dados" aria-hidden="false"><h3>Insights e Decisões</h3><p>Interpretação dos resultados e recomendações fundamentadas.</p></div><div class="method-content" data-method-content="desenvolvimento" aria-hidden="true"><h3>Testes e Entrega</h3><p>Validações, correções, documentação e disponibilização da solução.</p></div></div></article>
+</div>
 
         </div>
 
@@ -2120,7 +2094,8 @@
                     LinkedIn →
                 </a>
 
-            </div>
+            <a href="https://github.com/LeandroAugFerreira" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub →</a>
+</div>
 
         </div>
 

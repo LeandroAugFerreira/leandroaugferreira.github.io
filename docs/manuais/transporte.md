@@ -50,3 +50,9 @@ A apresentação inclui imagem e vídeo para conhecer o projeto mesmo sem conclu
 ## Para quem avalia a análise
 
 Observe a relação entre filtros e indicadores, as comparações por cliente e rota e o uso de um resumo executivo para conduzir a investigação. O projeto demonstra organização visual de dados de logística em **Power BI**, sem atribuir melhorias operacionais comprovadas a uma implantação.
+
+## Dados, metodologia e limites
+
+O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+
+O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.
