@@ -1,0 +1,12 @@
+{
+  "product": "NexoLog",
+  "edition": "Windows x64 demo",
+  "file": "NexoLog.exe",
+  "bytes": 21580971,
+  "sha256": "d0ac8df17e6476859b5da3456454030968f444ddb3444221ee40ad3ee7640945",
+  "reference_date": "2026-11-01",
+  "distribution": "existing public executable; unchanged",
+  "isolation_test": "passed",
+  "python_or_node_required": false,
+  "tracking": "simulation"
+}

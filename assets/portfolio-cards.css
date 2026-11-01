@@ -1,0 +1,7 @@
+/* Leitura dos cartões na página inicial; independente dos guias offline dos apps. */
+.portfolio-standard .tile-meta{font-size:10px}
+.portfolio-standard .tile-tech>span{font-size:11px}
+.portfolio-standard .tile-actions a,.portfolio-standard .tile-actions a:last-child{font-size:12px;min-height:44px}
+.portfolio-standard .project-tile .teaser-controls{font-size:11px}
+.portfolio-standard .project-tile .teaser-controls button,.portfolio-standard .project-tile .teaser-controls select{font-size:11px;min-height:32px}
+@media(max-width:400px){.portfolio-standard .tile-actions{grid-template-columns:1fr}.portfolio-standard .tile-actions a{justify-content:center}.portfolio-standard .tile-actions a:last-child{border:1px solid var(--border-subtle,#25404e);border-radius:4px}}

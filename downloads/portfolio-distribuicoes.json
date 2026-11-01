@@ -1,0 +1,41 @@
+{
+  "reference_date": "2026-11-01",
+  "apps": [
+    {
+      "project": "chronos",
+      "file": "Chronos.exe",
+      "bytes": 68922418,
+      "sha256": "077503582d30e395ceb53404f61e840d20df7e7bdb0876c9f4433b962a5b2a47",
+      "download_url": "https://leandroaugferreira.github.io/downloads/Chronos.exe"
+    },
+    {
+      "project": "nexolog",
+      "file": "NexoLog.exe",
+      "bytes": 21580971,
+      "sha256": "d0ac8df17e6476859b5da3456454030968f444ddb3444221ee40ad3ee7640945",
+      "download_url": "https://leandroaugferreira.github.io/downloads/NexoLog.exe"
+    },
+    {
+      "project": "nexofiscal",
+      "file": "NexoFiscal.exe",
+      "bytes": 38106092,
+      "sha256": "3f210e12d3b4f834b489d573031f49a1dfa1ca42f083bb529a5a8c637ef7b451",
+      "download_url": "https://leandroaugferreira.github.io/downloads/NexoFiscal.exe"
+    },
+    {
+      "project": "voxtexto",
+      "local_matches_published_asset": true,
+      "bytes": 171000416,
+      "sha256": "71c37f09801bf0d7426ef679f91e79b9c7545c51b78b764d7ebb411eb526ed53",
+      "download_url": "https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/download/V2.0/TranscricaoEmTexto-Setup-V2.0.exe"
+    },
+    {
+      "project": "atelie-verde",
+      "local_matches_published_asset": true,
+      "bytes": 231727691,
+      "sha256": "275ea653f7a04c068966f02d510efe416bd43e8ce578b7cab4d15e64cfeb2852",
+      "download_url": "https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.12-clientes/AtelieVerde-Windows.zip"
+    }
+  ],
+  "dashboards": "Power BI: acesso interativo nas páginas de apresentação"
+}

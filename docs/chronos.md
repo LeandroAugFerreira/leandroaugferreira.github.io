@@ -2,7 +2,7 @@
 
 Atualização de 01/11/2026.
 
-- Destaque e galeria em `index.html#chronos`. O botão VER PROJETO COMPLETO leva a `chronos.html#manual`.
+- Destaque e galeria em `index.html#chronos`. O botão VER PROJETO COMPLETO leva a `chronos.html`; o cartão também oferece um botão próprio para abrir o manual em nova aba. O endereço `chronos.html#manual` continua disponível.
 - Página do projeto: `chronos.html`, com apresentação do problema, atuação do autor, escolhas técnicas e download principal para Windows.
 - Manual: `chronos-manual.html`, aberto em nova aba, com índice, roteiro de cinco minutos e explicações dos módulos. Sem incorporação de PDF.
 - Aplicativo: `downloads/Chronos.exe`, Windows x64, versão Chronos 1.0. Não exige Python ou Node instalados. Executável sem assinatura digital.

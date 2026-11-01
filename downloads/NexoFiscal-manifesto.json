@@ -1,8 +1,8 @@
 {
   "archive": "NexoFiscal-codigo-fonte.zip",
-  "files": 167,
-  "bytes": 296589,
-  "sha256": "b7192a74d8d25169bd3a408a66d26cebb852aa7f2c8960a644843c1f17465b72",
+  "files": 177,
+  "bytes": 321407,
+  "sha256": "3a878f7ab01114cd9c19d58993b492028142e0812c89b00ac4f31db46e2295d8",
   "exclusions": [
     "credenciais locais",
     "bancos",

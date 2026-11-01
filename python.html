@@ -3,24 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VoxTexto: transforme gravações, aulas, entrevistas e reuniões em texto e documentos Word, com processamento local. Projeto de Leandro Augusto Ferreira com Python, Flask e Whisper local.">
+  <meta name="description" content="Transcrição local de áudio e vídeo, com fila, histórico por usuário e exportação Word. Conheça o projeto, baixe o aplicativo Windows e leia o manual online. Por Leandro Augusto Ferreira.">
   <meta property="og:title" content="VoxTexto V2.0 | Leandro Augusto Ferreira">
   <meta property="og:description" content="Da gravação ao documento: conheça a seleção de arquivos, a transcrição, o histórico e a exportação Word do VoxTexto.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://leandroaugferreira.github.io/python.html">
   <meta property="og:image" content="https://leandroaugferreira.github.io/img/transcricao/video-capa.jpg">
   <title>VoxTexto V2.0 | Leandro Augusto Ferreira</title>
-  <link rel="stylesheet" href="assets/transcricao.css?v=49d7b4e740d1">
-  <script src="assets/transcricao.js?v=dd693a688bab" defer></script>
-  <link rel="stylesheet" href="assets/video-player.css?v=8a4adeee32d9">
-  <script src="assets/video-player.js?v=221f6fa349ed" defer></script>
-</head>
-<body class="transcricao-page">
-  <nav class="tc-container tc-nav" aria-label="Navegação do projeto">
-    <a href="index.html#transcricao">← Voltar ao portfólio</a>
-    <span>Leandro Augusto Ferreira · Dados & Desenvolvimento</span>
-  </nav>
-  <main class="tc-container">
+  <link rel="stylesheet" href="assets/transcricao.css?v=c30a279b2b2f">
+  <script src="assets/transcricao.js?v=b41f3523a2a3" defer></script>
+  <link rel="stylesheet" href="assets/video-player.css?v=53644a1de1f4">
+  <script src="assets/video-player.js?v=177390994c99" defer></script>
+<meta name="author" content="Leandro Augusto Ferreira"><link rel="canonical" href="https://leandroaugferreira.github.io/python.html"><link rel="stylesheet" href="assets/project-standard.css?v=10e7f4dab0f4"></head>
+<body class="portfolio-project transcricao-page" style="--project-accent:#57deff">
+  <a class="case-skip" href="#conteudo">Pular para o conteúdo</a><nav class="case-shell case-nav" aria-label="Navegação do projeto"><a href="https://leandroaugferreira.github.io/#transcricao">← Portfólio</a><div><a href="python.html">O projeto</a><a href="voxtexto-manual.html" target="_blank" rel="noopener noreferrer">Manual online ↗</a><a href="python.html#download">Aplicativo Windows</a></div></nav>
+  <main id="conteudo" class="tc-container">
     <header class="tc-hero">
       <div>
         <p class="tc-eyebrow">Python · Inteligência artificial · V2.0</p>
@@ -28,10 +25,7 @@
         <p class="tc-lead">Da gravação ao documento.</p>
         <p>Transforme aulas, entrevistas e gravações em documentos Word. Uma aplicação local com reconhecimento de fala, fila de arquivos e histórico por usuário.</p>
         <div class="tc-tags" aria-label="Tecnologias"><span>Python</span><span>Flask</span><span>Whisper Small</span><span>FFmpeg</span><span>SQLite</span><span>JavaScript</span></div>
-        <div class="tc-actions">
-          <a class="tc-button tc-primary" href="#apresentacao">Assistir à apresentação →</a>
-          <a class="tc-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Ver código no GitHub</a>
-        </div>
+        <div class="tc-actions"><a class="case-button case-primary" href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/download/V2.0/TranscricaoEmTexto-Setup-V2.0.exe" target="_blank" rel="noopener noreferrer">Baixar instalador Windows — V2.0 ↓</a><a class="case-button" href="voxtexto-manual.html" target="_blank" rel="noopener noreferrer">Manual online ↗</a></div>
         <p class="tc-note">Demonstração do aplicativo com uma gravação curta de teste. Processamento local, sem enviar as mídias para uma API de transcrição.</p>
       </div>
       <aside class="tc-summary" aria-label="Novidades e recursos">
@@ -40,13 +34,16 @@
         <div class="tc-summary-grid"><div><strong>5</strong><span>Formatos de entrada</span></div><div><strong>.docx</strong><span>Documento Word</span></div><div><strong>Local</strong><span>Whisper em CPU</span></div><div><strong>3</strong><span>Temas visuais</span></div></div>
       </aside>
     </header>
-    <section class="tc-section" id="apresentacao" aria-labelledby="apresentacao-titulo">
+<!-- PROJECT STANDARD OVERVIEW START -->
+<section class="case-section" id="visao-do-projeto" aria-labelledby="avaliacao-titulo"><p class="case-eyebrow">PARA QUEM ESTÁ AVALIANDO</p><h2 id="avaliacao-titulo">O projeto em um minuto.</h2><div class="case-grid"><article><h3>O problema</h3><p>Transformar gravações em texto revisável sem perder o controle sobre a fila e os resultados.</p></article><article><h3>O que construí</h3><p>Seleção de mídias, transcrição local, acompanhamento das tarefas e geração de documentos Word.</p></article><article><h3>O que observar</h3><p>Worker separado, cancelamento, tratamento de falhas e persistência do histórico por usuário.</p></article></div></section>
+<!-- PROJECT STANDARD OVERVIEW END -->
+<section class="tc-section" id="apresentacao" aria-labelledby="apresentacao-titulo">
       <div class="tc-intro"><p class="tc-eyebrow">O projeto em uso</p><h2 id="apresentacao-titulo">Conheça o VoxTexto em vídeo</h2><p>Da seleção das gravações à transcrição, ao histórico e à exportação Word.</p></div>
-      <div class="transcricao-player" data-transcricao-player data-scenes="media/transcricao-apresentacao-cenas.json?v=a760b076eb7c">
+      <div class="transcricao-player" data-transcricao-player data-scenes="media/transcricao-apresentacao-cenas.json?v=98dc495eba55">
   <video controls playsinline preload="metadata" poster="img/transcricao/video-capa.jpg?v=ddca3974bcb3" width="1280" height="720" aria-label="Apresentação do VoxTexto V2.0">
     <source src="media/transcricao-apresentacao.mp4?v=8f6f0eb83f97" type="video/mp4">
-    <track kind="subtitles" src="media/transcricao-pt.vtt?v=9bf08f5153e2" srclang="pt-BR" label="Português BR" default>
-    <track kind="subtitles" src="media/transcricao-en.vtt?v=048432640e27" srclang="en" label="English">
+    <track kind="subtitles" src="media/transcricao-pt.vtt?v=12295ecbd055" srclang="pt-BR" label="Português BR" default>
+    <track kind="subtitles" src="media/transcricao-en.vtt?v=dea2b42b15d6" srclang="en" label="English">
     Seu navegador não reproduz este vídeo. <a href="media/transcricao-apresentacao.mp4?v=8f6f0eb83f97">Baixar apresentação</a>.
   </video>
   <div class="transcricao-controls">
@@ -86,14 +83,14 @@
     <section class="tc-section" aria-labelledby="tecnica-titulo">
       <div class="tc-intro"><p class="tc-eyebrow">Desenvolvimento</p><h2 id="tecnica-titulo">Interface web, processamento em Python</h2><p>O Flask conecta a interface ao worker do Whisper, executado em processo separado. O FFmpeg faz a leitura das mídias, o SQLite mantém usuários e histórico, e o python-docx gera os documentos.</p><p>O worker separado permite interromper uma transcrição e preparar o mecanismo para a próxima tarefa. A distribuição Windows utiliza PyInstaller e Inno Setup.</p></div>
     </section>
-    <section class="tc-section" id="experimentar" aria-labelledby="experimentar-titulo">
-      <div class="tc-usage"><p class="tc-eyebrow">Experimente</p><h2 id="experimentar-titulo">Conheça o projeto no seu computador</h2>
-        <ol><li>Baixe o instalador V2.0 para Windows e siga as instruções de instalação.</li><li>Crie sua conta no primeiro acesso ou entre na aplicação e adicione um áudio de teste.</li><li>Inicie a transcrição, confira o texto e exporte o Word.</li></ol>
-        <div class="tc-actions"><a class="tc-button tc-primary" href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Código e documentação →</a><a class="tc-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/download/V2.0/TranscricaoEmTexto-Setup-V2.0.exe" target="_blank" rel="noopener noreferrer">Instalador Windows V2.0 ↓</a></div>
-        <div class="tc-update"><p><strong>V2.0 disponível:</strong> Instalador com suporte a OGG e a interface apresentada nesta página.</p><p class="tc-note">Aceita MP3, WAV, MP4, M4A e OGG. O modelo Whisper pode precisar ser baixado na primeira utilização; depois de disponível, a transcrição é local. <a href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Versão anterior: V1.0</a>.</p></div>
-      </div>
-    </section>
-  </main>
-  <footer class="tc-footer"><div class="tc-container">VoxTexto · Projeto de Leandro Augusto Ferreira · <a href="index.html#projetos">Conhecer outros projetos</a></div></footer>
+
+  <!-- PROJECT STANDARD DOWNLOAD START -->
+<span id="experimentar" aria-hidden="true"></span><section class="case-section" id="download" aria-labelledby="download-titulo"><div class="case-download"><div><p class="case-eyebrow">EXPERIMENTE NO WINDOWS</p><h2 id="download-titulo">Instale. Transcreva. Revise.</h2><p>Baixe o instalador V2.0 e siga o assistente. O modelo Whisper pode precisar de download na primeira utilização; depois de disponível, o processamento é local.</p><div class="case-actions"><a class="case-button case-primary" href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/download/V2.0/TranscricaoEmTexto-Setup-V2.0.exe" target="_blank" rel="noopener noreferrer">Baixar instalador Windows — V2.0 ↓</a><a class="case-button" href="voxtexto-manual.html" target="_blank" rel="noopener noreferrer">Como usar ↗</a></div><p class="case-note">V2.0 · Leia o guia antes de começar. Se a política do computador impedir a abertura, confira a origem e procure o responsável pelo equipamento.</p></div><div class="case-download-side"><h3>Seu primeiro teste</h3><ol><li>Instale a V2.0 em um computador Windows.</li><li>Abra o VoxTexto e crie sua conta ou entre.</li><li>Adicione um áudio curto, transcreva e exporte o Word.</li></ol><p class="case-note">Crie sua própria conta na instalação. O histórico fica vinculado ao usuário.</p></div></div><details class="case-code"><summary>Código, versões e informações técnicas</summary><p>Estes links complementam a avaliação. O aplicativo é o caminho de experimentação; o código é destinado à análise técnica.</p><div class="case-actions"><a class="case-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Código-fonte e documentação</a><a class="case-button" href="https://github.com/LeandroAugFerreira/transcricao-audio-web/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Versão anterior: V1.0</a></div></details></section>
+<!-- PROJECT STANDARD DOWNLOAD END -->
+<!-- PROJECT STANDARD MANUAL START -->
+<section class="case-guide-callout" id="manual" aria-labelledby="manual-titulo"><div><p class="case-eyebrow">GUIA EM UMA ABA PRÓPRIA</p><h2 id="manual-titulo">Um roteiro para conhecer e avaliar.</h2><p>Primeiros passos, um passeio de cinco minutos e explicações dos principais recursos. A leitura técnica fica ao final do guia.</p></div><a class="case-button case-primary" href="voxtexto-manual.html" target="_blank" rel="noopener noreferrer">Abrir manual online ↗</a></section>
+<!-- PROJECT STANDARD MANUAL END -->
+</main>
+  <footer class="case-footer"><div class="case-shell"><div class="case-signature"><span class="case-monogram" aria-hidden="true">lf.</span><span><small>DESIGN & DESENVOLVIMENTO</small><b>Leandro Augusto Ferreira</b></span></div><p>VoxTexto · Projeto de portfólio · <a href="https://leandroaugferreira.github.io/#projetos">Outros projetos</a></p></div></footer>
 </body>
 </html>

@@ -1,0 +1,17 @@
+{
+  "product": "NexoFiscal",
+  "version": "0.1.0",
+  "edition": "Windows x64 demonstration",
+  "file": "NexoFiscal.exe",
+  "bytes": 38106092,
+  "sha256": "3f210e12d3b4f834b489d573031f49a1dfa1ca42f083bb529a5a8c637ef7b451",
+  "reference_date": "2026-11-01",
+  "digitally_signed": false,
+  "fiscal": "simulador; sem validade fiscal",
+  "python_or_node_required": false,
+  "personal_accounts_included": false,
+  "smtp_configured": false,
+  "n8n_configured": false,
+  "isolation_test": "passed",
+  "source_package": "NexoFiscal-codigo-fonte.zip"
+}
