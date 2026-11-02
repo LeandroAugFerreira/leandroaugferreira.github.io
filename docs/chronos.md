@@ -2,7 +2,7 @@
 
 Atualização de 01/11/2026.
 
-- Destaque e galeria em `index.html#chronos`. O botão VER PROJETO COMPLETO leva a `chronos.html`; o cartão também oferece um botão próprio para abrir o manual em nova aba. O endereço `chronos.html#manual` continua disponível.
+- Card único em `index.html#chronos`, classificado como destaque e Desenvolvimento & Automação na evolução estratégica local. A âncora antiga `#chronos-aplicacao` aponta para esse mesmo card. O botão VER PROJETO COMPLETO leva a `chronos.html`; o cartão também oferece um botão próprio para abrir o manual em nova aba. O endereço `chronos.html#manual` continua disponível.
 - Página do projeto: `chronos.html`, com apresentação do problema, atuação do autor, escolhas técnicas e download principal para Windows.
 - Manual: `chronos-manual.html`, aberto em nova aba, com índice, roteiro de cinco minutos e explicações dos módulos. Sem incorporação de PDF.
 - Aplicativo: `downloads/Chronos.exe`, Windows x64, versão Chronos 1.0. Não exige Python ou Node instalados. Executável sem assinatura digital.
@@ -18,4 +18,4 @@ Os dados ficam em `%LOCALAPPDATA%\Chronos\1.0-demo`. A janela controla a API, a 
 
 Identidade em azul profundo, cobre e papel, com símbolo próprio e assinatura de Leandro Augusto Ferreira. Capa social em `img/chronos-social.png`. Os vídeos são guias ilustrados, com diagramas e dados fictícios; não são gravações da interface. A narração e os controles seguem os demais projetos do portfólio.
 
-A revisão não altera páginas ou downloads de outros projetos. O site estático apresenta o projeto e distribui a demonstração; não hospeda a API ou oferece login público online. As pendências de QA visual em navegador real, Power BI Desktop, revisão aplicável à produção e homologação operacional permanecem registradas no projeto.
+A demonstração do Chronos é independente dos demais aplicativos. O site estático apresenta o projeto e distribui a demonstração; não hospeda a API ou oferece login público online. As pendências de QA visual em navegador real da aplicação, Power BI Desktop, revisão aplicável à produção e homologação operacional permanecem registradas no projeto.

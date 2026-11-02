@@ -90,16 +90,18 @@ def teaser(p,context=''):
  duration=round(json.loads((ROOT/('media/'+media+'-resumo-cenas.json')).read_text(encoding='utf-8'))[-1]['end'])
  pt=resource('media/'+media+'-resumo-pt.vtt');en=resource('media/'+media+'-resumo-en.vtt')
  return f'''<div class="teaser-player" data-teaser-player data-project-name="{escape(p['title'],quote=True)}" data-duration="{duration}" data-scenes="{scenes}"><video controls playsinline preload="none" poster="{resource(poster)}" width="1280" height="720" aria-label="Resumo de {escape(p['title'],quote=True)}"><source src="{resource('media/'+media+'-resumo.mp4')}" type="video/mp4"><track kind="subtitles" src="{pt}" srclang="pt-BR" label="Português BR" default><track kind="subtitles" src="{en}" srclang="en" label="English">Seu navegador não reproduz este vídeo. <a href="{p['page']}">Conhecer {escape(p['title'])}</a>.</video><div class="teaser-controls"><button type="button" data-teaser-toggle aria-label="Reproduzir resumo de {escape(p['title'],quote=True)}">▶ Reproduzir resumo</button><label>Legendas <select data-teaser-language aria-label="Idioma das legendas de {escape(p['title'],quote=True)} {context}"><option value="pt-BR">Português BR</option><option value="en">English</option><option value="off">Sem legendas</option></select></label></div></div>'''
-def card(p,featured=False):
- ident='featured-'+p['slug'] if featured else p['anchor']
- if p['slug']=='chronos':ident='chronos' if featured else 'chronos-aplicacao'
- classname='project-tile'+(' chronos-featured' if p['slug']=='chronos' and featured else '')
+def card(p):
+ ident=p['anchor']
+ featured=p.get('featured',False)
+ aliases={'chronos':'chronos-aplicacao','voxtexto':'featured-voxtexto','churn':'featured-churn'}
+ alias='<span class="project-route-anchor" id="'+aliases[p['slug']]+'" aria-hidden="true"></span>' if p['slug'] in aliases else ''
  version=p.get('version','')
  label='Windows · Aplicativo' if p['kind']=='app' else 'Power BI · Relatório'
  badge=version if version in ('1.0','V2.0','0.1.0') else ('Local' if p['kind']=='app' else 'Online')
- html=f'<article class="{classname}" id="{ident}" style="--project-accent:{p["accent"]}">'+teaser(p,'em destaque' if featured else 'na galeria')+f'<div class="tile-content"><div class="tile-meta"><span>{label}</span><span>{badge}</span></div><h3>{escape(p["title"])}</h3><p>{escape(p["summary"])}</p><div class="tile-tech">'+''.join('<span>'+escape(t)+'</span>' for t in p['tech'][:4])+f'</div><div class="tile-actions"><a href="{p["page"]}'+ '">VER PROJETO COMPLETO →</a><a href="'+p['manual']+'" target="_blank" rel="noopener noreferrer" aria-label="Abrir manual de '+escape(p['title'],quote=True)+' em nova aba">Manual online ↗</a></div></div></article>'
+ featured_tag='<span class="project-featured">Destaque</span>' if featured else ''
+ html=f'<article class="project-tile" id="{ident}" data-project-card data-category="{p["kind"]}" data-featured="{str(featured).lower()}" style="--project-accent:{p["accent"]}">'+alias+teaser(p,'na listagem')+f'<div class="tile-content"><div class="tile-meta"><span>{label}</span><span>{badge}</span></div><h3>{escape(p["title"])}</h3><p>{escape(p["summary"])}</p><div class="tile-tech">'+featured_tag+''.join('<span>'+escape(t)+'</span>' for t in p['tech'][:4])+f'</div><div class="tile-actions"><a href="{p["page"]}'+ '">VER PROJETO COMPLETO →</a><a href="'+p['manual']+'" target="_blank" rel="noopener noreferrer" aria-label="Abrir manual de '+escape(p['title'],quote=True)+' em nova aba">Manual online ↗</a></div></div></article>'
  if p['slug']=='chronos':
-  section='FEATURED' if featured else 'GALLERY';html='<!-- CHRONOS '+section+' START -->\n'+html+'\n<!-- CHRONOS '+section+' END -->'
+  html='<!-- CHRONOS FEATURED START -->\n'+html+'\n<!-- CHRONOS FEATURED END -->'
  return html
 
 def guides():
@@ -122,8 +124,9 @@ def improve_apps():
   for marker,value in meta.items():
    if marker not in text:additions+=value
   text=text.replace('</head>',additions+'</head>',1)
-  description=p['summary']+' Conheça o projeto, baixe o aplicativo Windows e leia o manual online. Por Leandro Augusto Ferreira.'
+  description=p['summary']+' Aplicativo Windows e manual online.'
   text=re.sub(r'<meta name="description" content="[^"]*"\s*/?>','<meta name="description" content="'+escape(description,quote=True)+'">',text,count=1)
+  text=re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>','<meta property="og:description" content="'+escape(description,quote=True)+'">',text,count=1)
   def body(match):
    attrs=match[1]
    if 'portfolio-project' not in attrs:
@@ -162,7 +165,7 @@ def dashboard(p):
  gallery=''
  if p['slug']=='churn':
   gallery='<section class="case-section" aria-labelledby="paginas-titulo"><p class="case-eyebrow">PÁGINAS DA ANÁLISE</p><h2 id="paginas-titulo">Do cancelamento aos grupos em risco.</h2><div class="case-report-gallery">'+''.join('<figure><a href="'+resource(image)+'" target="_blank" rel="noopener noreferrer"><img src="'+resource(image)+'" alt="'+caption+'" loading="lazy"></a><figcaption>'+caption+'</figcaption></figure>' for image,caption in [('img/churn-impacto.jpg','Impacto financeiro dos cancelamentos na base demonstrativa.'),('img/churn-risco.jpg','Segmentos e clientes destacados na leitura de risco do relatório.')])+'</div></section>'
- body=head(p,p['title'],p['summary']+' Relatório interativo e guia de leitura por Leandro Augusto Ferreira.',p['page'])+f'<body class="portfolio-project dashboard-project" style="--project-accent:{p["accent"]}">'+nav(p)+'<main class="case-shell" id="conteudo"><header class="case-hero"><div><p class="case-eyebrow">DATA & ANALYTICS / POWER BI</p><h1>'+escape(p['title'])+'</h1><p class="case-lead">'+escape(p['tagline'])+'</p><p>'+escape(p['summary'])+'</p><div class="case-actions"><a class="case-button case-primary" href="#relatorio">Explorar dashboard →</a><a class="case-button" href="'+p['manual']+'" target="_blank" rel="noopener noreferrer">Guia de leitura ↗</a></div><div class="case-tags">'+''.join('<span>'+escape(t)+'</span>' for t in p['tech'])+'</div></div><figure><a href="'+resource(p['image'])+'" target="_blank" rel="noopener noreferrer"><img src="'+resource(p['image'])+'" alt="Captura do dashboard de '+escape(p['title'],quote=True)+'" width="1340" height="750"></a><figcaption>Captura do projeto. Clique para ampliar ou explore o relatório interativo abaixo.</figcaption></figure></header>'+overview(p)+'<section class="case-section" id="relatorio" aria-labelledby="relatorio-titulo"><div class="case-report-header"><div><p class="case-eyebrow">EXPERIMENTE NO NAVEGADOR</p><h2 id="relatorio-titulo">Explore os indicadores.</h2><p>Confira as seleções e navegue pelas páginas do Power BI. O guia oferece um roteiro para iniciar a leitura e interpretar os recortes.</p></div><a class="case-button" href="'+escape(p['report_url'],quote=True)+'" target="_blank" rel="noopener noreferrer">Abrir relatório em nova aba ↗</a></div><iframe class="case-report-frame" src="'+escape(p['report_url'],quote=True)+'" title="Relatório interativo de '+escape(p['title'],quote=True)+'" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe><p class="case-report-footnote">A versão interativa depende de internet e da disponibilidade do Power BI. Não é necessário instalar um executável para essa avaliação. Valores e indicadores variam conforme página e filtros.</p></section>'+manual_callout(p)+gallery+'<section class="case-section" id="apresentacao" aria-labelledby="video-titulo"><p class="case-eyebrow">APRESENTAÇÃO RÁPIDA</p><h2 id="video-titulo">Uma visão do projeto em vídeo.</h2>'+player+'</section><section class="case-section" aria-labelledby="leitura-titulo"><p class="case-eyebrow">LEITURA COM CONTEXTO</p><h2 id="leitura-titulo">Da informação à investigação.</h2><p>'+escape(p['evaluate'])+'</p><p>As contribuições descritas são possibilidades de análise. O portfólio não atribui ao projeto ganhos comprovados de uma implantação real. As imagens registram recortes específicos do relatório.</p></section></main>'+footer(p)+'</body></html>'
+ body=head(p,p['title'],p['summary']+' Relatório Power BI e guia online.',p['page'])+f'<body class="portfolio-project dashboard-project" style="--project-accent:{p["accent"]}">'+nav(p)+'<main class="case-shell" id="conteudo"><header class="case-hero"><div><p class="case-eyebrow">DATA & ANALYTICS / POWER BI</p><h1>'+escape(p['title'])+'</h1><p class="case-lead">'+escape(p['tagline'])+'</p><p>'+escape(p['summary'])+'</p><div class="case-actions"><a class="case-button case-primary" href="#relatorio">Explorar dashboard →</a><a class="case-button" href="'+p['manual']+'" target="_blank" rel="noopener noreferrer">Guia de leitura ↗</a></div><div class="case-tags">'+''.join('<span>'+escape(t)+'</span>' for t in p['tech'])+'</div></div><figure><a href="'+resource(p['image'])+'" target="_blank" rel="noopener noreferrer"><img src="'+resource(p['image'])+'" alt="Captura do dashboard de '+escape(p['title'],quote=True)+'" width="1340" height="750"></a><figcaption>Captura do projeto. Clique para ampliar ou explore o relatório interativo abaixo.</figcaption></figure></header>'+overview(p)+'<section class="case-section" id="relatorio" aria-labelledby="relatorio-titulo"><div class="case-report-header"><div><p class="case-eyebrow">EXPERIMENTE NO NAVEGADOR</p><h2 id="relatorio-titulo">Explore os indicadores.</h2><p>Confira as seleções e navegue pelas páginas do Power BI. O guia oferece um roteiro para iniciar a leitura e interpretar os recortes.</p></div><a class="case-button" href="'+escape(p['report_url'],quote=True)+'" target="_blank" rel="noopener noreferrer">Abrir relatório em nova aba ↗</a></div><iframe class="case-report-frame" src="'+escape(p['report_url'],quote=True)+'" title="Relatório interativo de '+escape(p['title'],quote=True)+'" loading="lazy" referrerpolicy="no-referrer" allowfullscreen></iframe><p class="case-report-footnote">A versão interativa depende de internet e da disponibilidade do Power BI. Não é necessário instalar um executável para essa avaliação. Valores e indicadores variam conforme página e filtros.</p></section>'+manual_callout(p)+gallery+'<section class="case-section" id="apresentacao" aria-labelledby="video-titulo"><p class="case-eyebrow">APRESENTAÇÃO RÁPIDA</p><h2 id="video-titulo">Uma visão do projeto em vídeo.</h2>'+player+'</section><section class="case-section" aria-labelledby="leitura-titulo"><p class="case-eyebrow">LEITURA COM CONTEXTO</p><h2 id="leitura-titulo">Da informação à investigação.</h2><p>'+escape(p['evaluate'])+'</p><p>As contribuições descritas são possibilidades de análise. O portfólio não atribui ao projeto ganhos comprovados de uma implantação real. As imagens registram recortes específicos do relatório.</p></section></main>'+footer(p)+'</body></html>'
  body=body.replace('As contribuições descritas são possibilidades de análise. O portfólio não atribui ao projeto ganhos comprovados de uma implantação real. As imagens registram recortes específicos do relatório.','As imagens registram recortes específicos do relatório. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam deste repositório do portfólio. A apresentação permite avaliar a leitura dos indicadores; a reprodução dos cálculos depende desses materiais. Não são atribuídos ganhos comprovados de uma implantação real.')
  (ROOT/p['page']).write_text(body,encoding='utf-8')
 
@@ -177,24 +180,26 @@ def home():
    else:attrs+=' class="portfolio-standard"'
   return '<body'+attrs+'>'
  text=re.sub(r'<body([^>]*)>',body,text,count=1)
- def wrap(ident,label,title,description,cards,extra=''):
-  return '<section class="section'+(' section-divider' if ident=='projetos' else ' section-alt' if ident=='aplicativos' else '')+'" id="'+ident+'"><div class="container"><p class="section-label">'+label+'</p><h2 class="section-title">'+title+'</h2><p class="section-description">'+description+'</p>'+extra+'<div class="portfolio-project-grid'+(' portfolio-bi-grid' if ident=='dashboards' else '')+'">'+cards+'</div></div></section>'
- featured=[next(p for p in CATALOG if p['slug']==name) for name in ('chronos','voxtexto','churn')]
- blocks={
-  'featured':wrap('projetos','PORTFÓLIO / SELEÇÃO','Projetos em destaque','Duas frentes de atuação: aplicações para organizar rotinas e análises para investigar perguntas de negócio. Cada projeto reúne contexto, demonstração e um guia online.',''.join(card(p,True) for p in featured)),
-  'apps':wrap('aplicativos','DESENVOLVIMENTO & AUTOMAÇÃO','Aplicativos para experimentar','Conheça o problema, veja o sistema e teste a distribuição Windows. Os manuais explicam o primeiro acesso e os pontos técnicos de cada implementação.',''.join(card(p) for p in CATALOG if p['kind']=='app')),
-  'bi':wrap('dashboards','DATA & ANALYTICS','Dashboards para explorar','Indicadores com contexto, relatórios interativos e guias de leitura. Escolha uma pergunta de negócio e percorra a análise no navegador.',''.join(card(p) for p in CATALOG if p['kind']=='bi'))}
- found=set()
+ ordered=[p for p in CATALOG if p.get('featured')]+[p for p in CATALOG if not p.get('featured')]
+ options=[('all','Todos'),('featured','Destaques'),('app','Desenvolvimento & Automação'),('bi','Dados & BI')]
+ filters='<fieldset class="method-selector project-filters" disabled><legend class="method-sr-only">Filtrar projetos</legend>'+''.join('<label><input type="radio" name="project-filter" value="'+value+'" aria-controls="project-list"'+(' checked' if value=='all' else '')+'><span>'+escape(label)+'</span></label>' for value,label in options)+'</fieldset>'
+ aliases='<span class="project-route-anchor" id="aplicativos" aria-hidden="true"></span><span class="project-route-anchor" id="dashboards" aria-hidden="true"></span>'
+ project_block='<section class="section section-divider" id="projetos" data-projects aria-labelledby="projetos-titulo"><div class="container"><p class="section-label">PORTFÓLIO</p><h2 class="section-title" id="projetos-titulo">Projetos</h2><p class="section-description">Explore soluções em desenvolvimento de software, automação de processos, inteligência artificial e análise de dados.</p>'+aliases+filters+'<p class="method-sr-only" role="status" data-project-status></p><div class="portfolio-project-grid" id="project-list">'+''.join(card(p) for p in ordered)+'</div></div></section>'
+ found=False
  def section(match):
+  nonlocal found
   block=match[0]
-  if 'project-directory' in block or 'featured-grid' in block or 'id="projetos"' in block:key='featured'
-  elif 'projects-grid' in block or 'id="aplicativos"' in block:key='apps'
-  elif 'development-grid' in block or 'id="dashboards"' in block:key='bi'
-  else:return block
-  assert key not in found,key
-  found.add(key);return blocks[key]
+  if 'id="projetos"' in block:
+   assert not found,'duplicate projects section'
+   found=True
+   return project_block
+  if re.match(r'<section\b[^>]*\bid="(?:aplicativos|dashboards)"',block):return ''
+  return block
  text=re.sub(r'<section\b[^>]*>.*?</section>',section,text,flags=re.S)
- assert found==set(blocks),found
+ assert found,'missing projects section'
+ for filename in ('project-filters.css','project-filters.js'):
+  text=re.sub(r'<(?:link|script)\b[^>]*(?:href|src)="assets/'+re.escape(filename)+r'[^\"]*"[^>]*>(?:</script>)?', '',text)
+ text=text.replace('</head>','<link rel="stylesheet" href="'+resource('assets/project-filters.css')+'"><script src="'+resource('assets/project-filters.js')+'" defer></script></head>',1)
  path.write_text(text,encoding='utf-8')
 
 def linkedin():

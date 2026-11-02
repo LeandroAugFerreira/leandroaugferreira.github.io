@@ -1,0 +1,6 @@
+/* Usa o seletor nativo e os cards já existentes. Nenhum tema é substituído. */
+.project-filters{margin-bottom:30px}
+.portfolio-standard .portfolio-project-grid>[hidden]{display:none!important}
+.project-route-anchor{display:block;height:0;scroll-margin-top:85px}
+.portfolio-standard .tile-tech .project-featured{color:var(--project-accent)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

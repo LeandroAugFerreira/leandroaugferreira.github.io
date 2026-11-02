@@ -4,7 +4,7 @@ Revisão de 01/11/2026. Autoria: Leandro Augusto Ferreira.
 
 ## Organização
 
-O portfólio reúne nove projetos publicados: cinco aplicativos Windows e quatro relatórios Power BI. A seleção de destaques apresenta Chronos, VoxTexto e Análise de Churn. As listas seguintes separam aplicativos e dashboards, com cartões de proporção consistente, resumo, tecnologias e acesso ao projeto e ao manual.
+O portfólio reúne nove projetos: cinco aplicativos Windows e quatro relatórios Power BI. A evolução estratégica local usa uma única listagem, com um card por projeto e filtros Todos, Destaques, Desenvolvimento & Automação e Dados & BI. Chronos, VoxTexto, NexoLog e Análise de Churn aparecem primeiro em Todos e têm a marca discreta Destaque. Os demais seguem a ordem do catálogo. Esta evolução não foi publicada automaticamente.
 
 Os espaços de projetos futuros foram retirados da seleção publicada. Os endereços existentes e as âncoras dos aplicativos foram preservados. A Análise de Churn ganhou uma página própria; seu relatório original continua acessível por essa página.
 
@@ -30,11 +30,17 @@ As informações de integridade ficam em `downloads/portfolio-distribuicoes.json
 
 `tools/project_catalog.json` centraliza nomes, links, resumos e informações de cada projeto. Os textos dos novos guias ficam em `docs/manuais`. Execute `python tools/standardize_projects.py` para regenerar os guias, as páginas analíticas, os blocos comuns das páginas de aplicativos e os cartões da página inicial.
 
-A edição atual do Chronos permanece na estrutura própria já aprovada; o catálogo aponta para sua página e seu manual existentes. O gerador preserva os marcadores Chronos dos cartões para compatibilidade com seu fluxo de manutenção.
+A edição atual do Chronos permanece na estrutura própria já aprovada; o catálogo aponta para sua página e seu manual existentes. Há apenas um card Chronos, com o marcador FEATURED e a âncora antiga chronos-aplicacao no mesmo elemento. Após usar um gerador específico de página de projeto, execute o gerador do portfólio para manter a listagem única; não recrie o antigo segundo card de galeria.
 
 `assets/project-standard.css` cuida da apresentação comum, com cores próprias por projeto e ajustes para telas estreitas. O gerador pode ser repetido sem duplicar blocos ou alterar o resultado.
 
+`assets/project-filters.js` apenas mostra/oculta os cards existentes e pausa vídeos ocultos. `assets/project-filters.css` reutiliza o seletor do Método e garante que o atributo hidden prevaleça sobre o display dos cards. Os nomes de radio distintos mantêm os dois seletores independentes. Todos os cards permanecem disponíveis sem JavaScript, com os filtros desabilitados.
+
+Verifique a estrutura com `python tools/check_portfolio.py`. Para a integração DOM, use `node tools/check_interactions.cjs <caminho-para-jsdom>`, apontando para uma instalação de desenvolvimento disponível. A ferramenta de teste não é dependência de execução do site e não substitui inspeção real de layout, teclado e leitor de tela.
+
 ## Verificações
+
+Os itens de distribuição abaixo registram a entrega anterior dos aplicativos. Nesta evolução, os binários, pacotes, manuais e materiais de mídia são preservados; nenhum aplicativo foi reconstruído ou retestado internamente. Para os resultados atuais de filtros e edição, consulte o relatório de evolução estratégica.
 
 - 19 páginas HTML: nove apresentações, nove guias e a página inicial.
 - Links locais, âncoras, IDs, metadados, downloads e referências de recursos conferidos.

@@ -74,6 +74,19 @@ def main():
         if p['kind'] == 'bi':
             check(p['report_url'].replace('&', '&amp;') in html, p['slug']+': original Power BI URL')
     home = (ROOT/'index.html').read_text(encoding='utf-8')
+    home_elements = pages['index.html'].elements
+    cards = [a for t, a in home_elements if t == 'article' and 'data-project-card' in a]
+    check(len(cards) == 9, 'single project list must contain nine cards')
+    check(len({a.get('id') for a in cards}) == 9, 'project cards must not be duplicated')
+    check([a.get('id') for a in cards[:4]] == ['chronos', 'transcricao', 'nexolog', 'churn'], 'featured projects must appear first')
+    check(sum(a.get('data-featured') == 'true' for a in cards) == 4, 'four featured projects required')
+    check(sum(a.get('data-category') == 'app' for a in cards) == 5 and sum(a.get('data-category') == 'bi' for a in cards) == 4, 'project categories')
+    filters = [a for t, a in home_elements if t == 'input' and a.get('name') == 'project-filter']
+    check({a.get('value') for a in filters} == {'all', 'featured', 'app', 'bi'} and len(filters) == 4, 'four native project filters required')
+    check(any(a.get('value') == 'all' and 'checked' in a for a in filters), 'Todos must be the default')
+    check(sum(t == 'section' and a.get('id') == 'projetos' for t, a in home_elements) == 1, 'single projects section required')
+    check(not any(t == 'section' and a.get('id') in ('aplicativos', 'dashboards') for t, a in home_elements), 'old category lists must not remain')
+    check('DataFlow' not in home, 'future DataFlow must not be presented as an implemented project')
     check(home.count('class="process-card"') == 4, 'methodology must reuse four cards')
     check(len(re.findall(r'name="methodology"', home)) == 2, 'two native methodology options')
     check(home.count('data-method-content="dados"') == 4 and home.count('data-method-content="desenvolvimento"') == 4, 'four steps per methodology')

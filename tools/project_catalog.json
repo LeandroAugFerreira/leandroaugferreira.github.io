@@ -17,14 +17,15 @@
       "OR-Tools"
     ],
     "tagline": "Pessoas e tempo, em equilíbrio.",
-    "summary": "Planejamento de equipes, jornadas e escalas, com cenários, custos e revisão das propostas.",
+    "summary": "Gestão de jornadas e escalas com cenários, custos e otimização OR-Tools, sujeita à revisão humana.",
     "problem": "Organizar pessoas e necessidades de cobertura sem perder o contexto das regras e dos contratos.",
     "solution": "Uma plataforma configurável com cenários versionados, simulação financeira e propostas de escalas.",
     "evaluate": "Elegibilidade por competência, processamento do otimizador e rastreabilidade das decisões.",
     "download": "downloads/Chronos.exe",
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/Chronos-1.0-codigo-fonte.zip",
-    "image": "img/chronos-social.png"
+    "image": "img/chronos-social.png",
+    "featured": true
   },
   {
     "slug": "voxtexto",
@@ -44,7 +45,7 @@
       "FFmpeg"
     ],
     "tagline": "Da gravação ao documento.",
-    "summary": "Transcrição local de áudio e vídeo, com fila, histórico por usuário e exportação Word.",
+    "summary": "Transcrição local de áudio e vídeo com Whisper e FFmpeg, fila de tarefas, histórico e exportação Word.",
     "problem": "Transformar gravações em texto revisável sem perder o controle sobre a fila e os resultados.",
     "solution": "Seleção de mídias, transcrição local, acompanhamento das tarefas e geração de documentos Word.",
     "evaluate": "Worker separado, cancelamento, tratamento de falhas e persistência do histórico por usuário.",
@@ -52,7 +53,8 @@
     "download_label": "Baixar instalador Windows — V2.0",
     "source": "https://github.com/LeandroAugFerreira/transcricao-audio-web",
     "image": "img/transcricao/fila-ogg.jpg",
-    "poster": "img/teasers/transcricao.jpg"
+    "poster": "img/teasers/transcricao.jpg",
+    "featured": true
   },
   {
     "slug": "nexolog",
@@ -72,14 +74,15 @@
       "SQLite"
     ],
     "tagline": "Sua operação conectada.",
-    "summary": "Estoque, pedidos e entregas simuladas, com reservas, relatórios e histórico das operações.",
+    "summary": "Gestão logística full stack com estoque, reservas e pedidos integrados a indicadores e entregas simuladas.",
     "problem": "Acompanhar o efeito de pedidos e entregas sobre saldos, reservas e indicadores.",
     "solution": "Cadastros, estoque e Kanban de pedidos ligados ao rastreamento demonstrativo e aos relatórios.",
     "evaluate": "Transações, estados dos pedidos, controle de acesso e auditoria das movimentações.",
     "download": "downloads/NexoLog.exe",
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/NexoLog-codigo-fonte.zip",
-    "image": "img/nexolog-dashboard.png"
+    "image": "img/nexolog-dashboard.png",
+    "featured": true
   },
   {
     "slug": "atelie-verde",
@@ -99,13 +102,14 @@
       "SQLite"
     ],
     "tagline": "Da primeira planta à gestão do jardim.",
-    "summary": "Loja, serviços e paisagismo conectados à gestão, com identidade botânica e assistente Rafinha.",
+    "summary": "Loja e gestão de jardinagem e paisagismo: catálogo, pedidos, serviços, projetos e financeiro, com o Rafinha.",
     "problem": "Conectar catálogo, compra, serviços e execução do projeto à rotina administrativa.",
     "solution": "Portal do cliente e gestão integrada de estoque, agenda, orçamentos, projetos e financeiro.",
     "evaluate": "Regras compartilhadas entre portal e gestão, privacidade por usuário e integração do assistente.",
     "download": "https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.12-clientes/AtelieVerde-Windows.zip",
     "download_label": "Baixar aplicativo Windows (.zip com EXE)",
-    "image": "img/atelie-verde/loja.webp"
+    "image": "img/atelie-verde/loja.webp",
+    "featured": false
   },
   {
     "slug": "nexofiscal",
@@ -125,14 +129,15 @@
       "SQLite"
     ],
     "tagline": "Do cliente ao documento, com clareza.",
-    "summary": "Emissão simulada de serviços, com revisão, documento demonstrativo e histórico das tentativas.",
+    "summary": "Protótipo de emissão simulada de NFS-e, com revisão no servidor, documento demonstrativo e histórico.",
     "problem": "Conduzir o cadastro, a revisão e o acompanhamento de documentos de serviços em um único fluxo.",
     "solution": "Jornada guiada de emissão simulada, com PDF identificado e preparação de entrega por e-mail.",
     "evaluate": "Validação no servidor, proteção contra duplicidade, permissões e histórico fiscal simulado.",
     "download": "downloads/NexoFiscal.exe",
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/NexoFiscal-codigo-fonte.zip",
-    "image": "img/nexofiscal-central.png"
+    "image": "img/nexofiscal-central.png",
+    "featured": false
   },
   {
     "slug": "financeiro",
@@ -150,12 +155,13 @@
       "Indicadores"
     ],
     "tagline": "Resultado, margem e planejamento.",
-    "summary": "Receitas, despesas e composição do resultado para comparar a operação com o planejamento.",
+    "summary": "Receitas, despesas, margens e fluxo de caixa para acompanhar o resultado e compará-lo com o planejamento.",
     "problem": "Dar visibilidade aos componentes que explicam o resultado e os desvios de margem.",
     "solution": "Indicadores executivos, composição do resultado, ponto de equilíbrio e comparação com metas.",
     "evaluate": "Hierarquia dos indicadores e passagem da visão consolidada aos componentes da análise.",
     "image": "img/financeiro.png",
-    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"
+    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9",
+    "featured": false
   },
   {
     "slug": "transporte",
@@ -173,12 +179,13 @@
       "Indicadores"
     ],
     "tagline": "Viagens, prazos e desempenho.",
-    "summary": "Pontualidade, volume e tempo de transporte, com comparações por rota, cliente e tipo de frota.",
+    "summary": "Viagens, pontualidade, volume e tempo de transporte, com recortes por rota, cliente e tipo de frota.",
     "problem": "Entender diferenças de desempenho e localizar atrasos que merecem investigação.",
     "solution": "Painel de viagens e prazos com filtros por período, cliente, status e tipo de frota.",
     "evaluate": "Comparação de volume, frequência de atrasos e duração no mesmo recorte.",
     "image": "img/transporte.png",
-    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZTNhMjE2M2YtZDZiMC00NmVjLTlhYWYtOTNkM2QyYzg5ZDJlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=e7c29e7f989f80231982"
+    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZTNhMjE2M2YtZDZiMC00NmVjLTlhYWYtOTNkM2QyYzg5ZDJlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=e7c29e7f989f80231982",
+    "featured": false
   },
   {
     "slug": "venda",
@@ -196,12 +203,13 @@
       "Rentabilidade"
     ],
     "tagline": "Vendas com contexto de negócio.",
-    "summary": "Faturamento, lucro e margem por produto, canal e região, com acompanhamento de devoluções.",
+    "summary": "Faturamento, lucro, margem e devoluções para comparar o desempenho comercial por produto, canal e região.",
     "problem": "Relacionar desempenho de vendas, rentabilidade e devoluções em uma leitura coerente.",
     "solution": "Visão executiva e comparações de período, produtos, canais e regiões.",
     "evaluate": "Relação entre receita, quantidade e margem, com navegação entre recortes comerciais.",
     "image": "img/venda.png",
-    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZmNjNTBiMjEtNjc3NS00YjZkLWFiNTYtM2E5YTRhMDc5YzNlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=ReportSectione3ea6826c1e6474d728c"
+    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZmNjNTBiMjEtNjc3NS00YjZkLWFiNTYtM2E5YTRhMDc5YzNlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=ReportSectione3ea6826c1e6474d728c",
+    "featured": false
   },
   {
     "slug": "churn",
@@ -219,11 +227,12 @@
       "Segmentação"
     ],
     "tagline": "Entender os cancelamentos é o primeiro passo.",
-    "summary": "Cancelamentos, impacto financeiro e grupos em risco para investigar padrões de retenção.",
+    "summary": "Cancelamentos, impacto financeiro e segmentos da base para investigar padrões e perguntas de retenção.",
     "problem": "Relacionar cancelamentos, características dos grupos e impacto financeiro na base.",
     "solution": "Relatório com visão geral, análise de churn, impacto financeiro e segmentos em risco.",
     "evaluate": "Comparações entre grupos e conexão dos indicadores à pergunta de retenção, sem alegar causalidade.",
     "image": "img/churn-analise.jpg",
-    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9"
+    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9",
+    "featured": true
   }
 ]
