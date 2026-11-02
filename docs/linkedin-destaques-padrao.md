@@ -26,6 +26,14 @@ Material de apoio. Este arquivo não comprova publicação no perfil. A inclusã
 
 **Descrição:** Gestão logística full stack com estoque, reservas e pedidos integrados a indicadores e entregas simuladas. Transações, estados dos pedidos, controle de acesso e auditoria das movimentações. Na página, veja a apresentação, experimente a versão Windows e leia o guia online.
 
+## Análise de Churn
+
+**Título:** Análise de Churn | Dashboard Power BI
+
+**Link:** https://leandroaugferreira.github.io/churn.html
+
+**Descrição:** Cancelamentos, impacto financeiro e segmentos da base para investigar padrões e perguntas de retenção. Comparações entre grupos e conexão dos indicadores à pergunta de retenção, sem alegar causalidade. Na página, veja a apresentação, explore o relatório interativo e leia o guia online.
+
 ## Ateliê Verde
 
 **Título:** Ateliê Verde | Aplicativo Windows
@@ -65,11 +73,3 @@ Material de apoio. Este arquivo não comprova publicação no perfil. A inclusã
 **Link:** https://leandroaugferreira.github.io/venda.html
 
 **Descrição:** Faturamento, lucro, margem e devoluções para comparar o desempenho comercial por produto, canal e região. Relação entre receita, quantidade e margem, com navegação entre recortes comerciais. Na página, veja a apresentação, explore o relatório interativo e leia o guia online.
-
-## Análise de Churn
-
-**Título:** Análise de Churn | Dashboard Power BI
-
-**Link:** https://leandroaugferreira.github.io/churn.html
-
-**Descrição:** Cancelamentos, impacto financeiro e segmentos da base para investigar padrões e perguntas de retenção. Comparações entre grupos e conexão dos indicadores à pergunta de retenção, sem alegar causalidade. Na página, veja a apresentação, explore o relatório interativo e leia o guia online.

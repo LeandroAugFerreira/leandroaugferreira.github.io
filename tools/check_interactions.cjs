@@ -70,7 +70,7 @@ async function main() {
   const originalUrl = w.location.href;
   const orders = {
     all: ['chronos', 'transcricao', 'nexolog', 'churn', 'atelie-verde', 'nexofiscal', 'financeiro', 'transporte', 'venda'],
-    featured: ['chronos', 'transcricao', 'nexolog', 'churn'],
+    featured: ['chronos', 'churn'],
     app: ['chronos', 'transcricao', 'nexolog', 'atelie-verde', 'nexofiscal'],
     bi: ['churn', 'financeiro', 'transporte', 'venda'],
   };

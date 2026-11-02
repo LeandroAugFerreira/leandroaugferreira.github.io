@@ -78,8 +78,8 @@ def main():
     cards = [a for t, a in home_elements if t == 'article' and 'data-project-card' in a]
     check(len(cards) == 9, 'single project list must contain nine cards')
     check(len({a.get('id') for a in cards}) == 9, 'project cards must not be duplicated')
-    check([a.get('id') for a in cards[:4]] == ['chronos', 'transcricao', 'nexolog', 'churn'], 'featured projects must appear first')
-    check(sum(a.get('data-featured') == 'true' for a in cards) == 4, 'four featured projects required')
+    check([a.get('id') for a in cards[:4]] == ['chronos', 'transcricao', 'nexolog', 'churn'], 'project presentation order must be preserved')
+    check([a.get('id') for a in cards if a.get('data-featured') == 'true'] == ['chronos', 'churn'], 'only Chronos and Churn must be featured')
     check(sum(a.get('data-category') == 'app' for a in cards) == 5 and sum(a.get('data-category') == 'bi' for a in cards) == 4, 'project categories')
     filters = [a for t, a in home_elements if t == 'input' and a.get('name') == 'project-filter']
     check({a.get('value') for a in filters} == {'all', 'featured', 'app', 'bi'} and len(filters) == 4, 'four native project filters required')

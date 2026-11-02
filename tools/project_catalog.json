@@ -54,7 +54,7 @@
     "source": "https://github.com/LeandroAugFerreira/transcricao-audio-web",
     "image": "img/transcricao/fila-ogg.jpg",
     "poster": "img/teasers/transcricao.jpg",
-    "featured": true
+    "featured": false
   },
   {
     "slug": "nexolog",
@@ -82,6 +82,30 @@
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/NexoLog-codigo-fonte.zip",
     "image": "img/nexolog-dashboard.png",
+    "featured": false
+  },
+  {
+    "slug": "churn",
+    "title": "Análise de Churn",
+    "page": "churn.html",
+    "anchor": "churn",
+    "kind": "bi",
+    "accent": "#f2aaa4",
+    "manual_accent": "#944240",
+    "manual": "churn-manual.html",
+    "media": "churn",
+    "tech": [
+      "Power BI",
+      "Retenção",
+      "Segmentação"
+    ],
+    "tagline": "Entender os cancelamentos é o primeiro passo.",
+    "summary": "Cancelamentos, impacto financeiro e segmentos da base para investigar padrões e perguntas de retenção.",
+    "problem": "Relacionar cancelamentos, características dos grupos e impacto financeiro na base.",
+    "solution": "Relatório com visão geral, análise de churn, impacto financeiro e segmentos em risco.",
+    "evaluate": "Comparações entre grupos e conexão dos indicadores à pergunta de retenção, sem alegar causalidade.",
+    "image": "img/churn-analise.jpg",
+    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9",
     "featured": true
   },
   {
@@ -210,29 +234,5 @@
     "image": "img/venda.png",
     "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZmNjNTBiMjEtNjc3NS00YjZkLWFiNTYtM2E5YTRhMDc5YzNlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=ReportSectione3ea6826c1e6474d728c",
     "featured": false
-  },
-  {
-    "slug": "churn",
-    "title": "Análise de Churn",
-    "page": "churn.html",
-    "anchor": "churn",
-    "kind": "bi",
-    "accent": "#f2aaa4",
-    "manual_accent": "#944240",
-    "manual": "churn-manual.html",
-    "media": "churn",
-    "tech": [
-      "Power BI",
-      "Retenção",
-      "Segmentação"
-    ],
-    "tagline": "Entender os cancelamentos é o primeiro passo.",
-    "summary": "Cancelamentos, impacto financeiro e segmentos da base para investigar padrões e perguntas de retenção.",
-    "problem": "Relacionar cancelamentos, características dos grupos e impacto financeiro na base.",
-    "solution": "Relatório com visão geral, análise de churn, impacto financeiro e segmentos em risco.",
-    "evaluate": "Comparações entre grupos e conexão dos indicadores à pergunta de retenção, sem alegar causalidade.",
-    "image": "img/churn-analise.jpg",
-    "report_url": "https://app.powerbi.com/view?r=eyJrIjoiMGYyODJlYWQtNWZhMS00NmU0LThhN2ItMWE4ZWM0ZDZkNzc2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9",
-    "featured": true
   }
 ]

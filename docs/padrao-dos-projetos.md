@@ -4,7 +4,7 @@ Revisão de 01/11/2026. Autoria: Leandro Augusto Ferreira.
 
 ## Organização
 
-O portfólio reúne nove projetos: cinco aplicativos Windows e quatro relatórios Power BI. A evolução estratégica local usa uma única listagem, com um card por projeto e filtros Todos, Destaques, Desenvolvimento & Automação e Dados & BI. Chronos, VoxTexto, NexoLog e Análise de Churn aparecem primeiro em Todos e têm a marca discreta Destaque. Os demais seguem a ordem do catálogo. Esta evolução não foi publicada automaticamente.
+O portfólio reúne nove projetos: cinco aplicativos Windows e quatro relatórios Power BI. A página usa uma única listagem, com um card por projeto e filtros Todos, Destaques, Desenvolvimento & Automação e Dados & BI. O filtro Destaques contém somente Chronos e Análise de Churn, com a marca discreta Destaque. A ordem em Todos permanece Chronos, VoxTexto, NexoLog, Análise de Churn e os demais projetos; a apresentação segue a ordem explícita do catálogo, independente da seleção de destaques.
 
 Os espaços de projetos futuros foram retirados da seleção publicada. Os endereços existentes e as âncoras dos aplicativos foram preservados. A Análise de Churn ganhou uma página própria; seu relatório original continua acessível por essa página.
 

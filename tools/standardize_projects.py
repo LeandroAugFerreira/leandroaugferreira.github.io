@@ -180,7 +180,7 @@ def home():
    else:attrs+=' class="portfolio-standard"'
   return '<body'+attrs+'>'
  text=re.sub(r'<body([^>]*)>',body,text,count=1)
- ordered=[p for p in CATALOG if p.get('featured')]+[p for p in CATALOG if not p.get('featured')]
+ ordered=CATALOG
  options=[('all','Todos'),('featured','Destaques'),('app','Desenvolvimento & Automação'),('bi','Dados & BI')]
  filters='<fieldset class="method-selector project-filters" disabled><legend class="method-sr-only">Filtrar projetos</legend>'+''.join('<label><input type="radio" name="project-filter" value="'+value+'" aria-controls="project-list"'+(' checked' if value=='all' else '')+'><span>'+escape(label)+'</span></label>' for value,label in options)+'</fieldset>'
  aliases='<span class="project-route-anchor" id="aplicativos" aria-hidden="true"></span><span class="project-route-anchor" id="dashboards" aria-hidden="true"></span>'
