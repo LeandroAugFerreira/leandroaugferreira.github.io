@@ -25,7 +25,8 @@
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/Chronos-1.0-codigo-fonte.zip",
     "image": "img/chronos-social.png",
-    "featured": true
+    "featured": true,
+    "repository": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas"
   },
   {
     "slug": "voxtexto",
@@ -54,7 +55,8 @@
     "source": "https://github.com/LeandroAugFerreira/transcricao-audio-web",
     "image": "img/transcricao/fila-ogg.jpg",
     "poster": "img/teasers/transcricao.jpg",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/transcricao-audio-web"
   },
   {
     "slug": "nexolog",
@@ -82,7 +84,8 @@
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/NexoLog-codigo-fonte.zip",
     "image": "img/nexolog-dashboard.png",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/nexolog"
   },
   {
     "slug": "churn",
@@ -133,7 +136,8 @@
     "download": "https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/releases/download/atelie-verde-2026.10.12-clientes/AtelieVerde-Windows.zip",
     "download_label": "Baixar aplicativo Windows (.zip com EXE)",
     "image": "img/atelie-verde/loja.webp",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/atelie-verde"
   },
   {
     "slug": "nexofiscal",
@@ -161,7 +165,8 @@
     "download_label": "Baixar para Windows (.exe)",
     "source": "downloads/NexoFiscal-codigo-fonte.zip",
     "image": "img/nexofiscal-central.png",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/nexofiscal"
   },
   {
     "slug": "financeiro",
@@ -185,7 +190,9 @@
     "evaluate": "Hierarquia dos indicadores e passagem da visão consolidada aos componentes da análise.",
     "image": "img/financeiro.png",
     "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZWQ0NzkyY2YtNzBjMi00OWQ5LTk3MzAtMjBhNDQ4MzNiZjk2IiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/dashboard-financeiro",
+    "web_dashboard": "dashboards/financeiro/index.html"
   },
   {
     "slug": "transporte",
@@ -209,7 +216,9 @@
     "evaluate": "Comparação de volume, frequência de atrasos e duração no mesmo recorte.",
     "image": "img/transporte.png",
     "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZTNhMjE2M2YtZDZiMC00NmVjLTlhYWYtOTNkM2QyYzg5ZDJlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=e7c29e7f989f80231982",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/dashboard-logistico",
+    "web_dashboard": "dashboards/logistico/index.html"
   },
   {
     "slug": "venda",
@@ -233,6 +242,8 @@
     "evaluate": "Relação entre receita, quantidade e margem, com navegação entre recortes comerciais.",
     "image": "img/venda.png",
     "report_url": "https://app.powerbi.com/view?r=eyJrIjoiZmNjNTBiMjEtNjc3NS00YjZkLWFiNTYtM2E5YTRhMDc5YzNlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=ReportSectione3ea6826c1e6474d728c",
-    "featured": false
+    "featured": false,
+    "repository": "https://github.com/LeandroAugFerreira/analise-comercial",
+    "web_dashboard": "dashboards/comercial/index.html"
   }
 ]

@@ -49,6 +49,6 @@ As contribuições apresentadas são possibilidades de uso da análise, sem atri
 
 ## Dados, metodologia e limites
 
-O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+A versão web financeira é uma demonstração complementar com dados sintéticos criados por autorização do autor. Sua metodologia, as bases CSV e o gerador estão no repositório. O relatório Power BI existente não foi alterado.
 
 O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.

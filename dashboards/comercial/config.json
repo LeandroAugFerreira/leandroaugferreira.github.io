@@ -1,0 +1,730 @@
+{
+  "kind": "comercial",
+  "title": "Análise Comercial",
+  "repository": "https://github.com/LeandroAugFerreira/analise-comercial",
+  "portfolio": "https://leandroaugferreira.github.io/venda.html",
+  "powerbi": "https://app.powerbi.com/view?r=eyJrIjoiZmNjNTBiMjEtNjc3NS00YjZkLWFiNTYtM2E5YTRhMDc5YzNlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=ReportSectione3ea6826c1e6474d728c",
+  "pages": [
+    {
+      "id": "ReportSection12a8a72e6fa50197971d",
+      "title": "Geral",
+      "defaults": {
+        "dCalendario|Ano": 2022.0
+      },
+      "visuals": [
+        {
+          "id": "699b295f15b1d7363ecb",
+          "type": "multiRowCard",
+          "x": 178.01324503311258,
+          "y": 89.00662251655629,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "Faturamento Total"
+          ],
+          "title": "Faturamento Total",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Faturamento Total",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "7d9d364ed973d0078e06",
+          "type": "multiRowCard",
+          "x": 475.2317880794702,
+          "y": 89.00662251655629,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "Lucro Total"
+          ],
+          "title": "Lucro Total",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Lucro Total",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "297b9beb817dcc029884",
+          "type": "multiRowCard",
+          "x": 777.2185430463576,
+          "y": 89.00662251655629,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "Total Vendas"
+          ],
+          "title": "Total Vendas",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Total Vendas",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "f321a800a5a016c28e0b",
+          "type": "multiRowCard",
+          "x": 1064.9006622516556,
+          "y": 89.00662251655629,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "% Margem de Lucro"
+          ],
+          "title": "Margem",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Margem de Lucro",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "fac030b2c982276d4d25",
+          "type": "slicer",
+          "x": 1026.7549668874171,
+          "y": 19.072847682119207,
+          "w": 222.51655629139074,
+          "h": 57.21854304635762,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "Ano",
+              "name": "dCalendario.Ano"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "73acb413d17670a30976",
+          "type": "textbox",
+          "x": 872.5827814569536,
+          "y": 27.019867549668874,
+          "w": 163.7086092715232,
+          "h": 50.860927152317885,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "text": "Ano Selecionado:"
+        },
+        {
+          "id": "83f5b2e6b842a64d3d28",
+          "type": "textbox",
+          "x": 176.42384105960267,
+          "y": 143.04635761589404,
+          "w": 154.17218543046357,
+          "h": 42.913907284768214,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "text": "Vs. Ano Anterior"
+        },
+        {
+          "id": "1724ec30b55e4cb47706",
+          "type": "textbox",
+          "x": 473.6423841059603,
+          "y": 141.45695364238412,
+          "w": 154.17218543046357,
+          "h": 42.913907284768214,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "text": "Vs. Ano Anterior"
+        },
+        {
+          "id": "208d0b3c705a04455264",
+          "type": "textbox",
+          "x": 767.682119205298,
+          "y": 141.45695364238412,
+          "w": 154.17218543046357,
+          "h": 42.913907284768214,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "text": "Vs. Ano Anterior"
+        },
+        {
+          "id": "8f154ce483b8cbeba173",
+          "type": "card",
+          "x": 262.25165562913907,
+          "y": 128.74172185430464,
+          "w": 149.4039735099338,
+          "h": 63.576158940397356,
+          "categories": [],
+          "metrics": [
+            "% Crescimento Faturamento YoY"
+          ],
+          "title": "",
+          "filters": {
+            "dCalendario|Data Vigente?": "Sim"
+          },
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Crescimento Faturamento YoY",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "2e89d2a407ba62e00aa7",
+          "type": "card",
+          "x": 557.8807947019868,
+          "y": 125.56291390728477,
+          "w": 149.4039735099338,
+          "h": 66.75496688741723,
+          "categories": [],
+          "metrics": [
+            "% Crescimento Lucro YoY"
+          ],
+          "title": "",
+          "filters": {
+            "dCalendario|Data Vigente?": "Sim"
+          },
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Crescimento Lucro YoY",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "4f730e5013be67524e7c",
+          "type": "card",
+          "x": 855.0993377483444,
+          "y": 125.56291390728477,
+          "w": 149.4039735099338,
+          "h": 63.576158940397356,
+          "categories": [],
+          "metrics": [
+            "% Crescimento Vendas YoY"
+          ],
+          "title": "",
+          "filters": {
+            "dCalendario|Data Vigente?": "Sim"
+          },
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Crescimento Vendas YoY",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "518bc56a10503c03460b",
+          "type": "clusteredColumnChart",
+          "x": 108.0794701986755,
+          "y": 192.31788079470198,
+          "w": 813.7748344370862,
+          "h": 232.05298013245033,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "Mês",
+              "name": "dCalendario.Mês"
+            }
+          ],
+          "metrics": [
+            "Faturamento Total",
+            "Faturamento LY"
+          ],
+          "title": "Faturamento Atual vs Ano Anterior",
+          "filters": {
+            "dCalendario|Data Vigente?": "Sim"
+          },
+          "colors": [
+            "#032030",
+            "#E89B26"
+          ],
+          "sort": {
+            "field": {
+              "entity": "dCalendario",
+              "column": "Mês",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        },
+        {
+          "id": "cf4dc1a9861240400193",
+          "type": "donutChart",
+          "x": 940.9271523178808,
+          "y": 192.31788079470198,
+          "w": 308.34437086092714,
+          "h": 243.17880794701986,
+          "categories": [
+            {
+              "entity": "dLojas",
+              "column": "Tipo",
+              "name": "dLojas.Tipo"
+            }
+          ],
+          "metrics": [
+            "Total Vendas"
+          ],
+          "title": "Total Vendas por Tipo de Loja",
+          "filters": {},
+          "colors": [
+            "#E89B26"
+          ],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Total Vendas",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "ba8f62fa7b66403ab860",
+          "type": "barChart",
+          "x": 108.0794701986755,
+          "y": 451.3907284768212,
+          "w": 406.8874172185431,
+          "h": 246.35761589403975,
+          "categories": [
+            {
+              "entity": "dProdutos",
+              "column": "Tipo do Produto",
+              "name": "dProdutos.Tipo do Produto"
+            }
+          ],
+          "metrics": [
+            "Faturamento Total"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Faturamento Total",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "af29360bf28708fbab49",
+          "type": "pivotTable",
+          "x": 534.0397350993378,
+          "y": 451.3907284768212,
+          "w": 715.2317880794702,
+          "h": 246.35761589403975,
+          "categories": [
+            {
+              "entity": "dLojas",
+              "column": "Continente",
+              "name": "dLojas.Continente"
+            },
+            {
+              "entity": "dLojas",
+              "column": "País",
+              "name": "dLojas.País"
+            }
+          ],
+          "metrics": [
+            "Faturamento Total",
+            "Lucro Total",
+            "Total Vendas"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": []
+        }
+      ],
+      "background": "Plano_de_Fundo_P_gina_14711604646912677.png"
+    },
+    {
+      "id": "ReportSectione06ec37ec122eb0f9922",
+      "title": "Indicadores",
+      "defaults": {
+        "Parâmetro|Parâmetro": "Total Vendas"
+      },
+      "visuals": [
+        {
+          "id": "bb33f85ad95f9cd93360",
+          "type": "decompositionTreeVisual",
+          "x": 103.3112582781457,
+          "y": 77.88079470198676,
+          "w": 979.0728476821192,
+          "h": 452.98013245033115,
+          "categories": [
+            {
+              "entity": "dProdutos",
+              "column": "Marca",
+              "name": "dProdutos.Marca"
+            },
+            {
+              "entity": "dProdutos",
+              "column": "Tipo do Produto",
+              "name": "dProdutos.Tipo do Produto"
+            },
+            {
+              "entity": "dProdutos",
+              "column": "Nome Produto",
+              "name": "dProdutos.Nome Produto"
+            }
+          ],
+          "metrics": [
+            "Total Vendas"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Total Vendas",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "50f8b42c2311454ed6e2",
+          "type": "slicer",
+          "x": 1082.3841059602648,
+          "y": 82.64900662251655,
+          "w": 197.08609271523179,
+          "h": 138.27814569536423,
+          "categories": [
+            {
+              "entity": "Parâmetro",
+              "column": "Parâmetro",
+              "name": "Parâmetro.Parâmetro"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "12f433c1c84487cf7688",
+          "type": "enlightenDataStoryDDFB78A6143E42CFAFBC50CCF18D978D",
+          "x": 103.3112582781457,
+          "y": 602.384105960265,
+          "w": 559.4701986754967,
+          "h": 96.95364238410596,
+          "categories": [],
+          "metrics": [
+            "Produto Mais Vendido",
+            "Qtd Vendida (Top 1 Produto)",
+            "% das Vendas (Top 1 Produto)"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Produto Mais Vendido",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        },
+        {
+          "id": "25c0432572d5cee8e855",
+          "type": "enlightenDataStoryDDFB78A6143E42CFAFBC50CCF18D978D",
+          "x": 688.2119205298013,
+          "y": 611.9205298013245,
+          "w": 559.4701986754967,
+          "h": 96.95364238410596,
+          "categories": [],
+          "metrics": [
+            "Loja + Vendas",
+            "Qtd Vendida (Loja + Vendas)",
+            "% das Vendas (Loja + Vendas)"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Loja + Vendas",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        },
+        {
+          "id": "5f4a9f792e4b907e0a0b",
+          "type": "ScrollingTextVisual1448795304508",
+          "x": 95.36423841059603,
+          "y": 19.072847682119207,
+          "w": 1096.6887417218543,
+          "h": 54.03973509933775,
+          "categories": [
+            {
+              "entity": "dProdutos",
+              "column": "Tipo do Produto",
+              "name": "dProdutos.Tipo do Produto"
+            }
+          ],
+          "metrics": [
+            "Faturamento Total",
+            "% Crescimento MoM"
+          ],
+          "title": "",
+          "filters": {
+            "dCalendario|Data Vigente?": "Sim"
+          },
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Faturamento Total",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        }
+      ],
+      "background": "Plano_de_Fundo_P_gina_2756143367940419.png"
+    },
+    {
+      "id": "ReportSectiond1c1cadb6bae5b48ecb8",
+      "title": "Devoluções",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "5bdebb02b3ff5b565f2d",
+          "type": "multiRowCard",
+          "x": 182.7814569536424,
+          "y": 101.72185430463577,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "Faturamento Perdido"
+          ],
+          "title": "Faturamento Perdido",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Faturamento Perdido",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "returnFact": true
+        },
+        {
+          "id": "e3a9c82aa3d0adf95c56",
+          "type": "multiRowCard",
+          "x": 476.82119205298017,
+          "y": 101.72185430463577,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "Total Devoluções"
+          ],
+          "title": "Devoluções",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "Total Devoluções",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "returnFact": true
+        },
+        {
+          "id": "4f1e9151a92075bddd25",
+          "type": "multiRowCard",
+          "x": 1060.132450331126,
+          "y": 101.72185430463577,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "% Devoluções"
+          ],
+          "title": "% Devoluções",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Devoluções",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "returnFact": true
+        },
+        {
+          "id": "b84a0b825b1e59864dc6",
+          "type": "multiRowCard",
+          "x": 774.0397350993378,
+          "y": 101.72185430463577,
+          "w": 195.49668874172187,
+          "h": 60.397350993377486,
+          "categories": [],
+          "metrics": [
+            "% Fat Perdido"
+          ],
+          "title": "% Faturam. Perdido",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "Medidas",
+              "measure": "% Fat Perdido",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "returnFact": true
+        },
+        {
+          "id": "ee21a065bc0f651cbe7d",
+          "type": "areaChart",
+          "x": 101.72185430463577,
+          "y": 192.31788079470198,
+          "w": 707.2847682119206,
+          "h": 232.05298013245033,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "Inicio do Mês",
+              "name": "dCalendario.Inicio do Mês"
+            }
+          ],
+          "metrics": [
+            "% Devoluções"
+          ],
+          "title": "% Devoluções Mensal",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "dCalendario",
+              "column": "Inicio do Mês",
+              "name": "sort"
+            },
+            "ascending": true
+          },
+          "returnFact": true
+        },
+        {
+          "id": "6b21b34fca00d77d6263",
+          "type": "map",
+          "x": 820.1324503311258,
+          "y": 192.31788079470198,
+          "w": 435.49668874172187,
+          "h": 232.05298013245033,
+          "categories": [
+            {
+              "entity": "dLojas",
+              "column": "Continente",
+              "name": "dLojas.Continente"
+            }
+          ],
+          "metrics": [
+            "% Devoluções"
+          ],
+          "title": "% Devoluções por Continente",
+          "filters": {},
+          "colors": [],
+          "returnFact": true
+        },
+        {
+          "id": "ec0ee77961fe7f7487ac",
+          "type": "columnChart",
+          "x": 101.72185430463577,
+          "y": 446.6225165562914,
+          "w": 1153.9072847682119,
+          "h": 244.7682119205298,
+          "categories": [
+            {
+              "entity": "dProdutos",
+              "column": "Marca",
+              "name": "dProdutos.Marca"
+            },
+            {
+              "entity": "dProdutos",
+              "column": "Tipo do Produto",
+              "name": "dProdutos.Tipo do Produto"
+            },
+            {
+              "entity": "dProdutos",
+              "column": "Nome Produto",
+              "name": "dProdutos.Nome Produto"
+            }
+          ],
+          "metrics": [
+            "% Devoluções"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "dProdutos",
+              "column": "Marca",
+              "name": "sort"
+            },
+            "ascending": true
+          },
+          "returnFact": true
+        }
+      ],
+      "background": "Plano_de_Fundo_P_gina_311720575936445021.png"
+    }
+  ]
+}

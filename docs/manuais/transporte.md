@@ -53,6 +53,6 @@ Observe a relação entre filtros e indicadores, as comparações por cliente e 
 
 ## Dados, metodologia e limites
 
-O relatório interativo, as capturas e o vídeo são as evidências disponíveis nesta apresentação. A base tabular de origem, o arquivo PBIX e as fórmulas das medidas não constam do repositório deste portfólio. Por isso, a origem dos dados, o tratamento, os relacionamentos e os cálculos não podem ser reproduzidos integralmente a partir destes arquivos.
+O repositório do projeto disponibiliza PBIX e planilhas preservados, medidas DAX, consultas Power Query, relacionamentos e testes da versão web complementar. Os dados foram confirmados fictícios/didáticos e autorizados pelo autor. O relatório Power BI existente não foi alterado.
 
 O roteiro propõe perguntas e comparações sobre os indicadores exibidos. Uma recomendação operacional exige confirmar definições, unidades, período e qualidade da base. Não são apresentados resultados de implantação em produção nem ganhos financeiros comprovados.

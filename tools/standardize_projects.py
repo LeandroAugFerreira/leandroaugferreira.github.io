@@ -7,6 +7,7 @@ import json
 import re
 import unicodedata
 from audit_metadata import complete as complete_metadata
+from integrate_repositories import integrate
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC='https://leandroaugferreira.github.io/'
@@ -229,7 +230,7 @@ def main():
  improve_apps()
  for p in CATALOG:
   if p['kind']=='bi':dashboard(p)
- home();linkedin();complete_metadata(ROOT,CATALOG);refresh_versions()
+ home();linkedin();complete_metadata(ROOT,CATALOG);refresh_versions();integrate()
  print(json.dumps({'projects':len(CATALOG),'manuals':len(CATALOG),'apps':5,'dashboards':4,'placeholders':0}))
 
 if __name__=='__main__':main()

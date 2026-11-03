@@ -1,0 +1,1327 @@
+{
+  "kind": "logistico",
+  "title": "Logística e Frota",
+  "repository": "https://github.com/LeandroAugFerreira/dashboard-logistico",
+  "portfolio": "https://leandroaugferreira.github.io/transporte.html",
+  "powerbi": "https://app.powerbi.com/view?r=eyJrIjoiZTNhMjE2M2YtZDZiMC00NmVjLTlhYWYtOTNkM2QyYzg5ZDJlIiwidCI6IjUxM2FkOWFiLTQ1NGUtNGFkYi1iYzIzLThmOWY1NGNkNmRmMSJ9&pageName=e7c29e7f989f80231982",
+  "pages": [
+    {
+      "id": "e7c29e7f989f80231982",
+      "title": "Capa",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "e99b27f2238ec08e0423",
+          "type": "actionButton",
+          "x": 35.915822291504284,
+          "y": 424.0062353858145,
+          "w": 293.3125487139516,
+          "h": 49.88308651597817,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 1
+        }
+      ],
+      "background": "ChatGPT_Image_9_de_abr._de_2027039003072053662.png"
+    },
+    {
+      "id": "2d3c48ffb28d0788e4fe",
+      "title": "Painel Executivo",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "da14a197f588c0e53939",
+          "type": "card",
+          "x": 216.71469740634004,
+          "y": 126.3400576368876,
+          "w": 189.04899135446684,
+          "h": 65.47550432276657,
+          "categories": [],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Total Viagens",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "da968321b33c967cf9ff",
+          "type": "card",
+          "x": 1077.1181556195966,
+          "y": 126.3400576368876,
+          "w": 172.44956772334294,
+          "h": 65.47550432276657,
+          "categories": [],
+          "metrics": [
+            "Volume Total"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Volume Total",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "40063a457259376d78e2",
+          "type": "card",
+          "x": 640,
+          "y": 126.3400576368876,
+          "w": 184.43804034582132,
+          "h": 65.47550432276657,
+          "categories": [],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "771a461766accf8eef2f",
+          "type": "card",
+          "x": 853.9481268011526,
+          "y": 127.2622478386167,
+          "w": 184.43804034582132,
+          "h": 64.55331412103746,
+          "categories": [],
+          "metrics": [
+            "Qtd Atrasos"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Qtd Atrasos",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "8f6e5e5f23a4e2b7d503",
+          "type": "card",
+          "x": 432.50720461095096,
+          "y": 127.2622478386167,
+          "w": 184.43804034582132,
+          "h": 64.55331412103746,
+          "categories": [],
+          "metrics": [
+            "% No Prazo"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "% No Prazo",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "15a20d654c54a68e6f51",
+          "type": "lineChart",
+          "x": 209.96064894718674,
+          "y": 256.08836727649293,
+          "w": 625.1101139109423,
+          "h": 144.74559889540905,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "MesNome",
+              "name": "dCalendario.MesNome"
+            }
+          ],
+          "metrics": [
+            "Total Viagens",
+            "Media Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#2E86DE",
+            "#2ECC71"
+          ]
+        },
+        {
+          "id": "f0aa4147f836992c51a3",
+          "type": "barChart",
+          "x": 210.14778325123152,
+          "y": 432.70935960591135,
+          "w": 528.4729064039409,
+          "h": 181.77339901477833,
+          "categories": [
+            {
+              "entity": "dCliente",
+              "column": "razao_social",
+              "name": "dCliente.razao_social"
+            }
+          ],
+          "metrics": [
+            "Rank Cliente"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#2ECC71",
+            "#2ECC71",
+            "#2E86DE",
+            "#2E86DE",
+            "#2E86DE",
+            "#2ECC71",
+            "#2ECC71"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Rank Cliente",
+              "name": "sort"
+            },
+            "ascending": true
+          },
+          "topFilter": {
+            "field": {
+              "entity": "dCliente",
+              "column": "razao_social",
+              "name": "field"
+            },
+            "metric": "Volume Total",
+            "count": 3
+          }
+        },
+        {
+          "id": "54e67012a60cd3828671",
+          "type": "barChart",
+          "x": 774.6275457369692,
+          "y": 432.6461857093545,
+          "w": 475.5926820849154,
+          "h": 181.32965136347946,
+          "categories": [
+            {
+              "entity": "dRotas",
+              "column": "uf_rota",
+              "name": "dRotas.uf_rota"
+            }
+          ],
+          "metrics": [
+            "Rank Rota"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#118DFF",
+            "#2E86DE",
+            "#2E86DE",
+            "#2E86DE",
+            "#2E86DE",
+            "#2ECC71",
+            "#2ECC71",
+            "#2ECC71",
+            "#2ECC71",
+            "#2ECC71"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Rank Rota",
+              "name": "sort"
+            },
+            "ascending": true
+          },
+          "topFilter": {
+            "field": {
+              "entity": "dRotas",
+              "column": "rota",
+              "name": "field"
+            },
+            "metric": "Volume Total",
+            "count": 3
+          }
+        },
+        {
+          "id": "34cd08211f09be4d4373",
+          "type": "slicer",
+          "x": 58.852606144287186,
+          "y": 138.38315498791852,
+          "w": 139.97376596479114,
+          "h": 42.94649637556092,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "Ano",
+              "name": "dCalendario.Ano"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "1aa3bc9d1d0329179693",
+          "type": "slicer",
+          "x": 58.852606144287186,
+          "y": 227.45736969278562,
+          "w": 139.97376596479114,
+          "h": 46.12771832930618,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "MesNome",
+              "name": "dCalendario.MesNome"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "f9f55312b6e521364d09",
+          "type": "slicer",
+          "x": 58.852606144287186,
+          "y": 313.35036244390744,
+          "w": 139.97376596479114,
+          "h": 46.12771832930618,
+          "categories": [
+            {
+              "entity": "dCliente",
+              "column": "razao_social",
+              "name": "dCliente.razao_social"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "8b98a727321d201043a2",
+          "type": "slicer",
+          "x": 58.852606144287186,
+          "y": 400.8339661719019,
+          "w": 139.97376596479114,
+          "h": 46.12771832930618,
+          "categories": [
+            {
+              "entity": "dStatus",
+              "column": "Status",
+              "name": "dStatus.Status"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "c802a1f4fb35a5b8ac69",
+          "type": "slicer",
+          "x": 58.852606144287186,
+          "y": 477.183293061788,
+          "w": 139.97376596479114,
+          "h": 46.12771832930618,
+          "categories": [
+            {
+              "entity": "dVeículos",
+              "column": "tipo_frota",
+              "name": "dVeículos.tipo_frota"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {
+            "dVeículos|tipo_frota": [
+              "Agregado",
+              "Terceiro",
+              "Proprio"
+            ]
+          },
+          "colors": []
+        },
+        {
+          "id": "098734d4ef8bc091e945",
+          "type": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+          "x": 58.09798270893371,
+          "y": 653.8328530259365,
+          "w": 914.8126801152737,
+          "h": 52.564841498559076,
+          "categories": [],
+          "metrics": [
+            "Resumo Executivo HTML"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "293e55cfcb33bb2dc620",
+          "type": "actionButton",
+          "x": 987.7694166379011,
+          "y": 677.600276147739,
+          "w": 125.65826717293751,
+          "h": 25.449775629962026,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 0
+        },
+        {
+          "id": "07f2a193d37d5f6a1250",
+          "type": "actionButton",
+          "x": 1130.9244045564376,
+          "y": 677.600276147739,
+          "w": 119.295823265447,
+          "h": 28.63099758370728,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 2
+        },
+        {
+          "id": "fc22dfeb4da17d000600",
+          "type": "donutChart",
+          "x": 853.6868268434134,
+          "y": 255.5758077879039,
+          "w": 395.55923777961885,
+          "h": 150.58823529411765,
+          "categories": [
+            {
+              "entity": "fViagens",
+              "column": "Status Prazo",
+              "name": "fViagens.Status Prazo"
+            }
+          ],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#2ECC71",
+            "#E74C3C"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Total Viagens",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "25a46fb17b901003b978",
+          "type": "card",
+          "x": 1002.1541010770505,
+          "y": 271.48301574150787,
+          "w": 98.62468931234466,
+          "h": 114.53189726594863,
+          "categories": [],
+          "metrics": [
+            "% No Prazo Formatado"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": []
+        }
+      ],
+      "background": "MONITORAMENTO_ESTRAT_GICO_DE_T6026108877776687.jpg"
+    },
+    {
+      "id": "b4c8814ad1be4d7f28e3",
+      "title": "Painel Operacional",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "a31790f55932fe7d80fc",
+          "type": "card",
+          "x": 340.3907490507421,
+          "y": 122.47704521919226,
+          "w": 286.3099758370728,
+          "h": 65.2150500517777,
+          "categories": [],
+          "metrics": [
+            "Qtd Atrasos"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Qtd Atrasos",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "5567ce7e88b6148781c6",
+          "type": "card",
+          "x": 38.48101265822785,
+          "y": 121.51898734177215,
+          "w": 285.56962025316454,
+          "h": 66.83544303797468,
+          "categories": [],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "21eaff885be8fd1de750",
+          "type": "card",
+          "x": 639.425612702796,
+          "y": 122.47704521919226,
+          "w": 297.4442526751812,
+          "h": 65.2150500517777,
+          "categories": [],
+          "metrics": [
+            "Qtd Motoristas"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Qtd Motoristas",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "ecf8081c8bb04160972f",
+          "type": "card",
+          "x": 957.5478080773213,
+          "y": 122.47704521919226,
+          "w": 291.0818087676907,
+          "h": 65.2150500517777,
+          "categories": [],
+          "metrics": [
+            "Total Veículos"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Total Veículos",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "7a7e7652d90240808607",
+          "type": "clusteredColumnChart",
+          "x": 38.32066424979534,
+          "y": 260.26117802986005,
+          "w": 587.5835184968619,
+          "h": 172.44298912407905,
+          "categories": [
+            {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "fViagens.motorista"
+            }
+          ],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#2E86DE",
+            "#2E86DE",
+            "#E74C3C",
+            "#2E86DE",
+            "#2E86DE"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "topFilter": {
+            "field": {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "field"
+            },
+            "metric": "Tempo Médio",
+            "count": 5
+          }
+        },
+        {
+          "id": "c1a5476a258b84b60a01",
+          "type": "clusteredColumnChart",
+          "x": 641.871126184072,
+          "y": 260.26117802986005,
+          "w": 606.7438506217596,
+          "h": 172.44298912407905,
+          "categories": [
+            {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "fViagens.motorista"
+            }
+          ],
+          "metrics": [
+            "Atraso Motorista"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#E74C3C",
+            "#E74C3C",
+            "#2ECC71",
+            "#2ECC71"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Atraso Motorista",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "topFilter": {
+            "field": {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "field"
+            },
+            "metric": "Atraso Motorista",
+            "count": 5
+          }
+        },
+        {
+          "id": "a2c3f866bdab7d114020",
+          "type": "tableEx",
+          "x": 38.731988472622476,
+          "y": 480.4610951008645,
+          "w": 651.0662824207492,
+          "h": 188.12680115273773,
+          "categories": [
+            {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "fViagens.motorista"
+            }
+          ],
+          "metrics": [
+            "Ranking Motorista",
+            "Qtd Atrasos Motorista",
+            "Tempo Médio Motorista",
+            "Classificação Motorista"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "columns": [
+            {
+              "entity": "01 - Medidas",
+              "measure": "Ranking Motorista",
+              "name": "01 - Medidas.Ranking Motorista"
+            },
+            {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "fViagens.motorista"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "Qtd Atrasos Motorista",
+              "name": "01 - Medidas.Qtd Atrasos Motorista"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio Motorista",
+              "name": "01 - Medidas.Tempo Médio Motorista"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "Classificação Motorista",
+              "name": "01 - Medidas.Classificação Motorista"
+            }
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Ranking Motorista",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        },
+        {
+          "id": "796ca4bdbbbb15119b86",
+          "type": "gauge",
+          "x": 1031.0086455331411,
+          "y": 467.55043227665703,
+          "w": 198.27089337175792,
+          "h": 85.76368876080691,
+          "categories": [],
+          "metrics": [
+            "Minimo",
+            "Maximo",
+            "% Veículos Eficientes",
+            "Meta"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "% Veículos Eficientes",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "a9e7ab77bb5341020b50",
+          "type": "actionButton",
+          "x": 987.7694166379011,
+          "y": 677.600276147739,
+          "w": 125.65826717293751,
+          "h": 25.449775629962026,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 1
+        },
+        {
+          "id": "583d881247691d07712c",
+          "type": "actionButton",
+          "x": 1130.9244045564376,
+          "y": 677.600276147739,
+          "w": 119.295823265447,
+          "h": 28.63099758370728,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 3
+        },
+        {
+          "id": "c9f5fe06a1b55c36ab10",
+          "type": "tableEx",
+          "x": 724.4334975369458,
+          "y": 553.3004926108374,
+          "w": 505.4187192118227,
+          "h": 115.27093596059113,
+          "categories": [
+            {
+              "entity": "dVeículos",
+              "column": "placa",
+              "name": "dVeículos.placa"
+            },
+            {
+              "entity": "dVeículos",
+              "column": "tipo_frota",
+              "name": "dVeículos.tipo_frota"
+            }
+          ],
+          "metrics": [
+            "Qtd Atrasos",
+            "Tempo Médio Atraso",
+            "% Impacto por Tempo"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "columns": [
+            {
+              "entity": "dVeículos",
+              "column": "placa",
+              "name": "dVeículos.placa"
+            },
+            {
+              "entity": "dVeículos",
+              "column": "tipo_frota",
+              "name": "dVeículos.tipo_frota"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "Qtd Atrasos",
+              "name": "01 - Medidas.Qtd Atrasos"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio Atraso",
+              "name": "01 - Medidas.Tempo Médio Atraso"
+            },
+            {
+              "entity": "01 - Medidas",
+              "measure": "% Impacto por Tempo",
+              "name": "01 - Medidas.% Impacto Veículo"
+            }
+          ],
+          "sort": {
+            "field": {
+              "entity": "dVeículos",
+              "column": "placa",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        }
+      ],
+      "background": "AN_LISE_DE_DESEMPENHO_OPERACIO14175755365707599.jpg"
+    },
+    {
+      "id": "b502a65d5f04d31e8dd8",
+      "title": "Painel Logístico",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "aec94412994a94893925",
+          "type": "card",
+          "x": 281.2680115273775,
+          "y": 152.16138328530258,
+          "w": 230.54755043227664,
+          "h": 48.87608069164265,
+          "categories": [],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "dc68bbae911db6d2b774",
+          "type": "card",
+          "x": 524.7262247838617,
+          "y": 151.23919308357347,
+          "w": 230.54755043227664,
+          "h": 49.79827089337175,
+          "categories": [],
+          "metrics": [
+            "% Atraso"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "% Atraso",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "5c3bf7eacb95aa601e2c",
+          "type": "card",
+          "x": 1026.3976945244956,
+          "y": 152.16138328530258,
+          "w": 230.54755043227664,
+          "h": 49.79827089337175,
+          "categories": [],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Total Viagens",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "2e35c135b943447e5ded",
+          "type": "treemap",
+          "x": 33.40283051432516,
+          "y": 257.6789782533655,
+          "w": 652.150500517777,
+          "h": 168.60476354849843,
+          "categories": [
+            {
+              "entity": "fViagens",
+              "column": "operacao",
+              "name": "fViagens.operacao"
+            }
+          ],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#2E86C1",
+            "#1F3A93",
+            "#E67E22",
+            "#8E44AD",
+            "#E84393"
+          ]
+        },
+        {
+          "id": "3cdff0178366d4259388",
+          "type": "clusteredColumnChart",
+          "x": 434.2367966862271,
+          "y": 472.41146013117014,
+          "w": 251.31653434587503,
+          "h": 195.64515015533308,
+          "categories": [
+            {
+              "entity": "dVeículos",
+              "column": "tipo_frota",
+              "name": "dVeículos.tipo_frota"
+            }
+          ],
+          "metrics": [
+            "% Veículos Eficientes"
+          ],
+          "title": "",
+          "filters": {
+            "dVeículos|tipo_frota": [
+              "Agregado",
+              "Terceiro",
+              "Proprio"
+            ]
+          },
+          "colors": [
+            "#2ECC71",
+            "#F1C40F",
+            "#E74C3C"
+          ],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "% Veículos Eficientes",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "76b885f069c49b700eb8",
+          "type": "azureMap",
+          "x": 715.774939592682,
+          "y": 257.6789782533655,
+          "w": 524.9016223679669,
+          "h": 399.2433551950293,
+          "categories": [
+            {
+              "entity": "dRotas",
+              "column": "Localizacao",
+              "name": "dRotas.Localizacao"
+            }
+          ],
+          "metrics": [
+            "Volume Total"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [
+            "#E74C3C"
+          ]
+        },
+        {
+          "id": "2edbde8fb0dbe2c265a4",
+          "type": "slicer",
+          "x": 140.1729106628242,
+          "y": 95.90778097982708,
+          "w": 186.2824207492795,
+          "h": 38.731988472622476,
+          "categories": [
+            {
+              "entity": "dRotas",
+              "column": "flag_rota",
+              "name": "dRotas.flag_rota"
+            }
+          ],
+          "metrics": [],
+          "title": "",
+          "filters": {
+            "dRotas|flag_rota": [
+              "INTERESTADUAL",
+              "INTRAESTADUAL"
+            ]
+          },
+          "colors": []
+        },
+        {
+          "id": "0d3de2a782205c0ecc90",
+          "type": "barChart",
+          "x": 33.40283051432516,
+          "y": 472.41146013117014,
+          "w": 373.79357956506726,
+          "h": 184.5108733172247,
+          "categories": [
+            {
+              "entity": "dRotas",
+              "column": "uf_rota",
+              "name": "dRotas.uf_rota"
+            }
+          ],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Total Viagens",
+              "name": "sort"
+            },
+            "ascending": false
+          },
+          "topFilter": {
+            "field": {
+              "entity": "dRotas",
+              "column": "rota",
+              "name": "field"
+            },
+            "metric": "Total Viagens",
+            "count": 5
+          }
+        },
+        {
+          "id": "661c7dcd5dc05059e965",
+          "type": "actionButton",
+          "x": 1130.9244045564376,
+          "y": 677.600276147739,
+          "w": 119.295823265447,
+          "h": 28.63099758370728,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 4
+        },
+        {
+          "id": "6bc37bef53d0e474bdd0",
+          "type": "actionButton",
+          "x": 987.7694166379011,
+          "y": 677.600276147739,
+          "w": 125.65826717293751,
+          "h": 25.449775629962026,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 2
+        },
+        {
+          "id": "085599d403bce048d072",
+          "type": "card",
+          "x": 55.331412103746395,
+          "y": 152.16138328530258,
+          "w": 209.3371757925072,
+          "h": 49.79827089337175,
+          "categories": [],
+          "metrics": [
+            "% No Prazo"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "% No Prazo",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "0237f7dd1d50e801a954",
+          "type": "card",
+          "x": 783.8616714697406,
+          "y": 152.16138328530258,
+          "w": 230.54755043227664,
+          "h": 49.79827089337175,
+          "categories": [],
+          "metrics": [
+            "Tempo Médio Atraso"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio Atraso",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        }
+      ],
+      "background": "AN_LISE_LOG_STICA_DE_TRANSPORT33845099582542437.jpg"
+    },
+    {
+      "id": "358187d9eb447cf3d723",
+      "title": "Painel de Diagnostico",
+      "defaults": {},
+      "visuals": [
+        {
+          "id": "a0e019861ced69a61ccb",
+          "type": "actionButton",
+          "x": 1132.5150155333101,
+          "y": 682.3721090783569,
+          "w": 125.65826717293751,
+          "h": 25.449775629962026,
+          "categories": [],
+          "metrics": [],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "target": 3
+        },
+        {
+          "id": "7694cd9b0856880055ca",
+          "type": "card",
+          "x": 485.9542724833093,
+          "y": 122.81564177248329,
+          "w": 230.43016101583976,
+          "h": 49.46406597722215,
+          "categories": [],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "745055f1828554029051",
+          "type": "card",
+          "x": 755.5447619143345,
+          "y": 123.22375522123508,
+          "w": 230.42532146389715,
+          "h": 49.37685459940653,
+          "categories": [],
+          "metrics": [
+            "Maior Atraso (h)"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Maior Atraso (h)",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "45c50b115ed3478a980e",
+          "type": "card",
+          "x": 1018.8879864445025,
+          "y": 123.22375522123508,
+          "w": 240.55390702274977,
+          "h": 49.37685459940653,
+          "categories": [],
+          "metrics": [
+            "Desvio Tempo (h)"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Desvio Tempo (h)",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "b56c4e307705a75000b0",
+          "type": "decompositionTreeVisual",
+          "x": 35.467980295566505,
+          "y": 242.0689655172414,
+          "w": 1223.6453201970444,
+          "h": 275.76354679802955,
+          "categories": [
+            {
+              "entity": "dRotas",
+              "column": "uf_rota",
+              "name": "dRotas.uf_rota"
+            },
+            {
+              "entity": "fViagens",
+              "column": "operacao",
+              "name": "fViagens.operacao"
+            },
+            {
+              "entity": "dVeículos",
+              "column": "tipo_frota",
+              "name": "dVeículos.tipo_frota"
+            },
+            {
+              "entity": "fViagens",
+              "column": "motorista",
+              "name": "fViagens.motorista"
+            },
+            {
+              "entity": "dStatus",
+              "column": "Status",
+              "name": "dStatus.Status"
+            }
+          ],
+          "metrics": [
+            "Tempo Médio"
+          ],
+          "title": "",
+          "filters": {
+            "dVeículos|tipo_frota": [
+              "Agregado",
+              "Terceiro",
+              "Proprio"
+            ]
+          },
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "01 - Medidas",
+              "measure": "Tempo Médio",
+              "name": "sort"
+            },
+            "ascending": false
+          }
+        },
+        {
+          "id": "54a6b8e081e7ac75d45c",
+          "type": "lineChart",
+          "x": 34.98677837413274,
+          "y": 540.4854038486712,
+          "w": 604.4267574289828,
+          "h": 125.46982589344154,
+          "categories": [
+            {
+              "entity": "dCalendario",
+              "column": "MesNome",
+              "name": "dCalendario.MesNome"
+            }
+          ],
+          "metrics": [
+            "Tempo Médio",
+            "Media Geral Tempo"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": []
+        },
+        {
+          "id": "edccf65380e8b5a4abc8",
+          "type": "clusteredColumnChart",
+          "x": 646.25,
+          "y": 540,
+          "w": 623.75,
+          "h": 133.75,
+          "categories": [
+            {
+              "entity": "dFaixaTempo",
+              "column": "Faixa",
+              "name": "dFaixaTempo.Faixa"
+            }
+          ],
+          "metrics": [
+            "Total Viagens"
+          ],
+          "title": "",
+          "filters": {},
+          "colors": [],
+          "sort": {
+            "field": {
+              "entity": "dFaixaTempo",
+              "column": "Faixa",
+              "name": "sort"
+            },
+            "ascending": true
+          }
+        }
+      ],
+      "background": "DIAGN_STICO_AVAN_ADO_DE_TRANSP6237619677176424.jpg"
+    }
+  ]
+}
