@@ -1,0 +1,28 @@
+/* Formação e certificações: seção independente dos projetos. */
+.education-header {max-width:800px;margin-bottom:36px}
+.education-header > p:last-child {color:var(--text-body);line-height:1.8}
+.education-academic {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0 0 32px;padding:0;list-style:none}
+.education-card {height:100%;overflow:hidden;border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-card)}
+.education-preview {display:block;background:#f3f4f6;border-bottom:1px solid var(--border-subtle)}
+.education-preview img {width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;padding:12px}
+.education-card-body {padding:24px}
+.education-step {margin:0 0 10px;color:var(--cyan-neon);font-size:.77rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.education-card h3 {font-size:1.14rem;line-height:1.45;margin:0 0 12px;color:var(--text-title)}
+.education-meta {margin:0 0 16px;font-size:.86rem;color:var(--text-body);line-height:1.65}
+.education-doc {display:inline-block;color:var(--cyan-neon);font-size:.85rem;font-weight:600;text-decoration:underline;text-underline-offset:4px;padding:5px 0}
+.education-doc:hover {color:var(--text-title)}
+.education-doc:focus-visible,.education-year summary:focus-visible {outline:2px solid var(--cyan-neon);outline-offset:5px;border-radius:4px}
+.education-year {border:1px solid var(--border-subtle);border-radius:var(--radius-md);background:var(--bg-card);margin-top:16px;overflow:hidden}
+.education-year summary {cursor:pointer;padding:23px 26px;font-weight:600;color:var(--text-light);line-height:1.65}
+.education-year summary::marker {color:var(--cyan-neon)}
+.education-year summary small {display:block;margin-left:19px;font-weight:400;color:var(--text-body);font-size:.85rem}
+.education-year[open] summary {border-bottom:1px solid var(--border-subtle)}
+.education-courses {list-style:none;margin:0;padding:0 26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px}
+.education-course {padding:22px 0;border-bottom:1px solid var(--border-subtle);min-width:0}
+.education-course h4 {margin:0 0 8px;font-size:.94rem;line-height:1.6;font-weight:600;color:var(--text-light)}
+.education-course p {font-size:.8rem;color:var(--text-body);margin:0 0 8px}
+.education-kind {color:var(--green-status);font-size:.72rem;font-weight:500;margin-left:6px;white-space:nowrap}
+.education-footer {display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:26px}
+.education-note {font-size:.8rem;color:var(--text-body);margin:20px 0 0;max-width:850px;line-height:1.8}
+@media(max-width:800px){.education-academic{grid-template-columns:1fr;gap:18px}.education-card{display:grid;grid-template-columns:180px minmax(0,1fr)}.education-preview{display:flex;align-items:center;border-bottom:0;border-right:1px solid var(--border-subtle)}.education-courses{grid-template-columns:1fr}}
+@media(max-width:520px){.education-card{display:block}.education-preview{border-right:0;border-bottom:1px solid var(--border-subtle)}.education-preview img{max-height:220px}.education-card-body{padding:22px}.education-year summary{padding:20px}.education-courses{padding:0 20px}.education-footer{align-items:flex-start;flex-direction:column}}
