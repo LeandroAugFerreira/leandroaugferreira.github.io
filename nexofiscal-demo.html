@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NexoFiscal — Demonstração técnica segura</title>
+<meta name="description" content="Explore a emissão fiscal simulada do NexoFiscal: prévia, rejeição, reprocessamento, idempotência e cancelamento com dados fictícios, sem transmissão a prefeitura.">
+<meta name="theme-color" content="#0a1a2a"><link rel="canonical" href="https://leandroaugferreira.github.io/nexofiscal-demo.html">
+<meta property="og:title" content="NexoFiscal — Tour de emissão simulada"><meta property="og:description" content="Fluxo didático de NFS-e simulada, sem validade fiscal e sem backend público."><meta property="og:type" content="website">
+<style>
+:root{color-scheme:dark;--bg:#071522;--panel:#0c2537;--panel2:#112d42;--line:#2b4c62;--fg:#e8f4ff;--muted:#a1bbce;--accent:#66d8ff;--mint:#72e0c4;--amber:#f0c78a;--red:#f6a8a2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% -14%,#11527399,transparent 47%),var(--bg);font:15px/1.55 Inter,"Segoe UI",Arial,sans-serif;color:var(--fg)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}button{font:inherit;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}
+.wrap{max-width:1120px;width:calc(100% - 36px);margin-inline:auto}
+nav{border-bottom:1px solid var(--line);background:#081a2bbb}nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:17px 0}.brand{font-size:22px;font-weight:850;letter-spacing:-1px;color:var(--fg)}.brand span{color:var(--accent)}.links{display:flex;gap:17px;flex-wrap:wrap;font-size:13px}
+.hero{padding:55px 0 31px}.eyebrow{font-size:11px;letter-spacing:1.9px;font-weight:800;text-transform:uppercase;color:var(--accent);margin:0 0 10px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.8px;max-width:810px;margin:0 0 19px}.hero h1 em{font-style:normal;font-family:Georgia,serif;color:var(--accent);font-weight:400}
+.hero .lead{max-width:800px;color:var(--muted);font-size:17px;margin:0 0 24px}
+.warning{border:1px solid #ac8759;border-radius:12px;background:#533e253e;padding:13px 16px;color:#f1d5a9;font-size:13px;max-width:1050px}.warning strong{margin-right:12px}
+h2{font-size:25px;letter-spacing:-.6px;margin:7px 0 12px}.sub{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:1.3fr .85fr;gap:19px;align-items:stretch}
+.panel{border:1px solid var(--line);border-radius:17px;padding:22px;background:linear-gradient(150deg,#112d40,#092133);box-shadow:0 16px 42px #0002}
+.panel h3{font-size:19px;letter-spacing:-.3px;margin:0 0 4px}.panel p{color:var(--muted);margin:0 0 18px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{display:grid;gap:5px;font-size:12px;color:var(--muted)}.fields select{width:100%;padding:10px 12px;border:1px solid #47708a;border-radius:8px;color:var(--fg);background:#102e41;font:inherit}
+.status{display:inline-flex;border:1px solid #47718a;border-radius:99px;background:#154258;padding:6px 12px;font-size:12px;font-weight:800;max-width:100%;margin-top:12px}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}.metric{border:1px solid #33566c;border-radius:12px;padding:12px;background:#071c2b}.metric span{font-size:11px;color:var(--muted);display:block}.metric strong{display:block;font-size:clamp(17px,2.2vw,24px);letter-spacing:-.5px;margin-top:8px}.metric .ok{color:var(--mint)}.metric .alert{color:var(--amber)}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin:21px 0 12px}.action{border:1px solid #527a94;background:#173d54;color:var(--fg);border-radius:9px;padding:11px 14px;font-size:13px;font-weight:750}.action.primary{background:#66d8ff;border-color:#66d8ff;color:#062034}.action.reset{background:transparent}
+.details{margin:10px 0 0;padding:0;list-style:none}.details li{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #264b5e;padding:12px 0}.details li:last-child{border:0}.details small{color:var(--muted)}.details strong{text-align:right;font-size:13px}
+.events{margin:13px 0 0;padding:0;list-style:none;display:grid;gap:11px}.events li{border-left:3px solid var(--accent);padding-left:12px;color:#d7eaf6;font-size:13px}
+.doc{margin:18px 0 0;background:#ecf3f8;color:#17314c;padding:19px;border-radius:11px;border:1px solid #91adc1}.doc h4{font-size:19px;margin:0 0 8px}.doc p{color:#435970;margin:0 0 8px;font-size:13px}.doc .stamp{border:2px solid #b86c44;background:#fff5ec;color:#8b3b17;text-align:center;font-weight:900;font-size:13px;letter-spacing:.5px;padding:10px;margin:13px 0}.doc small{color:#486279;display:block}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0}.card{border:1px solid var(--line);padding:18px;border-radius:12px;background:#0d2536}.card b{font-size:13px;color:var(--mint)}.card p{color:var(--muted);font-size:12px;margin:8px 0 0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding:27px 0 45px;margin-top:12px}.cta a{display:inline-flex;align-items:center;border:1px solid #527c97;padding:11px 16px;border-radius:10px;color:var(--fg);font-size:13px;font-weight:700}.cta a:first-child{background:var(--accent);border-color:var(--accent);color:#092a3e}
+footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:12px}
+.hidden{display:none!important}
+@media(max-width:790px){.grid{grid-template-columns:1fr}.three{grid-template-columns:1fr 1fr}}
+@media(max-width:530px){.hero{padding:36px 0 25px}.hero .lead{font-size:15px}.fields,.three{grid-template-columns:1fr}.panel{padding:16px}.metrics{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:1/-1}.action{flex:1}.cta a{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<nav><div class="wrap"><a href="nexofiscal.html" class="brand">Nexo<span>Fiscal</span></a><div class="links"><a href="nexofiscal.html">Sobre o projeto</a><a href="nexofiscal-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/nexofiscal" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></div></div></nav>
+<main class="wrap"><header class="hero"><p class="eyebrow">Simulação interativa · case de backend Python</p><h1>Um documento de serviço. <em>Uma jornada rastreável.</em></h1>
+<p class="lead">Explore como o NexoFiscal valida uma solicitação, evita emissão duplicada, registra uma rejeição e permite reprocessamento ou cancelamento — tudo usando dados fictícios.</p>
+<div class="warning"><strong>SEM VALIDADE FISCAL</strong> Esta página é uma ilustração estática. <b>Não transmite NFS-e à prefeitura, não executa a API real nem gera documento válido</b>; não cria conta, cobrança, pagamento ou envia e-mail. Os estados reiniciam ao atualizar.</div></header>
+<section aria-labelledby="flow"><p class="eyebrow">01 · Jornada interativa</p><h2 id="flow">Experimente o fluxo de emissão simulada</h2>
+<p class="sub">Os valores correspondem a um caso sintético do projeto. Escolha como a simulação responderá, avance e confira o histórico.</p>
+<div class="grid"><div class="panel">
+<h3>Serviço de consultoria</h3><p>Valor fictício R$ 350,00, competência 11/2026. Validação do cliente e serviço ocorre no backend real; aqui usamos campos fixos e uma seleção de cenário.</p>
+<div class="fields"><label for="profile">Cliente fictício<select id="profile"><option value="pj">Empresa Demonstração Ltda. (PJ)</option><option value="pf">Cliente Exemplo (PF)</option></select></label><label for="scenario">Resultado programado<select id="scenario"><option value="ok">Autorização simulada</option><option value="reject">Rejeição simulada</option></select></label></div>
+<div id="state" class="status" role="status" aria-live="polite">Pronto para prévia</div>
+<div class="metrics" aria-live="polite">
+<div class="metric"><span>Tentativas de processamento</span><strong id="tries">0</strong></div>
+<div class="metric"><span>Documentos únicos</span><strong class="ok" id="unique">0</strong></div>
+<div class="metric"><span>Transmissões oficiais</span><strong class="ok">0</strong></div>
+</div>
+<div class="actions"><button class="action primary" id="preview">1. Validar prévia</button><button class="action" id="emit" disabled>2. Simular emissão</button><button class="action" id="replay" disabled>Reenviar mesma chave</button><button class="action" id="retry" disabled>3. Reprocessar</button><button class="action" id="cancel" disabled>4. Cancelar</button><button class="action reset" id="reset">↺ Reiniciar</button></div>
+<h3 style="font-size:15px;margin-top:23px">Linha do tempo</h3><ol id="events" class="events" aria-live="polite"><li>Início da simulação. Nenhum documento foi gerado.</li></ol>
+</div><aside class="panel"><p class="eyebrow">Registro fictício</p><h3>SIM-DEMO-001</h3>
+<ul class="details"><li><small>Tipo</small><strong>Documento de serviço (simulação)</strong></li><li><small>Cliente</small><strong id="client-name">Empresa Demonstração Ltda.</strong></li><li><small>Valor</small><strong>R$ 350,00</strong></li><li><small>Competência</small><strong>11/2026</strong></li><li><small>Provedor</small><strong>Simulador local</strong></li><li><small>Origem</small><strong>Emissão avulsa; sem cobrança</strong></li></ul>
+<div class="doc hidden" id="doc"><h4>Prévia demonstrativa</h4><p id="doc-state">Estado do cenário</p><div class="stamp">DOCUMENTO SIMULADO — SEM VALIDADE FISCAL</div><p>Identificador de interface: SIM-DEMO-001. Este cartão é apenas ilustrativo, não o PDF/XML emitido pelo backend.</p><small>QR code, autorização municipal e chave de acesso fiscal oficial não são gerados nesta página.</small></div>
+</aside></div></section>
+<section style="margin-top:38px" aria-labelledby="evidence"><p class="eyebrow">02 · Engenharia verificável</p><h2 id="evidence">O que o repositório comprova</h2><div class="three">
+<article class="card"><b>Idempotência</b><p>Uma chave associada ao mesmo conteúdo reaproveita a solicitação; chave com conteúdo diferente gera conflito em vez de criar duplicidade.</p></article>
+<article class="card"><b>Rastreabilidade</b><p>Estados internos e eventos persistidos permitem consultar rejeições, reprocessamentos e cancelamentos simulados.</p></article>
+<article class="card"><b>Limites de integração</b><p>Adaptadores NFS-e nacional e municipal são contratos não implementados. A saída HTML/PDF/XML tem aviso explícito de simulação; nenhuma autorização oficial.</p></article></div>
+<div class="cta"><a href="nexofiscal.html">Conhecer o projeto completo →</a><a href="https://github.com/LeandroAugFerreira/nexofiscal/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Arquitetura e testes ↗</a><a href="https://github.com/LeandroAugFerreira/nexofiscal/actions" target="_blank" rel="noopener noreferrer">Execuções do CI ↗</a></div></section></main>
+<footer><div class="wrap">NexoFiscal — visualização estática com dados fictícios; sem efeitos fiscais, financeiros ou externos.</div></footer>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);let step=0,tries=0,replays=0,status='',history=[];
+function add(line){history.push(line);}
+function render(){
+$('profile').disabled=step>0;$('scenario').disabled=step>0;
+$('client-name').textContent=$('profile').value==='pj'?'Empresa Demonstração Ltda.':'Cliente Exemplo';
+$('preview').disabled=step!==0;$('emit').disabled=step!==1;$('replay').disabled=step<2;
+$('retry').disabled=status!=='rejeitada';$('cancel').disabled=status!=='autorizada';
+$('tries').textContent=String(tries);$('unique').textContent=step>=2?'1':'0';
+$('state').textContent=status||(['Pronto para prévia','Prévia válida'][step]||'');
+$('doc').classList.toggle('hidden',step<2);$('doc-state').textContent=status==='cancelada'?'Status: cancelada (simulação)':status==='autorizada'?'Status: autorizada (simulação)':status==='rejeitada'?'Status: rejeitada (simulação)':'Status: prévia';
+$('events').replaceChildren();for(const line of history){const item=document.createElement('li');item.textContent=line;$('events').append(item);}
+}
+$('profile').addEventListener('change',render);
+$('preview').addEventListener('click',()=>{if(step!==0)return;step=1;add('Prévia fictícia validada: cliente/serviço ativos, competência e valor configurados; sem transmissão.');render()});
+$('emit').addEventListener('click',()=>{if(step!==1)return;step=2;tries=1;status=$('scenario').value==='reject'?'rejeitada':'autorizada';add(status==='rejeitada'?'Processamento do simulador: rejeição solicitada. Tentativa e erro registrados.':'Processamento do simulador: autorização interna fictícia; documento demonstrativo disponível.');render()});
+$('replay').addEventListener('click',()=>{if(step<2)return;replays++;add('Reenvio '+replays+': mesma chave e mesmo payload → mesmo registro, sem nova tentativa nem segundo documento.');render()});
+$('retry').addEventListener('click',()=>{if(status!=='rejeitada')return;tries++;status='autorizada';add('Reprocessamento da rejeição fictícia: segunda tentativa autorizada internamente.');render()});
+$('cancel').addEventListener('click',()=>{if(status!=='autorizada')return;status='cancelada';add('Cancelamento simulado com motivo: evento histórico adicionado, documento marcado como cancelado.');render()});
+$('reset').addEventListener('click',()=>{step=0;tries=0;replays=0;status='';history=['Início da simulação. Nenhum documento foi gerado.'];render();$('preview').focus()});
+add('Início da simulação. Nenhum documento foi gerado.');render();
+})();
+</script></body></html>
