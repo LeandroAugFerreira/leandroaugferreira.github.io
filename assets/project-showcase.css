@@ -1,0 +1,52 @@
+/* Vitrine de projetos: destaque editorial + especialidades, sem duplicações. */
+.portfolio-standard .portfolio-showcase{display:block}
+.portfolio-standard .portfolio-showcase-intro{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px}
+.portfolio-standard .portfolio-showcase-intro>p{margin:0;color:var(--text-body,#b4c7d3);font-size:13px;line-height:1.7}
+.portfolio-standard .portfolio-showcase-intro strong{color:#f0f6ff}
+.portfolio-standard .portfolio-showcase-intro .showcase-count{white-space:nowrap;color:var(--cyan-neon,#7fdef5);font-size:12px;border:1px solid var(--border-subtle,#25404e);border-radius:100px;padding:7px 13px}
+.portfolio-standard .project-filters{margin:24px 0 0}
+.portfolio-standard .project-group{margin-top:46px;scroll-margin-top:96px}
+.portfolio-standard .project-group[data-project-group="featured"]{margin-top:28px}
+.portfolio-standard .project-group[hidden],.portfolio-standard .portfolio-project-grid [hidden],.portfolio-standard .spotlight-grid [hidden]{display:none!important}
+.portfolio-standard .project-group-header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:19px;border-bottom:1px solid var(--border-subtle,#25404e);margin-bottom:23px}
+.portfolio-standard .project-group-header h3{font-size:clamp(20px,2.3vw,28px);font-weight:700;letter-spacing:-.5px;line-height:1.25;color:#f0f6ff;margin:4px 0 0}
+.portfolio-standard .project-group-header p{font-size:12.5px;color:var(--text-body,#b4c7d3);max-width:470px;line-height:1.7;margin:0}
+.portfolio-standard .project-group-kicker{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan-neon,#7fdef5)}
+.portfolio-standard .project-group-heading{min-width:0}
+.portfolio-standard .portfolio-project-grid{align-items:stretch}
+.portfolio-standard .spotlight-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:stretch}
+.portfolio-standard .spotlight-grid>.project-tile{grid-column:span 6}
+.portfolio-standard .spotlight-grid>#chronos{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,0.93fr);min-height:360px}
+.portfolio-standard .spotlight-grid>#chronos .teaser-player{display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border-subtle,#25404e);border-bottom:0}
+.portfolio-standard .spotlight-grid>#chronos .tile-content{padding:30px 35px;justify-content:center}
+.portfolio-standard .spotlight-grid>#chronos .tile-content h4{font-size:clamp(30px,3vw,40px)}
+.portfolio-standard .spotlight-grid>#chronos .tile-content>p{font-size:14px;min-height:0}
+.portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile,.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos){grid-column:1/-1}
+.portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile:not(#chronos),.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:330px}
+.portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile:not(#chronos) .teaser-player,.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos) .teaser-player{display:flex;flex-direction:column;justify-content:center;border-bottom:0;border-right:1px solid var(--border-subtle,#25404e)}
+.portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile:not(#chronos) .tile-content,.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos) .tile-content{justify-content:center;padding:30px}
+.portfolio-standard .project-tile .tile-content h4{font-size:25px;font-weight:600;line-height:1.2;margin:0 0 13px;letter-spacing:-.6px;color:var(--text-main,#f0f6ff)}
+.portfolio-standard .project-tile .tile-content>p{min-height:0}
+.portfolio-standard .project-tile .tile-meta{margin-bottom:12px}
+.portfolio-standard .project-tile .tile-actions a:first-child{font-weight:800;letter-spacing:.015em}
+.portfolio-standard .project-group[data-project-group="featured"] .project-tile{box-shadow:0 12px 32px rgba(0,0,0,.16)}
+.portfolio-standard .project-group[data-project-group="featured"] .project-tile:hover{box-shadow:0 16px 38px rgba(0,0,0,.27)}
+.portfolio-standard .project-group[data-project-group="featured"] .tile-tech .project-featured{border:1px solid var(--project-accent);border-radius:30px;padding:4px 9px;font-weight:700;background:rgba(255,255,255,.04)}
+@media(max-width:920px){
+ .portfolio-standard .spotlight-grid>#chronos{display:flex;flex-direction:column;min-height:0}
+ .portfolio-standard .spotlight-grid>#chronos .teaser-player{border-right:0;border-bottom:1px solid var(--border-subtle,#25404e)}
+ .portfolio-standard .spotlight-grid>#chronos .tile-content{padding:24px}
+ .portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile:not(#chronos),.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos){display:flex;flex-direction:column;min-height:0}
+ .portfolio-standard .spotlight-grid[data-visible-count="1"]>.project-tile:not(#chronos) .teaser-player,.portfolio-standard .spotlight-grid[data-visible-count="2"]>.project-tile:not(#chronos) .teaser-player{border-right:0;border-bottom:1px solid var(--border-subtle,#25404e)}
+}
+@media(max-width:680px){
+ .portfolio-standard .spotlight-grid{grid-template-columns:1fr;gap:22px}
+ .portfolio-standard .spotlight-grid>.project-tile,.portfolio-standard .spotlight-grid>#chronos,.portfolio-standard .spotlight-grid[data-visible-count]>.project-tile{grid-column:1/-1}
+ .portfolio-standard .project-group-header{display:block}
+ .portfolio-standard .project-group-header p{margin-top:9px}
+ .portfolio-standard .project-group{margin-top:37px}
+ .portfolio-standard .portfolio-showcase-intro{margin-top:16px}
+ .portfolio-standard .project-filters{margin-top:17px}
+ .portfolio-standard .spotlight-grid>#chronos .tile-content h4{font-size:29px}
+}
+@media(prefers-reduced-motion:reduce){.portfolio-standard .project-group[data-project-group="featured"] .project-tile{transition:none}}
