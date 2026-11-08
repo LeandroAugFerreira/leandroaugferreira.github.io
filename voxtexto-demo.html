@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoxTexto — demonstração técnica interativa</title>
+<meta name="description" content="Explore o fluxo de processamento do VoxTexto: arquivo fictício, worker isolado, histórico por usuário e exportação Word. Demonstração sem envio de áudio ou transcrição real.">
+<meta name="theme-color" content="#07192d"><link rel="canonical" href="https://leandroaugferreira.github.io/voxtexto-demo.html">
+<meta property="og:title" content="VoxTexto — Tour de engenharia Python"><meta property="og:description" content="Simule conclusão, falha e cancelamento de transcrição. Dados fictícios, sem subir gravações.">
+<meta property="og:type" content="website">
+<style>
+:root{color-scheme:dark;--bg:#041223;--panel:#0c273e;--panel2:#0d3147;--line:#285069;--accent:#57deff;--fg:#eef8ff;--muted:#aac4d9;--green:#74e7c1;--red:#ffa8a8;--amber:#f3ce88;--shadow:#00101e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -15%,#155b8780,transparent 48%),radial-gradient(ellipse at -15% 70%,#12264a60,transparent 45%),var(--bg);font:15px/1.55 Inter,"Segoe UI",Arial,sans-serif;color:var(--fg)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #f7cf80;outline-offset:3px}button{font:inherit;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}
+.wrap{max-width:1110px;width:calc(100% - 36px);margin:auto}
+.top{border-bottom:1px solid var(--line);background:#071a2dd4}.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:16px 0}.brand{font-size:22px;color:var(--fg);font-weight:900;letter-spacing:-1.4px}.brand span{color:var(--accent)}.nav{display:flex;gap:17px;flex-wrap:wrap;font-size:13px}
+.hero{padding:53px 0 34px}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:1.8px;color:var(--accent);margin:0 0 13px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;max-width:870px;letter-spacing:-1.7px;margin:0 0 17px}.hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--accent);font-style:normal}.lead{max-width:820px;font-size:17px;color:var(--muted);margin:0 0 22px}
+.alert{padding:13px 17px;border:1px solid #ae8658;border-radius:12px;color:#f3d7ab;background:#4f3a2435;font-size:13px}.alert b{margin-right:8px;letter-spacing:.5px}
+h2{font-size:25px;letter-spacing:-.5px;margin:6px 0 12px}.sub{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1.32fr .82fr;gap:18px}.panel{border-radius:17px;border:1px solid var(--line);padding:23px;background:linear-gradient(148deg,#0e3148,#082238);min-width:0;box-shadow:0 16px 50px #00102028}
+.panel h3{font-size:18px;margin:0 0 6px}.panel p{font-size:13px;color:var(--muted);margin:0 0 16px}
+.inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.inputs label{display:grid;gap:5px;font-size:12px;color:var(--muted)}select{border-radius:9px;background:#092f46;color:var(--fg);border:1px solid #537992;padding:10px 11px;min-width:0}
+.progress{display:flex;gap:6px;align-items:center;margin:20px 0 11px}.progress span{height:7px;border-radius:99px;flex:1;background:#26485e}.progress span.active{background:var(--accent)}.state{color:var(--accent);font-weight:800;margin-top:4px;display:inline-flex;border:1px solid #3e718c;border-radius:99px;padding:6px 12px;font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:17px 0}.kpi{border:1px solid #315973;padding:13px;border-radius:12px;background:#082337}.kpi span{display:block;font-size:11px;color:var(--muted)}.kpi strong{display:block;font-size:clamp(20px,2.4vw,28px);margin:6px 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.action{border:1px solid #537b98;border-radius:9px;padding:11px 15px;background:#16425b;color:var(--fg);font-weight:800;font-size:13px}.action.main{background:var(--accent);color:#082338;border-color:var(--accent)}.action.alt{background:transparent}
+.timeline{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}.timeline li{border-left:3px solid var(--accent);padding-left:12px;font-size:13px;color:#dceef9}.small{font-size:12px;color:var(--muted)}
+.doc{background:#ecf5ff;color:#152d48;border-radius:10px;padding:17px;margin:18px 0 0;border:1px solid #b2cfe4}.doc h4{margin:0 0 9px;font-size:19px}.doc p{color:#395b76;margin:0;font-size:13px}.doc .label{font-size:10px;letter-spacing:1.3px;font-weight:800;color:#34688e}.doc .paper{margin:10px 0;padding:13px;border:1px solid #d5e2ee;background:white;color:#254763;border-radius:7px;font:14px/1.7 Georgia,serif}.doc small{display:block;color:#587489}
+.history{border:1px solid var(--line);border-radius:11px;background:#071d31;padding:15px;margin-top:15px}.history h4{margin:0 0 8px}.history ul{margin:0;padding:0;list-style:none}.history li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #2a4860;font-size:12px}.history li:last-child{border:0}.history li span{color:var(--muted)}.history li strong{text-align:right}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:27px 0}.card{padding:17px;border:1px solid var(--line);border-radius:13px;background:#0b273c}.card b{font-size:13px;color:var(--green)}.card p{font-size:12px;color:var(--muted);margin:8px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;padding:25px 0 48px;border-top:1px solid var(--line)}.cta a{display:inline-flex;border:1px solid #4f829d;border-radius:9px;padding:12px 17px;color:var(--fg);font-size:13px;font-weight:700}.cta a:first-child{background:var(--accent);border-color:var(--accent);color:#08293d}
+footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:12px}.hidden{display:none!important}
+@media(max-width:810px){.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.hero{padding:34px 0 24px}.lead{font-size:15px}.panel{padding:16px}.inputs,.cards{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.kpi:last-child{grid-column:1/-1}.action{flex:1}.cta a{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="python.html">Vox<span>Texto</span></a><nav class="nav" aria-label="Navegação"><a href="python.html">Projeto completo</a><a href="voxtexto-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">Caso técnico · Python, Flask, SQLite e Word</p><h1>Do arquivo à transcrição. <em>Sem perder o controle.</em></h1>
+<p class="lead">Explore o ciclo de uma tarefa no VoxTexto: entrada validada, execução isolada, registro de sucesso ou falha, cancelamento e histórico por usuário.</p>
+<div class="alert"><b>DEMONSTRAÇÃO ESTÁTICA</b> Nenhum áudio pode ser enviado aqui. O tour não executa Whisper, não acessa banco ou API, não cria DOCX verdadeiro e não mede precisão/tempo. Os textos são exemplos fictícios que se perdem ao atualizar a página.</div></section>
+<section aria-labelledby="flow"><p class="eyebrow">01 · Fluxo interativo</p><h2 id="flow">Experimente três cenários de processamento</h2>
+<p class="sub">Cada botão simula uma transição da aplicação. O processamento real ocorre localmente no aplicativo Windows/Python; aqui não há gravações nem dados pessoais.</p>
+<div class="grid"><section class="panel">
+<div class="inputs"><label for="scenario">Cenário fictício<select id="scenario"><option value="ok">Transcrição concluída</option><option value="error">Falha do worker</option><option value="cancel">Cancelamento autorizado</option></select></label><label for="account">Conta de demonstração<select id="account"><option value="a">Usuário A</option><option value="b">Usuário B</option></select></label></div>
+<div class="progress" aria-hidden="true"><span id="bar1"></span><span id="bar2"></span><span id="bar3"></span><span id="bar4"></span></div>
+<div role="status" class="state" id="state">Pronto para selecionar exemplo</div>
+<div class="kpis" aria-live="polite"><div class="kpi"><span>Tarefas criadas</span><strong id="count">0</strong></div><div class="kpi"><span>Tarefa atual</span><strong id="phase">—</strong></div><div class="kpi"><span>Modelo no app real</span><strong>Small</strong></div></div>
+<div class="actions"><button class="action main" id="add">1. Adicionar arquivo fictício</button><button class="action" id="start" disabled>2. Simular worker</button><button class="action" id="finish" disabled>3. Finalizar cenário</button><button class="action alt" id="reset">↺ Reiniciar</button></div>
+<h3 style="font-size:15px;margin-top:25px">Eventos ilustrativos</h3><ol class="timeline" id="events" aria-live="polite"><li>Sem tarefa pendente.</li></ol>
+</section><aside class="panel"><p class="eyebrow">02 · Histórico e documento</p><h3>Visão da conta selecionada</h3><p>O backend real filtra transcrições por usuário e verifica o proprietário antes do download ou cancelamento.</p>
+<div class="history"><h4>Histórico fictício</h4><ul id="history" aria-live="polite"><li><span>Nenhum arquivo processado</span><strong>—</strong></li></ul></div>
+<div class="doc hidden" id="document"><span class="label">PRÉVIA ILUSTRATIVA · NÃO É UM DOCX</span><h4>VoxTexto | Transcrição</h4><p>Arquivo: entrevista_ficticia.wav</p><div class="paper">Esta é uma transcrição fictícia. O serviço de teste foi concluído.</div><small>O código real gera .docx com python-docx. O conteúdo acima é apenas texto fixo do tour e não resulta de reconhecimento de fala.</small></div>
+<p style="margin-top:18px" id="owner-note">Nenhum arquivo disponível. Altere a conta para visualizar a separação do histórico.</p>
+</aside></div></section>
+<section style="margin-top:36px" aria-labelledby="proof"><p class="eyebrow">03 · Engenharia demonstrável</p><h2 id="proof">Evidências para uma entrevista Python</h2>
+<div class="cards"><article class="card"><b>Isolamento e controle do worker</b><p>Whisper roda em processo separado, com filas de comandos e resultados; testes novos usam respostas simuladas e não carregam modelos.</p></article>
+<article class="card"><b>Histórico, Word e permissões</b><p>O backend registra operações no SQLite por usuário, gera DOCX e restringe o download; testes exercitam essas regras com Flask e Word reais.</p></article>
+<article class="card"><b>Limites verificáveis</b><p>Testes não medem WER/CER, velocidade, acurácia em português, GPU, cancelamento de processo real ou criação de instalador Windows.</p></article></div>
+<div class="cta"><a href="python.html">Conhecer o projeto completo →</a><a href="https://github.com/LeandroAugFerreira/transcricao-audio-web/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Estudo de caso e evidências ↗</a><a href="https://github.com/LeandroAugFerreira/transcricao-audio-web/actions" target="_blank" rel="noopener noreferrer">Testes GitHub Actions ↗</a></div></section>
+</main><footer><div class="wrap">VoxTexto V2.0 · Tour sem upload, backend ou modelos · Todas as pessoas e os resultados são fictícios.</div></footer>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+let job=null,history=[],counter=0,logs=[];
+function active(){return $('account').value}
+function emit(message){logs.push(message)}
+function refresh(){
+const owner=active(),running=job&&job.stage==='processando';
+$('add').disabled=Boolean(job&&job.stage!=='finalizado');
+$('start').disabled=!job||job.stage!=='pendente'||job.owner!==owner;
+$('finish').disabled=!running;
+$('scenario').disabled=Boolean(job&&job.stage!=='finalizado');
+$('phase').textContent=!job?'—':job.stage==='finalizado'?job.result:job.stage;
+$('count').textContent=String(counter);
+$('state').textContent=!job?'Pronto para selecionar exemplo':job.stage==='finalizado'?job.result:job.stage==='processando'&&job.owner!==owner?'Processamento de outra conta':job.stage;
+const progress=!job?0:job.stage==='pendente'?1:job.stage==='processando'?2:4;
+for(let i=1;i<=4;i++)$('bar'+i).classList.toggle('active',i<=progress);
+$('events').replaceChildren();for(const line of logs){const li=document.createElement('li');li.textContent=line;$('events').append(li);}
+const own=history.filter(item=>item.owner===owner);
+$('history').replaceChildren();if(!own.length){const li=document.createElement('li');const a=document.createElement('span');a.textContent='Nenhum registro desta conta';li.append(a);$('history').append(li)}else{for(const item of own.slice().reverse()){const li=document.createElement('li'),a=document.createElement('span'),b=document.createElement('strong');a.textContent=item.name;b.textContent=item.result;li.append(a,b);$('history').append(li)}}
+$('document').classList.toggle('hidden',!own.some(item=>item.result==='concluido'));
+$('owner-note').textContent=job&&job.stage==='processando'&&job.owner!==owner?'Esta conta não é proprietária da tarefa ativa: o cancelamento seria recusado pelo backend.':own.length?'Histórico filtrado para '+(owner==='a'?'Usuário A':'Usuário B')+'. Arquivos de outras contas não são exibidos.':'Nenhum arquivo concluído desta conta.';
+}
+$('account').addEventListener('change',refresh);
+$('add').addEventListener('click',()=>{
+if(job&&job.stage!=='finalizado')return;
+counter++;job={id:counter,owner:active(),scenario:$('scenario').value,stage:'pendente',result:'',name:'entrevista_ficticia_'+counter+'.wav'};logs=[];
+emit('Arquivo de exemplo adicionado para '+(job.owner==='a'?'Usuário A':'Usuário B')+'. Sem upload, áudio ou gravação real.');refresh();
+});
+$('start').addEventListener('click',()=>{if(!job||job.stage!=='pendente'||job.owner!==active())return;job.stage='processando';emit('Worker ilustrativo recebeu a tarefa. No aplicativo, esse processo é separado do servidor Flask.');refresh()});
+$('finish').addEventListener('click',()=>{
+if(!job||job.stage!=='processando')return;
+if(job.owner!==active()){emit('Acesso recusado: somente a conta proprietária pode cancelar a tarefa.');refresh();return;}
+job.stage='finalizado';
+job.result=job.scenario==='ok'?'concluido':job.scenario==='error'?'erro':'cancelado';
+const msg={ok:'Resposta fictícia do worker recebida; Word e histórico seriam gravados pelo backend.',error:'Falha sintética do worker registrada; sem documento Word. Upload temporário removido.',cancel:'Cancelamento sintético registrado e processamento interrompido; sem documento Word.'};
+emit(msg[job.scenario]);
+history.push({owner:job.owner,name:job.name,result:job.result});refresh();
+});
+$('reset').addEventListener('click',()=>{job=null;history=[];counter=0;logs=['Simulação reiniciada; nada foi persistido.'];refresh();$('add').focus()});
+emit('Sem tarefa pendente.');refresh();
+})();
+</script>
+</body></html>
