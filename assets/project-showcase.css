@@ -50,3 +50,55 @@
  .portfolio-standard .spotlight-grid>#chronos .tile-content h4{font-size:29px}
 }
 @media(prefers-reduced-motion:reduce){.portfolio-standard .project-group[data-project-group="featured"] .project-tile{transition:none}}
+
+
+/* Atalhos de navegação para as três categorias, sem filtros ou ocultação de projetos. */
+.portfolio-standard .project-quicklinks{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+  margin:26px 0 0;
+}
+.portfolio-standard .project-quicklinks a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  padding:10px 20px;
+  border:1px solid var(--border-active,#2888a7);
+  border-radius:999px;
+  background:rgba(3,10,22,.44);
+  color:var(--text-light,#e2e8f0);
+  text-decoration:none;
+  font:600 clamp(13px,1.3vw,16px)/1.45 inherit;
+  transition:background-color .2s,border-color .2s,transform .2s;
+}
+.portfolio-standard .project-quicklinks a .shortcut-arrow{
+  color:var(--cyan-neon,#00e5ff);
+  font-size:18px;
+  line-height:1;
+}
+.portfolio-standard .project-quicklinks a:hover{
+  color:#fff;
+  background:rgba(0,229,255,.12);
+  border-color:var(--cyan-neon,#00e5ff);
+  transform:translateY(-2px);
+}
+.portfolio-standard .project-quicklinks a:focus-visible{
+  outline:3px solid var(--cyan-neon,#00e5ff);
+  outline-offset:4px;
+}
+.portfolio-standard .project-group[id]{
+  scroll-margin-top:100px;
+}
+@media(max-width:620px){
+  .portfolio-standard .project-quicklinks{gap:10px;margin-top:18px}
+  .portfolio-standard .project-quicklinks a{flex:1 1 100%;min-height:46px;justify-content:space-between;padding:11px 18px;font-size:14px}
+  .portfolio-standard .project-group[id]{scroll-margin-top:80px}
+}
+@media(prefers-reduced-motion:reduce){
+  .portfolio-standard .project-quicklinks a{transition:none}
+  .portfolio-standard .project-quicklinks a:hover{transform:none}
+}
