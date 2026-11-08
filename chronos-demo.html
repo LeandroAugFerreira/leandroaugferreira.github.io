@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chronos | Experiência interativa de escalas — Leandro Augusto Ferreira</title>
+<meta name="theme-color" content="#101f2a">
+<meta name="description" content="Explore como o Chronos avalia lacunas de cobertura em um microensaio sintético: 3 ou 2 profissionais, política first-fit e solver OR-Tools. Dados verificáveis, sem servidor.">
+<link rel="canonical" href="https://leandroaugferreira.github.io/chronos-demo.html">
+<meta property="og:title" content="Chronos — Demonstração interativa de otimização">
+<meta property="og:description" content="Uma escala fictícia de 24 horas, dois cenários e resultados do microensaio reproduzível. Simulação estática, não backend hospedado.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leandroaugferreira.github.io/chronos-demo.html">
+<style>
+:root{color-scheme:dark;--bg:#101f2a;--panel:#172c38;--panel2:#1b3643;--border:#34505b;--txt:#f6f2eb;--muted:#b6c4c7;--copper:#e9b98c;--green:#7fd1b8;--warn:#efcb83}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--txt);background:radial-gradient(ellipse at 85% -5%,#284a55 0,transparent 48%),linear-gradient(155deg,#122736,#101f2a 72%);font:15px/1.55 "Segoe UI",Inter,Arial,sans-serif}
+a{color:var(--copper);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.wrap{max-width:1140px;margin:auto;padding-left:20px;padding-right:20px}
+nav.top{border-bottom:1px solid var(--border);background:#0c1a24aa}.nav-in{padding-top:18px;padding-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.wordmark{font-size:23px;font-weight:850;letter-spacing:-1px;color:var(--txt)}.wordmark span{color:var(--copper)}
+.links{display:flex;flex-wrap:wrap;gap:20px;font-size:13px;font-weight:600}
+.hero{padding-top:58px;padding-bottom:38px}
+.kicker{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--copper);margin:0 0 12px}
+h1{font-size:clamp(36px,5.2vw,62px);line-height:1.09;letter-spacing:-2px;font-weight:800;margin:0 0 20px;max-width:800px}
+h1 em{font-family:Georgia,serif;color:var(--copper);font-weight:500}
+.lead{font-size:17px;color:var(--muted);max-width:760px;margin:0 0 22px}
+.disclaimer{border:1px solid #987a52;border-radius:12px;background:#5b422c3b;padding:12px 16px;font-size:13px;color:#f8dfb7;max-width:1000px}
+.disclaimer b{font-size:11px;letter-spacing:1px;display:inline-block;margin-right:10px}
+.section-title{font-size:clamp(22px,3vw,31px);letter-spacing:-.6px;margin:0 0 14px}
+.section-copy{color:var(--muted);margin-top:0}
+.panel{border:1px solid var(--border);border-radius:17px;background:linear-gradient(160deg,#1c3542,#132833);box-shadow:0 16px 45px #0002;padding:23px}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:20px 0}
+.toggle{display:flex;gap:8px;flex-wrap:wrap}
+.toggle button{padding:10px 15px;border-radius:9px;border:1px solid #6c817f;background:#16313d;color:var(--txt);font-weight:650}
+.toggle button[aria-pressed=true]{background:var(--copper);color:#182933;border-color:var(--copper);font-weight:800}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:19px}
+.metric{border:1px solid #49606b;border-radius:12px;background:#142934;padding:15px}
+.metric small{display:block;font-size:11px;color:var(--muted);line-height:1.35}.metric strong{display:block;font-size:clamp(24px,2.8vw,34px);line-height:1.25;margin-top:10px;letter-spacing:-.7px}
+.metric strong.warn{color:var(--warn)}.metric strong.good{color:var(--green)}
+.hint{color:var(--muted);font-size:11px;margin:6px 0 0}
+.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:17px}
+.shift{border:1px solid #3f606a;background:#0e2732;border-radius:11px;padding:14px;min-height:101px}
+.shift .time{display:block;color:var(--copper);font-size:11px;font-weight:750;letter-spacing:1px}
+.shift strong{display:block;margin:10px 0 0;font-size:14px}
+.shift span{font-size:11px;color:var(--muted)}
+.shift.gap{border-style:dashed;border-color:#b99a66;background:#583f2639}.shift.gap strong{color:var(--warn)}
+.comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:23px}
+.method{border:1px solid var(--border);border-radius:12px;background:#102632;padding:19px}
+.method h3{margin:0 0 5px;font-size:18px}.method p{font-size:12px;color:var(--muted);margin:0 0 18px}
+.bar{height:13px;background:#33505a;border-radius:100px;overflow:hidden;margin-bottom:8px}
+.bar span{display:block;height:100%;width:100%;background:linear-gradient(90deg,#a97655,#f2c390);border-radius:100px;transition:width .4s ease}
+.method:last-child .bar span{background:linear-gradient(90deg,#598e94,#8cdac1)}
+.method .ratio{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px}.ratio b{color:var(--txt)}
+.method .cost{padding-top:12px;border-top:1px solid #32505b;margin-top:15px;font-size:13px;color:var(--muted)}
+.method .cost strong{font-size:18px;color:var(--txt);display:block}
+.note{color:var(--muted);font-size:13px;margin:17px 0 0}
+.truth{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:34px 0}
+.truth>article{border:1px solid var(--border);background:#102634;padding:18px;border-radius:12px}
+.truth b{font-size:13px;color:var(--copper)}.truth p{font-size:12px;color:var(--muted);margin-bottom:0}
+.footerlinks{padding:28px 0 55px;border-top:1px solid var(--border);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn{padding:12px 20px;border:1px solid #c39b70;border-radius:10px;color:var(--txt);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:750;font-size:13px}
+.btn.primary{background:var(--copper);color:#142734;border-color:var(--copper)}
+footer{padding:17px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+@media(max-width:760px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.truth{grid-template-columns:1fr}.comparison{grid-template-columns:1fr}.hero{padding-top:36px}}
+@media(max-width:490px){.metrics,.timeline{grid-template-columns:1fr}.controls{display:block}.toggle{margin-top:12px}.toggle button{flex:1}.shift{min-height:80px}.metric strong{font-size:27px}.btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar span{transition:none}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap nav-in"><a class="wordmark" href="chronos.html" aria-label="Chronos, voltar ao projeto">chronos<span>.</span></a><div class="links"><a href="chronos.html">O projeto</a><a href="chronos-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/chronos-gestao-escalas">GitHub ↗</a></div></div></nav>
+<main class="wrap">
+<header class="hero"><p class="kicker">Demonstração interativa · caso sintético documentado</p>
+<h1>Um dia de escala.<br>Várias decisões. <em>Uma lacuna visível.</em></h1>
+<p class="lead">Compare os resultados registrados de duas abordagens — política cronológica <i>first-fit</i> e solver Chronos CP-SAT — para um único dia de 24 horas. Escolha quantos profissionais estão disponíveis.</p>
+<div class="disclaimer"><b>AVISO IMPORTANTE</b> Esta é uma visualização interativa de <strong>resultados históricos do microensaio fictício</strong>, não o solver executado no navegador. Não comprova validade jurídica, adequação clínica, economia ou produtividade humana.</div>
+</header>
+<section aria-labelledby="heading"><h2 class="section-title" id="heading">Experimente dois cenários de cobertura</h2><p class="section-copy">Uma atividade contínua de 24 horas: três turnos fictícios de 8 horas (1.440 postos-minuto de demanda), custo hipotético de R$ 480,00 por turno, com regras parametrizadas apenas para este teste.</p>
+<div class="panel">
+<div class="controls"><div><b>Profissionais disponíveis</b><p class="hint">Alterne entre os dois casos efetivamente calculados no repositório.</p></div>
+<div class="toggle" role="group" aria-label="Selecionar população de profissionais"><button id="three" type="button" aria-pressed="true">3 profissionais</button><button id="two" type="button" aria-pressed="false">2 profissionais</button></div></div>
+<div class="metrics" aria-live="polite">
+<div class="metric"><small>Demanda necessária</small><strong>1.440 <small>postos-min</small></strong></div>
+<div class="metric"><small>Demanda coberta</small><strong id="covered" class="good">1.440</strong></div>
+<div class="metric"><small>Lacuna não coberta</small><strong id="gap" class="good">0</strong></div>
+<div class="metric"><small>Taxa de cobertura</small><strong id="percent" class="good">100%</strong></div>
+</div>
+<h3 style="font-size:15px;margin:25px 0 4px">Distribuição didática dos turnos</h3><p class="hint">A visualização por intervalo ilustra a cobertura total/parcial. Não reproduz identidades nem a escala persistida no Chronos.</p>
+<div class="timeline">
+<div class="shift"><span class="time">00h → 08h</span><strong id="slot0">Coberto</strong><span>480 postos-min</span></div>
+<div class="shift"><span class="time">08h → 16h</span><strong id="slot1">Coberto</strong><span>480 postos-min</span></div>
+<div class="shift" id="shift2"><span class="time">16h → 24h</span><strong id="slot2">Coberto</strong><span>480 postos-min</span></div>
+</div>
+<div class="comparison">
+<div class="method"><h3>Política first-fit</h3><p>Seleção cronológica simulada, validada pelo mesmo verificador de restrições.</p><div class="bar" aria-label="Cobertura first-fit"><span id="manual-bar"></span></div><div class="ratio"><span id="manual-coverage">1.440 / 1.440</span><b id="manual-percent">100%</b></div><div class="cost">Custo hipotético<small> · não salário</small><strong id="manual-cost">R$ 1.440,00</strong></div></div>
+<div class="method"><h3>Chronos · OR-Tools CP-SAT</h3><p>Otimização com verificador independente e reporte de lacunas, sem aprovação automática.</p><div class="bar" aria-label="Cobertura Chronos CP-SAT"><span id="solver-bar"></span></div><div class="ratio"><span id="solver-coverage">1.440 / 1.440</span><b id="solver-percent">100%</b></div><div class="cost">Custo hipotético<small> · não salário</small><strong id="solver-cost">R$ 1.440,00</strong></div></div>
+</div>
+<p class="note" id="conclusion" role="status">Nos três turnos sintéticos, as duas políticas obtiveram cobertura numérica completa e o mesmo custo imputado. Este ensaio não demonstra vantagem econômica do solver.</p>
+</div>
+</section>
+<section class="truth" aria-label="Limites metodológicos">
+<article><b>O que foi medido</b><p>Um dia, três ou dois profissionais fictícios, três repetições sequenciais. O benchmark inclui hashes, versões, seed e tempos em JSON verificável.</p></article>
+<article><b>O que NÃO foi demonstrado</b><p>Não há comparação com trabalho humano, cobertura dos 350 colaboradores do Hospital Horizonte, economia real nem certificação trabalhista.</p></article>
+<article><b>O diferencial de engenharia</b><p>Restrições configuradas, evidências versionadas, verificador independente, revisão por outro responsável e decisões rastreáveis no código real.</p></article>
+</section>
+<div class="footerlinks"><a class="btn primary" href="chronos.html">Conhecer o Chronos completo →</a><a class="btn" href="https://github.com/LeandroAugFerreira/chronos-gestao-escalas/blob/main/docs/portfolio/benchmark.json" target="_blank" rel="noopener noreferrer">Conferir benchmark original ↗</a><a class="btn" href="https://github.com/LeandroAugFerreira/chronos-gestao-escalas/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Arquitetura e evidências ↗</a></div>
+</main><footer><div class="wrap">Chronos 1.0 · Microensaio fictício, sem integração à API · Leandro Augusto Ferreira</div></footer>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const cases={
+3:{covered:1440,gap:0,rate:100,cost:1440,complete:true},
+2:{covered:960,gap:480,rate:67,cost:960,complete:false}
+};
+const money=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+let active=3;
+function update(count){
+active=count;const m=cases[count],yes=m.complete;
+$('three').setAttribute('aria-pressed',String(count===3));$('two').setAttribute('aria-pressed',String(count===2));
+$('covered').textContent=m.covered.toLocaleString('pt-BR');$('gap').textContent=m.gap.toLocaleString('pt-BR');$('percent').textContent=m.rate===100?'100%':'66,7%';
+for(const id of ['gap','percent']){$(id).classList.toggle('warn',!yes);$(id).classList.toggle('good',yes)}
+for(const id of ['manual','solver']){
+$(id+'-bar').style.width=(100*m.covered/1440)+'%';
+$(id+'-coverage').textContent=m.covered.toLocaleString('pt-BR')+' / 1.440';
+$(id+'-percent').textContent=yes?'100%':'66,7%';
+$(id+'-cost').textContent=money(m.cost);
+}
+$('slot2').textContent=yes?'Coberto':'Lacuna de cobertura';$('shift2').classList.toggle('gap',!yes);
+$('conclusion').textContent=yes
+?'Com três profissionais, as duas políticas cobriram 1.440 postos-minuto com custo hipotético igual. Não houve superioridade de cobertura/custo neste microensaio.'
+:'Com dois profissionais, ambas cobriram apenas 960 dos 1.440 postos-minuto. O custo menor decorre da cobertura incompleta — NÃO representa economia. O status OPTIMAL do diagnóstico não remove a lacuna.';
+}
+$('three').addEventListener('click',()=>update(3));$('two').addEventListener('click',()=>update(2));update(active);
+})();
+</script>
+</body></html>
