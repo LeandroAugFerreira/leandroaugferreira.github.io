@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061420">
+<title>NexoLog | Demonstração interativa de pedidos</title>
+<meta name="description" content="Explore, no navegador, a lógica de reserva, expedição e entrega do NexoLog. Simulação estática com dados fictícios e links ao código-fonte real.">
+<link rel="canonical" href="https://leandroaugferreira.github.io/nexolog-demo.html">
+<meta property="og:title" content="NexoLog — Demonstração interativa">
+<meta property="og:description" content="Entenda o fluxo pedido, reserva, expedição e indicadores em um cenário fictício sem instalar aplicativos.">
+<style>
+:root{color-scheme:dark;--bg:#061420;--panel:#0b2335;--panel2:#0d2a3d;--line:#25465b;--white:#edf8ff;--muted:#9bb8c9;--cyan:#36d7ee;--mint:#5ae6bc;--amber:#eec77d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% -10%,#114967 0%,transparent 45%),var(--bg);font:15px/1.55 "Segoe UI",Inter,Arial,sans-serif;color:var(--white)}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}button{font:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}
+.shell{width:min(1160px,calc(100% - 40px));margin:auto}
+.top{border-bottom:1px solid var(--line);background:#071a2ba8}
+.top .shell{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;padding:19px 0}
+.brand{font-size:19px;font-weight:900;letter-spacing:-.6px;color:var(--white)}.brand span{color:var(--cyan)}
+.nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:13px}
+.hero{padding:58px 0 35px}
+.eyebrow{color:var(--cyan);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px}
+.hero h1{font-size:clamp(32px,5vw,58px);letter-spacing:-2.1px;line-height:1.08;margin:0 0 16px;max-width:780px}
+.hero p{color:var(--muted);font-size:17px;max-width:740px}
+.note{display:inline-flex;gap:10px;align-items:flex-start;padding:10px 14px;border:1px solid #715e37;border-radius:12px;background:#483d1b4d;color:#ffe2a4;font-size:13px;max-width:900px}
+.note strong{white-space:nowrap}
+.section-kicker{font-size:11px;color:var(--cyan);font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.section-title{font-size:23px;font-weight:800;letter-spacing:-.5px;margin:6px 0 10px}
+.grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start}
+.panel{border:1px solid var(--line);background:linear-gradient(165deg,#102b40dd,#092034ea);border-radius:18px;padding:24px;box-shadow:0 16px 42px #0002}
+.panel p{color:var(--muted)}
+.panel header{display:flex;justify-content:space-between;gap:12px;align-items:start;flex-wrap:wrap}
+.status{border:1px solid #41687a;border-radius:100px;padding:6px 12px;font-weight:700;font-size:12px;background:#14384a}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:25px 0}
+.metric{border:1px solid #244456;background:#061b2b;border-radius:13px;padding:15px 12px}
+.metric span{font-size:11px;color:var(--muted);display:block;line-height:1.4}.metric strong{font-size:clamp(20px,2.6vw,30px);display:block;margin-top:6px;letter-spacing:-1px}
+.chart-title{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);margin:0 0 8px}.chart-title strong{color:var(--white)}
+.track{height:12px;border-radius:12px;background:#244153;overflow:hidden;margin-bottom:16px}
+.fill{height:100%;background:linear-gradient(90deg,#00a7dd,#62e3f8);border-radius:12px;transition:width .45s ease}
+.fill.reserved{background:var(--amber)}
+.mini{font-size:12px;color:var(--muted);margin:10px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:19px}
+.action{padding:12px 17px;border-radius:10px;background:#12374c;color:var(--white);border:1px solid #41728a;font-weight:700}
+.action.primary{background:linear-gradient(120deg,#00a7d4,#007ca9);border-color:#16bddd;color:#fff}
+.action:hover:not(:disabled){filter:brightness(1.13);transform:translateY(-1px)}
+.action.reset{border-color:#54707c;background:transparent}
+.steps{display:grid;gap:12px;margin-top:15px}
+.step{border:1px solid #294b5e;background:#081e2f;border-radius:12px;padding:13px 15px;display:flex;align-items:center;gap:12px}
+.step .n{display:grid;place-items:center;flex:none;width:29px;height:29px;border-radius:50%;border:1px solid #4c7385;font-weight:800;font-size:12px}
+.step.done{border-color:#286b68;background:#1039376b}.step.done .n{background:#174c44;color:var(--mint);border-color:#387667}
+.step.current{border-color:var(--cyan);background:#15384e}.step.current .n{background:var(--cyan);border-color:var(--cyan);color:#043246}
+.step strong{display:block;font-size:13px}.step small{display:block;color:var(--muted);font-size:11px}
+.timeline{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:11px}
+.timeline li{border-left:2px solid var(--cyan);padding:2px 0 2px 12px;font-size:13px;color:#c4dce9}
+.insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:28px}
+.insight{background:#081e30;border:1px solid var(--line);border-radius:14px;padding:19px}
+.insight b{display:block;color:var(--mint);font-size:13px;margin-bottom:8px}
+.insight p{font-size:13px;color:var(--muted);margin:0}
+.cta{margin:44px 0 56px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+.cta .action{text-decoration:none;display:inline-flex}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:20px 0}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.insights{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.shell{width:min(100% - 26px,1100px)}.hero{padding:35px 0 24px}.hero h1{letter-spacing:-1px}.hero p{font-size:15px}.note{display:flex;flex-direction:column;gap:3px}.panel{padding:17px}.metrics{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:1/-1}.insights{grid-template-columns:1fr}.action{width:100%;text-align:center;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fill,.action{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell"><a class="brand" href="nexolog.html" aria-label="NexoLog, voltar ao projeto">Nexo<span>Log</span></a><nav class="nav" aria-label="Navegação"><a href="nexolog.html">Sobre o projeto</a><a href="https://github.com/LeandroAugFerreira/nexolog" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a><a href="nexolog-manual.html">Manual ↗</a></nav></div></header>
+<main class="shell">
+<section class="hero" aria-labelledby="title">
+<p class="eyebrow">Experiência de portfólio · dados fictícios</p>
+<h1>Veja como uma operação logística se conecta.</h1>
+<p>Crie um pedido, acompanhe a reserva de estoque, despache o produto e observe como os indicadores mudam. Tudo acontece nesta página, sem instalar programas.</p>
+<div class="note"><strong>SIMULAÇÃO INTERATIVA</strong><span>Esta página reproduz didaticamente regras do NexoLog, mas <b>não conecta ao backend, ao banco SQLite ou à aplicação Windows</b>. Os números são fictícios e reiniciados ao atualizar a página.</span></div>
+</section>
+<section aria-labelledby="sim-title">
+<p class="section-kicker">01 · Simulação guiada</p>
+<h2 id="sim-title" class="section-title">Um pedido. Quatro etapas. Três indicadores.</h2>
+<div class="grid">
+<div class="panel">
+<header><div><p class="eyebrow">Produto · PRD-DEMO</p><h3 style="font-size:21px;margin:2px 0">Caixa de embalagem fictícia</h3><p class="mini">Cliente: Comercial Exemplo · Quantidade do pedido: 30 unidades</p></div><span class="status" id="status" aria-live="polite">Sem pedido</span></header>
+<div class="metrics" aria-label="Indicadores simulados">
+<div class="metric"><span>Estoque físico</span><strong id="physical">100</strong></div>
+<div class="metric"><span>Reservado</span><strong id="reserved">0</strong></div>
+<div class="metric"><span>Disponível</span><strong id="available">100</strong></div>
+</div>
+<div class="chart-title"><span>Disponível para novos pedidos</span><strong id="available-label">100 / 100 un.</strong></div><div class="track" role="progressbar" aria-label="Estoque disponível" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="available-track"><div class="fill" id="available-bar" style="width:100%"></div></div>
+<div class="chart-title"><span>Reservas ativas</span><strong id="reserve-label">0 un.</strong></div><div class="track" role="progressbar" aria-label="Quantidade reservada" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="reserved-track"><div class="fill reserved" id="reserved-bar" style="width:0%"></div></div>
+<p class="mini">Preço unitário fictício: R$ 20,00 · Total do pedido: <strong id="total">R$ 0,00</strong></p>
+<div class="actions" aria-label="Executar etapas da simulação">
+<button type="button" class="action primary" id="create">1. Criar pedido</button>
+<button type="button" class="action" id="process" disabled>2. Processar</button>
+<button type="button" class="action" id="ship" disabled>3. Expedir</button>
+<button type="button" class="action" id="deliver" disabled>4. Entregar</button>
+<button type="button" class="action reset" id="reset">↺ Reiniciar cenário</button>
+</div>
+</div>
+<div class="panel">
+<header><div><p class="eyebrow">Pedido · PED-DEMO-001</p><h3 style="font-size:19px;margin:2px 0">Ciclo de vida</h3></div></header>
+<div class="steps" id="steps" aria-label="Progresso das etapas">
+<div class="step current"><span class="n">0</span><span><strong>Aguardando criação</strong><small>Nenhum pedido registrado</small></span></div>
+</div>
+<h3 style="font-size:15px;margin:25px 0 0">Histórico da simulação</h3>
+<ol class="timeline" id="timeline" aria-live="polite"><li>Cenário pronto. Clique em “Criar pedido”.</li></ol>
+</div>
+</div>
+</section>
+<section aria-labelledby="architecture-title" style="margin-top:34px">
+<p class="section-kicker">02 · O que o código realmente faz</p>
+<h2 id="architecture-title" class="section-title">Da interface React ao SQLite</h2>
+<div class="insights">
+<article class="insight"><b>Reserva ≠ baixa física</b><p>Em <code>backend/operations.py</code>, pedidos pendentes/processando comprometem o disponível, mas não mudam o saldo físico até a expedição.</p></article>
+<article class="insight"><b>Transições controladas</b><p>A API aplica estados permitidos e registra eventos. Uma segunda baixa na mesma expedição é evitada por <code>estoque_baixado</code>.</p></article>
+<article class="insight"><b>Dados atualizados</b><p>O dashboard real consulta pedidos, produtos e movimentações na API; esta página mostra apenas o equivalente didático do fluxo.</p></article>
+</div>
+</section>
+<section class="cta" aria-label="Aprofundar o projeto"><a class="action primary" href="nexolog.html">Conhecer o projeto completo</a><a class="action" href="https://github.com/LeandroAugFerreira/nexolog/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Ver arquitetura e testes ↗</a><p class="mini">Para executar a aplicação completa, consulte as instruções do repositório e o manual. O rastreamento de entregas é simulado.</p></section>
+</main><footer><div class="shell">NexoLog — Demonstração didática e isolada · Todos os dados desta página são fictícios · Leandro Augusto Ferreira</div></footer>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const phases = [
+    {name:'Sem pedido',physical:100,reserved:0,available:100,total:0},
+    {name:'Pendente',physical:100,reserved:30,available:70,total:600},
+    {name:'Em processamento',physical:100,reserved:30,available:70,total:600},
+    {name:'Enviado',physical:70,reserved:0,available:70,total:600},
+    {name:'Entregue',physical:70,reserved:0,available:70,total:600}
+  ];
+  const actions = [
+    {id:'create',name:'Pedido criado',detail:'30 unidades reservadas, sem baixa física.'},
+    {id:'process',name:'Separação iniciada',detail:'Reserva mantida; estoque físico permanece em 100.'},
+    {id:'ship',name:'Expedição registrada',detail:'Uma saída física de 30 unidades; reserva encerrada.'},
+    {id:'deliver',name:'Entrega registrada',detail:'Pedido encerrado. O saldo físico continua em 70.'}
+  ];
+  let stage=0;
+  function render(){
+    const current=phases[stage];
+    for(const [id,val] of Object.entries({physical:current.physical,reserved:current.reserved,available:current.available,status:current.name})) $(id).textContent=String(val);
+    $('total').textContent=current.total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    $('available-label').textContent=current.available+' / 100 un.';
+    $('reserve-label').textContent=current.reserved+' un.';
+    $('available-bar').style.width=current.available+'%';
+    $('reserved-bar').style.width=current.reserved+'%';
+    $('available-track').setAttribute('aria-valuenow',String(current.available));
+    $('reserved-track').setAttribute('aria-valuenow',String(current.reserved));
+    actions.forEach((step,index)=>{ $(step.id).disabled = (stage!==index); });
+    const order=document.createDocumentFragment();
+    if(stage===0){
+      const div=document.createElement('div');div.className='step current';div.textContent='0 · Aguardando criação do pedido';order.appendChild(div);
+    }else{
+      actions.forEach((step,index)=>{
+        const row=document.createElement('div');row.className='step'+(index<stage?' done':index===stage?' current':'');
+        const n=document.createElement('span');n.className='n';n.textContent=index<stage?'✓':String(index+1);
+        const label=document.createElement('span');const b=document.createElement('strong');b.textContent=step.name;
+        const desc=document.createElement('small');desc.textContent=step.detail;
+        label.append(b,desc);row.append(n,label);order.appendChild(row);
+      });
+    }
+    $('steps').replaceChildren(order);
+    const events=document.createDocumentFragment();
+    if(stage===0){const li=document.createElement('li');li.textContent='Cenário pronto. Clique em “Criar pedido”.';events.appendChild(li);}
+    else actions.slice(0,stage).forEach(step=>{const li=document.createElement('li');li.textContent=step.name+' — '+step.detail;events.appendChild(li)});
+    $('timeline').replaceChildren(events);
+  }
+  actions.forEach((step,index)=>$(step.id).addEventListener('click',()=>{if(stage!==index)return;stage+=1;render()}));
+  $('reset').addEventListener('click',()=>{stage=0;render();$('create').focus()});
+  render();
+})();
+</script>
+</body></html>
