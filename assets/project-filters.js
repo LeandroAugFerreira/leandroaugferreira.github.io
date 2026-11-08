@@ -19,6 +19,14 @@
       card.hidden = !visible;
       if (visible) count += 1;
     });
+    section.querySelectorAll('[data-project-group]').forEach((group) => {
+      const visible = [...group.querySelectorAll('[data-project-card]')].filter((card) => !card.hidden).length;
+      group.hidden = visible === 0;
+      const grid = group.querySelector('[data-project-grid]');
+      if (grid) grid.dataset.visibleCount = String(visible);
+    });
+    const counter = section.querySelector('[data-project-count]');
+    if (counter) counter.textContent = `${count} ${count === 1 ? 'projeto' : 'projetos'} exibidos`;
     if (announce) {
       const label = input.closest('label').querySelector('span').textContent;
       status.textContent = `${count} ${count === 1 ? 'projeto exibido' : 'projetos exibidos'}: ${label}.`;
