@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ateliê Verde: demonstração interativa de regras de pedido, estoque, financeiro e orçamento de paisagismo com dados fictícios. Sem backend ou pagamento real.">
+<meta name="theme-color" content="#102922">
+<meta property="og:title" content="Ateliê Verde — Demonstração técnica interativa">
+<meta property="og:description" content="Explore jornadas de compra e orçamento com lógica comercial do código real, em simulação segura sem serviços externos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leandroaugferreira.github.io/atelie-verde-demo.html">
+<link rel="canonical" href="https://leandroaugferreira.github.io/atelie-verde-demo.html">
+<title>Ateliê Verde | Demonstração técnica interativa</title>
+<style>
+:root{color-scheme:dark;--bg:#09221c;--panel:#103129;--panel2:#183c32;--stroke:#34644d;--green:#8de3b0;--gold:#dec99a;--white:#f1f6eb;--muted:#b1c4b7;--warn:#f1c17d;--shadow:#00160e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.55 Inter,"Segoe UI",Arial,sans-serif;color:var(--white);background:radial-gradient(ellipse at 85% -10%,#245c3c77,transparent 45%),linear-gradient(155deg,#0a211b,#0f3023 75%,#0a211b)}
+a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #e4d3a3;outline-offset:3px}
+.shell{width:min(1120px,calc(100% - 36px));margin-inline:auto}.top{border-bottom:1px solid var(--stroke);background:#0d261fee}.top .shell{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:17px 0;flex-wrap:wrap}.logo{font-family:Georgia,serif;font-size:23px;font-weight:800;letter-spacing:-.5px;color:var(--white)}.logo b{color:var(--green)}.nav{display:flex;gap:18px;flex-wrap:wrap;font-size:13px}
+.hero{padding:56px 0 34px}.eyebrow{margin:0 0 12px;color:var(--green);text-transform:uppercase;letter-spacing:1.9px;font-size:11px;font-weight:800}.hero h1{max-width:830px;font-size:clamp(33px,5vw,58px);line-height:1.08;letter-spacing:-1.5px;margin:0 0 20px}.hero h1 em{font-style:normal;color:var(--green);font-family:Georgia,serif;font-weight:500}.hero .lead{color:var(--muted);font-size:17px;max-width:810px;margin:0 0 24px}
+.notice{padding:12px 16px;border:1px solid #99865c;border-radius:12px;background:#4d41263d;color:#e7d9b9;font-size:13px;max-width:990px}.notice b{color:var(--gold);font-size:11px;letter-spacing:1px;margin-right:12px}
+.section-title{font-size:25px;letter-spacing:-.6px;margin:8px 0 9px}.intro{color:var(--muted);margin:0 0 18px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0 17px}.tabs button{background:#183d30;color:var(--white);border:1px solid var(--stroke);border-radius:11px;padding:13px 20px;font-weight:750}.tabs button[aria-selected=true]{background:var(--green);border-color:var(--green);color:#102e21}
+.panel{border:1px solid var(--stroke);background:linear-gradient(150deg,#17382c,#0d2c21);border-radius:19px;padding:24px;box-shadow:0 15px 45px #001c1230}.panel h3{font-size:19px;letter-spacing:-.3px;margin:0 0 5px}.panel p{color:var(--muted);margin:0 0 15px}
+.split{display:grid;grid-template-columns:1.3fr .8fr;gap:19px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:20px 0}
+.stat{border:1px solid #37614f;border-radius:13px;background:#0a291f;padding:14px}.stat span{font-size:11px;color:var(--muted);display:block}.stat strong{font-size:clamp(22px,2.8vw,31px);display:block;line-height:1.2;margin-top:7px;letter-spacing:-.8px}
+.stat strong.good{color:var(--green)}.stat strong.warn{color:var(--warn)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0}.action{border:1px solid #537d62;border-radius:9px;background:#204638;color:var(--white);padding:12px 16px;font-weight:750}.action.primary{background:var(--green);color:#0b2e1f;border-color:var(--green)}.action.alt{background:transparent}.action:disabled{opacity:.4;cursor:not-allowed}.action:hover:not(:disabled){filter:brightness(1.12)}
+.timeline{list-style:none;margin:17px 0 0;padding:0;display:grid;gap:12px}.timeline li{border-left:3px solid var(--green);padding-left:12px;color:#d9e9dc;font-size:13px}
+.side{border:1px solid var(--stroke);border-radius:15px;padding:20px;background:#08261ec4}.side .eyebrow{margin-bottom:6px}.side strong{font-size:20px}.side .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #335b4a}.side .row:last-child{border-bottom:0}.side .row span{font-size:12px;color:var(--muted)}.side .row b{font-size:13px;text-align:right}
+.path{margin:24px 0;border-radius:13px;padding:16px;background:#0a271ed6;border:1px solid #345644}.path code{color:#a0e9c0;font-size:12px;overflow-wrap:anywhere}.path p{font-size:12px;margin:4px 0;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:28px 0}.card{border:1px solid var(--stroke);border-radius:13px;padding:18px;background:#0e2c21}.card b{font-size:13px;color:var(--gold)}.card p{font-size:12px;color:var(--muted);margin:9px 0 0}
+.footlinks{margin:25px 0 50px;display:flex;gap:12px;flex-wrap:wrap}.footlinks a{display:inline-flex;border-radius:10px;padding:12px 17px;border:1px solid #81c9a1;color:var(--white);font-weight:700;font-size:13px}.footlinks a:first-child{background:var(--green);color:#102e21}
+footer{border-top:1px solid var(--stroke);color:var(--muted);font-size:12px;padding:19px 0}
+.hidden{display:none!important}
+@media(max-width:810px){.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.hero{padding:35px 0 24px}.hero .lead{font-size:15px}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}.cards{grid-template-columns:1fr}.action{width:100%}.tabs button{flex:1}.panel{padding:17px}.notice b{display:block}}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell"><a class="logo" href="atelie-verde.html">Ateliê <b>Verde</b></a><nav class="nav" aria-label="Navegação"><a href="atelie-verde.html">Projeto completo</a><a href="atelie-verde-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/atelie-verde" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></nav></div></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">Estudo de caso técnico · dados 100% fictícios</p><h1>Da primeira planta à <em>operação completa.</em></h1>
+<p class="lead">O Ateliê Verde integra uma experiência de loja com estoque, financeiro, orçamentos e projetos de jardinagem. Explore duas jornadas fundamentais, baseadas nas regras verificáveis da API FastAPI.</p>
+<div class="notice"><b>SIMULAÇÃO ESTÁTICA</b> Esta página não acessa a API, banco, pedidos reais, pagamentos ou serviços de IA. As mudanças existem apenas no navegador e são reiniciadas ao atualizar a página. Valores e clientes são fictícios.</div></section>
+<section id="experiencia" aria-labelledby="journey"><p class="eyebrow">01 · Jornada interativa</p><h2 id="journey" class="section-title">Explore as regras de negócio</h2><p class="intro">Escolha o fluxo e avance em cada etapa. A API real implementa autorização, transações e persistência; esta demonstração ilustra os resultados esperados.</p>
+<div class="tabs" role="tablist" aria-label="Selecionar fluxo demonstrativo">
+<button type="button" role="tab" id="tab-order" aria-selected="true" aria-controls="purchase">Compra e estoque</button>
+<button type="button" role="tab" id="tab-quote" aria-selected="false" aria-controls="budget">Orçamento e projeto</button></div>
+<section class="panel" role="tabpanel" id="purchase" aria-labelledby="tab-order">
+<div class="split"><div>
+<p class="eyebrow">Produto de teste · PL-001</p><h3>Lavanda · R$ 24,90/un.</h3><p>Estoque inicial fictício: 5 unidades. O cliente adquire 2 unidades por R$ 49,80, gerando uma conta a receber pendente.</p>
+<div class="stats" aria-live="polite"><div class="stat"><span>Estoque disponível</span><strong id="stock">5</strong></div><div class="stat"><span>Pedido</span><strong id="order-status">—</strong></div><div class="stat"><span>Conta a receber</span><strong id="ledger-status">—</strong></div></div>
+<div class="actions"><button class="action primary" id="create-order">1. Registrar pedido</button><button class="action" id="retry-order" disabled>Reenviar mesma solicitação</button><button class="action" id="cancel-order" disabled>2. Cancelar pedido</button><button class="action alt" id="reset-order">↺ Reiniciar</button></div>
+<h3 style="font-size:15px;margin-top:24px">Eventos da demonstração</h3><ol id="order-events" class="timeline" aria-live="polite"></ol>
+</div><aside class="side" aria-label="Detalhes do pedido"><p class="eyebrow">Pedido fictício</p><strong>AV-DEMO-001</strong>
+<div class="row"><span>Quantidade</span><b>2 unidades</b></div><div class="row"><span>Preço unitário</span><b>R$ 24,90</b></div><div class="row"><span>Total calculado pelo servidor real</span><b>R$ 49,80</b></div><div class="row"><span>Regra do replay</span><b>Uma venda por identificador</b></div><div class="row"><span>Regra de cancelamento</span><b>Reposição única, se não pago</b></div>
+</aside></div><div class="path"><strong>Rotas existentes no projeto</strong><p><code>POST /api/orders</code> → <code>GET /api/orders</code> → <code>POST /api/orders/{id}/cancel</code></p><p>O backend também grava <code>StockMove</code> e <code>Ledger</code> na mesma transação.</p></div></section>
+<section class="panel hidden" role="tabpanel" id="budget" aria-labelledby="tab-quote">
+<div class="split"><div><p class="eyebrow">Serviço de teste · Poda</p><h3>Do orçamento ao projeto</h3><p>Um cliente fictício solicita o serviço para uma área de 85 m²; somente o administrador define o preço, e o cliente responsável aprova.</p>
+<div class="stats" aria-live="polite"><div class="stat"><span>Status do orçamento</span><strong id="quote-status">—</strong></div><div class="stat"><span>Valor proposto</span><strong id="quote-price">—</strong></div><div class="stat"><span>Projeto criado</span><strong id="project-status">Não</strong></div></div>
+<div class="actions"><button class="action primary" id="create-quote">1. Cliente solicita</button><button class="action" id="price-quote" disabled>2. Admin envia proposta</button><button class="action" id="approve-quote" disabled>3. Cliente aprova</button><button class="action alt" id="reset-quote">↺ Reiniciar</button></div>
+<h3 style="font-size:15px;margin-top:24px">Eventos da demonstração</h3><ol id="quote-events" class="timeline" aria-live="polite"></ol>
+</div><aside class="side"><p class="eyebrow">Orçamento fictício</p><strong>ORC-DEMO-001</strong>
+<div class="row"><span>Cliente</span><b>Cliente de demonstração</b></div><div class="row"><span>Serviço</span><b>Poda</b></div><div class="row"><span>Área hipotética</span><b>85 m²</b></div><div class="row"><span>Preço do administrador</span><b>R$ 1.800,00</b></div><div class="row"><span>Proteção</span><b>Outra conta não aprova</b></div>
+</aside></div><div class="path"><strong>Rotas existentes no projeto</strong><p><code>POST /api/quotes</code> → <code>PATCH /api/quotes/{id}/price</code> → <code>POST /api/quotes/{id}/approve</code></p><p>A aprovação cria um registro de <code>Project</code> e um evento de projeto. A simulação não cadastra clientes, projetos ou contratos reais.</p></div></section>
+</section>
+<section style="margin-top:36px" aria-labelledby="proof"><p class="eyebrow">02 · Evidência técnica</p><h2 class="section-title" id="proof">O que um recrutador pode verificar</h2>
+<div class="cards"><article class="card"><b>Transações e idempotência</b><p>Reenvios com a mesma chave não geram dupla venda. Quando uma linha não tem estoque, a operação deve falhar sem alterações parciais.</p></article><article class="card"><b>Controle de acesso</b><p>Clientes visualizam seus pedidos e orçamentos. O administrador controla precificação e financeiro. O backend valida permissões, não apenas o frontend.</p></article><article class="card"><b>Testes reais no repositório</b><p>Há testes de API em SQLite e PostgreSQL, migrações e Playwright. A demonstração desta página não substitui o CI.</p></article></div>
+<div class="footlinks"><a href="atelie-verde.html">Conhecer projeto completo →</a><a href="https://github.com/LeandroAugFerreira/atelie-verde/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Arquitetura e estudo de caso ↗</a><a href="https://github.com/LeandroAugFerreira/atelie-verde/actions" target="_blank" rel="noopener noreferrer">Ver testes no GitHub ↗</a></div></section>
+</main><footer><div class="shell">Ateliê Verde · Demo técnica isolada · Nenhum pedido, pagamento, venda ou serviço externo real.</div></footer>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+let orderStage=0,quoteStage=0,orderRetries=0;
+const text=(id,v)=>{$(id).textContent=v};
+const events=(id,items)=>{const container=$(id);container.replaceChildren();for(const message of items){const li=document.createElement('li');li.textContent=message;container.append(li)}};
+function orderRender(){
+text('stock',orderStage===1?'3':'5');
+text('order-status',orderStage===0?'—':orderStage===1?'Confirmado':'Cancelado');
+text('ledger-status',orderStage===0?'—':orderStage===1?'Pendente':'Cancelado');
+$('create-order').disabled=orderStage!==0;
+$('retry-order').disabled=orderStage!==1;
+$('cancel-order').disabled=orderStage!==1;
+let lines=['Cenário pronto: 5 lavandas em estoque, nenhum pedido.'];
+if(orderStage>0)lines.push('Cliente registrou 2 lavandas: total R$ 49,80, estoque 5 → 3, conta a receber pendente.');
+if(orderRetries>0)lines.push('Reenvio com a mesma chave: pedido reutilizado, sem segunda baixa de estoque. ('+orderRetries+' repetição/repetições simuladas)');
+if(orderStage===2)lines.push('Cancelamento autorizado: estoque 3 → 5 e conta a receber cancelada. Segunda tentativa seria recusada.');
+events('order-events',lines);
+}
+function quoteRender(){
+text('quote-status',['—','Solicitado','Enviado','Aprovado'][quoteStage]);
+text('quote-price',quoteStage<2?'—':'R$ 1.800,00');
+text('project-status',quoteStage===3?'Sim':'Não');
+$('create-quote').disabled=quoteStage!==0;
+$('price-quote').disabled=quoteStage!==1;
+$('approve-quote').disabled=quoteStage!==2;
+let lines=['Cenário pronto: nenhum orçamento solicitado.'];
+if(quoteStage>=1)lines.push('Cliente solicitou orçamento de Poda para uma área fictícia de 85 m².');
+if(quoteStage>=2)lines.push('Administrador enviou proposta de R$ 1.800,00; o cliente pode avaliar.');
+if(quoteStage>=3)lines.push('Cliente titular aprovou: orçamento encerrado, projeto e evento de aprovação criados uma vez.');
+events('quote-events',lines);
+}
+function tab(name){
+const buying=name==='purchase';
+$('tab-order').setAttribute('aria-selected',String(buying));
+$('tab-quote').setAttribute('aria-selected',String(!buying));
+$('purchase').classList.toggle('hidden',!buying);
+$('budget').classList.toggle('hidden',buying);
+}
+$('tab-order').addEventListener('click',()=>tab('purchase'));
+$('tab-quote').addEventListener('click',()=>tab('budget'));
+$('create-order').addEventListener('click',()=>{if(orderStage!==0)return;orderStage=1;orderRender()});
+$('retry-order').addEventListener('click',()=>{if(orderStage!==1)return;orderRetries++;orderRender()});
+$('cancel-order').addEventListener('click',()=>{if(orderStage!==1)return;orderStage=2;orderRender()});
+$('reset-order').addEventListener('click',()=>{orderStage=0;orderRetries=0;orderRender()});
+$('create-quote').addEventListener('click',()=>{if(quoteStage!==0)return;quoteStage=1;quoteRender()});
+$('price-quote').addEventListener('click',()=>{if(quoteStage!==1)return;quoteStage=2;quoteRender()});
+$('approve-quote').addEventListener('click',()=>{if(quoteStage!==2)return;quoteStage=3;quoteRender()});
+$('reset-quote').addEventListener('click',()=>{quoteStage=0;quoteRender()});
+orderRender();quoteRender();tab('purchase');
+})();
+</script>
+</body></html>
