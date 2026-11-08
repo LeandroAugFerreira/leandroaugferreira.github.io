@@ -72,7 +72,10 @@
   background:rgba(3,10,22,.44);
   color:var(--text-light,#e2e8f0);
   text-decoration:none;
-  font:600 clamp(13px,1.3vw,16px)/1.45 inherit;
+  font-family:inherit;
+  font-weight:600;
+  font-size:clamp(13px,1.3vw,16px);
+  line-height:1.45;
   transition:background-color .2s,border-color .2s,transform .2s;
 }
 .portfolio-standard .project-quicklinks a .shortcut-arrow{
