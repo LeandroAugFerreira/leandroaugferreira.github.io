@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise Comercial — Estudo de caso de Dados e BI</title>
+<meta name="description" content="Estudo de caso de Power BI: unidades vendidas, faturamento nominal, lucro pela regra DAX e devoluções. Explore filtros didáticos e evidências de 32 testes.">
+<meta name="theme-color" content="#081629">
+<meta property="og:title" content="Análise Comercial — Case de Dados e BI">
+<meta property="og:description" content="Como interpretar vendas, margem e devoluções com métricas verificáveis e dados didáticos.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://leandroaugferreira.github.io/comercial-case.html">
+<style>
+:root{color-scheme:dark;--bg:#071324;--panel:#10243b;--panel2:#152e49;--border:#324964;--text:#eff5ff;--muted:#b1bfd5;--accent:#c3aaf2;--mint:#7ee2c4;--warn:#f2ce8b;--blue:#86b8ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 87% -13%,#553a8977,transparent 45%),radial-gradient(ellipse at -6% 80%,#24416e55,transparent 42%),var(--bg);font:15px/1.56 Inter,"Segoe UI",Arial,sans-serif;color:var(--text)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--warn);outline-offset:3px}button{font:inherit;cursor:pointer}
+.wrap{max-width:1130px;width:calc(100% - 36px);margin:auto}
+.top{background:#07172bd8;border-bottom:1px solid var(--border)}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:17px 0}.brand{font-size:21px;font-weight:850;color:var(--text);letter-spacing:-.6px}.brand span{color:var(--accent)}.nav{display:flex;flex-wrap:wrap;gap:17px;font-size:13px}
+.hero{padding:55px 0 35px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;color:var(--accent);font-weight:900;margin:0 0 12px}.hero h1{font-size:clamp(35px,5.5vw,61px);letter-spacing:-1.8px;line-height:1.07;max-width:930px;margin:0 0 19px}.hero h1 em{font:italic 400 1em Georgia,serif;color:var(--accent)}.lead{color:var(--muted);font-size:17px;max-width:860px;margin:0 0 24px}
+.warning{border:1px solid #a27d58;background:#45312550;color:#edd6b4;border-radius:13px;padding:14px 18px;font-size:13px}.warning b{margin-right:10px;color:#ffdeab}
+h2{font-size:25px;letter-spacing:-.6px;margin:4px 0 12px}.sub{color:var(--muted);margin:0 0 20px}
+.tabs{display:flex;flex-wrap:wrap;gap:9px;margin:23px 0 18px}.tabs button{padding:10px 18px;border:1px solid var(--border);border-radius:11px;color:var(--text);background:#19334d;font-weight:750;font-size:13px}.tabs button[aria-pressed=true]{color:#231836;background:var(--accent);border-color:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.kpi{border:1px solid var(--border);background:linear-gradient(155deg,#172e4b,#0b2036);border-radius:16px;padding:19px;min-width:0}.kpi small{display:block;color:var(--muted);font-size:12px;line-height:1.35}.kpi strong{font-size:clamp(21px,2.65vw,31px);letter-spacing:-.7px;display:block;margin:10px 0 7px;overflow-wrap:anywhere}.kpi strong.mint{color:var(--mint)}.kpi em{font-size:11px;color:var(--muted);font-style:normal}
+.grid{display:grid;grid-template-columns:1.16fr .84fr;gap:16px}.panel{border:1px solid var(--border);border-radius:17px;background:#10263e;padding:23px;min-width:0}.panel h3{font-size:19px;margin:0 0 8px}.panel p{font-size:13px;color:var(--muted);margin:0 0 15px}.pair{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid #2a4561}.pair:last-child{border-bottom:0}.pair span{font-size:12px;color:var(--muted)}.pair b{text-align:right;font-size:13px}
+.note{border:1px solid #99764f;border-radius:12px;padding:13px 15px;background:#70503027;color:#f1d6a5;font-size:12px;margin-top:18px}
+.bars{display:grid;gap:17px;margin-top:16px}.barhead{display:flex;justify-content:space-between;gap:15px;font-size:12px;margin-bottom:6px}.track{background:#304461;height:11px;border-radius:50px;overflow:hidden}.fill{height:100%;background:var(--accent);border-radius:50px}.fill.second{background:var(--mint)}.fill.third{background:var(--blue)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:23px 0}.card{background:#10263e;border:1px solid var(--border);border-radius:13px;padding:18px}.card b{color:var(--accent);font-size:13px}.card p{font-size:12px;color:var(--muted);margin:8px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:12px;border-top:1px solid var(--border);padding:26px 0 50px}.links a{border:1px solid #596a8e;border-radius:10px;padding:12px 17px;color:var(--text);font-size:13px;font-weight:760;display:inline-flex;align-items:center}.links a:first-child{background:var(--accent);color:#271b39;border-color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted);font-size:12px}
+@media(max-width:850px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:545px){.hero{padding:34px 0 26px}.lead{font-size:15px}.kpis{gap:9px}.kpi{padding:14px}.tabs button{flex:1;min-width:30%;padding:10px 9px}.cards{grid-template-columns:1fr}.panel{padding:17px}.links a{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="venda.html" class="brand"><span>Análise</span> Comercial</a><nav class="nav" aria-label="Navegação"><a href="venda.html">Projeto completo</a><a href="dashboards/comercial/index.html">Dashboard funcional</a><a href="https://github.com/LeandroAugFerreira/analise-comercial" target="_blank" rel="noopener noreferrer">Repositório ↗</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+<p class="kicker">Estudo de caso · Power BI, DAX, Power Query e qualidade</p>
+<h1>Mais que faturamento. <em>Entender o que cada número mede.</em></h1>
+<p class="lead">Explore indicadores de unidades, faturamento nominal, lucro didático e devoluções. O foco é demonstrar definições, filtros e rastreabilidade — competências essenciais em Dados e BI.</p>
+<div class="warning"><b>DADOS DIDÁTICOS · VALORES ESTÁTICOS</b> O case resume uma base de exercício de 2020–2022. Não é venda de clientes reais, faturamento de empresa do autor, atualização ao vivo ou execução do motor DAX. A unidade monetária não foi validada como moeda específica.</div>
+</section>
+<section aria-labelledby="metrics-title">
+<p class="kicker">01 · Indicadores com definição</p><h2 id="metrics-title">Altere o recorte e compare resultados</h2>
+<p class="sub">Escolha um ano, o canal Online ou o tipo Notebook. Cada seleção mostra os indicadores no seu próprio contexto, sem somar recortes sobrepostos.</p>
+<div class="tabs" role="group" aria-label="Selecionar recorte do estudo">
+<button type="button" data-period="total" aria-pressed="true">Total</button>
+<button type="button" data-period="2020" aria-pressed="false">2020</button>
+<button type="button" data-period="2021" aria-pressed="false">2021</button>
+<button type="button" data-period="2022" aria-pressed="false">2022</button>
+<button type="button" data-period="online" aria-pressed="false">Canal Online</button>
+<button type="button" data-period="notebook" aria-pressed="false">Notebooks</button>
+</div>
+<div class="kpis" aria-live="polite">
+<div class="kpi"><small>Total Vendas · unidades, não pedidos</small><strong id="units">84.174</strong><em>SUM(Qtd Vendida)</em></div>
+<div class="kpi"><small>Faturamento nominal do modelo</small><strong id="revenue">15.226.080,56</strong><em>Quantidade × preço cadastrado</em></div>
+<div class="kpi"><small>Margem do lucro didático</small><strong class="mint" id="margin">64,64%</strong><em>Lucro calculado / faturamento</em></div>
+<div class="kpi"><small>Devoluções · unidades</small><strong id="returned">1.828</strong><em id="rate">2,17% das unidades vendidas</em></div>
+</div>
+<div class="grid">
+<article class="panel"><h3>Composição e contexto</h3>
+<p>O “Lucro Total” do exercício usa uma fórmula própria: cada unidade contribui com 90% do preço cadastrado menos o custo do produto. Não é lucro líquido contábil.</p>
+<div class="pair"><span>Recorte selecionado</span><b id="periodName">Todo o conjunto</b></div>
+<div class="pair"><span>Lucro calculado pela regra DAX</span><b id="profit">9.842.627,604</b></div>
+<div class="pair"><span>Valor nominal dos itens devolvidos</span><b id="lost">433.032,87</b></div>
+<div class="pair"><span>Percentual desse valor sobre faturamento</span><b id="lostRate">2,84%</b></div>
+<div class="note" id="periodNote">56.046 registros de vendas somam 84.174 unidades. 1.809 registros de devoluções correspondem a 1.828 unidades.</div>
+</article>
+<aside class="panel"><h3>Entenda as devoluções</h3>
+<p>O valor denominado “Faturamento Perdido” representa quantidade devolvida × preço do produto. Não há prova de estorno, pagamento ou prejuízo líquido.</p>
+<div class="pair"><span>Registros de vendas no dataset total</span><b>56.046</b></div>
+<div class="pair"><span>Registros de devoluções no dataset total</span><b>1.809</b></div>
+<div class="pair"><span>Definição de taxa exibida</span><b>Unidades devolvidas / vendidas</b></div>
+<div class="note">Em filtros por ano, vendas usam <strong>data da venda</strong> e devoluções usam <strong>data da devolução</strong>. Não é automaticamente a taxa de retorno da mesma coorte de vendas.</div>
+</aside>
+</div>
+</section>
+<section style="margin-top:41px" aria-labelledby="years-title"><p class="kicker">02 · Comparação sem causalidade</p><h2 id="years-title">Distribuição de unidades por ano</h2>
+<p class="sub">O ano de 2020 possui bem menos unidades que 2021/2022. Isso pode refletir cobertura e mix diferentes; não se deve chamar a diferença de crescimento empresarial comprovado.</p>
+<div class="panel">
+<div class="bars">
+<div><div class="barhead"><span>2020</span><strong>2.630 unidades · 3,12%</strong></div><div class="track"><div class="fill" style="width:3.12%;min-width:3px"></div></div></div>
+<div><div class="barhead"><span>2021</span><strong>36.230 unidades · 43,04%</strong></div><div class="track"><div class="fill second" style="width:43.04%"></div></div></div>
+<div><div class="barhead"><span>2022</span><strong>45.314 unidades · 53,83%</strong></div><div class="track"><div class="fill third" style="width:53.83%"></div></div></div>
+</div>
+<p style="margin-top:17px">Os três anos somam as 84.174 unidades. A base é histórica e didática, sem dados ao vivo.</p>
+</div>
+</section>
+<section style="margin-top:39px" aria-labelledby="quality-title"><p class="kicker">03 · Qualidade e código verificáveis</p><h2 id="quality-title">O que os testes realmente demonstram</h2>
+<div class="cards">
+<article class="card"><b>32 testes automatizados</b><p>15 anteriores + 17 novos. Conferem integridade dos originais, snapshot, fórmulas de indicadores, anos, canal, produto e contextos vazios.</p></article>
+<article class="card"><b>5 relações sem chaves órfãs</b><p>Vendas→cliente/loja/produto e devoluções→loja/produto: zero correspondências ausentes ou duplicatas de chave de dimensão no diagnóstico.</p></article>
+<article class="card"><b>Power BI e JavaScript não são o mesmo motor</b><p>O PBIX original é preservado. A versão web usa cálculos JavaScript próprios para apresentar os valores, sem executar DAX no navegador.</p></article>
+</div>
+<div class="links">
+<a href="dashboards/comercial/index.html">Abrir dashboard completo →</a>
+<a href="https://github.com/LeandroAugFerreira/analise-comercial/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Auditoria, DAX e perguntas de entrevista ↗</a>
+<a href="https://github.com/LeandroAugFerreira/analise-comercial/actions" target="_blank" rel="noopener noreferrer">Conferir os testes do CI ↗</a>
+<a href="venda.html">Conhecer a página do projeto →</a>
+</div></section>
+</main>
+<footer><div class="wrap">Análise Comercial · Dados fictícios/didáticos · Sem operação, faturamento real ou refresh · Fórmulas e limites documentados.</div></footer>
+<script>
+(()=>{'use strict';
+const info={
+ total:{name:'Todo o conjunto',units:84174,revenue:15226080.56,profit:9842627.604,returned:1828,lost:433032.87,note:'56.046 linhas de venda somam 84.174 unidades; 1.809 linhas de devolução somam 1.828 unidades.'},
+ '2020':{name:'Ano de 2020',units:2630,revenue:2183760.41,profit:1414636.269,returned:86,lost:75115.72,note:'Poucas unidades comparativamente a 2021/2022. Sem cobertura homogênea validada, não conclua crescimento real.'},
+ '2021':{name:'Ano de 2021',units:36230,revenue:5982860.68,profit:3872367.712,returned:770,lost:154643.8,note:'Os indicadores deste recorte reconciliam a captura didática publicada do relatório original.'},
+ '2022':{name:'Ano de 2022',units:45314,revenue:7059459.47,profit:4555623.623,returned:972,lost:203273.35,note:'Total de unidades maior no snapshot, mas sem dados de operação real ou validação de causalidade.'},
+ online:{name:'Canal Online — todos os anos',units:14288,revenue:2499053.43,profit:1608688.187,returned:318,lost:80421.67,note:'Filtro de tipo de loja Online, sem filtro de ano. Não somar este recorte aos anos: ele se sobrepõe a eles.'},
+ notebook:{name:'Tipo Notebook — todos os anos',units:6262,revenue:7469356.74,profit:4923166.666,returned:193,lost:218098.2,note:'Filtro por tipo de produto Notebook. Não se trata de categoria exclusiva de canal ou de ano.'}
+};
+const $=id=>document.getElementById(id);
+const n0=new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0});
+const n2=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const n3=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:3,maximumFractionDigits:3});
+function update(p){const v=info[p];if(!v)return;
+document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.period===p)));
+$('units').textContent=n0.format(v.units);
+$('revenue').textContent=n2.format(v.revenue);
+$('margin').textContent=n2.format(v.profit/v.revenue*100)+'%';
+$('returned').textContent=n0.format(v.returned);
+$('rate').textContent=n2.format(v.returned/v.units*100)+'% das unidades vendidas';
+$('periodName').textContent=v.name;
+$('profit').textContent=n3.format(v.profit);
+$('lost').textContent=n2.format(v.lost);
+$('lostRate').textContent=n2.format(v.lost/v.revenue*100)+'%';
+$('periodNote').textContent=v.note;
+}
+document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>update(b.dataset.period)));
+update('total');
+})();
+</script>
+</body></html>
