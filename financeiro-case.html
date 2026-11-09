@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gestão Financeira — Estudo de caso técnico em Dados e BI</title>
+<meta name="description" content="Explore resultado e orçamento com dados sintéticos, filtros de 2025/2026 e conciliação verificável. Dashboard financeiro em JavaScript e Python.">
+<meta name="theme-color" content="#0b1b28">
+<meta property="og:title" content="Gestão Financeira — Estudo de caso técnico">
+<meta property="og:description" content="Receita líquida, lucro sintético, margem, orçamento e risco mensal, com testes e gerador Python reproduzível.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://leandroaugferreira.github.io/financeiro-case.html">
+<style>
+:root{color-scheme:dark;--bg:#071725;--fg:#eff8f4;--muted:#b1c6bf;--accent:#b9d994;--line:#375364;--panel:#112b3b;--panel2:#173647;--green:#8cdaa7;--amber:#e9c477;--red:#f3aaa6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.58 Inter,"Segoe UI",Arial,sans-serif;color:var(--fg);background:radial-gradient(ellipse at 85% -12%,#517d506b,transparent 43%),radial-gradient(ellipse at -15% 82%,#21466183,transparent 42%),var(--bg)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid #fbd289;outline-offset:3px}button{font:inherit;cursor:pointer}
+.wrap{max-width:1120px;width:calc(100% - 38px);margin:auto}.top{background:#091e2acc;border-bottom:1px solid var(--line)}.top .wrap{padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:17px;flex-wrap:wrap}.brand{font-size:21px;font-weight:850;letter-spacing:-.7px;color:var(--fg)}.brand span{color:var(--accent)}.nav{display:flex;gap:17px;flex-wrap:wrap;font-size:13px}
+.hero{padding:54px 0 33px}.kicker{color:var(--accent);font-size:11px;font-weight:850;letter-spacing:1.8px;text-transform:uppercase;margin:0 0 12px}.hero h1{font-size:clamp(35px,5.5vw,62px);line-height:1.09;letter-spacing:-1.7px;max-width:900px;margin:0 0 17px}.hero h1 em{font:italic 400 1em Georgia,serif;color:var(--accent)}.intro{max-width:850px;color:var(--muted);font-size:17px;margin:0 0 22px}
+.warning{border:1px solid #9a855d;background:#7053312c;border-radius:12px;padding:15px 18px;font-size:13px;color:#f6deb6}.warning b{color:#ffe0a7;margin-right:9px}
+h2{font-size:25px;letter-spacing:-.5px;margin:4px 0 11px}.sub{color:var(--muted);margin:0 0 20px}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin:21px 0}.filters label{flex:1;min-width:190px;display:grid;gap:6px;font-size:12px;color:var(--muted)}.filters select{border:1px solid #628075;background:#143446;border-radius:9px;padding:11px 12px;color:var(--fg);font:inherit}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.kpi{border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#17384a,#0b2637);padding:18px;min-width:0}.kpi small{color:var(--muted);font-size:11px;display:block}.kpi strong{font-size:clamp(21px,2.7vw,33px);display:block;letter-spacing:-.7px;margin:10px 0 6px;overflow-wrap:anywhere}.kpi strong.ok{color:var(--green)}.kpi em{font-size:11px;color:var(--muted);font-style:normal}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.panel{border:1px solid var(--line);border-radius:16px;background:#0e2b3b;padding:23px;min-width:0}.panel h3{font-size:18px;margin:0 0 8px}.panel p{font-size:13px;color:var(--muted);margin:0 0 15px}
+.detail{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #325063;padding:11px 0}.detail:last-child{border-bottom:0}.detail span{font-size:12px;color:var(--muted)}.detail b{font-size:13px;text-align:right}
+.status{display:inline-flex;border-radius:100px;border:1px solid var(--line);background:#294657;padding:6px 13px;font-size:12px;font-weight:850;margin:7px 0 13px}.status[data-status="Controlado"]{border-color:#4d9471;color:#a7f0c4}.status[data-status="Alto"]{border-color:#ac6263;color:#ffc0bd}.status[data-status="Atenção"]{border-color:#b68b48;color:#ffe1a7}
+.notice{border:1px solid #8f7957;border-radius:11px;padding:12px 14px;background:#56452b45;color:#f2d8b0;font-size:12px;margin-top:15px}
+.months{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}.month{background:#0c2939;border:1px solid #3b5866;border-radius:11px;padding:12px;min-height:88px;color:var(--fg);text-align:left}.month:hover{border-color:var(--accent)}.month[aria-pressed="true"]{outline:2px solid var(--accent)}.month b{display:flex;justify-content:space-between;gap:8px;font-size:13px}.month span{display:block;font-size:12px;color:var(--muted);margin:3px 0 9px}.track{height:8px;border-radius:30px;background:#2d4351;overflow:hidden}.fill{height:100%;border-radius:30px;background:var(--accent)}.month[data-status="Alto"] .fill{background:var(--red)}.month[data-status="Atenção"] .fill{background:var(--amber)}.month[data-status="Controlado"] .fill{background:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0}.card{border:1px solid var(--line);background:#102d3e;border-radius:12px;padding:18px}.card b{font-size:13px;color:var(--accent)}.card p{color:var(--muted);font-size:12px;margin:9px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding:25px 0 48px}.cta a{padding:12px 16px;border:1px solid #5a7a79;border-radius:9px;color:var(--fg);font-weight:740;font-size:13px}.cta a:first-child{background:var(--accent);border-color:var(--accent);color:#183021}footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.hero{padding:34px 0 26px}.intro{font-size:15px}.kpis{gap:9px}.kpi{padding:14px}.panel{padding:17px}.months{grid-template-columns:repeat(2,minmax(0,1fr))}.filters label{min-width:120px}.cta a{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="financeiro.html" class="brand"><span>Gestão</span> Financeira</a><nav aria-label="Navegação" class="nav"><a href="financeiro.html">Projeto completo</a><a href="dashboards/financeiro/index.html">Dashboard</a><a href="https://github.com/LeandroAugFerreira/dashboard-financeiro" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><p class="kicker">Estudo de caso · Python, JavaScript e indicadores financeiros</p>
+<h1>Resultado não conta tudo. <em>O orçamento revela o contexto.</em></h1>
+<p class="intro">Explore um conjunto 100% sintético com duas séries anuais, três centros e 12 meses. As medidas são calculadas no navegador pelo mesmo módulo JavaScript do dashboard funcional.</p>
+<div class="warning"><b>EXERCÍCIO SINTÉTICO · NÃO É FLUXO DE CAIXA</b> Os valores não são de empresa real e não incluem pagamentos ou contas bancárias. O PBIX correspondente à captura de referência não foi localizado; esta web não executa DAX nem reproduz comprovadamente aquele modelo.</div></section>
+<section aria-labelledby="analysis"><p class="kicker">01 · Indicadores e filtros reais da simulação</p><h2 id="analysis">Compare realizado e orçado</h2>
+<p class="sub">Os filtros consultam apenas o JSON público estático de demonstração. Sem login, servidor de negócio ou transferência de dados pessoais.</p>
+<div class="filters">
+<label for="year">Período<select id="year"><option value="">2025 e 2026</option><option value="2025">2025</option><option value="2026" selected>2026</option></select></label>
+<label for="month">Mês<select id="month"><option value="">Todos os meses</option></select></label>
+<label for="center">Centro de resultado<select id="center"><option value="">Todos os centros</option><option value="Comercial">Comercial</option><option value="Serviços">Serviços</option><option value="Operações">Operações</option></select></label>
+</div>
+<div id="loadStatus" role="status" aria-live="polite" class="sub">Carregando dados sintéticos do repositório…</div>
+<div class="kpis" aria-live="polite">
+<div class="kpi"><small>Receita líquida · sintética</small><strong id="net">—</strong><em>Bruta − deduções</em></div>
+<div class="kpi"><small>Lucro calculado · sintético</small><strong id="profit">—</strong><em>Líquida − despesas totais</em></div>
+<div class="kpi"><small>Margem de lucro do exercício</small><strong class="ok" id="margin">—</strong><em>Lucro / líquida</em></div>
+<div class="kpi"><small>Aderência ao lucro-meta</small><strong id="adherence">—</strong><em>Lucro / orçamento de lucro</em></div>
+</div>
+<div class="grid">
+<article class="panel"><h3>Reconciliação da seleção</h3><p>Os valores abaixo são extraídos de linhas artificiais por mês, centro e categoria; não de registros bancários ou contábeis.</p>
+<div class="detail"><span>Receita bruta</span><b id="gross">—</b></div>
+<div class="detail"><span>Deduções</span><b id="deductions">—</b></div>
+<div class="detail"><span>Custos + despesas + impostos</span><b id="expenses">—</b></div>
+<div class="detail"><span>Meta de lucro</span><b id="plan">—</b></div>
+<div class="detail"><span>Receita bruta de equilíbrio *</span><b id="breakEven">—</b></div>
+<div class="notice">* Equilíbrio hipotético: despesas operacionais tratadas como fixas e deduções/custos/impostos como proporções da receita bruta. Não é previsão financeira de empresa.</div></article>
+<aside class="panel"><h3>Classificação e interpretação</h3><p>O risco da simulação compara margem e aderência à meta de lucro, sem inferir dificuldade financeira real.</p>
+<div id="risk" class="status" role="status" aria-live="polite">—</div>
+<div class="detail"><span>Meta de margem do exercício</span><b id="planMargin">—</b></div>
+<div class="detail"><span>Movimentações filtradas</span><b id="rows">—</b></div>
+<div class="detail"><span>Convenção de risco</span><b>Alto abaixo de 90% de aderência ou margem negativa</b></div>
+<p style="margin-top:18px">Uma meta de lucro pode estar acima de 100% enquanto a margem segue outra proporção. Sem orçamento comparável, o modelo informa “Sem orçamento” e preserva alerta de margem negativa.</p>
+</aside>
+</div>
+</section>
+<section style="margin-top:40px" aria-labelledby="monthsTitle"><p class="kicker">02 · A dimensão que o ano pode ocultar</p><h2 id="monthsTitle">Aderência ao planejamento por mês</h2><p class="sub">Clique em um mês para filtrar o resultado acima. Os meses são recalculados para o ano e o centro selecionados; as bases continuam fictícias.</p>
+<div id="months" class="months" aria-label="Meses calculados do modelo" role="group"></div>
+<p id="diagnosis" class="sub" aria-live="polite"></p>
+</section>
+<section style="margin-top:34px" aria-labelledby="proofTitle"><p class="kicker">03 · Engenharia verificável</p><h2 id="proofTitle">O que está comprovado no GitHub</h2>
+<div class="cards">
+<article class="card"><b>Python reproduzível</b><p>Um teste gera o JSON e os CSV em diretório temporário e compara os arquivos por SHA-256, sem tocar nas fontes versionadas.</p></article>
+<article class="card"><b>25 testes financeiros</b><p>As identidades, metas, centros, meses, risco, ausência de orçamento e ponto de equilíbrio foram exercitados em CI.</p></article>
+<article class="card"><b>Transparência sobre Power BI</b><p>O PBIX financeiro original não foi encontrado. Esta página utiliza o motor JavaScript demonstrativo, sem afirmar DAX ou resultados reais.</p></article>
+</div>
+<div class="cta"><a href="dashboards/financeiro/index.html">Explorar dashboard completo →</a><a href="https://github.com/LeandroAugFerreira/dashboard-financeiro/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Auditoria, testes e perguntas de entrevista ↗</a><a href="https://github.com/LeandroAugFerreira/dashboard-financeiro/actions" target="_blank" rel="noopener noreferrer">Consultar os testes automatizados ↗</a><a href="financeiro.html">Página do projeto →</a></div>
+</section>
+</main>
+<footer><div class="wrap">Gestão Financeira · Cenário determinístico sintético 2025–2026 · Sem backend empresarial, sem transações bancárias e sem equivalência demonstrada ao Power BI original.</div></footer>
+<script type="module">
+import {calculate} from './dashboards/financeiro/finance-model.mjs';
+const $=id=>document.getElementById(id);
+const money=n=>n===null||!Number.isFinite(n)?'—':new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:2}).format(n);
+const pct=n=>n===null||!Number.isFinite(n)?'—':new Intl.NumberFormat('pt-BR',{style:'percent',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+const fmt=n=>new Intl.NumberFormat('pt-BR').format(n);
+const names=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+let data;
+function render(){
+if(!data)return;
+const year=$('year').value,month=$('month').value,center=$('center').value;
+const m=calculate(data,{year,month,center});
+for(const [id,key,form] of [['gross','gross',money],['deductions','deductions',money],['expenses','totalExpenses',money],['net','net',money],['profit','profit',money],['plan','planProfit',money],['breakEven','breakEven',money],['margin','margin',pct],['planMargin','planMargin',pct],['adherence','adherence',pct],['rows','rows',fmt]])$(id).textContent=form(m[key]);
+$('risk').textContent=m.risk;$('risk').dataset.status=m.risk;
+$('loadStatus').textContent='Dados sintéticos locais · '+(year||'2025 e 2026')+' · '+(month?names[Number(month)-1]:'12 meses')+' · '+(center||'três centros');
+const months=$('months');months.replaceChildren();
+const risks=[];
+for(let i=1;i<=12;i++){
+const number=String(i).padStart(2,'0'),v=calculate(data,{year,month:number,center});
+risks.push(v.risk);
+const b=document.createElement('button');b.type='button';b.className='month';b.dataset.status=v.risk;b.setAttribute('aria-pressed',String(month===number));b.setAttribute('aria-label',names[i-1]+': '+(v.adherence===null?'sem orçamento':pct(v.adherence))+', risco '+v.risk+'. Filtrar mês.');
+const hd=document.createElement('b'),left=document.createElement('span'),right=document.createElement('span');
+left.textContent=names[i-1];right.textContent=v.risk;hd.append(left,right);
+const label=document.createElement('span');label.textContent=pct(v.adherence)+' de aderência';
+const track=document.createElement('div');track.className='track';const fill=document.createElement('div');fill.className='fill';fill.style.width=Math.min(100,Math.max(0,(v.adherence??0)/1.5*100))+'%';track.append(fill);
+b.append(hd,label,track);b.addEventListener('click',()=>{$('month').value=month===number?'':number;render()});months.append(b);
+}
+const high=risks.reduce((n,x)=>n+(x==='Alto'),0),attention=risks.reduce((n,x)=>n+(x==='Atenção'),0);
+$('diagnosis').textContent=(year||'Nos anos 2025–2026')+': '+high+' mês(es) de risco Alto e '+attention+' mês(es) de Atenção neste recorte. Um consolidado favorável não elimina a necessidade de examinar os meses.';
+}
+async function init(){
+for(let i=1;i<=12;i++){const o=document.createElement('option');o.value=String(i).padStart(2,'0');o.textContent=names[i-1];$('month').append(o);}
+for(const id of ['year','month','center'])$(id).addEventListener('change',render);
+try{const response=await fetch('./dashboards/financeiro/data.json',{cache:'force-cache'});if(!response.ok)throw Error('Dados indisponíveis');data=await response.json();if(data.synthetic!==true)throw Error('Fonte fora da simulação');render();}
+catch(e){$('loadStatus').textContent='Não foi possível carregar o JSON sintético. Abra o dashboard completo ou consulte a documentação no GitHub.';}
+}
+init();
+</script>
+</body></html>

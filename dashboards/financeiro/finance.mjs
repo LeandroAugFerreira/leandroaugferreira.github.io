@@ -14,7 +14,7 @@ function render(){
  const f=filters(),m=calculate(data,f);$('#status').textContent=`Base fictícia · ${f.year||'2025 e 2026'} · ${f.month?months[+f.month-1]:'Todos os meses'} · ${f.center||'Todos os centros'}`;
  for(const [id,key] of [['net','net'],['expenses','totalExpenses'],['profit','profit']]){$('#'+id).textContent=compact(m[key]);$('#'+id).title=money(m[key]);}
  $('#margin').textContent=percent(m.margin);$('#adherence').textContent=percent(m.adherence);$('#net-meta').textContent='Meta: '+compact(m.planRevenue);$('#profit-meta').textContent='Meta: '+compact(m.planProfit);$('#margin-meta').textContent='Meta: '+percent(m.planMargin);$('#risk').textContent=m.risk;$('#traffic').dataset.risk=m.risk;
- $('#alert').textContent=m.risk==='Controlado'?'→ Resultado acima do planejamento.':m.risk==='Atenção'?'→ Resultado próximo do planejado. Monitorar desvios.':m.risk==='Sem dados'?'Sem dados para esta seleção.':'→ Resultado abaixo do planejado. Investigar despesas e margem.';
+ $('#alert').textContent=m.risk==='Controlado'?'→ Resultado acima do planejamento.':m.risk==='Atenção'?'→ Resultado próximo do planejado. Monitorar desvios.':m.risk==='Sem dados'?'Sem dados para esta seleção.':m.risk==='Sem orçamento'?'Sem orçamento para comparar o resultado realizado.':'→ Resultado abaixo do planejado. Investigar despesas e margem.';
  $('#breakeven').textContent='Receita bruta de equilíbrio: '+money(m.breakEven);
  const s=chart('#waterfall',600,205,'Composição do resultado financeiro');const values=[m.gross,-m.deductions,-m.costs,-m.expenses,-m.taxes,m.profit],labels=['Receita Bruta','(-) Deduções','(-) Custos','(-) Despesas','(-) Impostos','Total'];
  let balance=0;const max=Math.max(m.gross,1),top=20,height=140,y=n=>top+(max-n)/max*height;

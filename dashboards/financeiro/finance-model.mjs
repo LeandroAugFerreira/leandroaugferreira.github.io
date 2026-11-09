@@ -7,6 +7,6 @@ export function calculate(data,{year='',month='',center=''}={}){
  // Gross break-even revenue: variable deductions + costs + taxes; operating expenses fixed.
  const contributionRate=gross?1-(deductions+costs+taxes)/gross:null;
  const breakEven=contributionRate>0?expenses/contributionRate:null;
- const risk=margin===null?'Sem dados':margin<0||adherence<.9?'Alto':adherence<1?'Atenção':'Controlado';
+ const risk=margin===null?'Sem dados':margin<0?'Alto':adherence===null?'Sem orçamento':adherence<.9?'Alto':adherence<1?'Atenção':'Controlado';
  return {rows:rr.length,gross,deductions,costs,expenses,taxes,net,totalExpenses,profit,margin,planRevenue,planProfit,planMargin,adherence,breakEven,risk};
 }
