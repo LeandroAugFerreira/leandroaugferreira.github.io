@@ -22,7 +22,7 @@ A suíte [tests/test_project.py](../tests/test_project.py) possui **19 testes Py
 
 A suíte [tests/ui.test.mjs](../tests/ui.test.mjs) acrescenta **6 testes Node.js** de filtros, taxas ponderadas, soma entre planos e consistência de coortes.
 
-**Total previsto após a etapa final:** 25 testes (19 Python + 6 Node). Os resultados executados na versão principal devem ser conferidos no [GitHub Actions do portfólio](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/workflows/churnlab.yml). A contagem de testes é distinta da geração/pipeline.
+**Total executado na branch:** **25 testes aprovados (19 Python + 6 Node)**, verificados no [GitHub Actions #42547314807](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/runs/42547314807). A execução final da versão principal será verificada após o merge. A contagem de testes é distinta da geração/pipeline.
 
 ## Valores reprodutíveis de referência
 
@@ -57,7 +57,7 @@ Os números não vieram do projeto antigo; foram gerados e versionados nesta nov
 - [Modelo e split](../src/model.py) / [model card JSON](../model_card.json).
 - [Testes Python](../tests/test_project.py) e [testes JavaScript](../tests/ui.test.mjs).
 - [SQL](../sql), [dicionário](DICIONARIO_DE_DADOS.md), [dashboard](../index.html).
-- [Workflow auditável](../../../../.github/workflows/churnlab.yml).
+- [Workflow auditável](../../../.github/workflows/churnlab.yml).
 
 Na demonstração pública, os filtros trabalham **somente com agregados**. CSVs de clientes também são públicos para reprodução, mas os registros e IDs são inteiramente artificiais.
 
