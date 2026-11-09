@@ -9,15 +9,15 @@ Quais segmentos da base sintética concentram mais cancelamentos mensais? Quanto
 ## Ferramentas e entrega
 
 - Python 3.12+ **sem dependências externas**: gerador determinístico, pipeline SQLite e regressão logística implementada com biblioteca padrão.
-- SQL em arquivos \`sql/\`: esquema relacional, taxa de churn, canal, plano, retenção por coorte e sinais de inatividade.
-- \`data/\`: **clientes fictícios** e observações mensais CSV, sem nomes, e-mails, CPF, telefones ou dados de empresas reais.
-- \`metrics.json\` e \`model_card.json\`: somente agregados e métricas de treino/validação/teste; não expõem IDs individuais.
-- Página web estática em \`index.html\`, com filtros por plano/mês, gráfico temporal, comparação de planos, coortes, sinais e métricas do teste final.
+- SQL em arquivos `sql/`: esquema relacional, taxa de churn, canal, plano, retenção por coorte e sinais de inatividade.
+- `data/`: **clientes fictícios** e observações mensais CSV, sem nomes, e-mails, CPF, telefones ou dados de empresas reais.
+- `metrics.json` e `model_card.json`: somente agregados e métricas de treino/validação/teste; não expõem IDs individuais.
+- Página web estática em `index.html`, com filtros por plano/mês, gráfico temporal, comparação de planos, coortes, sinais e métricas do teste final.
 - Testes de integridade, reprodutibilidade, reconciliação e corte temporal.
 
 ## Reprodução local
 
-Na pasta \`projects/churn-analytics\`:
+Na pasta raiz do ChurnLab (`projects/churn-analytics/` no repositório atual, ou raiz caso seja migrado):
 
 ~~~bash
 python -m src.generate
@@ -26,7 +26,7 @@ python -m unittest discover -s tests -v
 python -m http.server 8000
 ~~~
 
-Depois, abrir http://localhost:8000. O comando de geração **sobrescreve os CSV/JSON dessa pasta**, portanto faça isso somente num clone descartável ou use \`--output\` para um diretório separado:
+Depois, abrir http://localhost:8000. O comando de geração **sobrescreve os CSV/JSON dessa pasta**, portanto faça isso somente num clone descartável ou use `--output` para um diretório separado:
 
 ~~~bash
 python -m src.generate --output /tmp/churnlab-data
@@ -63,9 +63,9 @@ O dashboard é um estudo de **observabilidade de dados e experimentação**, nã
 
 1. Explique por que taxa mensal usa denominador de **clientes ativos no começo**.
 2. Abra o gráfico dos 18 meses, filtros por plano e comparações.
-3. Demonstre SQL em \`sql/monthly.sql\`, \`by_plan_month.sql\`, \`cohorts.sql\` e \`signals.sql\`.
+3. Demonstre SQL em `sql/monthly.sql`, `by_plan_month.sql`, `cohorts.sql` e `signals.sql`.
 4. Mostre o teste de qualidade que impede clientes reingressarem após cancelar.
-5. Explore \`model_card.json\`: recorte temporal, baseline, AUC/Brier/Lift **somente sintéticos**.
+5. Explore `model_card.json`: recorte temporal, baseline, AUC/Brier/Lift **somente sintéticos**.
 6. Abra o GitHub Actions e refaça a geração com seed fixa para demonstrar os mesmos arquivos.
 7. Cite limitações: dados perdidos do projeto antigo, sobrevivência anterior a 2025, censura de coortes, simulação por risco programado, ausência de causalidade/ROI/Power BI Desktop.
 
@@ -73,6 +73,16 @@ Leia também [documentação de auditoria](docs/AUDITORIA.md), [estudo de caso](
 
 ## Segurança e procedência
 
-**Todos os registros são gerados artificialmente.** O projeto não contém clientes, dados, vídeos, relatórios, arquivos ou medidas originais recuperados. Não há dependências externas, requests HTTP, envio de métricas ao servidor ou acesso a sistemas comerciais. Os resultados ilustram conceitos, não ganhos realizados.
+**Todos os registros são gerados artificialmente.** O projeto não contém clientes, dados, vídeos, relatórios, arquivos ou medidas originais recuperados. Não há chamadas a APIs externas, envio de métricas ao servidor nem acesso a sistemas comerciais. O navegador faz somente requisições HTTP aos dois arquivos JSON estáticos do próprio site. Os resultados ilustram conceitos, não ganhos realizados.
 
 **Localização temporária do projeto:** esta entrega está em uma pasta isolada do repositório GitHub Pages do portfólio, para poder ser transferida depois a um repositório próprio sem reescrever a implementação.
+
+## Apresentação visual e qualidade do navegador
+
+- [Prévia visual V2](preview.svg) com valores sintéticos do snapshot. É uma **ilustração vetorial**, não screenshot capturada de uma execução.
+- [Testes de navegador](tests/browser/smoke.spec.mjs) usando Playwright e Chromium em **desktop e viewport móvel**: carregamento de dados, KPIs, filtros, estado inválido, tabelas, teclado e verificação de estouro horizontal. Os testes também geram capturas reais de execução como artifacts temporários.
+- [Suíte Node](tests/ui.test.mjs) e [Python](tests/test_project.py) seguem independentes e não precisam instalar Playwright.
+- Para testar manualmente a navegação: `npm install`, `npx playwright install chromium` e `npx playwright test`. O ambiente padrão do site **não** precisa de npm.
+- [Migração para repositório próprio](docs/MIGRACAO_REPOSITORIO.md) e [pacote ZIP portátil](scripts/package_standalone.py). O pacote pode ser obtido pela seção **Artifacts** de uma execução verde do [workflow ChurnLab](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/workflows/churnlab.yml).
+
+**Status da organização:** repositório exclusivo ainda depende da criação na conta GitHub pelo titular, pois a conexão atual só permite alterar repositórios existentes. O código e a CI portátil estão prontos; não anunciar que um repositório novo já foi criado.

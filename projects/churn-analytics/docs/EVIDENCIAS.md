@@ -22,7 +22,7 @@ A suíte [tests/test_project.py](../tests/test_project.py) possui **19 testes Py
 
 A suíte [tests/ui.test.mjs](../tests/ui.test.mjs) acrescenta **6 testes Node.js** de filtros, taxas ponderadas, soma entre planos e consistência de coortes.
 
-**Total executado na branch:** **25 testes aprovados (19 Python + 6 Node)**, verificados no [GitHub Actions #42547314807](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/runs/42547314807). A execução final da versão principal será verificada após o merge. A contagem de testes é distinta da geração/pipeline.
+**Validação da revisão visual e de portabilidade:** [GitHub Actions #42551685358](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/runs/42551685358) aprovado. Passaram **19 testes Python, 6 testes Node e 10 testes Playwright (5 Chromium desktop e 5 Chromium mobile)**. O workflow também gerou um ZIP portátil com 38 arquivos e capturas reais dos dois tamanhos de tela. A contagem de testes é distinta da geração/pipeline e da produção dos artifacts.
 
 ## Valores reprodutíveis de referência
 
@@ -62,3 +62,10 @@ Os números não vieram do projeto antigo; foram gerados e versionados nesta nov
 Na demonstração pública, os filtros trabalham **somente com agregados**. CSVs de clientes também são públicos para reprodução, mas os registros e IDs são inteiramente artificiais.
 
 [Auditoria](AUDITORIA.md) · [Roteiro](ROTEIRO_DEMO.md).
+
+## Evidência visual e migração (novembro/2026)
+
+- [Screenshots reais de desktop e celular](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/runs/42551685358/artifacts/13645652416), geradas com Playwright, não imagens inventadas.
+- [Pacote ZIP portátil](https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/actions/runs/42551685358/artifacts/13645038773), compilado somente com dados sintéticos e fontes do projeto. O próprio pacote inclui uma configuração de CI independente.
+- [Nova prévia vetorial do dashboard](../preview.svg) substitui o vídeo histórico no cartão do portfólio. A prévia é uma ilustração estática, não screenshot de execução.
+- O repositório GitHub exclusivo ainda não foi criado: [passos para o titular](MIGRACAO_REPOSITORIO.md).

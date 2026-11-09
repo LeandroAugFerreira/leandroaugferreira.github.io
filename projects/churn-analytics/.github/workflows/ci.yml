@@ -1,0 +1,46 @@
+name: ChurnLab V2 - CI independente
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Python: dados, SQL, split temporal e reprodutibilidade
+        run: python -m unittest discover -s tests -v
+      - name: JavaScript: KPIs e filtros
+        run: node --test tests/*.test.mjs
+  browser:
+    needs: unit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Instalar ferramenta de testes do navegador
+        run: npm install --no-audit --no-fund
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Testar desktop e celular
+        run: npx playwright test
+      - name: Capturas e rastros do navegador
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: churnlab-browser-evidences
+          path: |
+            artifacts/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14

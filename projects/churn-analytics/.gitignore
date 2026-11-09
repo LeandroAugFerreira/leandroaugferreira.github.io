@@ -4,3 +4,9 @@ build/
 .venv/
 .pytest_cache/
 .DS_Store
+node_modules/
+package-lock.json
+test-results/
+playwright-report/
+artifacts/
+dist/
