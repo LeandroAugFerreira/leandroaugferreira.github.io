@@ -47,6 +47,24 @@ jobs:
           path: projects/churn-analytics/dist/churnlab-v2-standalone.zip
           if-no-files-found: error
           retention-days: 30
+      - name: Validar extração e execucao Python/Node da versão portátil
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from tempfile import TemporaryDirectory
+          from zipfile import ZipFile
+          import subprocess
+          import sys
+          with TemporaryDirectory() as temp:
+              with ZipFile('dist/churnlab-v2-standalone.zip') as archive:
+                  archive.extractall(temp)
+              root = Path(temp) / 'churnlab-v2'
+              assert (root/'src/generate.py').is_file()
+              assert (root/'.github/workflows/ci.yml').is_file()
+              subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=root,check=True,timeout=60)
+              subprocess.run(['node','--test','tests/ui.test.mjs'],cwd=root,check=True,timeout=30)
+              print('PASS: ChurnLab portátil executa testes fora do repositório do portfólio')
+          PY
       - name: Verificar que o pipeline nao editou originais
         run: git diff --exit-code -- data/ metrics.json model_card.json
   browser:

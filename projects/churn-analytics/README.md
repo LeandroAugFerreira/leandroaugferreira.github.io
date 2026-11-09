@@ -73,7 +73,7 @@ Leia também [documentação de auditoria](docs/AUDITORIA.md), [estudo de caso](
 
 ## Segurança e procedência
 
-**Todos os registros são gerados artificialmente.** O projeto não contém clientes, dados, vídeos, relatórios, arquivos ou medidas originais recuperados. Não há dependências externas, requests HTTP, envio de métricas ao servidor ou acesso a sistemas comerciais. Os resultados ilustram conceitos, não ganhos realizados.
+**Todos os registros são gerados artificialmente.** O projeto não contém clientes, dados, vídeos, relatórios, arquivos ou medidas originais recuperados. Não há chamadas a APIs externas, envio de métricas ao servidor nem acesso a sistemas comerciais. O navegador faz somente requisições HTTP aos dois arquivos JSON estáticos do próprio site. Os resultados ilustram conceitos, não ganhos realizados.
 
 **Localização temporária do projeto:** esta entrega está em uma pasta isolada do repositório GitHub Pages do portfólio, para poder ser transferida depois a um repositório próprio sem reescrever a implementação.
 
