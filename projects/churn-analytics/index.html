@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChurnLab — Retenção, SQL e Experimento Preditivo</title>
+<meta name="description" content="Estudo de caso reproduzível sobre churn com dados 100% sintéticos, Python, SQLite, SQL, teste temporal e dashboard interativo.">
+<meta name="theme-color" content="#101827">
+<meta property="og:type" content="website"><meta property="og:title" content="ChurnLab — Estudo de caso de Dados e BI">
+<meta property="og:description" content="Análise de evasão com dados fictícios, indicadores auditáveis, coortes, SQL, regressão logística temporal e 19 testes em Python.">
+<link rel="canonical" href="https://leandroaugferreira.github.io/projects/churn-analytics/">
+<link rel="stylesheet" href="./style.css">
+<script src="./app.mjs" type="module"></script>
+</head>
+<body>
+<a href="#main" class="skip">Pular para o conteúdo</a>
+<header class="topbar">
+  <div class="container nav-row">
+    <a href="../../churn.html" class="brand"><span class="brand-icon">C</span> Churn<span class="accent">Lab</span><span class="version">V2</span></a>
+    <nav class="nav" aria-label="Navegação principal"><a href="#analise">Análise</a><a href="#coortes">Coortes</a><a href="#modelo">Experimento</a><a href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/tree/main/projects/churn-analytics" target="_blank" rel="noopener noreferrer">Código no GitHub ↗</a></nav>
+  </div>
+</header>
+<main id="main" class="container">
+  <section class="hero" aria-labelledby="heading">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> ESTUDO DE CASO REPRODUZÍVEL · PYTHON + SQLITE + JAVASCRIPT</div>
+    <h1 id="heading">Por que clientes <em>cancelam?</em><br>Comece com perguntas que os dados conseguem responder.</h1>
+    <p class="hero-text">Da geração de clientes fictícios aos indicadores de retenção por mês, plano e coorte, com SQL, testes automatizados e uma avaliação preditiva temporal claramente delimitada.</p>
+    <div class="hero-actions"><a class="btn primary" href="#analise">Explorar os indicadores <span aria-hidden="true">→</span></a><a class="btn secondary" href="./README.md" target="_blank" rel="noopener noreferrer">Ler documentação ↗</a></div>
+    <div class="disclosure"><strong>BASE NOVA, 100% SINTÉTICA.</strong> Os dados e o PBIX anteriores foram perdidos; esta é uma reconstrução independente, não a recuperação dos números antigos. Não há clientes, cancelamentos, receita, previsões ou resultados comerciais reais.</div>
+  </section>
+  <div class="section-head" id="analise"><div><p class="section-eyebrow">01 · Panorama</p><h2>Indicadores do conjunto sintético</h2><p>Taxa de churn = cancelamentos ao fim do mês ÷ clientes ativos no início. Não é percentual de pedidos ou de clientes únicos.</p></div></div>
+  <section class="filter-bar" aria-label="Filtros do dashboard">
+    <label>Plano<select id="plan"><option value="">Todos os planos</option><option value="Essencial">Essencial</option><option value="Pro">Pro</option><option value="Equipe">Equipe</option></select></label>
+    <label>Mês inicial<select id="fromMonth"></select></label>
+    <label>Mês final<select id="toMonth"></select></label>
+    <button id="reset" type="button" class="reset">Limpar filtros</button>
+  </section>
+  <div id="status" class="load-state" role="status" aria-live="polite">Carregando dados agregados fictícios…</div>
+  <section class="kpis" aria-label="Indicadores filtrados" aria-live="polite">
+    <article class="kpi"><div class="kpi-label">Exposição acumulada</div><div class="kpi-value" id="k-exposures">—</div><div class="kpi-foot">Clientes-mês, não clientes únicos</div></article>
+    <article class="kpi"><div class="kpi-label">Cancelamentos</div><div class="kpi-value" id="k-churned">—</div><div class="kpi-foot">Eventos de saída registrados</div></article>
+    <article class="kpi"><div class="kpi-label">Taxa ponderada de churn</div><div class="kpi-value highlight" id="k-rate">—</div><div class="kpi-foot">Soma de saídas ÷ soma de exposições</div></article>
+    <article class="kpi"><div class="kpi-label">MRR vinculado às saídas</div><div class="kpi-value" id="k-lost-mrr">—</div><div class="kpi-foot">Valor contratual, não perda realizada</div></article>
+  </section>
+  <section class="main-grid">
+    <article class="panel main-chart">
+      <div class="panel-head"><div><p class="section-eyebrow">EVOLUÇÃO MENSAL</p><h3>Taxa de cancelamento</h3></div><span class="mini-note">18 meses no conjunto completo</span></div>
+      <div id="chart" class="chart" aria-label="Taxa de churn por mês. Consulte a tabela abaixo para os valores exatos."></div>
+      <details class="data-details"><summary>Ver valores mensais em tabela</summary><div class="table-scroll"><table><thead><tr><th scope="col">Mês</th><th scope="col">Ativos no início</th><th scope="col">Cancelamentos</th><th scope="col">Churn</th></tr></thead><tbody id="monthTable"></tbody></table></div></details>
+    </article>
+    <article class="panel panel-aside">
+      <div class="panel-head"><div><p class="section-eyebrow">SEGMENTAÇÃO</p><h3>Diferenças por plano</h3></div></div>
+      <p class="helper">Comparação ponderada no intervalo selecionado. Planos têm bases de tamanhos diferentes.</p>
+      <div id="planBars" class="plan-bars"></div>
+      <div class="insight" id="insightPlan">As diferenças descritas são geradas artificialmente; não demonstram causa ou efeito de campanhas.</div>
+    </article>
+  </section>
+  <section class="split-grid" id="coortes">
+    <article class="panel cohort-panel">
+      <div class="panel-head"><div><p class="section-eyebrow">02 · RETENÇÃO POR COORTE</p><h3>Quem permaneceu ativo?</h3></div></div>
+      <p class="helper">Coortes de aquisição de 2025. Cada célula mostra o percentual de clientes ainda ativos <strong>no início</strong> do mês de idade da coorte. Períodos não observados ficam vazios; a amostra antiga antes de 2025 foi excluída por censura à esquerda.</p>
+      <div id="cohortHeatmap" class="cohort-scroll" aria-label="Tabela de retenção mensal das coortes de 2025"></div>
+    </article>
+    <article class="panel">
+      <div class="panel-head"><div><p class="section-eyebrow">03 · ASSOCIAÇÃO DESCRITIVA</p><h3>Inatividade e cancelamentos</h3></div></div>
+      <p class="helper">Comparação de observações por dias sem uso nos 30 dias anteriores. <strong>Não</strong> infere que inatividade causou churn, nem que uma ação mudaria o resultado.</p>
+      <div class="signal-list" id="signals"></div>
+      <div class="note"><b>Por que é útil?</b> Ajuda a construir hipóteses e a formular perguntas para validação com dados reais — não a justificar ações automatizadas sobre clientes.</div>
+    </article>
+  </section>
+  <section class="model-section" id="modelo">
+    <div class="section-head"><div><p class="section-eyebrow">04 · EXPERIMENTO TEMPORAL</p><h2>Um classificador simples, limites explícitos.</h2><p>Regressão logística escrita em Python puro. Variáveis observadas no começo do mês; desfecho no fim. O teste final ocorre após os períodos usados no treino.</p></div></div>
+    <div class="model-grid">
+      <article class="model-lead"><span class="model-tag">BASE ARTIFICIAL · NÃO USAR PARA DECISÕES REAIS</span><div class="model-number" id="modelAuc">—</div><p>AUC ROC no <strong>teste temporal</strong> (abr–jun/2026)</p><div class="model-divider"></div><div class="model-periods"><span>Treino<strong>2025</strong></span><span>Validação<strong>Jan–mar 2026</strong></span><span>Teste<strong>Abr–jun 2026</strong></span></div><p class="model-disclaimer">O mecanismo de churn foi programado no gerador. AUC, precisão e lift neste cenário não comprovam capacidade de antecipar evasão em clientes reais.</p></article>
+      <div class="model-stats">
+        <article class="model-mini"><span>Brier score — modelo</span><strong id="modelBrier">—</strong><small>Quanto menor, melhor (nesta simulação)</small></article>
+        <article class="model-mini"><span>Brier score — prevalência treino</span><strong id="baselineBrier">—</strong><small>Referência constante, sem variáveis</small></article>
+        <article class="model-mini"><span>Lift do decil de maior risco</span><strong id="modelLift">—</strong><small>Comparado à taxa observada no teste</small></article>
+        <article class="model-mini"><span>Eventos no teste temporal</span><strong id="modelEvents">—</strong><small>Cancelamentos sintéticos</small></article>
+      </div>
+    </div>
+    <details class="method"><summary>Quais variáveis o modelo usou?</summary><p>Tempo de adesão, chamados anteriores, dias de inatividade, faturas atrasadas, plano, canal e mensalidade artificial. Um mesmo cliente pode aparecer em meses de treino e teste: a divisão é temporal, mas as observações longitudinais não são independentes. Não houve validação externa, campanha de retenção ou medição causal.</p></details>
+  </section>
+  <section class="evidence" id="evidencias">
+    <div class="section-head"><div><p class="section-eyebrow">05 · ENGENHARIA EVIDENCIÁVEL</p><h2>Do gráfico ao código, sem caixa-preta</h2></div></div>
+    <div class="evidence-grid">
+      <article><div class="evidence-icon">01</div><h3>Gerador Python</h3><p>Seed fixa e clientes fictícios, sem dados pessoais. CSV de clientes e eventos pode ser reproduzido byte a byte.</p></article>
+      <article><div class="evidence-icon">02</div><h3>SQL e SQLite</h3><p>Chaves, integridade relacional, churn mensal, receita contratual, planos, coortes e associação de sinais.</p></article>
+      <article><div class="evidence-icon">03</div><h3>Qualidade e validação</h3><p>Testes impedem saídas duplicadas, clientes “ressuscitados”, quebras de total e inconsistência dos arquivos gerados.</p></article>
+      <article><div class="evidence-icon">04</div><h3>Experimento responsável</h3><p>Treino/validação/teste cronológicos; baseline de prevalência, AUC, Brier e lift; limitações documentadas.</p></article>
+    </div>
+    <div class="downloads">
+      <a href="./data/customers.csv" download>Baixar clientes fictícios (.csv)</a>
+      <a href="./data/monthly_observations.csv" download>Baixar observações mensais (.csv)</a>
+      <a href="./docs/ESTUDO_DE_CASO.md" target="_blank" rel="noopener noreferrer">Estudo técnico ↗</a>
+      <a href="https://github.com/LeandroAugFerreira/leandroaugferreira.github.io/tree/main/projects/churn-analytics" target="_blank" rel="noopener noreferrer">Abrir código e testes ↗</a>
+    </div>
+  </section>
+</main>
+<footer><div class="container foot"><span><b>ChurnLab V2</b> · Projeto didático independente</span><span>Dados 100% sintéticos · Sem resultados comerciais · Não recupera a base anterior</span><a href="../../churn.html">Voltar ao portfólio</a></div></footer>
+</body></html>

@@ -32,12 +32,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Gerar somente CSV sintetico com seed fixa
         run: python -m src.generate
       - name: Reconciliar SQLite, exportar agregados e experimento temporal
         run: python -m src.pipeline
       - name: Executar todos os testes (inclusive reproduzir arquivos em diretorios temporarios)
         run: python -m unittest discover -s tests -v
+      - name: Conferir metricas de interface e filtros em Node
+        run: node --test tests/*.test.mjs
       - name: Versionar somente dados artificiais e agregados, na branch de trabalho
         run: |
           git config user.name "github-actions[bot]"
@@ -62,7 +67,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Testar CSV, SQL, snapshots, splits e modelo
         run: python -m unittest discover -s tests -v
+      - name: Conferir filtros, coortes e taxas ponderadas
+        run: node --test tests/*.test.mjs
       - name: Confirmar que nao houve alteracoes durante a verificacao
         run: git diff --exit-code -- data/ metrics.json model_card.json
