@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Logística e Frota — Estudo de caso de Dados e BI</title>
+<meta name="description" content="Entenda a reconciliação de 854 viagens didáticas no Power BI: indicadores, períodos, relações e qualidade dos dados, com dashboard funcional para explorar.">
+<meta name="theme-color" content="#091827">
+<meta property="og:title" content="Logística e Frota — Case de Dados/BI">
+<meta property="og:description" content="Comparação de indicadores e diagnóstico de 9 viagens sem veículo e 8 sem rota correspondente. Dados didáticos, código e testes verificáveis.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://leandroaugferreira.github.io/logistica-case.html">
+<style>
+:root{color-scheme:dark;--bg:#061323;--surface:#0d2436;--surface2:#123349;--line:#345269;--fg:#eef5fa;--muted:#adc2d1;--accent:#efb279;--cyan:#6cd4f2;--green:#74dba9;--warn:#f2c478}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.57 Inter,"Segoe UI",Arial,sans-serif;color:var(--fg);background:radial-gradient(ellipse at 90% -10%,#173d5880,transparent 48%),radial-gradient(ellipse at -10% 85%,#2f2b2859,transparent 38%),var(--bg)}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid #ffce8c;outline-offset:3px}button{font:inherit;cursor:pointer}
+.wrap{width:min(1120px,calc(100% - 38px));margin:auto}.top{border-bottom:1px solid var(--line);background:#081b2add}.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:17px 0}.brand{color:var(--fg);font-size:20px;font-weight:850;letter-spacing:-.5px}.brand strong{color:var(--accent)}.nav{display:flex;gap:17px;flex-wrap:wrap;font-size:13px}
+.hero{padding:54px 0 32px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;color:var(--accent);font-weight:850;margin:0 0 11px}.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.07;letter-spacing:-1.6px;max-width:880px;margin:0 0 18px}.hero h1 em{font:italic 400 1em Georgia,serif;color:var(--accent)}.intro{max-width:840px;color:var(--muted);font-size:17px;margin:0 0 23px}.notice{border:1px solid #84674c;background:#392d2145;border-radius:12px;padding:13px 16px;font-size:13px;color:#eed2ae}.notice b{margin-right:9px;color:#ffce90}
+h2{font-size:25px;letter-spacing:-.5px;margin:5px 0 12px}.sub{color:var(--muted);margin:0 0 19px}
+.periods{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 15px}.periods button{border:1px solid var(--line);border-radius:11px;background:var(--surface2);color:var(--fg);padding:11px 22px;font-weight:750}.periods button[aria-pressed=true]{border-color:var(--accent);background:var(--accent);color:#1d2730}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0 21px}.kpi{border:1px solid var(--line);border-radius:15px;padding:19px;background:linear-gradient(155deg,#122e42,#081f30)}.kpi small{display:block;color:var(--muted);font-size:12px;line-height:1.35}.kpi strong{font-size:clamp(24px,3vw,36px);line-height:1.2;letter-spacing:-.9px;display:block;margin:9px 0 7px}.kpi strong.good{color:var(--green)}.kpi em{font-size:11px;font-style:normal;color:var(--muted)}
+.split{display:grid;grid-template-columns:1.13fr .87fr;gap:15px}.panel{border:1px solid var(--line);background:#0b2639;border-radius:16px;padding:22px}.panel h3{font-size:18px;margin:0 0 7px}.panel p{color:var(--muted);font-size:13px;margin:0 0 12px}.panel .big{color:var(--fg);font-size:18px;font-weight:800;margin-top:12px}
+.status{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #294759}.status:last-child{border:0}.status span{font-size:12px;color:var(--muted)}.status b{font-size:13px}
+.bar{margin:12px 0 17px}.bar label{display:flex;justify-content:space-between;gap:12px;font-size:12px;margin-bottom:6px}.track{height:10px;background:#274556;border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:var(--cyan)}.fill.gold{background:var(--accent)}.fill.gray{background:#728d9f}.fill.warn{background:var(--warn)}
+.tag{display:inline-flex;border:1px solid #b18754;border-radius:99px;color:#f4d29f;background:#65472838;font-size:11px;padding:5px 10px;font-weight:750;margin:9px 0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:23px 0}.card{border:1px solid var(--line);border-radius:13px;background:#0c283b;padding:18px}.card b{color:var(--accent);font-size:13px}.card p{font-size:12px;color:var(--muted);margin:9px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:12px;padding:24px 0 52px;border-top:1px solid var(--line)}.links a{display:inline-flex;border:1px solid #57748b;padding:12px 16px;border-radius:10px;color:var(--fg);font-size:13px;font-weight:750}.links a:first-child{background:var(--accent);border-color:var(--accent);color:#1c2730}
+footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:12px}
+@media(max-width:850px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.hero{padding:34px 0 27px}.intro{font-size:15px}.kpis{gap:9px}.kpi{padding:14px}.cards{grid-template-columns:1fr}.panel{padding:16px}.periods button{flex:1;padding:10px 9px}.links a{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap"><a class="brand" href="transporte.html"><strong>Logística</strong> e Frota</a><div class="nav"><a href="transporte.html">Projeto completo</a><a href="dashboards/logistico/index.html">Dashboard funcional</a><a href="https://github.com/LeandroAugFerreira/dashboard-logistico" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></div></div></nav>
+<main class="wrap">
+<section class="hero">
+<p class="kicker">Estudo de caso · Power BI, DAX e qualidade de dados</p>
+<h1>O indicador é só o começo. <em>A pergunta é o que ficou fora.</em></h1>
+<p class="intro">Um caso de logística com dados didáticos que combina definição de KPIs, comparação temporal, preservação do modelo Power BI e auditoria de relacionamentos.</p>
+<div class="notice"><b>DADOS DIDÁTICOS · SNAPSHOT ESTÁTICO</b> Este guia usa resultados congelados e testados do conjunto de 2025/2026. Não é uma operação real, não consulta o Power BI em tempo real e não substitui o dashboard interativo completo.</div>
+</section>
+<section aria-labelledby="kp-title">
+<p class="kicker">01 · Indicadores reconciliados</p>
+<h2 id="kp-title">Explore o período do conjunto didático</h2>
+<p class="sub">Selecione o total ou um dos anos. Os valores mudam, mas as regras de cálculo são as mesmas.</p>
+<div class="periods" role="group" aria-label="Selecionar período de análise">
+<button type="button" data-period="total" aria-pressed="true">Total 2025–26</button>
+<button type="button" data-period="2025" aria-pressed="false">2025</button>
+<button type="button" data-period="2026" aria-pressed="false">2026</button>
+</div>
+<div class="kpis" aria-live="polite">
+<div class="kpi"><small>Viagens realizadas (registros)</small><strong id="kTrips">854</strong><em>Contagem de id_operacao</em></div>
+<div class="kpi"><small>Pontualidade pelo Status Prazo</small><strong class="good" id="kOnTime">98,71%</strong><em id="kFraction">843 de 854 viagens</em></div>
+<div class="kpi"><small>Viagens com atraso positivo</small><strong id="kLate">11</strong><em>atraso_horas maior que zero</em></div>
+<div class="kpi"><small>Tempo médio de execução</small><strong id="kTime">58,80 h</strong><em>Média de valores válidos</em></div>
+</div>
+<div class="split"><div class="panel">
+<h3>Quanto pesa o volume transportado?</h3>
+<p>O nome “Volume Total” veio da medida DAX original. A fórmula soma a coluna <code>peso_total</code>; não representa quantidade de volumes físicos.</p>
+<p class="big" id="kWeight" aria-live="polite">6.754.202,332 unidades de peso</p>
+<div class="status"><span>Período</span><b id="kYear">Todo o snapshot</b></div>
+<div class="status"><span>Regra de total</span><b>COUNT de operações</b></div>
+<div class="status"><span>Regra da pontualidade</span><b>Categoria “No Prazo”</b></div>
+<div class="status"><span>Origem da referência</span><b>tests/golden.json</b></div>
+<p style="margin-top:16px" id="periodNote">A distribuição soma os anos 2025 e 2026. A fonte não se atualiza automaticamente.</p>
+</div><aside class="panel">
+<h3>Interpretação responsável</h3>
+<p>O snapshot tem 816 viagens em 2025 e apenas 38 em 2026; portanto, uma taxa de 100% no subconjunto de 2026 não comprova ganho operacional.</p>
+<div class="status"><span>Viagens 2025</span><b>816</b></div>
+<div class="status"><span>Viagens 2026</span><b>38</b></div>
+<div class="status"><span>Maior cuidado</span><b>Período possivelmente parcial</b></div>
+<div class="tag">Sem afirmações de economia ou melhoria real</div>
+<p>Os dados não representam resultados de clientes, despesas de frete ou uma transportadora em produção.</p>
+</aside></div>
+</section>
+<section style="margin-top:38px" aria-labelledby="quality-title">
+<p class="kicker">02 · Qualidade dos relacionamentos</p>
+<h2 id="quality-title">O detalhe que muda a interpretação dos gráficos</h2>
+<p class="sub">Os testes encontraram viagens que existem na tabela de fatos, mas cuja chave não encontra um cadastro nas dimensões de veículos ou rotas. Essas lacunas não devem desaparecer de um relatório sem aviso.</p>
+<div class="split"><div class="panel"><h3>854 viagens por tipo de frota</h3><p>Os três tipos cadastrados somam 845 viagens. O restante não se associa a um veículo da dimensão.</p>
+<div id="vehicleBars">
+<div class="bar"><label><span>Próprio</span><b>383 · 44,85%</b></label><div class="track"><div class="fill" style="width:44.85%"></div></div></div>
+<div class="bar"><label><span>Terceiro</span><b>317 · 37,12%</b></label><div class="track"><div class="fill gold" style="width:37.12%"></div></div></div>
+<div class="bar"><label><span>Agregado</span><b>145 · 16,98%</b></label><div class="track"><div class="fill gray" style="width:16.98%"></div></div></div>
+<div class="bar"><label><span>Sem correspondência em dVeículos</span><b>9 · 1,05%</b></label><div class="track"><div class="fill warn" style="width:1.05%;min-width:3px"></div></div></div>
+</div>
+<div class="tag">845 classificadas + 9 sem correspondência = 854</div>
+</div><aside class="panel"><h3>Diagnóstico das cinco relações</h3><p>A auditoria não modificou o Power BI ou as tabelas. Ela contou lacunas e pesos associados, sem publicar chaves ou registros.</p>
+<div class="status"><span>dCliente</span><b>0 sem correspondência</b></div>
+<div class="status"><span>dEmpresa</span><b>0 sem correspondência</b></div>
+<div class="status"><span>dRotas</span><b>8 viagens · peso 90.387,460</b></div>
+<div class="status"><span>dStatus</span><b>0 sem correspondência</b></div>
+<div class="status"><span>dVeículos</span><b>9 viagens · peso 63.500,622</b></div>
+<p style="margin-top:14px">Os grupos de 8 e 9 viagens podem se sobrepor. Não representam necessariamente 17 linhas distintas.</p>
+</aside></div>
+</section>
+<section style="margin-top:37px" aria-labelledby="proof">
+<p class="kicker">03 · Código e evidência</p><h2 id="proof">O que um recrutador pode conferir</h2>
+<div class="cards">
+<article class="card"><b>Modelo Power BI preservado</b><p>PBIX/XLSX e seus hashes, DAX, consultas Power Query, esquema e relacionamentos disponíveis para revisão técnica.</p></article>
+<article class="card"><b>39 testes automatizados</b><p>Integridade do snapshot, referências independentes, recortes por mês/ano e o diagnóstico agregado de chaves sem correspondência.</p></article>
+<article class="card"><b>Dashboard real no navegador</b><p>A implementação web existente é interativa, mas usa JavaScript próprio. Este guia apenas explica métricas congeladas e limitações.</p></article>
+</div>
+<div class="links">
+<a href="dashboards/logistico/index.html">Abrir dashboard completo →</a>
+<a href="https://github.com/LeandroAugFerreira/dashboard-logistico/tree/main/docs/recrutamento" target="_blank" rel="noopener noreferrer">Estudo de caso, DAX e qualidade ↗</a>
+<a href="https://github.com/LeandroAugFerreira/dashboard-logistico/actions" target="_blank" rel="noopener noreferrer">Testes no GitHub ↗</a>
+<a href="transporte.html">Conhecer página do projeto →</a>
+</div></section>
+</main>
+<footer><div class="wrap">Logística e Frota · Dados fictícios/didáticos · Recortes verificáveis e limitações documentadas · Nenhuma informação em tempo real.</div></footer>
+<script>
+(()=>{'use strict';
+const values={
+total:{trips:854,ontime:843,late:11,avg:58.80160062392141,weight:6754202.332,year:'Todo o snapshot',note:'Os 12 meses e os dois anos recompõem o total. Os dados não são atualizados automaticamente.'},
+'2025':{trips:816,ontime:805,late:11,avg:59.68862736958627,weight:6518816.974,year:'2025',note:'A taxa é 805/816. Todas as 11 viagens atrasadas do snapshot estão no recorte de 2025.'},
+'2026':{trips:38,ontime:38,late:0,avg:37.85211601307189,weight:235385.358,year:'2026',note:'38 viagens e nenhum atraso registrado neste subconjunto. Isso não prova melhora de uma operação real ou ano completo.'}
+};
+const int = new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0});
+const two = new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const three = new Intl.NumberFormat('pt-BR',{minimumFractionDigits:3,maximumFractionDigits:3});
+const $=id=>document.getElementById(id);
+function choose(period){
+const v=values[period];if(!v)return;
+document.querySelectorAll('[data-period]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.period===period)));
+$('kTrips').textContent=int.format(v.trips);
+$('kOnTime').textContent=two.format(v.ontime/v.trips*100)+'%';
+$('kFraction').textContent=int.format(v.ontime)+' de '+int.format(v.trips)+' viagens';
+$('kLate').textContent=int.format(v.late);
+$('kTime').textContent=two.format(v.avg)+' h';
+$('kWeight').textContent=three.format(v.weight)+' unidades de peso';
+$('kYear').textContent=v.year;
+$('periodNote').textContent=v.note;
+}
+document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.period)));
+choose('total');
+})();
+</script>
+</body></html>
