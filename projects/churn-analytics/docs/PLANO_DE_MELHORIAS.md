@@ -30,3 +30,12 @@ O projeto fornece Python + SQLite/SQL, CSV sintético, agregados versionados, mo
 Em entrevistas, explicar **por que a taxa usa cliente-mês, por que datas e cortes importam, por que AUC ≠ accuracy e por que associação ≠ causalidade** tem mais valor do que acrescentar outro algoritmo sem validação.
 
 [Estudo](ESTUDO_DE_CASO.md) · [Auditoria](AUDITORIA.md) · [Model card](MODEL_CARD.md).
+
+## Conclusão visual e portabilidade — novembro/2026
+
+- A miniatura histórica do cartão no portfólio foi substituída por [prévia vetorial da V2](../preview.svg), baseada nos indicadores sintéticos. O vídeo e as imagens do Power BI antigo permanecem somente no arquivo histórico.
+- Foi adicionada suíte [Playwright](../tests/browser/smoke.spec.mjs) para execução desktop/mobile, com screenshots como artefatos de CI, sem imagens pessoais.
+- [CI independente](../.github/workflows/ci.yml) preparada para funcionar na raiz de um novo repositório após migração.
+- O workflow atual gera um **ZIP portátil** que pode ser baixado pelo usuário. Criar de fato outro repositório ainda depende da ação autorizada do titular; os links públicos existentes permanecem funcionais até a migração.
+
+[Guia de migração](MIGRACAO_REPOSITORIO.md).

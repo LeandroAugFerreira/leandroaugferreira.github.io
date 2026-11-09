@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="750" viewBox="0 0 1340 750" role="img" aria-labelledby="title desc">
+<title id="title">ChurnLab V2 — painel de retenção com dados sintéticos</title>
+<desc id="desc">Prévia vetorial editorial do ChurnLab V2: 1.800 clientes fictícios, 1.130 cancelamentos, taxa 8,35%, série temporal e coortes.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122237"/><stop offset="1" stop-color="#0b1728"/></linearGradient>
+<linearGradient id="rise" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2aaa4" stop-opacity=".28"/><stop offset="1" stop-color="#f2aaa4" stop-opacity=".01"/></linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f2aaa4"/><stop offset="1" stop-color="#c990e7"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1340" height="750" fill="url(#bg)"/>
+<ellipse cx="1169" cy="0" rx="360" ry="300" fill="#6f4b66" opacity=".27" filter="url(#glow)"/>
+<ellipse cx="35" cy="670" rx="230" ry="170" fill="#245778" opacity=".23" filter="url(#glow)"/>
+<rect x="33" y="32" width="1274" height="686" rx="25" fill="#102438" stroke="#365068" stroke-width="1.7"/>
+<rect x="34" y="33" width="1272" height="80" rx="24" fill="#172c3f"/>
+<path d="M35 89H1306V114H35Z" fill="#172c3f"/>
+<circle cx="75" cy="72" r="19" fill="#f2aaa4"/><text x="68" y="80" font-size="23" font-weight="800" fill="#172339" font-family="Inter,Arial">C</text>
+<text x="111" y="78" font-size="29" font-weight="800" letter-spacing="-1" fill="#ffffff" font-family="Inter,Arial">Churn<tspan fill="#f2aaa4">Lab</tspan></text>
+<rect x="269" y="55" width="61" height="30" rx="8" fill="#344457" stroke="#61738a"/><text x="283" y="76" font-size="15" font-weight="700" fill="#dce5ef" font-family="Inter,Arial">V2</text>
+<text x="978" y="74" font-size="14" font-weight="700" fill="#94d9bd" letter-spacing="1" font-family="Inter,Arial">DADOS SINTÉTICOS</text>
+<circle cx="956" cy="69" r="5" fill="#94d9bd"/>
+<text x="75" y="153" font-size="15" letter-spacing="3" fill="#f2aaa4" font-weight="800" font-family="Inter,Arial">ANÁLISE DE RETENÇÃO · PYTHON + SQL + BI</text>
+<g>
+<rect x="74" y="178" width="281" height="141" rx="16" fill="#1a3247" stroke="#3f5269"/>
+<rect x="377" y="178" width="281" height="141" rx="16" fill="#1a3247" stroke="#3f5269"/>
+<rect x="680" y="178" width="281" height="141" rx="16" fill="#1a3247" stroke="#3f5269"/>
+<rect x="983" y="178" width="282" height="141" rx="16" fill="#1a3247" stroke="#3f5269"/>
+<text x="96" y="212" font-size="17" fill="#b9c9d5" font-family="Inter,Arial">Clientes fictícios</text>
+<text x="96" y="270" font-size="48" font-weight="800" fill="#fff" font-family="Inter,Arial">1.800</text>
+<text x="399" y="212" font-size="17" fill="#b9c9d5" font-family="Inter,Arial">Cancelamentos</text>
+<text x="399" y="270" font-size="48" font-weight="800" fill="#fff" font-family="Inter,Arial">1.130</text>
+<text x="702" y="212" font-size="17" fill="#b9c9d5" font-family="Inter,Arial">Churn ponderado</text>
+<text x="702" y="270" font-size="48" font-weight="800" fill="#f2aaa4" font-family="Inter,Arial">8,35%</text>
+<text x="1005" y="212" font-size="17" fill="#b9c9d5" font-family="Inter,Arial">Período</text>
+<text x="1005" y="269" font-size="40" font-weight="800" fill="#fff" font-family="Inter,Arial">18 meses</text>
+</g>
+<rect x="74" y="342" width="754" height="299" rx="15" fill="#172d42" stroke="#394f65"/>
+<text x="98" y="383" font-size="21" font-weight="750" fill="#e9f3ff" font-family="Inter,Arial">Evolução mensal do churn</text>
+<text x="98" y="407" font-size="13" fill="#b0c1d0" font-family="Inter,Arial">Base fictícia · janeiro de 2025 a junho de 2026</text>
+<g stroke="#40556b" stroke-dasharray="5 8" opacity=".62">
+<path d="M76 548H794"/><path d="M76 496H794"/><path d="M76 444H794"/>
+</g>
+<polygon points="76,548 76.0,385.9 118.2,387.2 160.5,425.4 202.7,386.3 244.9,404.1 287.2,394.2 329.4,416.3 371.6,396.9 413.9,405.1 456.1,405.3 498.4,427.4 540.6,424.9 582.8,400.5 625.1,414.2 667.3,404.8 709.5,389.9 751.8,416.8 794.0,423.2 794,548" fill="url(#rise)"/>
+<polyline points="76.0,385.9 118.2,387.2 160.5,425.4 202.7,386.3 244.9,404.1 287.2,394.2 329.4,416.3 371.6,396.9 413.9,405.1 456.1,405.3 498.4,427.4 540.6,424.9 582.8,400.5 625.1,414.2 667.3,404.8 709.5,389.9 751.8,416.8 794.0,423.2" fill="none" stroke="url(#accent)" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="794.0" cy="423.2" r="7" fill="#f2aaa4" stroke="#fff" stroke-width="2"/>
+<text x="98" y="608" font-size="14" fill="#a9bfd2" font-family="Inter,Arial">JAN / 2025</text>
+<text x="397" y="608" font-size="14" fill="#a9bfd2" font-family="Inter,Arial">JUL / 2025</text>
+<text x="671" y="608" font-size="14" fill="#a9bfd2" font-family="Inter,Arial">JUN / 2026</text>
+<rect x="847" y="342" width="418" height="299" rx="15" fill="#172d42" stroke="#394f65"/>
+<text x="876" y="383" font-size="21" font-weight="750" fill="#e9f3ff" font-family="Inter,Arial">Coortes de aquisição</text>
+<text x="876" y="409" font-size="13" fill="#b0c1d0" font-family="Inter,Arial">Retenção sintética por tempo de vida</text>
+<g><rect x="931" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.79"/><rect x="982" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.72"/><rect x="1033" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.62"/><rect x="1084" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.57"/><rect x="1135" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.52"/><rect x="1186" y="391" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.51"/><rect x="931" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.79"/><rect x="982" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.75"/><rect x="1033" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.72"/><rect x="1084" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.65"/><rect x="1135" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.62"/><rect x="1186" y="428" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.58"/><rect x="931" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.79"/><rect x="982" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.74"/><rect x="1033" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.65"/><rect x="1084" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.61"/><rect x="1135" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.59"/><rect x="1186" y="465" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.56"/><rect x="931" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.79"/><rect x="982" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.73"/><rect x="1033" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.68"/><rect x="1084" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.63"/><rect x="1135" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.62"/><rect x="1186" y="502" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.59"/><rect x="931" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.79"/><rect x="982" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.72"/><rect x="1033" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.68"/><rect x="1084" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.64"/><rect x="1135" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.60"/><rect x="1186" y="539" width="45" height="30" rx="5" fill="#83d7bd" fill-opacity="0.58"/></g>
+<g font-family="Inter,Arial" fill="#d6e5ed" font-size="14"><text x="867" y="412" opacity="0"></text><text x="865" y="412" opacity="0"></text><text x="875" y="419" opacity="0"></text>
+<text x="875" y="410" opacity="0"></text><text x="869" y="418" opacity="0"></text>
+</g>
+<text x="872" y="424" font-size="14" fill="#e6d1ca" font-family="Inter,Arial" opacity="0">Coortes</text>
+<text x="882" y="584" font-size="16" fill="#93d8c3" font-family="Inter,Arial">●</text>
+<text x="905" y="584" font-size="13" fill="#b6c9d6" font-family="Inter,Arial">Retenção no início do período</text>
+<line x1="75" y1="667" x2="1265" y2="667" stroke="#415266"/>
+<text x="80" y="694" font-size="14" fill="#b1c7d8" font-family="Inter,Arial">Python   /   SQLite   /   SQL   /   JavaScript   /   Testes automáticos</text>
+<text x="1121" y="694" font-size="13" font-weight="700" fill="#f2aaa4" font-family="Inter,Arial">PREVIEW V2</text>
+</svg>

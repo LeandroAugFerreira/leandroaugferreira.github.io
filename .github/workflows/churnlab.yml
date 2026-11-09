@@ -1,29 +1,29 @@
-name: ChurnLab - dados sinteticos, SQL, ML e QA
+name: ChurnLab - geracao, SQL, ML, navegador e pacote
 
 on:
   push:
-    branches:
-      - main
-      - feat/churn-reconstrucao-20261108
     paths:
-      - projects/churn-analytics/**
-      - .github/workflows/churnlab.yml
-      - churn.html
-      - index.html
+      - 'projects/churn-analytics/**'
+      - '.github/workflows/churnlab.yml'
+      - 'assets/churnlab-preview.css'
+      - 'churn.html'
+      - 'index.html'
   pull_request:
     paths:
-      - projects/churn-analytics/**
-      - .github/workflows/churnlab.yml
-      - churn.html
-      - index.html
+      - 'projects/churn-analytics/**'
+      - '.github/workflows/churnlab.yml'
+      - 'assets/churnlab-preview.css'
+      - 'churn.html'
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  generate:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/feat/churn-reconstrucao-20261108'
-    permissions:
-      contents: write
+  quality:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 15
     defaults:
       run:
         working-directory: projects/churn-analytics
@@ -35,44 +35,48 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Gerar somente CSV sintetico com seed fixa
-        run: python -m src.generate
-      - name: Reconciliar SQLite, exportar agregados e experimento temporal
-        run: python -m src.pipeline
-      - name: Executar todos os testes (inclusive reproduzir arquivos em diretorios temporarios)
+      - name: Testes Python - qualidade, SQL, temporalidade e reprodutibilidade
         run: python -m unittest discover -s tests -v
-      - name: Conferir metricas de interface e filtros em Node
+      - name: Testes JavaScript - taxas e filtros
         run: node --test tests/*.test.mjs
-      - name: Versionar somente dados artificiais e agregados, na branch de trabalho
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/customers.csv data/monthly_observations.csv metrics.json model_card.json
-          if ! git diff --cached --quiet; then
-            git commit -m "data(churn): gerar base sintetica, metricas SQL e model card reproduziveis"
-            git push origin HEAD:"$GITHUB_REF_NAME"
-          fi
-
-  verify:
-    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-    runs-on: ubuntu-24.04
-    timeout-minutes: 12
-    defaults:
-      run:
-        working-directory: projects/churn-analytics
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Empacotamento isolado sem caches ou secrets
+        run: python scripts/package_standalone.py
+      - uses: actions/upload-artifact@v4
         with:
-          python-version: '3.12'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Testar CSV, SQL, snapshots, splits e modelo
-        run: python -m unittest discover -s tests -v
-      - name: Conferir filtros, coortes e taxas ponderadas
-        run: node --test tests/*.test.mjs
-      - name: Confirmar que nao houve alteracoes durante a verificacao
+          name: churnlab-v2-standalone
+          path: projects/churn-analytics/dist/churnlab-v2-standalone.zip
+          if-no-files-found: error
+          retention-days: 30
+      - name: Verificar que o pipeline nao editou originais
         run: git diff --exit-code -- data/ metrics.json model_card.json
+  browser:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: projects/churn-analytics
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Dependencias de desenvolvimento do Playwright
+        run: npm install --no-audit --no-fund
+      - name: Chromium para teste responsivo
+        run: npx playwright install --with-deps chromium
+      - name: E2E no desktop e no celular
+        run: npx playwright test
+      - name: Guardar screenshots e traces apenas como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: churnlab-browser-desktop-mobile
+          path: |
+            projects/churn-analytics/artifacts/
+            projects/churn-analytics/test-results/
+          if-no-files-found: ignore
+          retention-days: 14
