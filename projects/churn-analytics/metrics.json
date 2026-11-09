@@ -1,0 +1,1857 @@
+{
+  "by_channel": [
+    {
+      "channel": "Anúncios",
+      "churn_rate": 0.101375,
+      "churned": 376,
+      "customer_months": 3709
+    },
+    {
+      "channel": "Indicação",
+      "churn_rate": 0.07733,
+      "churned": 278,
+      "customer_months": 3595
+    },
+    {
+      "channel": "Orgânico",
+      "churn_rate": 0.076515,
+      "churned": 476,
+      "customer_months": 6221
+    }
+  ],
+  "by_plan_month": [
+    {
+      "active_start": 127,
+      "churn_rate": 0.055118,
+      "churned": 7,
+      "lost_mrr_cents": 193300,
+      "month": "2025-01",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 443,
+      "churn_rate": 0.124153,
+      "churned": 55,
+      "lost_mrr_cents": 358500,
+      "month": "2025-01",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 239,
+      "churn_rate": 0.062762,
+      "churned": 15,
+      "lost_mrr_cents": 201500,
+      "month": "2025-01",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 127,
+      "churn_rate": 0.047244,
+      "churned": 6,
+      "lost_mrr_cents": 163400,
+      "month": "2025-02",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 417,
+      "churn_rate": 0.11271,
+      "churned": 47,
+      "lost_mrr_cents": 310300,
+      "month": "2025-02",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 250,
+      "churn_rate": 0.088,
+      "churned": 22,
+      "lost_mrr_cents": 295800,
+      "month": "2025-02",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 128,
+      "churn_rate": 0.023438,
+      "churned": 3,
+      "lost_mrr_cents": 81700,
+      "month": "2025-03",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 411,
+      "churn_rate": 0.085158,
+      "churned": 35,
+      "lost_mrr_cents": 227500,
+      "month": "2025-03",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 239,
+      "churn_rate": 0.075314,
+      "churned": 18,
+      "lost_mrr_cents": 246200,
+      "month": "2025-03",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 133,
+      "churn_rate": 0.052632,
+      "churned": 7,
+      "lost_mrr_cents": 190300,
+      "month": "2025-04",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 412,
+      "churn_rate": 0.121359,
+      "churned": 50,
+      "lost_mrr_cents": 322000,
+      "month": "2025-04",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 245,
+      "churn_rate": 0.073469,
+      "churned": 18,
+      "lost_mrr_cents": 243200,
+      "month": "2025-04",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 135,
+      "churn_rate": 0.044444,
+      "churned": 6,
+      "lost_mrr_cents": 163400,
+      "month": "2025-05",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 391,
+      "churn_rate": 0.117647,
+      "churned": 46,
+      "lost_mrr_cents": 304400,
+      "month": "2025-05",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 243,
+      "churn_rate": 0.053498,
+      "churned": 13,
+      "lost_mrr_cents": 173700,
+      "month": "2025-05",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 138,
+      "churn_rate": 0.028986,
+      "churned": 4,
+      "lost_mrr_cents": 109600,
+      "month": "2025-06",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 380,
+      "churn_rate": 0.126316,
+      "churned": 48,
+      "lost_mrr_cents": 303200,
+      "month": "2025-06",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 246,
+      "churn_rate": 0.069106,
+      "churned": 17,
+      "lost_mrr_cents": 224300,
+      "month": "2025-06",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 143,
+      "churn_rate": 0.034965,
+      "churned": 5,
+      "lost_mrr_cents": 136500,
+      "month": "2025-07",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 355,
+      "churn_rate": 0.084507,
+      "churned": 30,
+      "lost_mrr_cents": 193000,
+      "month": "2025-07",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 252,
+      "churn_rate": 0.09127,
+      "churned": 23,
+      "lost_mrr_cents": 305700,
+      "month": "2025-07",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 148,
+      "churn_rate": 0.033784,
+      "churned": 5,
+      "lost_mrr_cents": 139500,
+      "month": "2025-08",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 350,
+      "churn_rate": 0.122857,
+      "churned": 43,
+      "lost_mrr_cents": 279700,
+      "month": "2025-08",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 246,
+      "churn_rate": 0.073171,
+      "churned": 18,
+      "lost_mrr_cents": 245200,
+      "month": "2025-08",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 146,
+      "churn_rate": 0.068493,
+      "churned": 10,
+      "lost_mrr_cents": 277000,
+      "month": "2025-09",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 340,
+      "churn_rate": 0.108824,
+      "churned": 37,
+      "lost_mrr_cents": 249300,
+      "month": "2025-09",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 253,
+      "churn_rate": 0.059289,
+      "churned": 15,
+      "lost_mrr_cents": 206500,
+      "month": "2025-09",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 145,
+      "churn_rate": 0.041379,
+      "churned": 6,
+      "lost_mrr_cents": 167400,
+      "month": "2025-10",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 334,
+      "churn_rate": 0.125749,
+      "churned": 42,
+      "lost_mrr_cents": 267800,
+      "month": "2025-10",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 249,
+      "churn_rate": 0.052209,
+      "churned": 13,
+      "lost_mrr_cents": 182700,
+      "month": "2025-10",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 149,
+      "churn_rate": 0.006711,
+      "churned": 1,
+      "lost_mrr_cents": 26900,
+      "month": "2025-11",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 315,
+      "churn_rate": 0.101587,
+      "churned": 32,
+      "lost_mrr_cents": 204800,
+      "month": "2025-11",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 256,
+      "churn_rate": 0.070312,
+      "churned": 18,
+      "lost_mrr_cents": 243200,
+      "month": "2025-11",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 157,
+      "churn_rate": 0.038217,
+      "churned": 6,
+      "lost_mrr_cents": 166400,
+      "month": "2025-12",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 315,
+      "churn_rate": 0.11746,
+      "churned": 37,
+      "lost_mrr_cents": 235300,
+      "month": "2025-12",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 261,
+      "churn_rate": 0.038314,
+      "churned": 10,
+      "lost_mrr_cents": 139000,
+      "month": "2025-12",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 163,
+      "churn_rate": 0.06135,
+      "churned": 10,
+      "lost_mrr_cents": 276000,
+      "month": "2026-01",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 309,
+      "churn_rate": 0.113269,
+      "churned": 35,
+      "lost_mrr_cents": 227500,
+      "month": "2026-01",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 267,
+      "churn_rate": 0.071161,
+      "churned": 19,
+      "lost_mrr_cents": 257100,
+      "month": "2026-01",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 162,
+      "churn_rate": 0.037037,
+      "churned": 6,
+      "lost_mrr_cents": 165400,
+      "month": "2026-02",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 306,
+      "churn_rate": 0.107843,
+      "churned": 33,
+      "lost_mrr_cents": 211700,
+      "month": "2026-02",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 270,
+      "churn_rate": 0.07037,
+      "churned": 19,
+      "lost_mrr_cents": 256100,
+      "month": "2026-02",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 171,
+      "churn_rate": 0.040936,
+      "churned": 7,
+      "lost_mrr_cents": 193300,
+      "month": "2026-03",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 303,
+      "churn_rate": 0.112211,
+      "churned": 34,
+      "lost_mrr_cents": 229600,
+      "month": "2026-03",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 263,
+      "churn_rate": 0.079848,
+      "churned": 21,
+      "lost_mrr_cents": 284900,
+      "month": "2026-03",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 166,
+      "churn_rate": 0.054217,
+      "churned": 9,
+      "lost_mrr_cents": 247100,
+      "month": "2026-04",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 311,
+      "churn_rate": 0.128617,
+      "churned": 40,
+      "lost_mrr_cents": 257000,
+      "month": "2026-04",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 266,
+      "churn_rate": 0.075188,
+      "churned": 20,
+      "lost_mrr_cents": 270000,
+      "month": "2026-04",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 169,
+      "churn_rate": 0.047337,
+      "churned": 8,
+      "lost_mrr_cents": 221200,
+      "month": "2026-05",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 300,
+      "churn_rate": 0.1,
+      "churned": 30,
+      "lost_mrr_cents": 193000,
+      "month": "2026-05",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 258,
+      "churn_rate": 0.069767,
+      "churned": 18,
+      "lost_mrr_cents": 242200,
+      "month": "2026-05",
+      "plan": "Pro"
+    },
+    {
+      "active_start": 169,
+      "churn_rate": 0.023669,
+      "churned": 4,
+      "lost_mrr_cents": 109600,
+      "month": "2026-06",
+      "plan": "Equipe"
+    },
+    {
+      "active_start": 293,
+      "churn_rate": 0.119454,
+      "churned": 35,
+      "lost_mrr_cents": 224500,
+      "month": "2026-06",
+      "plan": "Essencial"
+    },
+    {
+      "active_start": 261,
+      "churn_rate": 0.05364,
+      "churned": 14,
+      "lost_mrr_cents": 191600,
+      "month": "2026-06",
+      "plan": "Pro"
+    }
+  ],
+  "cohorts": [
+    {
+      "active_start": 52,
+      "age_months": 0,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 46,
+      "age_months": 1,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.884615
+    },
+    {
+      "active_start": 38,
+      "age_months": 2,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.730769
+    },
+    {
+      "active_start": 34,
+      "age_months": 3,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.653846
+    },
+    {
+      "active_start": 30,
+      "age_months": 4,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.576923
+    },
+    {
+      "active_start": 29,
+      "age_months": 5,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.557692
+    },
+    {
+      "active_start": 28,
+      "age_months": 6,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.538462
+    },
+    {
+      "active_start": 27,
+      "age_months": 7,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.519231
+    },
+    {
+      "active_start": 26,
+      "age_months": 8,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.5
+    },
+    {
+      "active_start": 23,
+      "age_months": 9,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.442308
+    },
+    {
+      "active_start": 23,
+      "age_months": 10,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.442308
+    },
+    {
+      "active_start": 22,
+      "age_months": 11,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.423077
+    },
+    {
+      "active_start": 21,
+      "age_months": 12,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.403846
+    },
+    {
+      "active_start": 17,
+      "age_months": 13,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.326923
+    },
+    {
+      "active_start": 16,
+      "age_months": 14,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.307692
+    },
+    {
+      "active_start": 14,
+      "age_months": 15,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.269231
+    },
+    {
+      "active_start": 14,
+      "age_months": 16,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.269231
+    },
+    {
+      "active_start": 13,
+      "age_months": 17,
+      "cohort": "2025-01",
+      "cohort_size": 52,
+      "retention_rate": 0.25
+    },
+    {
+      "active_start": 62,
+      "age_months": 0,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 58,
+      "age_months": 1,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.935484
+    },
+    {
+      "active_start": 55,
+      "age_months": 2,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.887097
+    },
+    {
+      "active_start": 48,
+      "age_months": 3,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.774194
+    },
+    {
+      "active_start": 45,
+      "age_months": 4,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.725806
+    },
+    {
+      "active_start": 41,
+      "age_months": 5,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.66129
+    },
+    {
+      "active_start": 39,
+      "age_months": 6,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.629032
+    },
+    {
+      "active_start": 36,
+      "age_months": 7,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.580645
+    },
+    {
+      "active_start": 33,
+      "age_months": 8,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.532258
+    },
+    {
+      "active_start": 30,
+      "age_months": 9,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.483871
+    },
+    {
+      "active_start": 27,
+      "age_months": 10,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.435484
+    },
+    {
+      "active_start": 27,
+      "age_months": 11,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.435484
+    },
+    {
+      "active_start": 26,
+      "age_months": 12,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.419355
+    },
+    {
+      "active_start": 26,
+      "age_months": 13,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.419355
+    },
+    {
+      "active_start": 24,
+      "age_months": 14,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.387097
+    },
+    {
+      "active_start": 20,
+      "age_months": 15,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.322581
+    },
+    {
+      "active_start": 19,
+      "age_months": 16,
+      "cohort": "2025-02",
+      "cohort_size": 62,
+      "retention_rate": 0.306452
+    },
+    {
+      "active_start": 59,
+      "age_months": 0,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 54,
+      "age_months": 1,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.915254
+    },
+    {
+      "active_start": 46,
+      "age_months": 2,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.779661
+    },
+    {
+      "active_start": 42,
+      "age_months": 3,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.711864
+    },
+    {
+      "active_start": 40,
+      "age_months": 4,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.677966
+    },
+    {
+      "active_start": 37,
+      "age_months": 5,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.627119
+    },
+    {
+      "active_start": 33,
+      "age_months": 6,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.559322
+    },
+    {
+      "active_start": 27,
+      "age_months": 7,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.457627
+    },
+    {
+      "active_start": 24,
+      "age_months": 8,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.40678
+    },
+    {
+      "active_start": 22,
+      "age_months": 9,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.372881
+    },
+    {
+      "active_start": 21,
+      "age_months": 10,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.355932
+    },
+    {
+      "active_start": 21,
+      "age_months": 11,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.355932
+    },
+    {
+      "active_start": 16,
+      "age_months": 12,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.271186
+    },
+    {
+      "active_start": 14,
+      "age_months": 13,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.237288
+    },
+    {
+      "active_start": 13,
+      "age_months": 14,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.220339
+    },
+    {
+      "active_start": 12,
+      "age_months": 15,
+      "cohort": "2025-03",
+      "cohort_size": 59,
+      "retention_rate": 0.20339
+    },
+    {
+      "active_start": 68,
+      "age_months": 0,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 62,
+      "age_months": 1,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.911765
+    },
+    {
+      "active_start": 56,
+      "age_months": 2,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.823529
+    },
+    {
+      "active_start": 51,
+      "age_months": 3,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.75
+    },
+    {
+      "active_start": 50,
+      "age_months": 4,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.735294
+    },
+    {
+      "active_start": 46,
+      "age_months": 5,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.676471
+    },
+    {
+      "active_start": 45,
+      "age_months": 6,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.661765
+    },
+    {
+      "active_start": 40,
+      "age_months": 7,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.588235
+    },
+    {
+      "active_start": 38,
+      "age_months": 8,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.558824
+    },
+    {
+      "active_start": 37,
+      "age_months": 9,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.544118
+    },
+    {
+      "active_start": 33,
+      "age_months": 10,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.485294
+    },
+    {
+      "active_start": 30,
+      "age_months": 11,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.441176
+    },
+    {
+      "active_start": 29,
+      "age_months": 12,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.426471
+    },
+    {
+      "active_start": 28,
+      "age_months": 13,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.411765
+    },
+    {
+      "active_start": 27,
+      "age_months": 14,
+      "cohort": "2025-04",
+      "cohort_size": 68,
+      "retention_rate": 0.397059
+    },
+    {
+      "active_start": 54,
+      "age_months": 0,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 48,
+      "age_months": 1,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.888889
+    },
+    {
+      "active_start": 45,
+      "age_months": 2,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.833333
+    },
+    {
+      "active_start": 41,
+      "age_months": 3,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.759259
+    },
+    {
+      "active_start": 38,
+      "age_months": 4,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.703704
+    },
+    {
+      "active_start": 36,
+      "age_months": 5,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.666667
+    },
+    {
+      "active_start": 34,
+      "age_months": 6,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.62963
+    },
+    {
+      "active_start": 29,
+      "age_months": 7,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.537037
+    },
+    {
+      "active_start": 29,
+      "age_months": 8,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.537037
+    },
+    {
+      "active_start": 28,
+      "age_months": 9,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.518519
+    },
+    {
+      "active_start": 28,
+      "age_months": 10,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.518519
+    },
+    {
+      "active_start": 26,
+      "age_months": 11,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.481481
+    },
+    {
+      "active_start": 24,
+      "age_months": 12,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.444444
+    },
+    {
+      "active_start": 21,
+      "age_months": 13,
+      "cohort": "2025-05",
+      "cohort_size": 54,
+      "retention_rate": 0.388889
+    },
+    {
+      "active_start": 60,
+      "age_months": 0,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 54,
+      "age_months": 1,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.9
+    },
+    {
+      "active_start": 52,
+      "age_months": 2,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.866667
+    },
+    {
+      "active_start": 44,
+      "age_months": 3,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.733333
+    },
+    {
+      "active_start": 40,
+      "age_months": 4,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.666667
+    },
+    {
+      "active_start": 35,
+      "age_months": 5,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.583333
+    },
+    {
+      "active_start": 30,
+      "age_months": 6,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.5
+    },
+    {
+      "active_start": 28,
+      "age_months": 7,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.466667
+    },
+    {
+      "active_start": 24,
+      "age_months": 8,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.4
+    },
+    {
+      "active_start": 22,
+      "age_months": 9,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.366667
+    },
+    {
+      "active_start": 20,
+      "age_months": 10,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.333333
+    },
+    {
+      "active_start": 16,
+      "age_months": 11,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.266667
+    },
+    {
+      "active_start": 14,
+      "age_months": 12,
+      "cohort": "2025-06",
+      "cohort_size": 60,
+      "retention_rate": 0.233333
+    },
+    {
+      "active_start": 55,
+      "age_months": 0,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 50,
+      "age_months": 1,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.909091
+    },
+    {
+      "active_start": 48,
+      "age_months": 2,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.872727
+    },
+    {
+      "active_start": 45,
+      "age_months": 3,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.818182
+    },
+    {
+      "active_start": 43,
+      "age_months": 4,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.781818
+    },
+    {
+      "active_start": 40,
+      "age_months": 5,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.727273
+    },
+    {
+      "active_start": 35,
+      "age_months": 6,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.636364
+    },
+    {
+      "active_start": 33,
+      "age_months": 7,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.6
+    },
+    {
+      "active_start": 31,
+      "age_months": 8,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.563636
+    },
+    {
+      "active_start": 27,
+      "age_months": 9,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.490909
+    },
+    {
+      "active_start": 26,
+      "age_months": 10,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.472727
+    },
+    {
+      "active_start": 25,
+      "age_months": 11,
+      "cohort": "2025-07",
+      "cohort_size": 55,
+      "retention_rate": 0.454545
+    },
+    {
+      "active_start": 52,
+      "age_months": 0,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 42,
+      "age_months": 1,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.807692
+    },
+    {
+      "active_start": 39,
+      "age_months": 2,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.75
+    },
+    {
+      "active_start": 33,
+      "age_months": 3,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.634615
+    },
+    {
+      "active_start": 32,
+      "age_months": 4,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.615385
+    },
+    {
+      "active_start": 31,
+      "age_months": 5,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.596154
+    },
+    {
+      "active_start": 29,
+      "age_months": 6,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.557692
+    },
+    {
+      "active_start": 25,
+      "age_months": 7,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.480769
+    },
+    {
+      "active_start": 23,
+      "age_months": 8,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.442308
+    },
+    {
+      "active_start": 21,
+      "age_months": 9,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.403846
+    },
+    {
+      "active_start": 19,
+      "age_months": 10,
+      "cohort": "2025-08",
+      "cohort_size": 52,
+      "retention_rate": 0.365385
+    },
+    {
+      "active_start": 61,
+      "age_months": 0,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 53,
+      "age_months": 1,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.868852
+    },
+    {
+      "active_start": 47,
+      "age_months": 2,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.770492
+    },
+    {
+      "active_start": 44,
+      "age_months": 3,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.721311
+    },
+    {
+      "active_start": 40,
+      "age_months": 4,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.655738
+    },
+    {
+      "active_start": 36,
+      "age_months": 5,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.590164
+    },
+    {
+      "active_start": 34,
+      "age_months": 6,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.557377
+    },
+    {
+      "active_start": 31,
+      "age_months": 7,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.508197
+    },
+    {
+      "active_start": 29,
+      "age_months": 8,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.47541
+    },
+    {
+      "active_start": 29,
+      "age_months": 9,
+      "cohort": "2025-09",
+      "cohort_size": 61,
+      "retention_rate": 0.47541
+    },
+    {
+      "active_start": 51,
+      "age_months": 0,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 46,
+      "age_months": 1,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.901961
+    },
+    {
+      "active_start": 43,
+      "age_months": 2,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.843137
+    },
+    {
+      "active_start": 38,
+      "age_months": 3,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.745098
+    },
+    {
+      "active_start": 33,
+      "age_months": 4,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.647059
+    },
+    {
+      "active_start": 30,
+      "age_months": 5,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.588235
+    },
+    {
+      "active_start": 26,
+      "age_months": 6,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.509804
+    },
+    {
+      "active_start": 25,
+      "age_months": 7,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.490196
+    },
+    {
+      "active_start": 21,
+      "age_months": 8,
+      "cohort": "2025-10",
+      "cohort_size": 51,
+      "retention_rate": 0.411765
+    },
+    {
+      "active_start": 53,
+      "age_months": 0,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 49,
+      "age_months": 1,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.924528
+    },
+    {
+      "active_start": 44,
+      "age_months": 2,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.830189
+    },
+    {
+      "active_start": 43,
+      "age_months": 3,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.811321
+    },
+    {
+      "active_start": 40,
+      "age_months": 4,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.754717
+    },
+    {
+      "active_start": 38,
+      "age_months": 5,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.716981
+    },
+    {
+      "active_start": 36,
+      "age_months": 6,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.679245
+    },
+    {
+      "active_start": 35,
+      "age_months": 7,
+      "cohort": "2025-11",
+      "cohort_size": 53,
+      "retention_rate": 0.660377
+    },
+    {
+      "active_start": 64,
+      "age_months": 0,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 55,
+      "age_months": 1,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.859375
+    },
+    {
+      "active_start": 49,
+      "age_months": 2,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.765625
+    },
+    {
+      "active_start": 45,
+      "age_months": 3,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.703125
+    },
+    {
+      "active_start": 43,
+      "age_months": 4,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.671875
+    },
+    {
+      "active_start": 37,
+      "age_months": 5,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.578125
+    },
+    {
+      "active_start": 33,
+      "age_months": 6,
+      "cohort": "2025-12",
+      "cohort_size": 64,
+      "retention_rate": 0.515625
+    },
+    {
+      "active_start": 59,
+      "age_months": 0,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 53,
+      "age_months": 1,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 0.898305
+    },
+    {
+      "active_start": 49,
+      "age_months": 2,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 0.830508
+    },
+    {
+      "active_start": 45,
+      "age_months": 3,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 0.762712
+    },
+    {
+      "active_start": 43,
+      "age_months": 4,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 0.728814
+    },
+    {
+      "active_start": 41,
+      "age_months": 5,
+      "cohort": "2026-01",
+      "cohort_size": 59,
+      "retention_rate": 0.694915
+    },
+    {
+      "active_start": 63,
+      "age_months": 0,
+      "cohort": "2026-02",
+      "cohort_size": 63,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 56,
+      "age_months": 1,
+      "cohort": "2026-02",
+      "cohort_size": 63,
+      "retention_rate": 0.888889
+    },
+    {
+      "active_start": 50,
+      "age_months": 2,
+      "cohort": "2026-02",
+      "cohort_size": 63,
+      "retention_rate": 0.793651
+    },
+    {
+      "active_start": 42,
+      "age_months": 3,
+      "cohort": "2026-02",
+      "cohort_size": 63,
+      "retention_rate": 0.666667
+    },
+    {
+      "active_start": 41,
+      "age_months": 4,
+      "cohort": "2026-02",
+      "cohort_size": 63,
+      "retention_rate": 0.650794
+    },
+    {
+      "active_start": 57,
+      "age_months": 0,
+      "cohort": "2026-03",
+      "cohort_size": 57,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 51,
+      "age_months": 1,
+      "cohort": "2026-03",
+      "cohort_size": 57,
+      "retention_rate": 0.894737
+    },
+    {
+      "active_start": 45,
+      "age_months": 2,
+      "cohort": "2026-03",
+      "cohort_size": 57,
+      "retention_rate": 0.789474
+    },
+    {
+      "active_start": 41,
+      "age_months": 3,
+      "cohort": "2026-03",
+      "cohort_size": 57,
+      "retention_rate": 0.719298
+    },
+    {
+      "active_start": 68,
+      "age_months": 0,
+      "cohort": "2026-04",
+      "cohort_size": 68,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 63,
+      "age_months": 1,
+      "cohort": "2026-04",
+      "cohort_size": 68,
+      "retention_rate": 0.926471
+    },
+    {
+      "active_start": 56,
+      "age_months": 2,
+      "cohort": "2026-04",
+      "cohort_size": 68,
+      "retention_rate": 0.823529
+    },
+    {
+      "active_start": 53,
+      "age_months": 0,
+      "cohort": "2026-05",
+      "cohort_size": 53,
+      "retention_rate": 1.0
+    },
+    {
+      "active_start": 47,
+      "age_months": 1,
+      "cohort": "2026-05",
+      "cohort_size": 53,
+      "retention_rate": 0.886792
+    },
+    {
+      "active_start": 52,
+      "age_months": 0,
+      "cohort": "2026-06",
+      "cohort_size": 52,
+      "retention_rate": 1.0
+    }
+  ],
+  "metadata": {
+    "customer_count": 1800,
+    "customer_months": 13525,
+    "definition": "churn mensal = cancelamentos ao fim do mês / base ativa no início",
+    "financial_definition": "MRR contratual associado a cancelamentos, NÃO perda financeira realizada",
+    "project": "ChurnLab — Retenção e Risco",
+    "seed": 20261108,
+    "source": "Gerador Python reproduzível, sem dados originais recuperados",
+    "synthetic": true,
+    "time_range": [
+      "2025-01",
+      "2026-06"
+    ]
+  },
+  "monthly": [
+    {
+      "active_mrr_cents": 9590100,
+      "active_start": 809,
+      "churn_rate": 0.095179,
+      "churned": 77,
+      "lost_mrr_cents": 753300,
+      "month": "2025-01",
+      "retained_end": 732
+    },
+    {
+      "active_mrr_cents": 9559600,
+      "active_start": 794,
+      "churn_rate": 0.094458,
+      "churned": 75,
+      "lost_mrr_cents": 769500,
+      "month": "2025-02",
+      "retained_end": 719
+    },
+    {
+      "active_mrr_cents": 9393200,
+      "active_start": 778,
+      "churn_rate": 0.071979,
+      "churned": 56,
+      "lost_mrr_cents": 555400,
+      "month": "2025-03",
+      "retained_end": 722
+    },
+    {
+      "active_mrr_cents": 9616000,
+      "active_start": 790,
+      "churn_rate": 0.094937,
+      "churned": 75,
+      "lost_mrr_cents": 755500,
+      "month": "2025-04",
+      "retained_end": 715
+    },
+    {
+      "active_mrr_cents": 9513100,
+      "active_start": 769,
+      "churn_rate": 0.084525,
+      "churned": 65,
+      "lost_mrr_cents": 641500,
+      "month": "2025-05",
+      "retained_end": 704
+    },
+    {
+      "active_mrr_cents": 9552600,
+      "active_start": 764,
+      "churn_rate": 0.090314,
+      "churned": 69,
+      "lost_mrr_cents": 637100,
+      "month": "2025-06",
+      "retained_end": 695
+    },
+    {
+      "active_mrr_cents": 9628000,
+      "active_start": 750,
+      "churn_rate": 0.077333,
+      "churned": 58,
+      "lost_mrr_cents": 635200,
+      "month": "2025-07",
+      "retained_end": 692
+    },
+    {
+      "active_mrr_cents": 9659600,
+      "active_start": 744,
+      "churn_rate": 0.08871,
+      "churned": 66,
+      "lost_mrr_cents": 664400,
+      "month": "2025-08",
+      "retained_end": 678
+    },
+    {
+      "active_mrr_cents": 9634100,
+      "active_start": 739,
+      "churn_rate": 0.083897,
+      "churned": 62,
+      "lost_mrr_cents": 732800,
+      "month": "2025-09",
+      "retained_end": 677
+    },
+    {
+      "active_mrr_cents": 9498200,
+      "active_start": 728,
+      "churn_rate": 0.083791,
+      "churned": 61,
+      "lost_mrr_cents": 617900,
+      "month": "2025-10",
+      "retained_end": 667
+    },
+    {
+      "active_mrr_cents": 9573000,
+      "active_start": 720,
+      "churn_rate": 0.070833,
+      "churned": 51,
+      "lost_mrr_cents": 474900,
+      "month": "2025-11",
+      "retained_end": 669
+    },
+    {
+      "active_mrr_cents": 9867700,
+      "active_start": 733,
+      "churn_rate": 0.072306,
+      "churned": 53,
+      "lost_mrr_cents": 540700,
+      "month": "2025-12",
+      "retained_end": 680
+    },
+    {
+      "active_mrr_cents": 10070100,
+      "active_start": 739,
+      "churn_rate": 0.086604,
+      "churned": 64,
+      "lost_mrr_cents": 760600,
+      "month": "2026-01",
+      "retained_end": 675
+    },
+    {
+      "active_mrr_cents": 10057200,
+      "active_start": 738,
+      "churn_rate": 0.078591,
+      "churned": 58,
+      "lost_mrr_cents": 633200,
+      "month": "2026-02",
+      "retained_end": 680
+    },
+    {
+      "active_mrr_cents": 10211300,
+      "active_start": 737,
+      "churn_rate": 0.084125,
+      "churned": 62,
+      "lost_mrr_cents": 707800,
+      "month": "2026-03",
+      "retained_end": 675
+    },
+    {
+      "active_mrr_cents": 10150700,
+      "active_start": 743,
+      "churn_rate": 0.092867,
+      "churned": 69,
+      "lost_mrr_cents": 774100,
+      "month": "2026-04",
+      "retained_end": 674
+    },
+    {
+      "active_mrr_cents": 10058300,
+      "active_start": 727,
+      "churn_rate": 0.077029,
+      "churned": 56,
+      "lost_mrr_cents": 656400,
+      "month": "2026-05",
+      "retained_end": 671
+    },
+    {
+      "active_mrr_cents": 10054700,
+      "active_start": 723,
+      "churn_rate": 0.073306,
+      "churned": 53,
+      "lost_mrr_cents": 525700,
+      "month": "2026-06",
+      "retained_end": 670
+    }
+  ],
+  "overview": {
+    "churn_events": 1130,
+    "customer_months": 13525,
+    "event_rate": 0.083549,
+    "latest_active_start": 723,
+    "latest_churned": 53,
+    "latest_month": "2026-06",
+    "latest_monthly_churn_rate": 0.073306,
+    "lost_mrr_cents": 11836000
+  },
+  "signals": [
+    {
+      "bucket": "0-13 dias inativo",
+      "churn_rate": 0.049916,
+      "churned": 386,
+      "customer_months": 7733
+    },
+    {
+      "bucket": "14+ dias inativo",
+      "churn_rate": 0.128453,
+      "churned": 744,
+      "customer_months": 5792
+    }
+  ]
+}

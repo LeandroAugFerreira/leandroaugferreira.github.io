@@ -1,0 +1,1801 @@
+customer_id,signup_month,plan,segment,channel,state,mrr_cents
+C00001,2024-11,Essencial,Individual,Orgânico,MG,7900
+C00002,2026-02,Essencial,Microempresa,Indicação,SP,7900
+C00003,2024-08,Pro,Microempresa,Indicação,SP,12900
+C00004,2024-06,Essencial,Individual,Anúncios,MG,5900
+C00005,2025-10,Essencial,Individual,Anúncios,SP,6900
+C00006,2026-04,Pro,Individual,Orgânico,SP,14900
+C00007,2025-01,Pro,Individual,Orgânico,PR,14900
+C00008,2025-05,Pro,Microempresa,Orgânico,SP,14900
+C00009,2025-08,Essencial,Pequena empresa,Anúncios,SP,6900
+C00010,2025-12,Essencial,Pequena empresa,Orgânico,PR,7900
+C00011,2024-03,Essencial,Microempresa,Indicação,MG,5900
+C00012,2024-11,Pro,Pequena empresa,Orgânico,PR,14900
+C00013,2024-04,Essencial,Microempresa,Orgânico,MG,5900
+C00014,2025-04,Equipe,Microempresa,Orgânico,RJ,28900
+C00015,2025-11,Essencial,Microempresa,Anúncios,SP,5900
+C00016,2024-08,Pro,Microempresa,Anúncios,RJ,14900
+C00017,2025-02,Essencial,Microempresa,Orgânico,PR,5900
+C00018,2024-06,Pro,Individual,Orgânico,SP,14900
+C00019,2024-08,Essencial,Pequena empresa,Orgânico,SP,5900
+C00020,2025-10,Essencial,Individual,Anúncios,SP,7900
+C00021,2025-07,Essencial,Individual,Indicação,RJ,7900
+C00022,2025-02,Essencial,Microempresa,Orgânico,RJ,5900
+C00023,2026-03,Essencial,Individual,Orgânico,MG,7900
+C00024,2025-04,Essencial,Microempresa,Indicação,SP,7900
+C00025,2025-10,Essencial,Individual,Anúncios,SP,7900
+C00026,2025-10,Essencial,Individual,Orgânico,RJ,5900
+C00027,2026-01,Pro,Individual,Orgânico,SP,12900
+C00028,2024-09,Essencial,Pequena empresa,Indicação,SP,6900
+C00029,2025-07,Equipe,Individual,Indicação,PR,26900
+C00030,2024-07,Essencial,Microempresa,Orgânico,SP,7900
+C00031,2024-12,Equipe,Individual,Indicação,SP,26900
+C00032,2024-04,Essencial,Microempresa,Indicação,SP,7900
+C00033,2024-06,Pro,Microempresa,Orgânico,SP,13900
+C00034,2024-12,Essencial,Individual,Indicação,MG,5900
+C00035,2026-04,Essencial,Individual,Orgânico,MG,5900
+C00036,2024-09,Equipe,Pequena empresa,Anúncios,SP,28900
+C00037,2026-04,Pro,Individual,Anúncios,RJ,14900
+C00038,2025-05,Pro,Individual,Orgânico,MG,12900
+C00039,2024-11,Essencial,Individual,Anúncios,SP,5900
+C00040,2024-01,Essencial,Individual,Orgânico,SP,5900
+C00041,2024-05,Pro,Individual,Anúncios,SP,14900
+C00042,2024-04,Essencial,Individual,Orgânico,SP,5900
+C00043,2025-03,Essencial,Microempresa,Orgânico,SP,6900
+C00044,2024-02,Essencial,Pequena empresa,Orgânico,SP,5900
+C00045,2024-04,Essencial,Individual,Anúncios,PR,6900
+C00046,2024-05,Essencial,Microempresa,Orgânico,RJ,5900
+C00047,2024-03,Pro,Individual,Orgânico,SP,12900
+C00048,2024-04,Essencial,Microempresa,Indicação,SP,5900
+C00049,2025-07,Pro,Individual,Orgânico,SP,14900
+C00050,2026-04,Pro,Individual,Indicação,SP,14900
+C00051,2025-02,Essencial,Individual,Orgânico,SP,6900
+C00052,2024-09,Equipe,Individual,Anúncios,PR,27900
+C00053,2026-04,Essencial,Individual,Indicação,MG,5900
+C00054,2025-01,Equipe,Microempresa,Orgânico,SP,26900
+C00055,2024-05,Pro,Individual,Indicação,SP,13900
+C00056,2024-11,Essencial,Individual,Orgânico,RJ,7900
+C00057,2024-12,Pro,Individual,Indicação,RJ,12900
+C00058,2025-01,Pro,Individual,Indicação,SP,12900
+C00059,2026-04,Pro,Microempresa,Anúncios,SP,14900
+C00060,2025-07,Pro,Pequena empresa,Indicação,SP,12900
+C00061,2024-09,Essencial,Microempresa,Indicação,MG,5900
+C00062,2025-07,Pro,Individual,Anúncios,MG,12900
+C00063,2024-08,Essencial,Individual,Anúncios,RJ,5900
+C00064,2025-02,Essencial,Individual,Orgânico,SP,5900
+C00065,2024-12,Pro,Individual,Orgânico,PR,14900
+C00066,2026-04,Essencial,Individual,Indicação,RJ,6900
+C00067,2024-03,Essencial,Microempresa,Anúncios,SP,6900
+C00068,2025-02,Essencial,Individual,Orgânico,SP,6900
+C00069,2024-01,Equipe,Individual,Indicação,RJ,26900
+C00070,2024-12,Essencial,Individual,Indicação,MG,7900
+C00071,2025-12,Equipe,Individual,Orgânico,SP,27900
+C00072,2024-07,Essencial,Pequena empresa,Indicação,MG,5900
+C00073,2025-11,Pro,Microempresa,Indicação,SP,13900
+C00074,2025-05,Essencial,Individual,Anúncios,SP,5900
+C00075,2024-11,Pro,Individual,Orgânico,PR,12900
+C00076,2025-10,Essencial,Microempresa,Orgânico,SP,5900
+C00077,2025-04,Essencial,Individual,Orgânico,SP,7900
+C00078,2024-09,Essencial,Individual,Orgânico,SP,5900
+C00079,2024-10,Pro,Pequena empresa,Orgânico,SP,13900
+C00080,2025-06,Equipe,Individual,Anúncios,MG,26900
+C00081,2026-02,Essencial,Individual,Orgânico,RJ,7900
+C00082,2025-05,Essencial,Pequena empresa,Indicação,SP,7900
+C00083,2025-05,Equipe,Individual,Anúncios,SP,27900
+C00084,2024-04,Essencial,Microempresa,Indicação,SP,5900
+C00085,2024-03,Pro,Microempresa,Orgânico,SP,13900
+C00086,2025-06,Pro,Individual,Indicação,MG,12900
+C00087,2025-06,Pro,Individual,Anúncios,SP,12900
+C00088,2024-11,Equipe,Pequena empresa,Orgânico,RJ,26900
+C00089,2024-02,Essencial,Individual,Indicação,MG,7900
+C00090,2026-02,Essencial,Pequena empresa,Indicação,PR,6900
+C00091,2025-10,Essencial,Individual,Anúncios,SP,7900
+C00092,2026-04,Essencial,Individual,Orgânico,SP,5900
+C00093,2026-06,Essencial,Microempresa,Orgânico,SP,5900
+C00094,2025-05,Essencial,Microempresa,Orgânico,SP,5900
+C00095,2025-04,Essencial,Individual,Anúncios,SP,5900
+C00096,2024-11,Pro,Individual,Orgânico,SP,12900
+C00097,2026-01,Pro,Microempresa,Anúncios,RJ,12900
+C00098,2024-02,Essencial,Microempresa,Anúncios,MG,6900
+C00099,2026-02,Equipe,Pequena empresa,Orgânico,SP,26900
+C00100,2024-07,Essencial,Individual,Orgânico,SP,6900
+C00101,2025-07,Essencial,Individual,Anúncios,SP,6900
+C00102,2024-08,Equipe,Individual,Indicação,SP,27900
+C00103,2026-02,Pro,Individual,Orgânico,RJ,13900
+C00104,2025-08,Essencial,Microempresa,Orgânico,SP,7900
+C00105,2026-02,Essencial,Pequena empresa,Orgânico,SP,5900
+C00106,2024-05,Pro,Microempresa,Indicação,RJ,12900
+C00107,2025-01,Essencial,Individual,Orgânico,SP,6900
+C00108,2024-03,Pro,Pequena empresa,Indicação,RJ,12900
+C00109,2024-09,Essencial,Microempresa,Orgânico,MG,5900
+C00110,2024-08,Pro,Individual,Indicação,RJ,14900
+C00111,2025-01,Essencial,Pequena empresa,Orgânico,SP,5900
+C00112,2025-11,Equipe,Individual,Anúncios,PR,26900
+C00113,2025-03,Essencial,Microempresa,Anúncios,MG,5900
+C00114,2025-04,Essencial,Individual,Indicação,MG,5900
+C00115,2025-12,Essencial,Individual,Anúncios,SP,7900
+C00116,2025-05,Equipe,Individual,Orgânico,SP,26900
+C00117,2024-11,Essencial,Microempresa,Indicação,MG,5900
+C00118,2025-08,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00119,2025-11,Essencial,Individual,Anúncios,SP,7900
+C00120,2026-06,Essencial,Microempresa,Orgânico,PR,7900
+C00121,2024-03,Equipe,Microempresa,Indicação,SP,26900
+C00122,2026-02,Essencial,Pequena empresa,Orgânico,SP,7900
+C00123,2025-09,Essencial,Microempresa,Anúncios,RJ,6900
+C00124,2026-05,Essencial,Individual,Indicação,MG,6900
+C00125,2025-09,Essencial,Individual,Anúncios,RJ,7900
+C00126,2026-04,Essencial,Pequena empresa,Orgânico,PR,5900
+C00127,2026-06,Essencial,Pequena empresa,Anúncios,PR,7900
+C00128,2024-02,Essencial,Individual,Anúncios,RJ,7900
+C00129,2025-09,Essencial,Individual,Anúncios,SP,5900
+C00130,2024-02,Pro,Pequena empresa,Anúncios,PR,13900
+C00131,2025-06,Essencial,Individual,Orgânico,SP,5900
+C00132,2025-04,Pro,Individual,Anúncios,SP,12900
+C00133,2026-02,Essencial,Individual,Indicação,MG,5900
+C00134,2025-02,Pro,Individual,Orgânico,SP,12900
+C00135,2026-05,Essencial,Microempresa,Anúncios,PR,6900
+C00136,2024-02,Essencial,Individual,Orgânico,SP,5900
+C00137,2025-09,Pro,Individual,Orgânico,RJ,12900
+C00138,2025-01,Essencial,Microempresa,Indicação,SP,7900
+C00139,2026-04,Essencial,Pequena empresa,Anúncios,SP,5900
+C00140,2025-05,Essencial,Individual,Indicação,SP,5900
+C00141,2024-02,Pro,Individual,Anúncios,SP,14900
+C00142,2025-04,Pro,Microempresa,Anúncios,SP,12900
+C00143,2026-02,Essencial,Individual,Anúncios,SP,7900
+C00144,2024-05,Essencial,Microempresa,Orgânico,SP,5900
+C00145,2025-07,Pro,Individual,Indicação,RJ,13900
+C00146,2025-09,Pro,Pequena empresa,Indicação,SP,12900
+C00147,2024-02,Equipe,Individual,Anúncios,RJ,26900
+C00148,2024-04,Essencial,Individual,Anúncios,MG,5900
+C00149,2025-01,Essencial,Pequena empresa,Orgânico,SP,5900
+C00150,2024-06,Essencial,Pequena empresa,Orgânico,SP,5900
+C00151,2024-04,Essencial,Individual,Anúncios,MG,5900
+C00152,2024-12,Pro,Microempresa,Orgânico,SP,12900
+C00153,2026-06,Equipe,Microempresa,Anúncios,SP,26900
+C00154,2026-02,Pro,Individual,Orgânico,SP,12900
+C00155,2025-05,Essencial,Individual,Anúncios,SP,5900
+C00156,2025-02,Essencial,Microempresa,Orgânico,MG,5900
+C00157,2024-01,Essencial,Pequena empresa,Orgânico,SP,6900
+C00158,2025-07,Essencial,Microempresa,Anúncios,SP,5900
+C00159,2026-06,Pro,Individual,Orgânico,SP,14900
+C00160,2024-12,Essencial,Individual,Orgânico,RJ,6900
+C00161,2025-08,Pro,Individual,Orgânico,SP,14900
+C00162,2026-01,Essencial,Individual,Anúncios,SP,6900
+C00163,2024-06,Essencial,Microempresa,Orgânico,SP,5900
+C00164,2026-04,Essencial,Individual,Orgânico,SP,6900
+C00165,2024-09,Equipe,Individual,Orgânico,MG,27900
+C00166,2024-10,Pro,Individual,Orgânico,PR,12900
+C00167,2025-10,Pro,Individual,Anúncios,SP,14900
+C00168,2026-06,Pro,Individual,Orgânico,MG,13900
+C00169,2024-06,Pro,Individual,Orgânico,SP,12900
+C00170,2026-05,Essencial,Individual,Anúncios,MG,7900
+C00171,2026-03,Pro,Microempresa,Orgânico,RJ,12900
+C00172,2025-06,Essencial,Microempresa,Orgânico,SP,5900
+C00173,2024-10,Essencial,Pequena empresa,Indicação,MG,5900
+C00174,2025-03,Essencial,Individual,Anúncios,SP,5900
+C00175,2026-04,Essencial,Microempresa,Orgânico,MG,5900
+C00176,2024-05,Pro,Pequena empresa,Orgânico,MG,14900
+C00177,2024-10,Pro,Individual,Orgânico,MG,14900
+C00178,2025-04,Pro,Individual,Anúncios,SP,12900
+C00179,2025-09,Essencial,Microempresa,Orgânico,MG,5900
+C00180,2026-05,Equipe,Microempresa,Indicação,MG,28900
+C00181,2025-11,Essencial,Microempresa,Indicação,RJ,6900
+C00182,2026-04,Pro,Individual,Orgânico,SP,13900
+C00183,2025-05,Essencial,Individual,Indicação,SP,7900
+C00184,2025-12,Pro,Individual,Orgânico,PR,12900
+C00185,2024-12,Pro,Individual,Anúncios,MG,14900
+C00186,2024-01,Essencial,Microempresa,Anúncios,SP,5900
+C00187,2026-03,Pro,Microempresa,Anúncios,SP,12900
+C00188,2026-01,Equipe,Microempresa,Anúncios,MG,28900
+C00189,2025-11,Pro,Individual,Orgânico,SP,12900
+C00190,2024-06,Essencial,Individual,Orgânico,RJ,7900
+C00191,2024-08,Pro,Microempresa,Anúncios,SP,12900
+C00192,2025-06,Pro,Microempresa,Anúncios,PR,12900
+C00193,2025-12,Essencial,Individual,Orgânico,SP,6900
+C00194,2024-03,Pro,Individual,Orgânico,MG,12900
+C00195,2024-05,Pro,Microempresa,Anúncios,MG,12900
+C00196,2026-04,Pro,Individual,Orgânico,SP,12900
+C00197,2024-10,Equipe,Microempresa,Orgânico,SP,26900
+C00198,2026-03,Essencial,Microempresa,Anúncios,PR,5900
+C00199,2025-08,Essencial,Microempresa,Orgânico,SP,5900
+C00200,2025-03,Essencial,Microempresa,Orgânico,SP,5900
+C00201,2025-04,Equipe,Microempresa,Orgânico,MG,26900
+C00202,2026-04,Essencial,Individual,Anúncios,SP,6900
+C00203,2026-05,Essencial,Individual,Orgânico,SP,5900
+C00204,2025-09,Essencial,Microempresa,Orgânico,PR,7900
+C00205,2025-08,Pro,Individual,Orgânico,SP,12900
+C00206,2024-11,Equipe,Microempresa,Anúncios,SP,26900
+C00207,2025-09,Pro,Microempresa,Orgânico,MG,13900
+C00208,2024-03,Essencial,Individual,Orgânico,SP,6900
+C00209,2024-03,Pro,Microempresa,Anúncios,SP,12900
+C00210,2024-06,Essencial,Individual,Indicação,MG,5900
+C00211,2026-04,Pro,Individual,Anúncios,RJ,12900
+C00212,2026-04,Essencial,Individual,Anúncios,MG,5900
+C00213,2026-03,Essencial,Individual,Indicação,RJ,7900
+C00214,2024-01,Pro,Individual,Indicação,RJ,12900
+C00215,2024-05,Essencial,Individual,Orgânico,SP,5900
+C00216,2025-10,Essencial,Microempresa,Orgânico,RJ,5900
+C00217,2026-05,Essencial,Pequena empresa,Orgânico,SP,5900
+C00218,2026-01,Essencial,Microempresa,Indicação,MG,6900
+C00219,2025-05,Essencial,Individual,Indicação,RJ,7900
+C00220,2024-08,Equipe,Individual,Anúncios,RJ,26900
+C00221,2024-03,Essencial,Microempresa,Orgânico,RJ,6900
+C00222,2026-01,Essencial,Microempresa,Orgânico,RJ,5900
+C00223,2025-03,Essencial,Individual,Anúncios,MG,6900
+C00224,2024-11,Essencial,Microempresa,Anúncios,MG,5900
+C00225,2026-04,Essencial,Individual,Anúncios,SP,5900
+C00226,2025-05,Essencial,Individual,Indicação,PR,5900
+C00227,2024-04,Pro,Individual,Orgânico,SP,12900
+C00228,2026-05,Essencial,Individual,Orgânico,SP,5900
+C00229,2026-04,Essencial,Individual,Orgânico,PR,6900
+C00230,2024-02,Essencial,Individual,Orgânico,RJ,5900
+C00231,2025-01,Essencial,Pequena empresa,Orgânico,SP,6900
+C00232,2025-09,Essencial,Individual,Anúncios,RJ,5900
+C00233,2024-03,Equipe,Individual,Anúncios,PR,26900
+C00234,2025-02,Pro,Pequena empresa,Anúncios,RJ,12900
+C00235,2025-11,Pro,Microempresa,Anúncios,MG,13900
+C00236,2024-09,Essencial,Pequena empresa,Orgânico,PR,5900
+C00237,2025-08,Essencial,Individual,Orgânico,SP,5900
+C00238,2026-02,Pro,Individual,Anúncios,SP,13900
+C00239,2025-05,Pro,Individual,Orgânico,SP,12900
+C00240,2024-07,Essencial,Individual,Indicação,MG,5900
+C00241,2026-01,Pro,Microempresa,Orgânico,MG,12900
+C00242,2024-11,Essencial,Individual,Indicação,SP,5900
+C00243,2024-10,Essencial,Microempresa,Anúncios,SP,5900
+C00244,2025-11,Pro,Microempresa,Orgânico,SP,12900
+C00245,2024-06,Pro,Microempresa,Orgânico,RJ,12900
+C00246,2025-07,Pro,Individual,Orgânico,SP,13900
+C00247,2025-10,Essencial,Microempresa,Anúncios,SP,5900
+C00248,2024-01,Essencial,Microempresa,Anúncios,SP,5900
+C00249,2024-06,Essencial,Microempresa,Anúncios,SP,5900
+C00250,2024-04,Essencial,Individual,Orgânico,SP,6900
+C00251,2025-09,Pro,Pequena empresa,Orgânico,MG,12900
+C00252,2024-11,Essencial,Microempresa,Orgânico,MG,5900
+C00253,2025-05,Pro,Individual,Orgânico,SP,12900
+C00254,2024-11,Pro,Microempresa,Orgânico,MG,13900
+C00255,2025-09,Essencial,Individual,Orgânico,SP,6900
+C00256,2025-11,Pro,Individual,Orgânico,SP,12900
+C00257,2024-06,Essencial,Microempresa,Orgânico,PR,5900
+C00258,2025-09,Pro,Individual,Anúncios,SP,13900
+C00259,2024-11,Pro,Individual,Orgânico,PR,13900
+C00260,2025-11,Pro,Microempresa,Indicação,PR,12900
+C00261,2025-12,Essencial,Pequena empresa,Anúncios,RJ,6900
+C00262,2024-07,Pro,Microempresa,Orgânico,SP,12900
+C00263,2025-05,Equipe,Microempresa,Anúncios,SP,28900
+C00264,2026-02,Pro,Individual,Anúncios,RJ,14900
+C00265,2024-03,Pro,Individual,Indicação,SP,12900
+C00266,2025-04,Pro,Individual,Anúncios,MG,12900
+C00267,2024-07,Pro,Individual,Orgânico,MG,12900
+C00268,2024-06,Equipe,Individual,Orgânico,SP,28900
+C00269,2026-06,Equipe,Individual,Anúncios,PR,26900
+C00270,2024-12,Essencial,Microempresa,Indicação,MG,6900
+C00271,2024-02,Equipe,Microempresa,Orgânico,SP,26900
+C00272,2025-11,Equipe,Microempresa,Indicação,SP,28900
+C00273,2025-01,Equipe,Individual,Orgânico,RJ,26900
+C00274,2025-02,Pro,Individual,Orgânico,PR,13900
+C00275,2025-03,Essencial,Individual,Orgânico,MG,5900
+C00276,2024-02,Pro,Individual,Orgânico,MG,12900
+C00277,2024-03,Pro,Pequena empresa,Anúncios,SP,13900
+C00278,2025-08,Essencial,Individual,Indicação,RJ,5900
+C00279,2024-11,Equipe,Individual,Anúncios,RJ,26900
+C00280,2025-11,Pro,Microempresa,Orgânico,SP,14900
+C00281,2026-02,Essencial,Individual,Indicação,SP,6900
+C00282,2024-02,Essencial,Microempresa,Indicação,MG,7900
+C00283,2025-02,Equipe,Individual,Anúncios,PR,27900
+C00284,2026-05,Pro,Individual,Indicação,MG,12900
+C00285,2025-09,Essencial,Pequena empresa,Orgânico,SP,5900
+C00286,2024-12,Essencial,Individual,Orgânico,SP,5900
+C00287,2025-06,Essencial,Individual,Orgânico,SP,5900
+C00288,2024-10,Essencial,Microempresa,Anúncios,SP,5900
+C00289,2025-09,Essencial,Individual,Orgânico,PR,5900
+C00290,2025-12,Pro,Individual,Indicação,SP,14900
+C00291,2024-01,Pro,Individual,Anúncios,RJ,13900
+C00292,2025-06,Essencial,Individual,Orgânico,SP,5900
+C00293,2024-02,Essencial,Individual,Orgânico,SP,5900
+C00294,2024-07,Essencial,Pequena empresa,Orgânico,PR,5900
+C00295,2026-03,Pro,Individual,Orgânico,RJ,13900
+C00296,2025-09,Essencial,Individual,Orgânico,MG,5900
+C00297,2025-11,Essencial,Individual,Anúncios,SP,5900
+C00298,2024-02,Pro,Microempresa,Orgânico,MG,12900
+C00299,2024-09,Essencial,Individual,Orgânico,SP,5900
+C00300,2025-04,Essencial,Pequena empresa,Indicação,SP,6900
+C00301,2026-03,Essencial,Individual,Orgânico,RJ,6900
+C00302,2024-05,Essencial,Individual,Indicação,SP,7900
+C00303,2026-04,Pro,Microempresa,Indicação,RJ,12900
+C00304,2025-12,Equipe,Individual,Orgânico,SP,26900
+C00305,2025-05,Pro,Microempresa,Orgânico,PR,12900
+C00306,2024-05,Essencial,Microempresa,Anúncios,SP,5900
+C00307,2025-12,Essencial,Pequena empresa,Orgânico,SP,5900
+C00308,2025-09,Pro,Microempresa,Anúncios,SP,12900
+C00309,2024-04,Essencial,Individual,Indicação,PR,5900
+C00310,2025-08,Equipe,Pequena empresa,Orgânico,SP,27900
+C00311,2024-06,Pro,Microempresa,Orgânico,RJ,13900
+C00312,2024-09,Essencial,Individual,Anúncios,SP,6900
+C00313,2025-01,Essencial,Individual,Orgânico,SP,5900
+C00314,2026-04,Essencial,Individual,Anúncios,PR,5900
+C00315,2025-02,Essencial,Individual,Orgânico,SP,7900
+C00316,2026-04,Pro,Individual,Orgânico,SP,12900
+C00317,2025-04,Essencial,Microempresa,Orgânico,MG,5900
+C00318,2024-07,Essencial,Individual,Indicação,PR,5900
+C00319,2025-04,Essencial,Individual,Indicação,RJ,5900
+C00320,2026-04,Essencial,Microempresa,Orgânico,RJ,6900
+C00321,2025-08,Pro,Microempresa,Orgânico,SP,12900
+C00322,2024-08,Essencial,Microempresa,Anúncios,PR,5900
+C00323,2025-10,Essencial,Individual,Anúncios,MG,6900
+C00324,2026-05,Essencial,Microempresa,Orgânico,SP,5900
+C00325,2025-04,Pro,Individual,Orgânico,MG,12900
+C00326,2025-09,Pro,Individual,Orgânico,SP,14900
+C00327,2026-06,Pro,Microempresa,Anúncios,RJ,14900
+C00328,2025-02,Essencial,Microempresa,Orgânico,SP,5900
+C00329,2026-01,Pro,Individual,Orgânico,SP,12900
+C00330,2025-11,Pro,Individual,Orgânico,RJ,14900
+C00331,2026-02,Essencial,Microempresa,Orgânico,MG,6900
+C00332,2025-06,Pro,Individual,Anúncios,SP,13900
+C00333,2025-06,Equipe,Microempresa,Orgânico,MG,26900
+C00334,2025-07,Equipe,Microempresa,Anúncios,SP,26900
+C00335,2026-03,Pro,Individual,Orgânico,SP,14900
+C00336,2024-03,Essencial,Pequena empresa,Orgânico,SP,6900
+C00337,2025-06,Essencial,Individual,Orgânico,SP,6900
+C00338,2026-05,Essencial,Individual,Orgânico,MG,5900
+C00339,2025-10,Pro,Individual,Anúncios,SP,12900
+C00340,2025-07,Pro,Individual,Orgânico,MG,14900
+C00341,2024-10,Essencial,Individual,Anúncios,SP,6900
+C00342,2026-03,Equipe,Individual,Orgânico,RJ,28900
+C00343,2024-04,Pro,Microempresa,Anúncios,RJ,12900
+C00344,2024-11,Essencial,Microempresa,Anúncios,PR,5900
+C00345,2026-02,Pro,Individual,Orgânico,MG,12900
+C00346,2024-07,Essencial,Individual,Anúncios,SP,7900
+C00347,2024-03,Pro,Individual,Indicação,MG,14900
+C00348,2025-05,Pro,Individual,Indicação,RJ,12900
+C00349,2024-01,Essencial,Individual,Anúncios,SP,5900
+C00350,2024-07,Equipe,Pequena empresa,Indicação,SP,26900
+C00351,2026-01,Essencial,Pequena empresa,Anúncios,MG,5900
+C00352,2024-08,Essencial,Pequena empresa,Anúncios,PR,7900
+C00353,2025-12,Essencial,Individual,Orgânico,RJ,5900
+C00354,2025-11,Pro,Individual,Orgânico,RJ,13900
+C00355,2024-11,Essencial,Individual,Orgânico,SP,5900
+C00356,2026-05,Essencial,Microempresa,Anúncios,RJ,5900
+C00357,2025-11,Essencial,Individual,Orgânico,SP,7900
+C00358,2024-12,Essencial,Individual,Orgânico,SP,6900
+C00359,2024-10,Pro,Individual,Orgânico,PR,12900
+C00360,2024-11,Pro,Individual,Indicação,PR,12900
+C00361,2024-05,Pro,Individual,Orgânico,MG,14900
+C00362,2024-11,Essencial,Microempresa,Indicação,MG,5900
+C00363,2026-01,Pro,Individual,Indicação,SP,12900
+C00364,2026-04,Pro,Individual,Orgânico,RJ,13900
+C00365,2026-01,Essencial,Pequena empresa,Orgânico,MG,5900
+C00366,2024-10,Pro,Microempresa,Anúncios,SP,12900
+C00367,2025-07,Pro,Individual,Anúncios,SP,12900
+C00368,2024-03,Pro,Individual,Orgânico,PR,12900
+C00369,2024-03,Essencial,Individual,Orgânico,RJ,6900
+C00370,2025-02,Essencial,Microempresa,Orgânico,SP,6900
+C00371,2025-11,Pro,Pequena empresa,Orgânico,SP,12900
+C00372,2024-11,Essencial,Individual,Anúncios,MG,7900
+C00373,2025-07,Pro,Individual,Indicação,MG,12900
+C00374,2025-11,Essencial,Microempresa,Orgânico,SP,7900
+C00375,2025-12,Essencial,Microempresa,Orgânico,MG,7900
+C00376,2025-04,Pro,Individual,Anúncios,SP,14900
+C00377,2025-05,Essencial,Microempresa,Orgânico,SP,5900
+C00378,2025-03,Essencial,Individual,Orgânico,SP,5900
+C00379,2025-07,Essencial,Individual,Anúncios,MG,5900
+C00380,2024-11,Pro,Individual,Anúncios,MG,13900
+C00381,2026-06,Essencial,Individual,Orgânico,SP,6900
+C00382,2024-09,Pro,Microempresa,Anúncios,SP,14900
+C00383,2025-01,Pro,Pequena empresa,Indicação,SP,12900
+C00384,2024-08,Pro,Pequena empresa,Indicação,PR,12900
+C00385,2025-02,Pro,Individual,Orgânico,MG,12900
+C00386,2024-12,Pro,Individual,Indicação,SP,12900
+C00387,2024-06,Essencial,Microempresa,Orgânico,RJ,7900
+C00388,2024-04,Pro,Microempresa,Indicação,SP,13900
+C00389,2025-06,Equipe,Microempresa,Orgânico,PR,27900
+C00390,2024-10,Equipe,Individual,Orgânico,MG,28900
+C00391,2024-06,Essencial,Individual,Anúncios,SP,5900
+C00392,2026-02,Essencial,Microempresa,Orgânico,SP,6900
+C00393,2025-10,Essencial,Individual,Orgânico,SP,7900
+C00394,2025-12,Pro,Individual,Anúncios,PR,12900
+C00395,2024-09,Essencial,Microempresa,Anúncios,MG,5900
+C00396,2024-01,Essencial,Microempresa,Orgânico,RJ,6900
+C00397,2026-03,Essencial,Individual,Indicação,SP,7900
+C00398,2026-03,Essencial,Pequena empresa,Anúncios,SP,6900
+C00399,2024-10,Essencial,Microempresa,Orgânico,SP,5900
+C00400,2024-02,Pro,Microempresa,Indicação,PR,12900
+C00401,2026-04,Pro,Microempresa,Orgânico,SP,14900
+C00402,2025-10,Essencial,Pequena empresa,Anúncios,SP,5900
+C00403,2025-02,Pro,Individual,Indicação,PR,12900
+C00404,2024-06,Pro,Microempresa,Anúncios,MG,12900
+C00405,2024-09,Essencial,Pequena empresa,Indicação,SP,5900
+C00406,2025-12,Equipe,Microempresa,Indicação,MG,27900
+C00407,2025-06,Essencial,Individual,Orgânico,RJ,5900
+C00408,2026-04,Essencial,Pequena empresa,Orgânico,SP,5900
+C00409,2025-08,Equipe,Individual,Orgânico,SP,27900
+C00410,2024-09,Essencial,Microempresa,Orgânico,SP,6900
+C00411,2026-01,Pro,Pequena empresa,Orgânico,PR,12900
+C00412,2026-06,Pro,Microempresa,Orgânico,SP,12900
+C00413,2025-07,Pro,Individual,Orgânico,SP,12900
+C00414,2024-05,Pro,Microempresa,Orgânico,PR,12900
+C00415,2024-09,Equipe,Individual,Orgânico,RJ,27900
+C00416,2024-01,Essencial,Individual,Orgânico,RJ,5900
+C00417,2024-03,Essencial,Microempresa,Anúncios,PR,5900
+C00418,2026-04,Pro,Pequena empresa,Anúncios,SP,13900
+C00419,2024-09,Equipe,Microempresa,Indicação,PR,28900
+C00420,2024-05,Essencial,Pequena empresa,Indicação,SP,7900
+C00421,2025-11,Essencial,Individual,Orgânico,SP,5900
+C00422,2025-11,Essencial,Individual,Indicação,RJ,6900
+C00423,2024-03,Equipe,Pequena empresa,Orgânico,PR,27900
+C00424,2024-01,Essencial,Microempresa,Anúncios,SP,7900
+C00425,2025-02,Equipe,Individual,Orgânico,MG,26900
+C00426,2024-03,Equipe,Microempresa,Orgânico,MG,26900
+C00427,2024-03,Essencial,Microempresa,Indicação,SP,7900
+C00428,2024-07,Pro,Individual,Orgânico,MG,14900
+C00429,2024-01,Essencial,Microempresa,Orgânico,SP,7900
+C00430,2024-12,Essencial,Individual,Indicação,MG,5900
+C00431,2024-09,Essencial,Individual,Orgânico,SP,7900
+C00432,2025-11,Equipe,Pequena empresa,Anúncios,RJ,26900
+C00433,2026-04,Essencial,Individual,Anúncios,SP,5900
+C00434,2024-09,Equipe,Pequena empresa,Indicação,SP,27900
+C00435,2026-03,Essencial,Microempresa,Orgânico,SP,6900
+C00436,2024-07,Pro,Individual,Orgânico,MG,12900
+C00437,2026-03,Essencial,Pequena empresa,Orgânico,SP,7900
+C00438,2025-05,Pro,Individual,Indicação,SP,12900
+C00439,2024-07,Essencial,Individual,Indicação,SP,5900
+C00440,2025-06,Essencial,Individual,Anúncios,SP,5900
+C00441,2024-12,Essencial,Individual,Orgânico,SP,5900
+C00442,2025-09,Essencial,Individual,Orgânico,SP,5900
+C00443,2024-10,Equipe,Individual,Orgânico,SP,27900
+C00444,2024-12,Essencial,Microempresa,Orgânico,SP,5900
+C00445,2025-07,Essencial,Pequena empresa,Indicação,SP,5900
+C00446,2024-08,Equipe,Microempresa,Anúncios,SP,27900
+C00447,2026-05,Essencial,Individual,Anúncios,PR,5900
+C00448,2025-02,Pro,Individual,Orgânico,SP,13900
+C00449,2025-03,Pro,Pequena empresa,Indicação,SP,12900
+C00450,2026-02,Equipe,Individual,Orgânico,PR,26900
+C00451,2024-08,Equipe,Microempresa,Orgânico,RJ,26900
+C00452,2025-05,Essencial,Individual,Orgânico,RJ,5900
+C00453,2025-03,Essencial,Microempresa,Anúncios,RJ,5900
+C00454,2024-05,Essencial,Individual,Orgânico,SP,5900
+C00455,2024-03,Equipe,Pequena empresa,Orgânico,SP,26900
+C00456,2024-09,Essencial,Individual,Anúncios,PR,5900
+C00457,2026-05,Equipe,Individual,Indicação,SP,27900
+C00458,2026-02,Pro,Individual,Indicação,RJ,12900
+C00459,2025-07,Pro,Individual,Indicação,SP,13900
+C00460,2025-07,Essencial,Individual,Orgânico,PR,6900
+C00461,2025-07,Pro,Microempresa,Indicação,SP,12900
+C00462,2024-03,Pro,Pequena empresa,Anúncios,PR,14900
+C00463,2024-01,Pro,Individual,Indicação,MG,12900
+C00464,2025-09,Pro,Pequena empresa,Orgânico,PR,12900
+C00465,2024-10,Pro,Microempresa,Orgânico,RJ,12900
+C00466,2025-04,Essencial,Individual,Indicação,MG,5900
+C00467,2024-11,Pro,Microempresa,Anúncios,SP,12900
+C00468,2025-10,Essencial,Individual,Anúncios,RJ,6900
+C00469,2026-03,Pro,Individual,Orgânico,SP,12900
+C00470,2024-10,Pro,Individual,Indicação,SP,12900
+C00471,2024-07,Essencial,Individual,Anúncios,SP,6900
+C00472,2024-11,Essencial,Individual,Indicação,SP,5900
+C00473,2025-09,Essencial,Individual,Anúncios,PR,7900
+C00474,2024-08,Pro,Individual,Anúncios,SP,12900
+C00475,2024-01,Essencial,Individual,Anúncios,SP,6900
+C00476,2025-03,Pro,Microempresa,Orgânico,RJ,12900
+C00477,2024-01,Essencial,Individual,Orgânico,MG,6900
+C00478,2025-09,Essencial,Individual,Anúncios,PR,5900
+C00479,2024-03,Pro,Microempresa,Indicação,MG,13900
+C00480,2026-02,Essencial,Individual,Anúncios,MG,5900
+C00481,2026-05,Essencial,Pequena empresa,Orgânico,SP,6900
+C00482,2024-06,Pro,Microempresa,Anúncios,SP,12900
+C00483,2026-03,Essencial,Individual,Indicação,SP,6900
+C00484,2025-01,Pro,Microempresa,Anúncios,PR,12900
+C00485,2026-06,Pro,Individual,Indicação,SP,13900
+C00486,2026-01,Essencial,Individual,Orgânico,RJ,5900
+C00487,2024-04,Essencial,Microempresa,Anúncios,SP,5900
+C00488,2024-02,Essencial,Individual,Indicação,SP,5900
+C00489,2025-10,Equipe,Individual,Indicação,PR,26900
+C00490,2026-01,Essencial,Microempresa,Orgânico,MG,5900
+C00491,2024-12,Essencial,Microempresa,Indicação,SP,6900
+C00492,2026-02,Equipe,Individual,Orgânico,SP,26900
+C00493,2026-05,Essencial,Microempresa,Orgânico,SP,5900
+C00494,2024-07,Equipe,Microempresa,Indicação,SP,28900
+C00495,2025-03,Essencial,Individual,Indicação,MG,5900
+C00496,2025-12,Pro,Pequena empresa,Anúncios,MG,12900
+C00497,2025-10,Essencial,Individual,Indicação,MG,5900
+C00498,2026-06,Pro,Individual,Indicação,PR,12900
+C00499,2025-07,Equipe,Pequena empresa,Anúncios,SP,28900
+C00500,2025-12,Pro,Pequena empresa,Indicação,SP,12900
+C00501,2025-09,Essencial,Pequena empresa,Anúncios,SP,5900
+C00502,2026-05,Pro,Individual,Anúncios,RJ,12900
+C00503,2025-06,Essencial,Individual,Indicação,SP,5900
+C00504,2025-06,Essencial,Individual,Indicação,RJ,7900
+C00505,2025-11,Essencial,Individual,Orgânico,SP,5900
+C00506,2025-06,Essencial,Microempresa,Indicação,SP,5900
+C00507,2025-03,Pro,Individual,Indicação,MG,12900
+C00508,2024-06,Pro,Microempresa,Anúncios,SP,12900
+C00509,2026-04,Pro,Pequena empresa,Anúncios,SP,12900
+C00510,2024-07,Pro,Microempresa,Indicação,RJ,12900
+C00511,2024-07,Essencial,Individual,Indicação,SP,5900
+C00512,2026-05,Pro,Microempresa,Orgânico,SP,12900
+C00513,2025-09,Pro,Individual,Anúncios,RJ,13900
+C00514,2024-10,Pro,Individual,Anúncios,SP,12900
+C00515,2025-12,Pro,Pequena empresa,Orgânico,MG,13900
+C00516,2024-05,Pro,Individual,Orgânico,SP,12900
+C00517,2025-03,Essencial,Pequena empresa,Anúncios,SP,5900
+C00518,2025-02,Essencial,Individual,Anúncios,SP,5900
+C00519,2024-07,Equipe,Individual,Anúncios,MG,26900
+C00520,2024-03,Essencial,Pequena empresa,Orgânico,MG,6900
+C00521,2024-04,Essencial,Individual,Anúncios,PR,6900
+C00522,2024-05,Pro,Individual,Orgânico,MG,14900
+C00523,2025-12,Pro,Microempresa,Anúncios,RJ,12900
+C00524,2026-01,Essencial,Individual,Indicação,SP,6900
+C00525,2024-11,Pro,Individual,Anúncios,MG,12900
+C00526,2025-11,Equipe,Microempresa,Indicação,SP,26900
+C00527,2024-01,Pro,Microempresa,Anúncios,SP,12900
+C00528,2025-01,Equipe,Individual,Orgânico,RJ,26900
+C00529,2024-05,Pro,Pequena empresa,Indicação,SP,14900
+C00530,2026-05,Equipe,Individual,Orgânico,SP,26900
+C00531,2024-11,Pro,Individual,Indicação,SP,14900
+C00532,2024-09,Pro,Individual,Orgânico,SP,12900
+C00533,2024-07,Essencial,Microempresa,Anúncios,SP,7900
+C00534,2024-04,Equipe,Individual,Indicação,MG,26900
+C00535,2024-02,Equipe,Individual,Indicação,MG,26900
+C00536,2024-04,Pro,Microempresa,Orgânico,RJ,14900
+C00537,2025-06,Essencial,Microempresa,Orgânico,SP,5900
+C00538,2025-11,Essencial,Pequena empresa,Orgânico,SP,6900
+C00539,2025-11,Pro,Microempresa,Anúncios,SP,12900
+C00540,2024-09,Pro,Microempresa,Anúncios,SP,12900
+C00541,2025-04,Pro,Individual,Orgânico,MG,14900
+C00542,2025-09,Pro,Microempresa,Orgânico,RJ,14900
+C00543,2026-03,Pro,Pequena empresa,Orgânico,RJ,13900
+C00544,2024-10,Essencial,Individual,Indicação,MG,5900
+C00545,2024-11,Essencial,Individual,Anúncios,SP,5900
+C00546,2025-10,Essencial,Individual,Anúncios,SP,7900
+C00547,2025-04,Equipe,Microempresa,Orgânico,RJ,26900
+C00548,2024-06,Essencial,Individual,Orgânico,PR,7900
+C00549,2024-02,Pro,Pequena empresa,Orgânico,MG,12900
+C00550,2025-04,Essencial,Microempresa,Orgânico,MG,6900
+C00551,2024-07,Pro,Microempresa,Orgânico,RJ,14900
+C00552,2025-08,Essencial,Individual,Orgânico,SP,5900
+C00553,2024-02,Essencial,Pequena empresa,Orgânico,MG,5900
+C00554,2024-11,Essencial,Individual,Anúncios,SP,7900
+C00555,2025-12,Essencial,Individual,Orgânico,SP,5900
+C00556,2024-11,Essencial,Individual,Indicação,MG,5900
+C00557,2024-05,Essencial,Individual,Anúncios,RJ,5900
+C00558,2025-06,Equipe,Microempresa,Indicação,MG,28900
+C00559,2024-11,Equipe,Microempresa,Orgânico,SP,26900
+C00560,2024-06,Essencial,Individual,Orgânico,SP,5900
+C00561,2024-08,Essencial,Individual,Orgânico,MG,5900
+C00562,2025-02,Essencial,Pequena empresa,Indicação,SP,6900
+C00563,2025-04,Pro,Individual,Anúncios,SP,14900
+C00564,2024-05,Pro,Pequena empresa,Anúncios,RJ,14900
+C00565,2026-03,Pro,Individual,Anúncios,RJ,12900
+C00566,2024-12,Essencial,Microempresa,Anúncios,RJ,5900
+C00567,2025-03,Equipe,Individual,Anúncios,PR,26900
+C00568,2024-05,Pro,Microempresa,Anúncios,SP,14900
+C00569,2024-02,Essencial,Individual,Orgânico,SP,6900
+C00570,2025-01,Pro,Individual,Anúncios,MG,12900
+C00571,2026-02,Essencial,Individual,Orgânico,SP,5900
+C00572,2026-03,Essencial,Pequena empresa,Anúncios,SP,6900
+C00573,2025-07,Essencial,Pequena empresa,Orgânico,SP,5900
+C00574,2026-06,Pro,Individual,Anúncios,MG,14900
+C00575,2025-03,Essencial,Individual,Anúncios,RJ,5900
+C00576,2026-02,Equipe,Pequena empresa,Anúncios,SP,26900
+C00577,2025-12,Pro,Microempresa,Orgânico,MG,12900
+C00578,2024-01,Essencial,Individual,Orgânico,SP,7900
+C00579,2024-09,Essencial,Microempresa,Orgânico,SP,5900
+C00580,2025-01,Essencial,Individual,Indicação,MG,7900
+C00581,2025-07,Essencial,Individual,Anúncios,SP,7900
+C00582,2025-03,Essencial,Individual,Orgânico,MG,6900
+C00583,2025-06,Pro,Individual,Anúncios,SP,12900
+C00584,2024-03,Essencial,Individual,Anúncios,RJ,6900
+C00585,2024-03,Essencial,Individual,Orgânico,RJ,5900
+C00586,2025-10,Pro,Microempresa,Anúncios,SP,12900
+C00587,2024-05,Essencial,Pequena empresa,Indicação,SP,5900
+C00588,2025-11,Pro,Pequena empresa,Anúncios,SP,13900
+C00589,2024-02,Pro,Individual,Anúncios,SP,12900
+C00590,2025-06,Pro,Individual,Indicação,SP,12900
+C00591,2024-11,Pro,Individual,Orgânico,MG,12900
+C00592,2025-04,Essencial,Individual,Indicação,SP,5900
+C00593,2025-01,Equipe,Individual,Orgânico,RJ,26900
+C00594,2025-05,Pro,Individual,Anúncios,MG,12900
+C00595,2026-01,Essencial,Microempresa,Indicação,SP,7900
+C00596,2024-09,Equipe,Individual,Orgânico,SP,27900
+C00597,2024-10,Pro,Individual,Indicação,SP,14900
+C00598,2025-08,Pro,Microempresa,Anúncios,PR,13900
+C00599,2025-08,Essencial,Microempresa,Anúncios,SP,5900
+C00600,2024-12,Equipe,Individual,Indicação,PR,26900
+C00601,2024-06,Essencial,Pequena empresa,Anúncios,SP,5900
+C00602,2024-11,Equipe,Individual,Anúncios,MG,28900
+C00603,2026-03,Essencial,Individual,Indicação,SP,5900
+C00604,2025-04,Essencial,Individual,Indicação,SP,7900
+C00605,2024-10,Essencial,Individual,Orgânico,SP,6900
+C00606,2024-03,Equipe,Pequena empresa,Indicação,MG,28900
+C00607,2024-05,Equipe,Individual,Anúncios,RJ,26900
+C00608,2025-07,Pro,Individual,Anúncios,RJ,13900
+C00609,2026-02,Essencial,Individual,Orgânico,RJ,6900
+C00610,2026-05,Equipe,Individual,Indicação,SP,27900
+C00611,2024-11,Pro,Individual,Orgânico,SP,12900
+C00612,2024-10,Essencial,Individual,Anúncios,SP,5900
+C00613,2024-06,Essencial,Pequena empresa,Anúncios,SP,7900
+C00614,2026-04,Pro,Microempresa,Anúncios,SP,12900
+C00615,2025-12,Essencial,Microempresa,Orgânico,SP,6900
+C00616,2024-02,Essencial,Individual,Orgânico,PR,6900
+C00617,2025-12,Essencial,Individual,Anúncios,SP,5900
+C00618,2025-07,Pro,Microempresa,Anúncios,PR,13900
+C00619,2026-02,Equipe,Pequena empresa,Orgânico,RJ,26900
+C00620,2025-07,Essencial,Individual,Anúncios,RJ,7900
+C00621,2025-04,Equipe,Pequena empresa,Anúncios,SP,26900
+C00622,2025-10,Equipe,Individual,Anúncios,PR,26900
+C00623,2026-03,Essencial,Individual,Orgânico,SP,7900
+C00624,2025-03,Equipe,Individual,Indicação,MG,26900
+C00625,2024-10,Essencial,Microempresa,Orgânico,SP,5900
+C00626,2024-04,Equipe,Individual,Indicação,SP,26900
+C00627,2025-03,Essencial,Microempresa,Orgânico,SP,5900
+C00628,2024-09,Essencial,Microempresa,Orgânico,MG,5900
+C00629,2024-09,Essencial,Pequena empresa,Orgânico,RJ,7900
+C00630,2025-03,Essencial,Individual,Orgânico,RJ,7900
+C00631,2025-10,Essencial,Microempresa,Anúncios,SP,5900
+C00632,2025-09,Essencial,Microempresa,Orgânico,PR,7900
+C00633,2025-06,Essencial,Microempresa,Indicação,SP,5900
+C00634,2026-06,Essencial,Individual,Indicação,SP,5900
+C00635,2024-02,Essencial,Pequena empresa,Orgânico,SP,5900
+C00636,2024-07,Essencial,Individual,Anúncios,RJ,5900
+C00637,2025-12,Essencial,Microempresa,Orgânico,SP,7900
+C00638,2024-10,Essencial,Individual,Anúncios,SP,6900
+C00639,2025-03,Essencial,Individual,Anúncios,SP,7900
+C00640,2024-02,Equipe,Microempresa,Orgânico,RJ,27900
+C00641,2025-02,Essencial,Individual,Orgânico,SP,5900
+C00642,2025-07,Essencial,Microempresa,Orgânico,SP,5900
+C00643,2025-03,Essencial,Individual,Anúncios,PR,5900
+C00644,2024-01,Equipe,Individual,Orgânico,RJ,28900
+C00645,2026-04,Essencial,Microempresa,Indicação,SP,6900
+C00646,2025-01,Equipe,Microempresa,Anúncios,SP,27900
+C00647,2025-11,Essencial,Pequena empresa,Orgânico,SP,7900
+C00648,2026-02,Pro,Microempresa,Indicação,RJ,12900
+C00649,2024-02,Essencial,Pequena empresa,Orgânico,RJ,7900
+C00650,2025-06,Essencial,Individual,Orgânico,SP,5900
+C00651,2024-10,Essencial,Individual,Orgânico,MG,5900
+C00652,2025-03,Essencial,Individual,Anúncios,SP,7900
+C00653,2024-09,Essencial,Individual,Indicação,SP,5900
+C00654,2025-06,Equipe,Microempresa,Anúncios,PR,26900
+C00655,2025-09,Essencial,Microempresa,Orgânico,MG,5900
+C00656,2025-09,Pro,Individual,Indicação,SP,14900
+C00657,2024-09,Pro,Microempresa,Indicação,MG,12900
+C00658,2024-12,Equipe,Microempresa,Indicação,MG,26900
+C00659,2026-04,Essencial,Individual,Orgânico,RJ,7900
+C00660,2024-03,Essencial,Individual,Indicação,RJ,5900
+C00661,2025-04,Essencial,Individual,Indicação,RJ,5900
+C00662,2026-04,Essencial,Individual,Orgânico,MG,5900
+C00663,2025-08,Essencial,Individual,Anúncios,PR,5900
+C00664,2025-04,Pro,Individual,Orgânico,SP,12900
+C00665,2024-08,Pro,Individual,Anúncios,PR,13900
+C00666,2025-07,Essencial,Microempresa,Orgânico,SP,6900
+C00667,2025-05,Pro,Individual,Indicação,SP,12900
+C00668,2025-03,Essencial,Individual,Orgânico,SP,6900
+C00669,2024-04,Essencial,Microempresa,Indicação,SP,5900
+C00670,2024-04,Pro,Individual,Anúncios,MG,12900
+C00671,2026-01,Essencial,Pequena empresa,Indicação,SP,5900
+C00672,2024-09,Equipe,Individual,Orgânico,MG,27900
+C00673,2026-01,Essencial,Individual,Anúncios,RJ,5900
+C00674,2024-06,Essencial,Microempresa,Indicação,MG,5900
+C00675,2024-12,Essencial,Individual,Orgânico,PR,6900
+C00676,2024-06,Pro,Microempresa,Orgânico,MG,13900
+C00677,2024-10,Essencial,Individual,Indicação,SP,5900
+C00678,2025-04,Essencial,Individual,Anúncios,MG,5900
+C00679,2024-01,Equipe,Individual,Anúncios,RJ,26900
+C00680,2025-08,Equipe,Microempresa,Orgânico,SP,26900
+C00681,2024-06,Essencial,Microempresa,Orgânico,SP,5900
+C00682,2024-09,Essencial,Pequena empresa,Orgânico,MG,5900
+C00683,2026-01,Essencial,Individual,Orgânico,RJ,7900
+C00684,2026-02,Equipe,Individual,Indicação,SP,26900
+C00685,2025-09,Pro,Individual,Indicação,MG,13900
+C00686,2025-06,Essencial,Individual,Orgânico,SP,6900
+C00687,2026-05,Essencial,Individual,Orgânico,MG,6900
+C00688,2025-03,Pro,Pequena empresa,Orgânico,SP,12900
+C00689,2025-04,Essencial,Individual,Orgânico,MG,5900
+C00690,2024-05,Essencial,Microempresa,Anúncios,MG,7900
+C00691,2025-04,Pro,Pequena empresa,Anúncios,MG,13900
+C00692,2024-10,Pro,Microempresa,Orgânico,SP,13900
+C00693,2024-10,Equipe,Microempresa,Orgânico,PR,26900
+C00694,2024-01,Pro,Individual,Orgânico,PR,14900
+C00695,2024-08,Essencial,Microempresa,Anúncios,SP,6900
+C00696,2025-01,Essencial,Microempresa,Anúncios,SP,5900
+C00697,2025-08,Pro,Individual,Indicação,PR,14900
+C00698,2024-08,Essencial,Microempresa,Anúncios,SP,5900
+C00699,2024-05,Essencial,Microempresa,Indicação,SP,6900
+C00700,2025-04,Equipe,Individual,Indicação,SP,28900
+C00701,2024-05,Essencial,Pequena empresa,Orgânico,SP,7900
+C00702,2025-09,Pro,Individual,Indicação,MG,14900
+C00703,2025-10,Pro,Pequena empresa,Indicação,PR,13900
+C00704,2026-01,Pro,Individual,Orgânico,SP,13900
+C00705,2025-07,Essencial,Individual,Orgânico,RJ,6900
+C00706,2025-03,Essencial,Individual,Indicação,PR,5900
+C00707,2024-01,Essencial,Microempresa,Orgânico,SP,5900
+C00708,2024-06,Essencial,Individual,Indicação,SP,6900
+C00709,2024-07,Pro,Individual,Indicação,SP,13900
+C00710,2024-09,Pro,Individual,Orgânico,PR,12900
+C00711,2024-10,Essencial,Individual,Anúncios,RJ,5900
+C00712,2024-02,Essencial,Individual,Indicação,RJ,5900
+C00713,2025-12,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00714,2024-10,Pro,Microempresa,Orgânico,RJ,12900
+C00715,2025-02,Essencial,Individual,Orgânico,SP,7900
+C00716,2025-03,Essencial,Microempresa,Indicação,SP,5900
+C00717,2024-03,Essencial,Individual,Orgânico,SP,5900
+C00718,2024-10,Pro,Pequena empresa,Indicação,SP,13900
+C00719,2025-01,Equipe,Individual,Orgânico,SP,26900
+C00720,2026-03,Essencial,Individual,Anúncios,MG,6900
+C00721,2025-07,Essencial,Individual,Anúncios,MG,5900
+C00722,2026-02,Equipe,Individual,Anúncios,MG,26900
+C00723,2024-06,Equipe,Pequena empresa,Anúncios,SP,27900
+C00724,2024-08,Essencial,Individual,Indicação,MG,5900
+C00725,2025-06,Pro,Pequena empresa,Orgânico,RJ,14900
+C00726,2024-01,Essencial,Pequena empresa,Orgânico,SP,5900
+C00727,2025-03,Essencial,Individual,Indicação,SP,7900
+C00728,2026-03,Essencial,Individual,Indicação,MG,7900
+C00729,2024-06,Essencial,Individual,Anúncios,RJ,7900
+C00730,2026-04,Essencial,Individual,Anúncios,SP,5900
+C00731,2024-08,Essencial,Individual,Orgânico,SP,7900
+C00732,2024-08,Essencial,Individual,Indicação,SP,6900
+C00733,2024-09,Essencial,Pequena empresa,Orgânico,SP,7900
+C00734,2024-04,Essencial,Individual,Orgânico,MG,5900
+C00735,2025-06,Essencial,Microempresa,Orgânico,RJ,5900
+C00736,2024-03,Equipe,Pequena empresa,Anúncios,SP,27900
+C00737,2024-09,Equipe,Pequena empresa,Indicação,SP,27900
+C00738,2024-05,Pro,Microempresa,Anúncios,RJ,12900
+C00739,2025-04,Essencial,Microempresa,Indicação,MG,6900
+C00740,2026-05,Pro,Microempresa,Orgânico,SP,14900
+C00741,2026-06,Pro,Individual,Indicação,MG,12900
+C00742,2026-06,Essencial,Individual,Orgânico,SP,5900
+C00743,2025-09,Pro,Individual,Indicação,SP,12900
+C00744,2024-09,Equipe,Individual,Anúncios,RJ,26900
+C00745,2026-06,Pro,Microempresa,Anúncios,SP,12900
+C00746,2026-01,Equipe,Microempresa,Indicação,SP,27900
+C00747,2024-07,Pro,Pequena empresa,Orgânico,RJ,14900
+C00748,2025-06,Pro,Microempresa,Orgânico,SP,12900
+C00749,2024-11,Pro,Individual,Orgânico,MG,14900
+C00750,2025-05,Pro,Microempresa,Anúncios,SP,12900
+C00751,2025-06,Essencial,Microempresa,Orgânico,SP,7900
+C00752,2024-08,Pro,Microempresa,Orgânico,PR,14900
+C00753,2025-09,Essencial,Microempresa,Orgânico,SP,5900
+C00754,2024-01,Equipe,Individual,Indicação,SP,28900
+C00755,2025-02,Essencial,Individual,Orgânico,PR,5900
+C00756,2024-11,Essencial,Individual,Anúncios,MG,5900
+C00757,2026-05,Essencial,Pequena empresa,Orgânico,MG,7900
+C00758,2025-12,Essencial,Pequena empresa,Orgânico,MG,5900
+C00759,2026-03,Essencial,Pequena empresa,Anúncios,RJ,6900
+C00760,2024-10,Pro,Pequena empresa,Indicação,SP,12900
+C00761,2025-04,Pro,Individual,Indicação,PR,12900
+C00762,2024-03,Essencial,Pequena empresa,Indicação,SP,6900
+C00763,2024-10,Essencial,Pequena empresa,Orgânico,SP,6900
+C00764,2026-06,Essencial,Pequena empresa,Orgânico,MG,5900
+C00765,2026-03,Essencial,Microempresa,Orgânico,MG,7900
+C00766,2024-11,Equipe,Individual,Indicação,SP,26900
+C00767,2025-10,Equipe,Individual,Orgânico,SP,26900
+C00768,2024-10,Essencial,Individual,Anúncios,MG,5900
+C00769,2026-05,Essencial,Individual,Anúncios,SP,5900
+C00770,2025-04,Essencial,Individual,Anúncios,SP,6900
+C00771,2025-03,Pro,Microempresa,Indicação,SP,12900
+C00772,2026-03,Essencial,Pequena empresa,Indicação,RJ,7900
+C00773,2026-02,Pro,Individual,Orgânico,SP,13900
+C00774,2025-09,Essencial,Individual,Orgânico,PR,6900
+C00775,2025-09,Essencial,Microempresa,Indicação,PR,6900
+C00776,2024-07,Essencial,Individual,Orgânico,SP,5900
+C00777,2026-01,Essencial,Microempresa,Anúncios,SP,5900
+C00778,2024-08,Essencial,Individual,Anúncios,SP,5900
+C00779,2024-02,Essencial,Pequena empresa,Anúncios,MG,5900
+C00780,2026-01,Essencial,Individual,Orgânico,MG,6900
+C00781,2025-10,Essencial,Microempresa,Anúncios,PR,5900
+C00782,2024-07,Pro,Microempresa,Anúncios,PR,12900
+C00783,2025-09,Essencial,Microempresa,Indicação,MG,5900
+C00784,2024-08,Pro,Individual,Orgânico,SP,14900
+C00785,2024-02,Pro,Individual,Indicação,RJ,12900
+C00786,2026-06,Essencial,Microempresa,Orgânico,MG,5900
+C00787,2025-11,Essencial,Individual,Anúncios,RJ,6900
+C00788,2024-02,Pro,Microempresa,Orgânico,SP,12900
+C00789,2024-04,Pro,Individual,Orgânico,SP,12900
+C00790,2024-08,Essencial,Microempresa,Orgânico,SP,5900
+C00791,2024-12,Essencial,Pequena empresa,Orgânico,PR,5900
+C00792,2026-06,Equipe,Microempresa,Orgânico,SP,27900
+C00793,2025-03,Pro,Microempresa,Orgânico,SP,13900
+C00794,2024-07,Essencial,Individual,Orgânico,SP,6900
+C00795,2024-08,Essencial,Individual,Orgânico,PR,5900
+C00796,2026-05,Essencial,Pequena empresa,Orgânico,RJ,6900
+C00797,2025-06,Essencial,Individual,Orgânico,SP,5900
+C00798,2024-08,Essencial,Individual,Anúncios,SP,5900
+C00799,2025-08,Pro,Microempresa,Indicação,SP,14900
+C00800,2024-02,Essencial,Individual,Indicação,MG,5900
+C00801,2026-01,Pro,Individual,Orgânico,MG,13900
+C00802,2025-02,Equipe,Individual,Anúncios,PR,27900
+C00803,2024-03,Pro,Microempresa,Orgânico,SP,12900
+C00804,2025-04,Essencial,Individual,Indicação,MG,5900
+C00805,2026-05,Pro,Microempresa,Orgânico,SP,12900
+C00806,2025-12,Pro,Microempresa,Anúncios,SP,14900
+C00807,2025-03,Pro,Microempresa,Indicação,SP,12900
+C00808,2025-09,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00809,2026-02,Essencial,Individual,Orgânico,SP,5900
+C00810,2025-11,Essencial,Individual,Orgânico,MG,5900
+C00811,2025-02,Equipe,Individual,Orgânico,MG,26900
+C00812,2024-04,Pro,Individual,Anúncios,SP,14900
+C00813,2025-12,Pro,Pequena empresa,Anúncios,MG,12900
+C00814,2025-10,Essencial,Microempresa,Anúncios,SP,6900
+C00815,2024-05,Pro,Microempresa,Anúncios,SP,13900
+C00816,2024-05,Essencial,Pequena empresa,Indicação,MG,5900
+C00817,2024-05,Essencial,Individual,Orgânico,SP,6900
+C00818,2024-10,Essencial,Individual,Orgânico,SP,5900
+C00819,2026-03,Equipe,Pequena empresa,Anúncios,RJ,26900
+C00820,2025-02,Equipe,Pequena empresa,Indicação,SP,27900
+C00821,2026-03,Essencial,Individual,Orgânico,MG,7900
+C00822,2026-01,Equipe,Microempresa,Anúncios,SP,26900
+C00823,2024-07,Equipe,Individual,Orgânico,SP,27900
+C00824,2024-12,Pro,Microempresa,Anúncios,MG,13900
+C00825,2024-03,Essencial,Individual,Anúncios,MG,5900
+C00826,2025-07,Pro,Individual,Orgânico,RJ,14900
+C00827,2024-08,Essencial,Individual,Anúncios,PR,5900
+C00828,2025-03,Essencial,Microempresa,Orgânico,SP,5900
+C00829,2024-07,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00830,2025-10,Pro,Microempresa,Anúncios,MG,12900
+C00831,2026-04,Pro,Microempresa,Orgânico,SP,13900
+C00832,2026-06,Pro,Microempresa,Orgânico,MG,14900
+C00833,2024-07,Essencial,Individual,Indicação,MG,5900
+C00834,2026-02,Equipe,Individual,Anúncios,MG,27900
+C00835,2025-04,Essencial,Pequena empresa,Orgânico,MG,5900
+C00836,2024-02,Essencial,Microempresa,Orgânico,RJ,5900
+C00837,2024-05,Equipe,Individual,Orgânico,MG,27900
+C00838,2024-10,Pro,Individual,Orgânico,SP,12900
+C00839,2024-06,Equipe,Individual,Orgânico,SP,26900
+C00840,2026-02,Pro,Pequena empresa,Indicação,MG,12900
+C00841,2026-01,Pro,Pequena empresa,Orgânico,SP,12900
+C00842,2025-09,Pro,Individual,Anúncios,PR,14900
+C00843,2025-04,Pro,Microempresa,Indicação,SP,13900
+C00844,2024-04,Pro,Individual,Orgânico,RJ,12900
+C00845,2024-11,Essencial,Individual,Indicação,MG,5900
+C00846,2025-03,Essencial,Microempresa,Orgânico,RJ,6900
+C00847,2025-11,Equipe,Individual,Indicação,RJ,26900
+C00848,2025-12,Essencial,Microempresa,Anúncios,MG,5900
+C00849,2026-02,Essencial,Microempresa,Indicação,MG,5900
+C00850,2025-04,Essencial,Individual,Anúncios,SP,6900
+C00851,2025-03,Essencial,Microempresa,Orgânico,PR,6900
+C00852,2024-02,Pro,Microempresa,Orgânico,SP,12900
+C00853,2024-10,Essencial,Pequena empresa,Orgânico,SP,5900
+C00854,2025-06,Equipe,Individual,Indicação,PR,26900
+C00855,2024-09,Equipe,Pequena empresa,Orgânico,MG,27900
+C00856,2024-02,Pro,Pequena empresa,Anúncios,PR,14900
+C00857,2024-09,Essencial,Individual,Orgânico,RJ,5900
+C00858,2026-01,Pro,Individual,Orgânico,RJ,13900
+C00859,2026-01,Essencial,Microempresa,Orgânico,SP,5900
+C00860,2026-04,Equipe,Individual,Indicação,SP,26900
+C00861,2024-04,Essencial,Individual,Indicação,MG,5900
+C00862,2025-03,Essencial,Individual,Anúncios,PR,5900
+C00863,2026-01,Essencial,Individual,Orgânico,PR,5900
+C00864,2025-02,Essencial,Individual,Indicação,SP,5900
+C00865,2024-02,Essencial,Individual,Indicação,PR,6900
+C00866,2025-09,Essencial,Microempresa,Anúncios,SP,5900
+C00867,2025-10,Essencial,Microempresa,Orgânico,RJ,6900
+C00868,2024-11,Essencial,Microempresa,Orgânico,SP,6900
+C00869,2024-03,Essencial,Individual,Anúncios,PR,5900
+C00870,2026-01,Essencial,Pequena empresa,Indicação,SP,5900
+C00871,2026-02,Pro,Pequena empresa,Indicação,MG,12900
+C00872,2024-04,Essencial,Individual,Indicação,SP,5900
+C00873,2025-02,Pro,Individual,Indicação,SP,13900
+C00874,2025-12,Essencial,Microempresa,Anúncios,RJ,6900
+C00875,2024-03,Equipe,Microempresa,Indicação,SP,27900
+C00876,2025-01,Essencial,Individual,Indicação,SP,7900
+C00877,2025-09,Pro,Individual,Orgânico,PR,12900
+C00878,2024-07,Equipe,Microempresa,Orgânico,RJ,26900
+C00879,2024-11,Essencial,Pequena empresa,Indicação,MG,5900
+C00880,2024-08,Essencial,Individual,Indicação,SP,6900
+C00881,2026-06,Essencial,Pequena empresa,Orgânico,MG,7900
+C00882,2025-07,Essencial,Pequena empresa,Indicação,SP,6900
+C00883,2024-03,Essencial,Microempresa,Orgânico,PR,7900
+C00884,2024-07,Essencial,Microempresa,Anúncios,SP,5900
+C00885,2025-09,Essencial,Individual,Anúncios,PR,7900
+C00886,2024-05,Pro,Individual,Orgânico,SP,12900
+C00887,2026-03,Pro,Microempresa,Orgânico,SP,12900
+C00888,2025-02,Pro,Pequena empresa,Orgânico,MG,13900
+C00889,2026-06,Essencial,Individual,Orgânico,SP,5900
+C00890,2024-02,Pro,Individual,Orgânico,PR,12900
+C00891,2026-04,Essencial,Pequena empresa,Orgânico,SP,5900
+C00892,2024-05,Pro,Individual,Indicação,RJ,14900
+C00893,2025-04,Essencial,Individual,Indicação,MG,5900
+C00894,2026-06,Pro,Microempresa,Anúncios,MG,12900
+C00895,2026-01,Pro,Individual,Orgânico,RJ,12900
+C00896,2026-05,Essencial,Individual,Orgânico,MG,7900
+C00897,2024-12,Pro,Microempresa,Indicação,SP,12900
+C00898,2025-01,Equipe,Microempresa,Anúncios,MG,27900
+C00899,2024-02,Essencial,Individual,Orgânico,SP,5900
+C00900,2025-05,Essencial,Pequena empresa,Anúncios,MG,5900
+C00901,2024-12,Essencial,Individual,Anúncios,RJ,5900
+C00902,2024-07,Pro,Individual,Anúncios,MG,13900
+C00903,2025-04,Equipe,Individual,Anúncios,RJ,26900
+C00904,2025-07,Pro,Microempresa,Orgânico,RJ,12900
+C00905,2025-08,Essencial,Individual,Anúncios,SP,6900
+C00906,2024-12,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00907,2024-01,Essencial,Microempresa,Indicação,SP,5900
+C00908,2024-06,Essencial,Individual,Indicação,SP,5900
+C00909,2024-11,Essencial,Individual,Orgânico,SP,6900
+C00910,2025-04,Pro,Individual,Anúncios,PR,12900
+C00911,2024-02,Essencial,Microempresa,Orgânico,MG,5900
+C00912,2024-05,Essencial,Individual,Orgânico,PR,5900
+C00913,2024-07,Pro,Microempresa,Orgânico,PR,13900
+C00914,2026-06,Essencial,Microempresa,Orgânico,MG,5900
+C00915,2026-03,Essencial,Individual,Orgânico,MG,5900
+C00916,2026-01,Equipe,Microempresa,Orgânico,SP,26900
+C00917,2025-09,Pro,Microempresa,Indicação,RJ,12900
+C00918,2025-09,Pro,Pequena empresa,Indicação,SP,13900
+C00919,2024-07,Pro,Individual,Anúncios,MG,12900
+C00920,2025-02,Essencial,Pequena empresa,Anúncios,PR,7900
+C00921,2025-08,Pro,Pequena empresa,Anúncios,SP,12900
+C00922,2026-04,Essencial,Microempresa,Orgânico,SP,5900
+C00923,2026-01,Equipe,Individual,Indicação,SP,28900
+C00924,2025-12,Pro,Pequena empresa,Indicação,RJ,12900
+C00925,2024-12,Equipe,Individual,Anúncios,SP,27900
+C00926,2025-02,Pro,Microempresa,Orgânico,MG,12900
+C00927,2024-10,Essencial,Individual,Anúncios,SP,7900
+C00928,2024-01,Equipe,Individual,Orgânico,PR,26900
+C00929,2025-04,Equipe,Microempresa,Orgânico,SP,26900
+C00930,2024-06,Equipe,Pequena empresa,Anúncios,SP,28900
+C00931,2026-05,Pro,Individual,Anúncios,SP,14900
+C00932,2024-09,Essencial,Microempresa,Indicação,SP,6900
+C00933,2024-04,Essencial,Microempresa,Indicação,SP,5900
+C00934,2026-01,Equipe,Microempresa,Anúncios,SP,26900
+C00935,2024-12,Essencial,Pequena empresa,Anúncios,SP,5900
+C00936,2026-05,Essencial,Individual,Orgânico,SP,7900
+C00937,2025-04,Pro,Individual,Orgânico,MG,13900
+C00938,2025-10,Essencial,Pequena empresa,Indicação,PR,5900
+C00939,2025-01,Essencial,Pequena empresa,Orgânico,RJ,5900
+C00940,2026-02,Pro,Individual,Anúncios,MG,12900
+C00941,2026-04,Essencial,Microempresa,Orgânico,SP,5900
+C00942,2024-01,Pro,Individual,Anúncios,SP,12900
+C00943,2024-12,Pro,Individual,Orgânico,SP,12900
+C00944,2024-04,Equipe,Pequena empresa,Orgânico,SP,28900
+C00945,2024-09,Essencial,Individual,Orgânico,SP,6900
+C00946,2025-03,Equipe,Individual,Anúncios,RJ,27900
+C00947,2024-03,Essencial,Pequena empresa,Indicação,SP,5900
+C00948,2026-04,Essencial,Individual,Orgânico,RJ,6900
+C00949,2024-10,Pro,Individual,Anúncios,PR,12900
+C00950,2025-10,Essencial,Pequena empresa,Orgânico,SP,7900
+C00951,2024-01,Pro,Microempresa,Orgânico,SP,14900
+C00952,2024-02,Essencial,Individual,Anúncios,RJ,6900
+C00953,2024-01,Pro,Microempresa,Orgânico,PR,14900
+C00954,2024-07,Pro,Pequena empresa,Orgânico,RJ,14900
+C00955,2026-06,Equipe,Individual,Indicação,RJ,26900
+C00956,2026-03,Essencial,Microempresa,Anúncios,RJ,7900
+C00957,2026-02,Essencial,Individual,Anúncios,SP,7900
+C00958,2024-06,Essencial,Individual,Indicação,RJ,6900
+C00959,2024-09,Pro,Individual,Anúncios,SP,12900
+C00960,2025-02,Pro,Pequena empresa,Indicação,PR,12900
+C00961,2024-12,Essencial,Individual,Anúncios,PR,5900
+C00962,2026-04,Essencial,Pequena empresa,Orgânico,SP,5900
+C00963,2026-04,Essencial,Microempresa,Orgânico,MG,5900
+C00964,2025-12,Essencial,Microempresa,Orgânico,SP,7900
+C00965,2025-08,Pro,Individual,Anúncios,MG,12900
+C00966,2024-04,Essencial,Individual,Orgânico,PR,6900
+C00967,2025-01,Essencial,Individual,Anúncios,SP,5900
+C00968,2025-10,Equipe,Individual,Anúncios,SP,26900
+C00969,2024-10,Essencial,Individual,Anúncios,SP,7900
+C00970,2024-06,Equipe,Individual,Indicação,SP,26900
+C00971,2026-01,Pro,Microempresa,Orgânico,MG,13900
+C00972,2025-07,Pro,Individual,Anúncios,PR,14900
+C00973,2025-01,Equipe,Pequena empresa,Indicação,SP,28900
+C00974,2025-01,Essencial,Individual,Indicação,SP,5900
+C00975,2024-10,Essencial,Individual,Orgânico,RJ,5900
+C00976,2025-01,Essencial,Individual,Indicação,MG,7900
+C00977,2026-02,Essencial,Microempresa,Anúncios,SP,5900
+C00978,2024-12,Essencial,Individual,Anúncios,MG,6900
+C00979,2024-11,Pro,Microempresa,Anúncios,SP,12900
+C00980,2025-08,Essencial,Individual,Indicação,PR,7900
+C00981,2024-11,Essencial,Individual,Indicação,MG,7900
+C00982,2024-08,Essencial,Individual,Indicação,SP,5900
+C00983,2025-08,Essencial,Individual,Anúncios,RJ,5900
+C00984,2024-01,Pro,Pequena empresa,Anúncios,SP,14900
+C00985,2024-08,Equipe,Microempresa,Indicação,SP,26900
+C00986,2025-06,Pro,Microempresa,Anúncios,SP,13900
+C00987,2025-12,Pro,Individual,Anúncios,MG,14900
+C00988,2025-08,Pro,Individual,Orgânico,MG,12900
+C00989,2026-03,Pro,Individual,Orgânico,SP,12900
+C00990,2025-06,Essencial,Individual,Anúncios,MG,6900
+C00991,2025-04,Pro,Pequena empresa,Orgânico,SP,14900
+C00992,2025-01,Essencial,Individual,Anúncios,SP,5900
+C00993,2025-06,Essencial,Individual,Orgânico,PR,7900
+C00994,2024-11,Essencial,Microempresa,Orgânico,RJ,5900
+C00995,2026-03,Essencial,Microempresa,Orgânico,MG,6900
+C00996,2024-01,Pro,Individual,Anúncios,RJ,13900
+C00997,2024-07,Essencial,Individual,Indicação,RJ,5900
+C00998,2026-06,Essencial,Individual,Orgânico,RJ,5900
+C00999,2026-06,Pro,Microempresa,Anúncios,SP,12900
+C01000,2024-09,Equipe,Individual,Anúncios,SP,26900
+C01001,2025-12,Essencial,Microempresa,Anúncios,SP,5900
+C01002,2026-05,Equipe,Pequena empresa,Indicação,MG,27900
+C01003,2024-08,Equipe,Microempresa,Anúncios,SP,26900
+C01004,2025-10,Essencial,Individual,Orgânico,MG,5900
+C01005,2024-05,Essencial,Pequena empresa,Indicação,SP,7900
+C01006,2025-04,Essencial,Individual,Anúncios,PR,5900
+C01007,2026-04,Essencial,Pequena empresa,Orgânico,MG,5900
+C01008,2024-04,Essencial,Individual,Anúncios,MG,5900
+C01009,2024-09,Equipe,Microempresa,Orgânico,SP,26900
+C01010,2026-01,Equipe,Microempresa,Indicação,MG,27900
+C01011,2024-10,Pro,Individual,Orgânico,SP,12900
+C01012,2026-03,Equipe,Pequena empresa,Orgânico,MG,28900
+C01013,2025-02,Pro,Microempresa,Anúncios,SP,13900
+C01014,2025-06,Essencial,Individual,Orgânico,SP,6900
+C01015,2025-09,Essencial,Pequena empresa,Orgânico,SP,5900
+C01016,2024-06,Pro,Individual,Anúncios,SP,12900
+C01017,2026-01,Pro,Individual,Indicação,MG,12900
+C01018,2024-04,Pro,Microempresa,Anúncios,MG,12900
+C01019,2025-04,Essencial,Individual,Orgânico,MG,5900
+C01020,2024-11,Essencial,Individual,Indicação,SP,5900
+C01021,2026-05,Equipe,Microempresa,Anúncios,PR,26900
+C01022,2025-07,Essencial,Individual,Anúncios,MG,6900
+C01023,2024-11,Essencial,Microempresa,Indicação,SP,5900
+C01024,2024-03,Essencial,Individual,Anúncios,RJ,5900
+C01025,2024-01,Essencial,Pequena empresa,Orgânico,RJ,6900
+C01026,2024-10,Equipe,Pequena empresa,Indicação,SP,26900
+C01027,2025-10,Equipe,Pequena empresa,Indicação,PR,26900
+C01028,2024-05,Essencial,Individual,Indicação,RJ,5900
+C01029,2024-07,Pro,Individual,Anúncios,PR,12900
+C01030,2024-08,Essencial,Individual,Indicação,PR,5900
+C01031,2024-05,Essencial,Microempresa,Anúncios,SP,5900
+C01032,2024-07,Essencial,Microempresa,Orgânico,SP,5900
+C01033,2024-08,Essencial,Individual,Anúncios,RJ,6900
+C01034,2025-03,Equipe,Individual,Orgânico,RJ,27900
+C01035,2024-02,Essencial,Individual,Anúncios,RJ,5900
+C01036,2025-07,Equipe,Microempresa,Anúncios,PR,26900
+C01037,2024-04,Essencial,Individual,Orgânico,MG,5900
+C01038,2025-12,Essencial,Individual,Orgânico,SP,5900
+C01039,2024-05,Essencial,Individual,Anúncios,SP,5900
+C01040,2025-06,Essencial,Pequena empresa,Anúncios,SP,5900
+C01041,2025-04,Essencial,Individual,Anúncios,SP,5900
+C01042,2026-03,Equipe,Individual,Orgânico,MG,27900
+C01043,2024-07,Essencial,Individual,Anúncios,SP,5900
+C01044,2025-07,Equipe,Individual,Orgânico,SP,27900
+C01045,2026-05,Essencial,Individual,Anúncios,SP,5900
+C01046,2025-01,Essencial,Individual,Orgânico,MG,5900
+C01047,2026-04,Essencial,Individual,Orgânico,SP,5900
+C01048,2024-07,Pro,Individual,Anúncios,SP,12900
+C01049,2025-06,Equipe,Microempresa,Indicação,SP,26900
+C01050,2026-02,Essencial,Individual,Orgânico,RJ,5900
+C01051,2026-02,Pro,Pequena empresa,Orgânico,MG,12900
+C01052,2024-01,Essencial,Individual,Anúncios,RJ,5900
+C01053,2025-07,Pro,Pequena empresa,Anúncios,SP,13900
+C01054,2026-06,Pro,Individual,Indicação,MG,12900
+C01055,2025-07,Equipe,Pequena empresa,Anúncios,MG,26900
+C01056,2024-01,Pro,Individual,Orgânico,RJ,12900
+C01057,2024-01,Essencial,Individual,Orgânico,MG,5900
+C01058,2024-09,Essencial,Individual,Indicação,SP,6900
+C01059,2025-03,Essencial,Microempresa,Indicação,RJ,7900
+C01060,2025-04,Pro,Pequena empresa,Orgânico,SP,12900
+C01061,2025-05,Pro,Individual,Anúncios,SP,14900
+C01062,2025-12,Essencial,Pequena empresa,Orgânico,SP,7900
+C01063,2024-07,Equipe,Microempresa,Orgânico,SP,27900
+C01064,2024-01,Essencial,Microempresa,Anúncios,SP,5900
+C01065,2025-06,Pro,Individual,Anúncios,SP,12900
+C01066,2024-02,Essencial,Individual,Anúncios,RJ,5900
+C01067,2025-02,Pro,Individual,Indicação,SP,12900
+C01068,2025-08,Equipe,Individual,Orgânico,SP,28900
+C01069,2024-04,Essencial,Individual,Orgânico,SP,5900
+C01070,2024-08,Pro,Individual,Anúncios,PR,13900
+C01071,2025-08,Pro,Pequena empresa,Anúncios,SP,13900
+C01072,2024-09,Equipe,Individual,Anúncios,SP,26900
+C01073,2026-01,Equipe,Individual,Orgânico,RJ,27900
+C01074,2025-08,Equipe,Microempresa,Anúncios,SP,26900
+C01075,2024-12,Pro,Microempresa,Orgânico,PR,13900
+C01076,2025-08,Essencial,Individual,Indicação,PR,5900
+C01077,2024-11,Essencial,Pequena empresa,Orgânico,PR,6900
+C01078,2024-08,Essencial,Pequena empresa,Indicação,SP,6900
+C01079,2025-04,Essencial,Individual,Anúncios,SP,7900
+C01080,2024-09,Equipe,Microempresa,Indicação,SP,26900
+C01081,2025-06,Pro,Microempresa,Indicação,RJ,12900
+C01082,2025-01,Essencial,Microempresa,Indicação,MG,5900
+C01083,2024-02,Essencial,Individual,Indicação,RJ,5900
+C01084,2025-05,Pro,Individual,Indicação,RJ,12900
+C01085,2024-08,Essencial,Microempresa,Orgânico,MG,5900
+C01086,2024-08,Pro,Individual,Orgânico,SP,12900
+C01087,2026-03,Essencial,Microempresa,Orgânico,SP,5900
+C01088,2025-09,Essencial,Individual,Indicação,SP,5900
+C01089,2024-02,Essencial,Pequena empresa,Orgânico,RJ,5900
+C01090,2025-10,Essencial,Individual,Orgânico,PR,5900
+C01091,2025-01,Equipe,Individual,Orgânico,RJ,28900
+C01092,2024-10,Essencial,Individual,Anúncios,MG,5900
+C01093,2025-06,Essencial,Microempresa,Indicação,MG,5900
+C01094,2025-12,Pro,Individual,Anúncios,MG,13900
+C01095,2024-05,Pro,Pequena empresa,Orgânico,SP,14900
+C01096,2026-02,Essencial,Individual,Anúncios,MG,6900
+C01097,2025-02,Essencial,Individual,Orgânico,PR,5900
+C01098,2025-05,Pro,Individual,Orgânico,SP,14900
+C01099,2025-02,Pro,Individual,Orgânico,RJ,12900
+C01100,2024-06,Pro,Individual,Orgânico,SP,12900
+C01101,2025-05,Essencial,Pequena empresa,Anúncios,MG,7900
+C01102,2024-04,Equipe,Individual,Orgânico,MG,26900
+C01103,2026-01,Equipe,Individual,Anúncios,SP,26900
+C01104,2024-09,Pro,Individual,Orgânico,MG,13900
+C01105,2024-07,Equipe,Individual,Indicação,MG,26900
+C01106,2025-02,Pro,Individual,Indicação,PR,12900
+C01107,2025-08,Essencial,Pequena empresa,Anúncios,SP,6900
+C01108,2025-12,Pro,Individual,Anúncios,MG,12900
+C01109,2024-02,Essencial,Microempresa,Orgânico,SP,5900
+C01110,2024-06,Essencial,Individual,Orgânico,MG,5900
+C01111,2026-06,Pro,Pequena empresa,Indicação,SP,14900
+C01112,2025-11,Equipe,Individual,Orgânico,RJ,26900
+C01113,2026-03,Essencial,Individual,Indicação,SP,7900
+C01114,2025-09,Essencial,Microempresa,Orgânico,MG,5900
+C01115,2025-07,Essencial,Microempresa,Orgânico,SP,7900
+C01116,2026-02,Pro,Pequena empresa,Anúncios,PR,12900
+C01117,2024-11,Pro,Pequena empresa,Orgânico,SP,12900
+C01118,2024-05,Equipe,Pequena empresa,Orgânico,RJ,27900
+C01119,2024-10,Essencial,Individual,Anúncios,MG,6900
+C01120,2025-07,Essencial,Individual,Indicação,RJ,6900
+C01121,2026-04,Pro,Microempresa,Orgânico,RJ,13900
+C01122,2024-03,Essencial,Individual,Orgânico,MG,5900
+C01123,2025-01,Pro,Individual,Anúncios,RJ,12900
+C01124,2025-05,Equipe,Individual,Orgânico,RJ,27900
+C01125,2024-07,Essencial,Individual,Orgânico,PR,5900
+C01126,2024-08,Pro,Microempresa,Orgânico,MG,12900
+C01127,2024-08,Pro,Individual,Indicação,MG,12900
+C01128,2024-11,Essencial,Individual,Indicação,RJ,5900
+C01129,2025-11,Pro,Individual,Orgânico,SP,12900
+C01130,2025-12,Pro,Individual,Orgânico,MG,12900
+C01131,2025-03,Essencial,Individual,Anúncios,MG,5900
+C01132,2026-03,Equipe,Individual,Anúncios,SP,28900
+C01133,2024-09,Pro,Microempresa,Indicação,SP,14900
+C01134,2025-08,Pro,Microempresa,Orgânico,SP,14900
+C01135,2024-02,Essencial,Microempresa,Indicação,MG,5900
+C01136,2024-06,Essencial,Individual,Anúncios,SP,5900
+C01137,2025-02,Essencial,Individual,Orgânico,RJ,5900
+C01138,2025-01,Essencial,Microempresa,Orgânico,SP,6900
+C01139,2025-05,Essencial,Individual,Orgânico,PR,5900
+C01140,2026-02,Essencial,Pequena empresa,Orgânico,SP,5900
+C01141,2024-05,Pro,Individual,Orgânico,PR,12900
+C01142,2024-08,Essencial,Microempresa,Orgânico,SP,5900
+C01143,2026-02,Essencial,Microempresa,Indicação,SP,7900
+C01144,2024-11,Essencial,Microempresa,Anúncios,SP,5900
+C01145,2025-10,Equipe,Pequena empresa,Anúncios,MG,26900
+C01146,2024-10,Equipe,Individual,Indicação,PR,27900
+C01147,2026-03,Equipe,Individual,Indicação,RJ,27900
+C01148,2024-07,Essencial,Individual,Anúncios,SP,7900
+C01149,2026-04,Pro,Individual,Indicação,SP,12900
+C01150,2025-11,Equipe,Individual,Orgânico,SP,26900
+C01151,2026-04,Essencial,Individual,Orgânico,MG,5900
+C01152,2025-07,Pro,Individual,Orgânico,SP,13900
+C01153,2025-12,Pro,Individual,Orgânico,SP,13900
+C01154,2024-08,Equipe,Individual,Orgânico,SP,28900
+C01155,2025-10,Essencial,Microempresa,Indicação,PR,5900
+C01156,2026-06,Essencial,Individual,Anúncios,RJ,7900
+C01157,2024-04,Essencial,Pequena empresa,Anúncios,MG,5900
+C01158,2025-06,Essencial,Microempresa,Indicação,SP,7900
+C01159,2026-03,Essencial,Individual,Orgânico,RJ,5900
+C01160,2026-03,Equipe,Individual,Anúncios,SP,26900
+C01161,2025-06,Pro,Individual,Indicação,SP,12900
+C01162,2026-03,Equipe,Individual,Orgânico,SP,26900
+C01163,2025-02,Pro,Microempresa,Orgânico,MG,12900
+C01164,2024-09,Pro,Individual,Anúncios,RJ,12900
+C01165,2024-12,Pro,Individual,Orgânico,SP,12900
+C01166,2024-11,Essencial,Individual,Indicação,PR,6900
+C01167,2024-12,Essencial,Pequena empresa,Orgânico,SP,5900
+C01168,2025-12,Essencial,Microempresa,Anúncios,MG,5900
+C01169,2026-03,Essencial,Individual,Orgânico,PR,5900
+C01170,2024-02,Pro,Individual,Orgânico,MG,14900
+C01171,2024-04,Essencial,Microempresa,Indicação,MG,7900
+C01172,2026-01,Essencial,Microempresa,Anúncios,SP,5900
+C01173,2024-04,Essencial,Microempresa,Indicação,SP,6900
+C01174,2025-03,Essencial,Individual,Anúncios,MG,5900
+C01175,2025-01,Essencial,Individual,Orgânico,RJ,5900
+C01176,2025-03,Essencial,Pequena empresa,Anúncios,SP,5900
+C01177,2025-05,Pro,Individual,Orgânico,SP,12900
+C01178,2024-05,Pro,Microempresa,Orgânico,SP,13900
+C01179,2024-12,Essencial,Individual,Orgânico,SP,5900
+C01180,2024-05,Essencial,Microempresa,Orgânico,RJ,6900
+C01181,2025-03,Essencial,Microempresa,Orgânico,SP,5900
+C01182,2026-03,Equipe,Microempresa,Orgânico,SP,26900
+C01183,2024-09,Essencial,Pequena empresa,Anúncios,SP,5900
+C01184,2026-03,Essencial,Individual,Orgânico,SP,5900
+C01185,2024-11,Equipe,Microempresa,Orgânico,RJ,28900
+C01186,2026-02,Essencial,Individual,Orgânico,PR,7900
+C01187,2025-04,Pro,Individual,Anúncios,SP,12900
+C01188,2024-09,Pro,Microempresa,Indicação,SP,12900
+C01189,2024-10,Pro,Microempresa,Orgânico,MG,12900
+C01190,2024-10,Equipe,Pequena empresa,Orgânico,SP,26900
+C01191,2024-08,Pro,Individual,Orgânico,SP,12900
+C01192,2024-10,Pro,Individual,Indicação,MG,12900
+C01193,2025-12,Essencial,Individual,Orgânico,SP,5900
+C01194,2026-02,Pro,Microempresa,Indicação,MG,12900
+C01195,2026-06,Pro,Individual,Anúncios,SP,12900
+C01196,2025-02,Pro,Individual,Orgânico,SP,12900
+C01197,2026-05,Pro,Microempresa,Anúncios,MG,12900
+C01198,2025-07,Essencial,Microempresa,Indicação,PR,5900
+C01199,2026-05,Essencial,Individual,Orgânico,RJ,6900
+C01200,2025-09,Pro,Individual,Orgânico,SP,14900
+C01201,2024-07,Essencial,Individual,Orgânico,RJ,7900
+C01202,2024-01,Equipe,Pequena empresa,Indicação,SP,26900
+C01203,2025-03,Essencial,Microempresa,Indicação,MG,5900
+C01204,2026-05,Equipe,Microempresa,Anúncios,SP,27900
+C01205,2025-07,Pro,Microempresa,Orgânico,PR,13900
+C01206,2024-08,Essencial,Individual,Orgânico,MG,5900
+C01207,2024-01,Pro,Individual,Orgânico,PR,13900
+C01208,2024-06,Pro,Microempresa,Anúncios,RJ,14900
+C01209,2026-04,Pro,Individual,Anúncios,RJ,12900
+C01210,2025-01,Essencial,Pequena empresa,Anúncios,MG,7900
+C01211,2024-10,Essencial,Pequena empresa,Orgânico,MG,5900
+C01212,2024-01,Pro,Microempresa,Orgânico,RJ,13900
+C01213,2025-07,Essencial,Individual,Orgânico,SP,5900
+C01214,2024-05,Pro,Individual,Anúncios,PR,12900
+C01215,2024-11,Essencial,Individual,Orgânico,PR,6900
+C01216,2025-04,Essencial,Pequena empresa,Anúncios,RJ,5900
+C01217,2024-11,Essencial,Individual,Anúncios,PR,5900
+C01218,2024-04,Pro,Pequena empresa,Indicação,RJ,14900
+C01219,2026-01,Essencial,Individual,Indicação,RJ,6900
+C01220,2025-12,Equipe,Microempresa,Orgânico,SP,26900
+C01221,2025-12,Equipe,Individual,Anúncios,SP,26900
+C01222,2025-11,Essencial,Microempresa,Orgânico,MG,7900
+C01223,2024-07,Essencial,Individual,Orgânico,SP,5900
+C01224,2024-01,Essencial,Individual,Orgânico,RJ,5900
+C01225,2026-01,Equipe,Individual,Orgânico,SP,26900
+C01226,2025-12,Equipe,Microempresa,Indicação,SP,27900
+C01227,2026-02,Essencial,Individual,Orgânico,RJ,5900
+C01228,2025-10,Pro,Individual,Orgânico,RJ,14900
+C01229,2025-03,Pro,Individual,Orgânico,SP,14900
+C01230,2024-02,Essencial,Pequena empresa,Indicação,MG,5900
+C01231,2024-12,Essencial,Microempresa,Orgânico,SP,6900
+C01232,2024-04,Essencial,Individual,Indicação,SP,6900
+C01233,2024-10,Essencial,Pequena empresa,Anúncios,MG,7900
+C01234,2025-06,Essencial,Individual,Orgânico,SP,6900
+C01235,2024-10,Pro,Individual,Orgânico,SP,12900
+C01236,2026-03,Equipe,Pequena empresa,Anúncios,SP,28900
+C01237,2024-11,Pro,Individual,Anúncios,MG,14900
+C01238,2025-02,Pro,Microempresa,Indicação,SP,12900
+C01239,2026-02,Pro,Pequena empresa,Orgânico,MG,12900
+C01240,2024-04,Essencial,Individual,Indicação,SP,7900
+C01241,2026-02,Pro,Individual,Orgânico,MG,12900
+C01242,2024-02,Pro,Individual,Anúncios,SP,12900
+C01243,2025-04,Essencial,Individual,Indicação,MG,5900
+C01244,2024-01,Essencial,Pequena empresa,Indicação,MG,6900
+C01245,2025-09,Equipe,Microempresa,Anúncios,RJ,26900
+C01246,2024-01,Essencial,Individual,Anúncios,PR,5900
+C01247,2024-03,Essencial,Individual,Indicação,SP,7900
+C01248,2025-09,Pro,Microempresa,Anúncios,SP,12900
+C01249,2024-10,Pro,Microempresa,Anúncios,MG,14900
+C01250,2024-10,Pro,Individual,Indicação,RJ,12900
+C01251,2025-11,Pro,Individual,Indicação,MG,14900
+C01252,2024-05,Essencial,Individual,Orgânico,SP,5900
+C01253,2024-02,Essencial,Pequena empresa,Indicação,MG,5900
+C01254,2024-10,Essencial,Microempresa,Indicação,RJ,5900
+C01255,2025-06,Pro,Microempresa,Anúncios,RJ,12900
+C01256,2026-01,Essencial,Microempresa,Anúncios,SP,5900
+C01257,2024-07,Essencial,Individual,Indicação,RJ,7900
+C01258,2025-09,Pro,Individual,Orgânico,RJ,12900
+C01259,2024-10,Essencial,Microempresa,Orgânico,RJ,6900
+C01260,2024-06,Pro,Individual,Indicação,MG,12900
+C01261,2024-02,Essencial,Pequena empresa,Indicação,SP,5900
+C01262,2024-10,Pro,Microempresa,Orgânico,SP,13900
+C01263,2026-02,Essencial,Microempresa,Orgânico,SP,5900
+C01264,2025-06,Essencial,Microempresa,Anúncios,SP,5900
+C01265,2025-02,Essencial,Microempresa,Indicação,SP,7900
+C01266,2024-02,Essencial,Microempresa,Orgânico,RJ,5900
+C01267,2025-03,Essencial,Pequena empresa,Orgânico,RJ,7900
+C01268,2025-02,Pro,Individual,Anúncios,SP,12900
+C01269,2025-08,Essencial,Individual,Orgânico,SP,5900
+C01270,2025-05,Essencial,Pequena empresa,Indicação,RJ,6900
+C01271,2024-03,Essencial,Pequena empresa,Anúncios,SP,7900
+C01272,2026-04,Pro,Microempresa,Indicação,MG,12900
+C01273,2024-01,Essencial,Individual,Indicação,MG,6900
+C01274,2024-07,Pro,Individual,Anúncios,SP,12900
+C01275,2024-05,Pro,Individual,Anúncios,RJ,13900
+C01276,2025-10,Essencial,Individual,Anúncios,MG,5900
+C01277,2024-12,Essencial,Individual,Anúncios,RJ,7900
+C01278,2024-05,Essencial,Pequena empresa,Indicação,RJ,5900
+C01279,2025-07,Pro,Individual,Anúncios,SP,12900
+C01280,2024-05,Essencial,Pequena empresa,Orgânico,SP,7900
+C01281,2024-10,Essencial,Individual,Orgânico,RJ,5900
+C01282,2026-05,Essencial,Individual,Orgânico,SP,5900
+C01283,2025-02,Pro,Individual,Indicação,RJ,12900
+C01284,2024-06,Pro,Individual,Orgânico,RJ,13900
+C01285,2026-01,Essencial,Microempresa,Anúncios,SP,7900
+C01286,2025-10,Essencial,Individual,Indicação,RJ,5900
+C01287,2026-02,Essencial,Microempresa,Indicação,MG,5900
+C01288,2026-05,Essencial,Individual,Orgânico,SP,6900
+C01289,2024-06,Essencial,Microempresa,Orgânico,SP,5900
+C01290,2025-08,Pro,Individual,Anúncios,RJ,12900
+C01291,2025-09,Equipe,Individual,Anúncios,MG,28900
+C01292,2025-05,Essencial,Individual,Orgânico,SP,7900
+C01293,2026-05,Pro,Individual,Orgânico,MG,13900
+C01294,2024-03,Essencial,Microempresa,Anúncios,SP,5900
+C01295,2024-08,Equipe,Microempresa,Orgânico,MG,26900
+C01296,2025-09,Essencial,Individual,Anúncios,RJ,5900
+C01297,2025-07,Essencial,Pequena empresa,Anúncios,SP,5900
+C01298,2024-05,Equipe,Individual,Orgânico,SP,26900
+C01299,2025-04,Pro,Microempresa,Orgânico,PR,12900
+C01300,2026-02,Essencial,Microempresa,Indicação,SP,5900
+C01301,2024-10,Pro,Microempresa,Indicação,PR,13900
+C01302,2024-03,Essencial,Individual,Orgânico,PR,7900
+C01303,2026-02,Pro,Individual,Indicação,MG,14900
+C01304,2026-01,Essencial,Individual,Orgânico,SP,5900
+C01305,2024-02,Essencial,Microempresa,Anúncios,MG,5900
+C01306,2024-07,Equipe,Individual,Orgânico,SP,26900
+C01307,2025-07,Equipe,Microempresa,Orgânico,SP,26900
+C01308,2025-06,Essencial,Individual,Orgânico,MG,5900
+C01309,2025-05,Essencial,Pequena empresa,Indicação,RJ,6900
+C01310,2024-07,Essencial,Pequena empresa,Anúncios,SP,5900
+C01311,2025-10,Pro,Microempresa,Orgânico,PR,14900
+C01312,2025-11,Pro,Individual,Orgânico,SP,12900
+C01313,2024-01,Essencial,Pequena empresa,Orgânico,MG,5900
+C01314,2025-11,Essencial,Microempresa,Orgânico,SP,5900
+C01315,2026-04,Essencial,Pequena empresa,Orgânico,SP,5900
+C01316,2025-09,Equipe,Microempresa,Orgânico,SP,27900
+C01317,2024-05,Essencial,Individual,Orgânico,MG,6900
+C01318,2025-06,Equipe,Individual,Indicação,RJ,26900
+C01319,2026-04,Pro,Microempresa,Anúncios,SP,14900
+C01320,2024-04,Pro,Microempresa,Orgânico,SP,12900
+C01321,2024-09,Equipe,Individual,Indicação,SP,26900
+C01322,2025-01,Equipe,Individual,Orgânico,SP,26900
+C01323,2024-03,Essencial,Individual,Orgânico,SP,7900
+C01324,2024-11,Essencial,Individual,Orgânico,SP,5900
+C01325,2024-03,Essencial,Individual,Orgânico,SP,5900
+C01326,2025-04,Essencial,Individual,Orgânico,SP,5900
+C01327,2026-06,Essencial,Individual,Orgânico,SP,5900
+C01328,2025-12,Equipe,Pequena empresa,Orgânico,MG,26900
+C01329,2026-02,Essencial,Microempresa,Indicação,RJ,5900
+C01330,2025-05,Equipe,Microempresa,Orgânico,SP,26900
+C01331,2024-06,Pro,Individual,Orgânico,MG,13900
+C01332,2026-06,Pro,Individual,Anúncios,SP,13900
+C01333,2026-01,Essencial,Pequena empresa,Indicação,SP,5900
+C01334,2024-06,Equipe,Microempresa,Orgânico,RJ,26900
+C01335,2025-04,Essencial,Microempresa,Indicação,SP,7900
+C01336,2025-03,Equipe,Individual,Anúncios,MG,28900
+C01337,2024-09,Essencial,Individual,Anúncios,MG,7900
+C01338,2026-04,Essencial,Microempresa,Anúncios,MG,6900
+C01339,2024-08,Equipe,Individual,Anúncios,SP,28900
+C01340,2025-08,Essencial,Microempresa,Orgânico,RJ,5900
+C01341,2026-06,Equipe,Pequena empresa,Indicação,MG,26900
+C01342,2024-02,Equipe,Individual,Indicação,RJ,26900
+C01343,2024-01,Pro,Microempresa,Orgânico,MG,12900
+C01344,2024-11,Essencial,Microempresa,Indicação,MG,5900
+C01345,2025-04,Essencial,Microempresa,Orgânico,PR,6900
+C01346,2024-05,Essencial,Microempresa,Orgânico,SP,5900
+C01347,2025-08,Essencial,Individual,Anúncios,SP,7900
+C01348,2026-06,Essencial,Pequena empresa,Orgânico,SP,5900
+C01349,2024-03,Equipe,Microempresa,Indicação,SP,28900
+C01350,2025-04,Pro,Individual,Orgânico,MG,12900
+C01351,2025-08,Equipe,Individual,Orgânico,MG,26900
+C01352,2024-03,Essencial,Pequena empresa,Indicação,SP,6900
+C01353,2026-06,Pro,Microempresa,Indicação,SP,12900
+C01354,2025-08,Essencial,Individual,Anúncios,MG,5900
+C01355,2024-01,Essencial,Individual,Anúncios,SP,5900
+C01356,2026-03,Equipe,Individual,Anúncios,SP,26900
+C01357,2024-07,Pro,Microempresa,Anúncios,RJ,14900
+C01358,2025-06,Essencial,Individual,Indicação,SP,5900
+C01359,2024-10,Essencial,Pequena empresa,Indicação,SP,6900
+C01360,2024-06,Essencial,Pequena empresa,Indicação,SP,5900
+C01361,2025-11,Pro,Individual,Anúncios,RJ,12900
+C01362,2024-08,Pro,Individual,Indicação,PR,14900
+C01363,2026-03,Essencial,Pequena empresa,Indicação,SP,5900
+C01364,2024-04,Essencial,Pequena empresa,Anúncios,RJ,5900
+C01365,2026-06,Essencial,Individual,Anúncios,SP,7900
+C01366,2024-11,Pro,Individual,Anúncios,MG,13900
+C01367,2025-08,Equipe,Microempresa,Anúncios,SP,26900
+C01368,2024-06,Essencial,Microempresa,Orgânico,SP,5900
+C01369,2026-06,Equipe,Individual,Indicação,SP,28900
+C01370,2024-04,Equipe,Individual,Anúncios,SP,26900
+C01371,2025-03,Essencial,Microempresa,Orgânico,PR,5900
+C01372,2026-02,Equipe,Pequena empresa,Indicação,SP,26900
+C01373,2025-01,Essencial,Individual,Anúncios,SP,7900
+C01374,2025-10,Pro,Microempresa,Anúncios,SP,13900
+C01375,2025-12,Essencial,Pequena empresa,Orgânico,SP,6900
+C01376,2025-12,Essencial,Microempresa,Orgânico,MG,5900
+C01377,2025-06,Pro,Individual,Indicação,SP,12900
+C01378,2025-02,Essencial,Microempresa,Indicação,SP,5900
+C01379,2026-05,Pro,Microempresa,Anúncios,MG,12900
+C01380,2024-04,Pro,Individual,Anúncios,SP,12900
+C01381,2026-05,Equipe,Individual,Orgânico,MG,26900
+C01382,2024-06,Essencial,Microempresa,Orgânico,SP,7900
+C01383,2024-07,Essencial,Microempresa,Indicação,RJ,5900
+C01384,2026-01,Equipe,Microempresa,Indicação,SP,27900
+C01385,2025-01,Essencial,Microempresa,Orgânico,MG,6900
+C01386,2024-07,Pro,Microempresa,Indicação,SP,14900
+C01387,2025-10,Equipe,Microempresa,Anúncios,SP,26900
+C01388,2024-10,Pro,Individual,Anúncios,RJ,13900
+C01389,2025-02,Pro,Microempresa,Orgânico,MG,12900
+C01390,2024-04,Equipe,Microempresa,Orgânico,MG,27900
+C01391,2025-02,Essencial,Individual,Anúncios,SP,5900
+C01392,2024-05,Equipe,Individual,Orgânico,MG,28900
+C01393,2025-06,Essencial,Microempresa,Orgânico,SP,5900
+C01394,2025-11,Essencial,Microempresa,Indicação,SP,5900
+C01395,2025-10,Essencial,Individual,Orgânico,MG,6900
+C01396,2026-04,Pro,Microempresa,Orgânico,MG,12900
+C01397,2024-01,Pro,Pequena empresa,Orgânico,SP,13900
+C01398,2024-09,Essencial,Individual,Anúncios,SP,5900
+C01399,2024-03,Pro,Pequena empresa,Indicação,SP,12900
+C01400,2025-04,Essencial,Individual,Anúncios,SP,6900
+C01401,2024-10,Essencial,Pequena empresa,Indicação,SP,5900
+C01402,2024-08,Essencial,Pequena empresa,Orgânico,SP,6900
+C01403,2024-12,Equipe,Individual,Indicação,MG,26900
+C01404,2024-06,Essencial,Individual,Anúncios,SP,5900
+C01405,2026-06,Equipe,Individual,Anúncios,RJ,26900
+C01406,2024-11,Essencial,Microempresa,Anúncios,SP,5900
+C01407,2024-11,Pro,Pequena empresa,Orgânico,PR,12900
+C01408,2025-04,Pro,Individual,Orgânico,SP,14900
+C01409,2024-06,Equipe,Microempresa,Orgânico,MG,26900
+C01410,2025-08,Pro,Individual,Indicação,SP,12900
+C01411,2026-01,Pro,Pequena empresa,Orgânico,MG,12900
+C01412,2026-04,Essencial,Individual,Orgânico,SP,5900
+C01413,2025-09,Pro,Individual,Orgânico,SP,14900
+C01414,2024-06,Equipe,Individual,Anúncios,SP,26900
+C01415,2024-08,Essencial,Individual,Orgânico,RJ,5900
+C01416,2024-05,Essencial,Individual,Anúncios,RJ,7900
+C01417,2024-12,Essencial,Individual,Anúncios,RJ,5900
+C01418,2024-11,Essencial,Individual,Indicação,PR,6900
+C01419,2024-11,Equipe,Individual,Orgânico,SP,28900
+C01420,2024-10,Pro,Individual,Orgânico,MG,12900
+C01421,2024-09,Pro,Microempresa,Orgânico,SP,13900
+C01422,2025-05,Essencial,Microempresa,Indicação,SP,7900
+C01423,2024-04,Pro,Individual,Indicação,SP,12900
+C01424,2026-03,Equipe,Individual,Orgânico,MG,27900
+C01425,2025-05,Equipe,Microempresa,Indicação,SP,26900
+C01426,2024-09,Pro,Individual,Anúncios,MG,13900
+C01427,2026-01,Essencial,Individual,Anúncios,SP,5900
+C01428,2024-02,Essencial,Individual,Anúncios,RJ,5900
+C01429,2025-05,Essencial,Individual,Indicação,RJ,6900
+C01430,2024-11,Essencial,Microempresa,Indicação,RJ,7900
+C01431,2024-02,Pro,Individual,Orgânico,SP,12900
+C01432,2024-02,Essencial,Individual,Orgânico,MG,5900
+C01433,2026-03,Essencial,Microempresa,Indicação,PR,6900
+C01434,2025-08,Equipe,Microempresa,Indicação,SP,28900
+C01435,2025-03,Essencial,Individual,Anúncios,SP,5900
+C01436,2024-01,Essencial,Microempresa,Orgânico,SP,5900
+C01437,2024-04,Equipe,Microempresa,Orgânico,SP,26900
+C01438,2025-05,Equipe,Pequena empresa,Orgânico,RJ,26900
+C01439,2026-02,Essencial,Pequena empresa,Anúncios,MG,5900
+C01440,2025-12,Essencial,Microempresa,Orgânico,RJ,5900
+C01441,2024-02,Essencial,Individual,Orgânico,SP,5900
+C01442,2026-02,Pro,Individual,Orgânico,SP,12900
+C01443,2025-12,Pro,Individual,Anúncios,RJ,13900
+C01444,2025-11,Essencial,Individual,Orgânico,RJ,6900
+C01445,2024-03,Essencial,Microempresa,Anúncios,MG,5900
+C01446,2025-04,Pro,Microempresa,Anúncios,SP,14900
+C01447,2024-07,Essencial,Pequena empresa,Indicação,SP,5900
+C01448,2025-05,Equipe,Individual,Orgânico,PR,26900
+C01449,2026-04,Essencial,Pequena empresa,Anúncios,SP,5900
+C01450,2024-08,Essencial,Microempresa,Anúncios,MG,7900
+C01451,2024-02,Essencial,Individual,Orgânico,MG,5900
+C01452,2025-02,Pro,Individual,Orgânico,SP,12900
+C01453,2025-09,Essencial,Pequena empresa,Orgânico,RJ,5900
+C01454,2025-07,Pro,Microempresa,Anúncios,SP,12900
+C01455,2025-10,Essencial,Microempresa,Orgânico,MG,5900
+C01456,2024-02,Pro,Individual,Orgânico,SP,12900
+C01457,2026-06,Pro,Pequena empresa,Anúncios,SP,12900
+C01458,2024-03,Equipe,Pequena empresa,Orgânico,SP,26900
+C01459,2025-07,Equipe,Pequena empresa,Orgânico,SP,26900
+C01460,2024-09,Essencial,Microempresa,Indicação,SP,5900
+C01461,2025-01,Essencial,Pequena empresa,Indicação,SP,7900
+C01462,2026-04,Essencial,Pequena empresa,Orgânico,SP,7900
+C01463,2025-12,Pro,Microempresa,Indicação,RJ,13900
+C01464,2024-10,Equipe,Individual,Orgânico,SP,26900
+C01465,2026-05,Pro,Individual,Indicação,PR,13900
+C01466,2025-06,Essencial,Individual,Indicação,SP,5900
+C01467,2024-09,Essencial,Individual,Orgânico,RJ,5900
+C01468,2025-02,Pro,Pequena empresa,Orgânico,SP,12900
+C01469,2024-07,Essencial,Individual,Indicação,SP,6900
+C01470,2024-12,Essencial,Pequena empresa,Orgânico,MG,7900
+C01471,2024-09,Essencial,Individual,Orgânico,MG,5900
+C01472,2024-08,Essencial,Individual,Anúncios,RJ,6900
+C01473,2025-04,Pro,Microempresa,Anúncios,RJ,12900
+C01474,2024-01,Pro,Microempresa,Orgânico,RJ,12900
+C01475,2025-01,Pro,Pequena empresa,Orgânico,SP,12900
+C01476,2024-10,Equipe,Individual,Indicação,SP,28900
+C01477,2025-04,Essencial,Individual,Anúncios,MG,5900
+C01478,2024-05,Essencial,Individual,Orgânico,RJ,6900
+C01479,2025-06,Essencial,Microempresa,Anúncios,MG,5900
+C01480,2024-06,Essencial,Pequena empresa,Indicação,MG,7900
+C01481,2024-03,Essencial,Microempresa,Anúncios,SP,6900
+C01482,2024-06,Pro,Individual,Orgânico,SP,12900
+C01483,2025-07,Essencial,Microempresa,Indicação,RJ,5900
+C01484,2025-06,Pro,Microempresa,Anúncios,RJ,12900
+C01485,2024-03,Equipe,Individual,Indicação,PR,28900
+C01486,2025-11,Essencial,Individual,Orgânico,SP,5900
+C01487,2024-08,Essencial,Pequena empresa,Indicação,PR,7900
+C01488,2024-03,Essencial,Individual,Orgânico,MG,7900
+C01489,2024-08,Equipe,Individual,Anúncios,RJ,28900
+C01490,2025-05,Essencial,Microempresa,Orgânico,RJ,5900
+C01491,2026-01,Pro,Microempresa,Orgânico,SP,12900
+C01492,2024-05,Essencial,Individual,Anúncios,SP,5900
+C01493,2025-03,Essencial,Microempresa,Anúncios,SP,7900
+C01494,2026-06,Pro,Microempresa,Orgânico,SP,12900
+C01495,2024-08,Pro,Individual,Orgânico,MG,12900
+C01496,2026-04,Essencial,Pequena empresa,Anúncios,SP,7900
+C01497,2025-09,Pro,Individual,Orgânico,PR,14900
+C01498,2026-05,Essencial,Individual,Orgânico,RJ,5900
+C01499,2024-06,Essencial,Individual,Orgânico,SP,7900
+C01500,2024-01,Essencial,Microempresa,Anúncios,SP,5900
+C01501,2026-06,Pro,Microempresa,Anúncios,MG,12900
+C01502,2026-03,Equipe,Individual,Anúncios,SP,28900
+C01503,2024-03,Essencial,Microempresa,Orgânico,PR,5900
+C01504,2025-08,Pro,Individual,Orgânico,MG,14900
+C01505,2025-06,Essencial,Microempresa,Anúncios,RJ,6900
+C01506,2024-07,Essencial,Pequena empresa,Indicação,RJ,6900
+C01507,2025-02,Essencial,Microempresa,Indicação,MG,6900
+C01508,2026-06,Essencial,Individual,Anúncios,RJ,5900
+C01509,2026-03,Essencial,Individual,Indicação,MG,5900
+C01510,2024-02,Essencial,Individual,Anúncios,RJ,6900
+C01511,2026-02,Pro,Individual,Anúncios,SP,12900
+C01512,2026-01,Essencial,Individual,Anúncios,RJ,6900
+C01513,2025-01,Pro,Microempresa,Orgânico,MG,14900
+C01514,2024-07,Essencial,Microempresa,Indicação,PR,7900
+C01515,2025-03,Equipe,Microempresa,Anúncios,MG,26900
+C01516,2026-04,Essencial,Microempresa,Anúncios,SP,6900
+C01517,2024-02,Essencial,Individual,Orgânico,SP,5900
+C01518,2024-07,Essencial,Individual,Indicação,SP,6900
+C01519,2026-06,Essencial,Individual,Orgânico,SP,5900
+C01520,2026-01,Pro,Individual,Anúncios,SP,12900
+C01521,2024-08,Essencial,Microempresa,Orgânico,SP,5900
+C01522,2024-04,Pro,Microempresa,Orgânico,MG,12900
+C01523,2026-01,Essencial,Individual,Indicação,SP,7900
+C01524,2026-05,Essencial,Individual,Orgânico,SP,6900
+C01525,2024-12,Pro,Individual,Anúncios,SP,12900
+C01526,2025-03,Essencial,Microempresa,Orgânico,RJ,7900
+C01527,2026-02,Essencial,Individual,Orgânico,SP,6900
+C01528,2026-04,Essencial,Microempresa,Orgânico,SP,5900
+C01529,2024-08,Pro,Microempresa,Orgânico,RJ,12900
+C01530,2025-01,Pro,Microempresa,Indicação,MG,13900
+C01531,2024-03,Equipe,Microempresa,Orgânico,MG,27900
+C01532,2025-12,Equipe,Individual,Orgânico,RJ,27900
+C01533,2025-05,Essencial,Individual,Indicação,MG,5900
+C01534,2025-05,Essencial,Microempresa,Orgânico,SP,5900
+C01535,2025-05,Essencial,Pequena empresa,Anúncios,SP,5900
+C01536,2025-01,Pro,Individual,Indicação,SP,14900
+C01537,2025-05,Essencial,Microempresa,Orgânico,MG,7900
+C01538,2024-02,Equipe,Individual,Orgânico,MG,28900
+C01539,2024-05,Essencial,Microempresa,Indicação,RJ,5900
+C01540,2024-05,Pro,Individual,Orgânico,SP,12900
+C01541,2024-09,Equipe,Individual,Indicação,SP,26900
+C01542,2026-05,Essencial,Pequena empresa,Anúncios,SP,5900
+C01543,2024-07,Essencial,Microempresa,Anúncios,SP,5900
+C01544,2026-04,Pro,Individual,Orgânico,PR,12900
+C01545,2024-04,Essencial,Microempresa,Anúncios,MG,5900
+C01546,2025-05,Essencial,Individual,Orgânico,MG,7900
+C01547,2026-05,Equipe,Individual,Indicação,SP,27900
+C01548,2025-11,Essencial,Pequena empresa,Anúncios,MG,5900
+C01549,2024-06,Essencial,Individual,Anúncios,RJ,5900
+C01550,2026-04,Essencial,Pequena empresa,Indicação,RJ,5900
+C01551,2026-06,Essencial,Individual,Orgânico,SP,7900
+C01552,2025-12,Pro,Microempresa,Anúncios,SP,12900
+C01553,2025-03,Essencial,Microempresa,Indicação,RJ,7900
+C01554,2024-11,Essencial,Individual,Anúncios,SP,6900
+C01555,2024-12,Equipe,Individual,Anúncios,SP,27900
+C01556,2024-11,Essencial,Microempresa,Indicação,PR,5900
+C01557,2025-03,Essencial,Individual,Indicação,MG,5900
+C01558,2026-06,Essencial,Pequena empresa,Indicação,SP,6900
+C01559,2026-04,Pro,Microempresa,Anúncios,SP,12900
+C01560,2025-03,Pro,Microempresa,Orgânico,MG,12900
+C01561,2024-02,Essencial,Individual,Indicação,MG,5900
+C01562,2024-05,Equipe,Pequena empresa,Orgânico,SP,26900
+C01563,2024-09,Pro,Individual,Indicação,PR,12900
+C01564,2025-05,Essencial,Individual,Indicação,MG,6900
+C01565,2024-02,Essencial,Microempresa,Anúncios,RJ,5900
+C01566,2025-05,Essencial,Individual,Orgânico,SP,7900
+C01567,2025-03,Pro,Individual,Indicação,SP,12900
+C01568,2024-06,Equipe,Microempresa,Indicação,SP,28900
+C01569,2025-12,Essencial,Individual,Orgânico,MG,5900
+C01570,2025-11,Pro,Pequena empresa,Orgânico,SP,13900
+C01571,2024-04,Equipe,Microempresa,Orgânico,SP,26900
+C01572,2024-02,Essencial,Microempresa,Indicação,MG,5900
+C01573,2026-04,Essencial,Individual,Anúncios,SP,7900
+C01574,2026-02,Essencial,Individual,Anúncios,SP,7900
+C01575,2025-03,Essencial,Pequena empresa,Anúncios,SP,5900
+C01576,2026-04,Essencial,Microempresa,Orgânico,SP,6900
+C01577,2024-08,Essencial,Individual,Indicação,SP,6900
+C01578,2024-04,Pro,Microempresa,Anúncios,PR,12900
+C01579,2026-06,Essencial,Microempresa,Anúncios,SP,5900
+C01580,2024-01,Equipe,Individual,Anúncios,SP,26900
+C01581,2025-08,Essencial,Microempresa,Orgânico,SP,5900
+C01582,2025-02,Pro,Individual,Orgânico,SP,13900
+C01583,2024-05,Essencial,Individual,Orgânico,SP,5900
+C01584,2024-09,Essencial,Microempresa,Anúncios,SP,5900
+C01585,2025-12,Essencial,Individual,Orgânico,SP,6900
+C01586,2025-11,Essencial,Pequena empresa,Indicação,SP,6900
+C01587,2024-01,Essencial,Individual,Indicação,SP,7900
+C01588,2025-09,Pro,Microempresa,Anúncios,SP,12900
+C01589,2024-12,Essencial,Individual,Anúncios,MG,5900
+C01590,2024-04,Pro,Individual,Orgânico,SP,12900
+C01591,2025-12,Pro,Microempresa,Indicação,SP,13900
+C01592,2026-05,Pro,Pequena empresa,Orgânico,SP,12900
+C01593,2025-10,Essencial,Individual,Orgânico,RJ,5900
+C01594,2024-07,Pro,Individual,Anúncios,SP,12900
+C01595,2024-08,Equipe,Individual,Indicação,SP,28900
+C01596,2025-09,Pro,Individual,Orgânico,SP,12900
+C01597,2024-07,Essencial,Microempresa,Orgânico,SP,5900
+C01598,2024-05,Pro,Microempresa,Orgânico,SP,12900
+C01599,2025-12,Pro,Microempresa,Anúncios,RJ,14900
+C01600,2025-01,Pro,Microempresa,Indicação,RJ,13900
+C01601,2025-01,Essencial,Individual,Orgânico,PR,7900
+C01602,2026-03,Equipe,Pequena empresa,Anúncios,MG,26900
+C01603,2024-10,Equipe,Individual,Orgânico,PR,26900
+C01604,2025-01,Pro,Pequena empresa,Orgânico,SP,12900
+C01605,2024-12,Pro,Pequena empresa,Anúncios,PR,12900
+C01606,2026-03,Essencial,Individual,Orgânico,MG,5900
+C01607,2026-06,Essencial,Microempresa,Orgânico,SP,6900
+C01608,2025-04,Essencial,Individual,Anúncios,RJ,7900
+C01609,2024-02,Essencial,Microempresa,Indicação,RJ,5900
+C01610,2025-12,Essencial,Microempresa,Anúncios,MG,6900
+C01611,2025-04,Essencial,Pequena empresa,Indicação,MG,6900
+C01612,2025-09,Essencial,Pequena empresa,Orgânico,SP,5900
+C01613,2025-04,Essencial,Pequena empresa,Indicação,SP,5900
+C01614,2024-06,Essencial,Individual,Anúncios,SP,6900
+C01615,2024-11,Equipe,Pequena empresa,Anúncios,MG,26900
+C01616,2024-03,Pro,Individual,Orgânico,MG,12900
+C01617,2025-02,Essencial,Pequena empresa,Orgânico,MG,5900
+C01618,2024-03,Essencial,Individual,Orgânico,PR,5900
+C01619,2025-06,Pro,Individual,Anúncios,SP,13900
+C01620,2026-02,Pro,Individual,Orgânico,SP,13900
+C01621,2025-12,Essencial,Individual,Anúncios,RJ,6900
+C01622,2024-09,Pro,Individual,Indicação,SP,13900
+C01623,2024-10,Equipe,Microempresa,Indicação,SP,26900
+C01624,2025-06,Equipe,Individual,Anúncios,SP,26900
+C01625,2024-09,Pro,Individual,Orgânico,SP,13900
+C01626,2026-05,Equipe,Microempresa,Orgânico,RJ,26900
+C01627,2024-10,Essencial,Individual,Anúncios,SP,6900
+C01628,2025-11,Pro,Individual,Anúncios,SP,12900
+C01629,2024-10,Essencial,Pequena empresa,Anúncios,PR,6900
+C01630,2025-06,Essencial,Microempresa,Indicação,SP,5900
+C01631,2025-04,Essencial,Individual,Anúncios,RJ,7900
+C01632,2024-06,Essencial,Pequena empresa,Orgânico,MG,5900
+C01633,2024-11,Pro,Individual,Orgânico,RJ,12900
+C01634,2024-03,Pro,Microempresa,Indicação,SP,14900
+C01635,2025-02,Essencial,Individual,Anúncios,SP,6900
+C01636,2024-06,Essencial,Individual,Orgânico,SP,5900
+C01637,2026-04,Essencial,Individual,Anúncios,PR,5900
+C01638,2024-07,Pro,Individual,Orgânico,MG,13900
+C01639,2025-12,Essencial,Pequena empresa,Indicação,SP,7900
+C01640,2025-05,Essencial,Pequena empresa,Anúncios,PR,6900
+C01641,2025-10,Equipe,Microempresa,Orgânico,RJ,26900
+C01642,2024-08,Essencial,Microempresa,Orgânico,RJ,5900
+C01643,2025-11,Equipe,Individual,Orgânico,RJ,26900
+C01644,2025-09,Essencial,Individual,Anúncios,SP,6900
+C01645,2024-03,Essencial,Microempresa,Orgânico,RJ,5900
+C01646,2025-01,Equipe,Individual,Indicação,MG,28900
+C01647,2026-05,Pro,Individual,Anúncios,SP,14900
+C01648,2025-02,Pro,Individual,Anúncios,MG,12900
+C01649,2024-09,Essencial,Individual,Indicação,SP,5900
+C01650,2026-02,Essencial,Pequena empresa,Indicação,PR,5900
+C01651,2025-10,Pro,Microempresa,Indicação,RJ,12900
+C01652,2025-08,Essencial,Individual,Orgânico,MG,6900
+C01653,2024-11,Essencial,Individual,Indicação,SP,5900
+C01654,2025-10,Essencial,Individual,Anúncios,SP,7900
+C01655,2025-08,Equipe,Individual,Orgânico,SP,27900
+C01656,2026-01,Essencial,Microempresa,Orgânico,SP,5900
+C01657,2025-01,Equipe,Microempresa,Orgânico,SP,26900
+C01658,2025-08,Essencial,Individual,Orgânico,PR,5900
+C01659,2024-05,Pro,Microempresa,Anúncios,SP,12900
+C01660,2026-04,Essencial,Microempresa,Indicação,SP,5900
+C01661,2025-05,Essencial,Individual,Orgânico,PR,5900
+C01662,2025-11,Essencial,Individual,Anúncios,SP,5900
+C01663,2024-02,Equipe,Microempresa,Indicação,RJ,26900
+C01664,2026-01,Equipe,Microempresa,Anúncios,SP,28900
+C01665,2024-03,Essencial,Microempresa,Orgânico,MG,5900
+C01666,2024-02,Equipe,Individual,Anúncios,RJ,28900
+C01667,2024-02,Pro,Microempresa,Anúncios,MG,13900
+C01668,2026-04,Pro,Individual,Indicação,SP,12900
+C01669,2025-05,Essencial,Individual,Orgânico,MG,5900
+C01670,2026-01,Essencial,Pequena empresa,Orgânico,SP,5900
+C01671,2024-06,Essencial,Pequena empresa,Anúncios,MG,5900
+C01672,2024-09,Pro,Individual,Anúncios,SP,12900
+C01673,2024-06,Equipe,Individual,Indicação,SP,26900
+C01674,2026-01,Essencial,Microempresa,Indicação,SP,6900
+C01675,2026-05,Equipe,Microempresa,Anúncios,MG,28900
+C01676,2024-07,Essencial,Individual,Anúncios,RJ,7900
+C01677,2025-07,Equipe,Individual,Orgânico,PR,28900
+C01678,2025-02,Essencial,Microempresa,Anúncios,SP,5900
+C01679,2025-10,Essencial,Microempresa,Orgânico,MG,6900
+C01680,2025-11,Pro,Microempresa,Orgânico,SP,12900
+C01681,2025-08,Essencial,Individual,Indicação,SP,5900
+C01682,2025-10,Essencial,Pequena empresa,Indicação,RJ,6900
+C01683,2025-07,Pro,Individual,Indicação,SP,12900
+C01684,2024-11,Essencial,Individual,Anúncios,PR,5900
+C01685,2026-01,Essencial,Individual,Indicação,RJ,5900
+C01686,2025-09,Essencial,Pequena empresa,Orgânico,SP,5900
+C01687,2026-05,Essencial,Microempresa,Orgânico,SP,5900
+C01688,2025-02,Essencial,Pequena empresa,Indicação,RJ,5900
+C01689,2025-12,Pro,Individual,Orgânico,SP,12900
+C01690,2024-08,Pro,Individual,Orgânico,SP,14900
+C01691,2025-01,Essencial,Pequena empresa,Indicação,MG,5900
+C01692,2025-10,Pro,Individual,Orgânico,SP,12900
+C01693,2024-08,Essencial,Individual,Indicação,SP,6900
+C01694,2026-06,Pro,Pequena empresa,Orgânico,MG,12900
+C01695,2024-05,Pro,Individual,Orgânico,MG,12900
+C01696,2025-08,Pro,Individual,Orgânico,RJ,12900
+C01697,2024-01,Pro,Individual,Anúncios,SP,14900
+C01698,2025-04,Pro,Individual,Orgânico,SP,12900
+C01699,2025-04,Equipe,Pequena empresa,Orgânico,MG,26900
+C01700,2025-03,Pro,Microempresa,Orgânico,SP,12900
+C01701,2026-03,Pro,Individual,Orgânico,PR,13900
+C01702,2024-02,Pro,Pequena empresa,Orgânico,SP,12900
+C01703,2025-08,Pro,Individual,Indicação,PR,12900
+C01704,2024-08,Essencial,Microempresa,Orgânico,MG,5900
+C01705,2025-07,Essencial,Individual,Indicação,SP,5900
+C01706,2024-06,Essencial,Individual,Indicação,MG,6900
+C01707,2025-02,Equipe,Microempresa,Orgânico,PR,26900
+C01708,2025-01,Essencial,Individual,Orgânico,SP,5900
+C01709,2025-09,Essencial,Microempresa,Orgânico,SP,5900
+C01710,2024-07,Essencial,Individual,Anúncios,MG,7900
+C01711,2024-09,Essencial,Microempresa,Anúncios,MG,5900
+C01712,2024-09,Pro,Individual,Orgânico,SP,12900
+C01713,2026-05,Essencial,Pequena empresa,Orgânico,MG,5900
+C01714,2024-12,Essencial,Individual,Orgânico,SP,6900
+C01715,2024-06,Pro,Pequena empresa,Anúncios,MG,12900
+C01716,2025-07,Pro,Microempresa,Orgânico,MG,14900
+C01717,2024-11,Essencial,Individual,Anúncios,SP,6900
+C01718,2025-08,Equipe,Microempresa,Orgânico,SP,27900
+C01719,2025-07,Essencial,Microempresa,Orgânico,RJ,5900
+C01720,2025-12,Pro,Pequena empresa,Orgânico,PR,12900
+C01721,2026-05,Essencial,Individual,Orgânico,PR,5900
+C01722,2026-06,Equipe,Individual,Anúncios,MG,26900
+C01723,2025-02,Essencial,Individual,Anúncios,SP,5900
+C01724,2024-11,Essencial,Microempresa,Indicação,MG,6900
+C01725,2024-06,Essencial,Individual,Orgânico,SP,5900
+C01726,2025-02,Pro,Individual,Orgânico,MG,14900
+C01727,2024-03,Equipe,Pequena empresa,Orgânico,SP,26900
+C01728,2025-03,Essencial,Individual,Orgânico,RJ,5900
+C01729,2025-03,Essencial,Individual,Orgânico,RJ,5900
+C01730,2024-02,Essencial,Individual,Anúncios,MG,5900
+C01731,2024-08,Pro,Individual,Anúncios,RJ,14900
+C01732,2026-05,Essencial,Pequena empresa,Orgânico,SP,5900
+C01733,2025-08,Essencial,Pequena empresa,Orgânico,SP,5900
+C01734,2025-04,Essencial,Individual,Orgânico,MG,5900
+C01735,2024-11,Essencial,Pequena empresa,Indicação,SP,7900
+C01736,2025-12,Equipe,Microempresa,Indicação,RJ,26900
+C01737,2025-05,Pro,Individual,Orgânico,MG,12900
+C01738,2025-04,Pro,Individual,Orgânico,SP,12900
+C01739,2025-05,Equipe,Microempresa,Anúncios,SP,26900
+C01740,2024-04,Pro,Individual,Orgânico,RJ,12900
+C01741,2024-07,Essencial,Individual,Indicação,PR,5900
+C01742,2025-11,Pro,Individual,Anúncios,SP,12900
+C01743,2026-03,Equipe,Pequena empresa,Indicação,MG,28900
+C01744,2024-10,Essencial,Microempresa,Orgânico,SP,5900
+C01745,2024-05,Essencial,Individual,Orgânico,SP,7900
+C01746,2024-04,Essencial,Individual,Orgânico,RJ,5900
+C01747,2025-12,Essencial,Microempresa,Anúncios,SP,5900
+C01748,2025-02,Pro,Microempresa,Indicação,SP,13900
+C01749,2025-08,Essencial,Pequena empresa,Indicação,MG,5900
+C01750,2025-06,Essencial,Microempresa,Indicação,MG,6900
+C01751,2026-01,Essencial,Microempresa,Indicação,RJ,7900
+C01752,2025-05,Pro,Individual,Anúncios,MG,12900
+C01753,2026-02,Essencial,Individual,Anúncios,SP,6900
+C01754,2024-07,Essencial,Individual,Anúncios,RJ,5900
+C01755,2025-03,Equipe,Pequena empresa,Orgânico,MG,26900
+C01756,2025-11,Equipe,Microempresa,Indicação,MG,26900
+C01757,2025-01,Essencial,Microempresa,Orgânico,MG,7900
+C01758,2024-04,Pro,Individual,Indicação,SP,14900
+C01759,2025-08,Essencial,Pequena empresa,Orgânico,MG,5900
+C01760,2025-11,Essencial,Pequena empresa,Indicação,SP,5900
+C01761,2026-03,Pro,Microempresa,Anúncios,RJ,13900
+C01762,2025-09,Essencial,Microempresa,Anúncios,SP,7900
+C01763,2026-02,Pro,Individual,Anúncios,MG,12900
+C01764,2025-06,Essencial,Individual,Anúncios,PR,6900
+C01765,2024-07,Essencial,Microempresa,Orgânico,SP,5900
+C01766,2024-06,Essencial,Individual,Anúncios,RJ,5900
+C01767,2024-06,Pro,Individual,Anúncios,SP,12900
+C01768,2024-09,Essencial,Individual,Orgânico,SP,7900
+C01769,2025-01,Essencial,Individual,Orgânico,RJ,7900
+C01770,2026-05,Equipe,Individual,Anúncios,SP,26900
+C01771,2024-07,Pro,Individual,Indicação,MG,13900
+C01772,2024-04,Essencial,Individual,Anúncios,MG,5900
+C01773,2024-06,Essencial,Microempresa,Orgânico,SP,5900
+C01774,2024-01,Essencial,Individual,Anúncios,SP,5900
+C01775,2025-08,Pro,Microempresa,Indicação,PR,13900
+C01776,2024-07,Essencial,Individual,Indicação,MG,5900
+C01777,2024-01,Essencial,Individual,Orgânico,SP,6900
+C01778,2024-10,Equipe,Individual,Indicação,RJ,26900
+C01779,2024-12,Essencial,Pequena empresa,Anúncios,MG,5900
+C01780,2024-01,Pro,Individual,Anúncios,SP,13900
+C01781,2024-03,Pro,Individual,Indicação,MG,12900
+C01782,2025-11,Essencial,Pequena empresa,Orgânico,SP,5900
+C01783,2024-07,Essencial,Individual,Anúncios,MG,7900
+C01784,2026-03,Pro,Individual,Anúncios,SP,12900
+C01785,2026-02,Pro,Pequena empresa,Indicação,SP,12900
+C01786,2025-11,Equipe,Microempresa,Indicação,SP,27900
+C01787,2024-10,Essencial,Individual,Orgânico,SP,5900
+C01788,2025-10,Equipe,Microempresa,Anúncios,SP,26900
+C01789,2025-02,Essencial,Microempresa,Anúncios,RJ,5900
+C01790,2024-09,Essencial,Individual,Anúncios,SP,5900
+C01791,2026-06,Essencial,Individual,Orgânico,SP,5900
+C01792,2026-04,Equipe,Microempresa,Anúncios,RJ,27900
+C01793,2025-02,Equipe,Microempresa,Indicação,PR,26900
+C01794,2025-02,Essencial,Individual,Orgânico,MG,7900
+C01795,2025-12,Essencial,Microempresa,Orgânico,MG,7900
+C01796,2025-12,Essencial,Individual,Anúncios,SP,5900
+C01797,2025-10,Pro,Individual,Anúncios,PR,12900
+C01798,2025-06,Essencial,Individual,Indicação,PR,7900
+C01799,2024-11,Pro,Individual,Orgânico,SP,13900
+C01800,2025-01,Essencial,Pequena empresa,Anúncios,MG,5900

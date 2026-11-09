@@ -1,0 +1,78 @@
+{
+  "algorithm": "Regressão logística manual (biblioteca padrão Python)",
+  "coefficients": [
+    -3.268254,
+    -0.189583,
+    0.733353,
+    1.425837,
+    1.239952,
+    0.178411,
+    -0.28272,
+    0.260176,
+    -0.464938
+  ],
+  "feature_timing": "início do mês; desfecho no fim",
+  "features": [
+    "tenure_months/24",
+    "tickets_last30d/5",
+    "inactive_days_last30d/30",
+    "late_invoices_last90d/2",
+    "plan_essencial",
+    "plan_equipe",
+    "channel_ads",
+    "mrr_cents/30000"
+  ],
+  "hyperparameters": {
+    "iterations": 175,
+    "l2_regularization": 0.001,
+    "learning_rate": 1.9
+  },
+  "label": "churned_end_month",
+  "limits": [
+    "Dados e mecanismo de churn inteiramente sintéticos.",
+    "Clientes podem reaparecer em meses de diferentes cortes; há dependência longitudinal.",
+    "AUC e lift do dataset artificial não comprovam previsão em clientes reais.",
+    "Sem otimização de limiar, comparação de intervenção, medição causal ou ROI.",
+    "Não contém nomes, gênero, raça, religião, crédito pessoal ou dados sensíveis."
+  ],
+  "metrics": {
+    "test": {
+      "auc_roc": 0.7034,
+      "baseline_brier_train_prevalence": 0.074589,
+      "brier_score": 0.070735,
+      "churn_events": 178,
+      "event_rate": 0.081167,
+      "lift_top_10pct": 2.8561,
+      "precision_at_top_10pct": 0.231818,
+      "rows": 2193
+    },
+    "train": {
+      "auc_roc": 0.72964,
+      "baseline_brier_train_prevalence": 0.077134,
+      "brier_score": 0.071748,
+      "churn_events": 768,
+      "event_rate": 0.084229,
+      "lift_top_10pct": 3.1894,
+      "precision_at_top_10pct": 0.26864,
+      "rows": 9118
+    },
+    "validation": {
+      "auc_roc": 0.70996,
+      "baseline_brier_train_prevalence": 0.076202,
+      "brier_score": 0.072187,
+      "churn_events": 184,
+      "event_rate": 0.083107,
+      "lift_top_10pct": 2.6558,
+      "precision_at_top_10pct": 0.220721,
+      "rows": 2214
+    }
+  },
+  "not_for_decisions": true,
+  "split": {
+    "test": "2026-04 a 2026-06",
+    "train": "2025-01 a 2025-12",
+    "validation": "2026-01 a 2026-03"
+  },
+  "synthetic": true,
+  "train_prevalence": 0.084229
+}
