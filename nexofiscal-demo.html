@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NexoFiscal — Demonstração técnica segura</title>
+<!-- Portfolio language assets -->
+<link rel="stylesheet" href="/assets/portfolio-language.css?v=c9952e50b275">
+<script src="/assets/i18n/nexofiscal-demo.js?v=6ed3133bc1f3" defer></script>
+<script src="/assets/portfolio-language.js?v=74d9ddcbbaf2" defer></script>
+<!-- End portfolio language assets -->
+
 <meta name="description" content="Explore a emissão fiscal simulada do NexoFiscal: prévia, rejeição, reprocessamento, idempotência e cancelamento com dados fictícios, sem transmissão a prefeitura.">
 <meta name="theme-color" content="#0a1a2a"><link rel="canonical" href="https://leandroaugferreira.github.io/nexofiscal-demo.html">
 <meta property="og:title" content="NexoFiscal — Tour de emissão simulada"><meta property="og:description" content="Fluxo didático de NFS-e simulada, sem validade fiscal e sem backend público."><meta property="og:type" content="website">
@@ -32,6 +38,15 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 @media(max-width:530px){.hero{padding:36px 0 25px}.hero .lead{font-size:15px}.fields,.three{grid-template-columns:1fr}.panel{padding:16px}.metrics{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:1/-1}.action{flex:1}.cta a{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style></head><body>
+<!-- Portfolio language controls -->
+<div class="portfolio-language-bar">
+    <div class="portfolio-languages" data-portfolio-languages="nexofiscal-demo" role="group" aria-label="Idioma do site" hidden>
+        <button type="button" data-language="pt" lang="pt-BR" aria-pressed="true"><img src="/img/flag-br.svg" alt="" width="22" height="15"> Português</button>
+        <button type="button" data-language="en" lang="en-US" aria-pressed="false"><img src="/img/flag-us.svg" alt="" width="22" height="15"> English</button>
+    </div>
+</div>
+<!-- End portfolio language controls -->
+
 <nav><div class="wrap"><a href="nexofiscal.html" class="brand">Nexo<span>Fiscal</span></a><div class="links"><a href="nexofiscal.html">Sobre o projeto</a><a href="nexofiscal-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/nexofiscal" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></div></div></nav>
 <main class="wrap"><header class="hero"><p class="eyebrow">Simulação interativa · case de backend Python</p><h1>Um documento de serviço. <em>Uma jornada rastreável.</em></h1>
 <p class="lead">Explore como o NexoFiscal valida uma solicitação, evita emissão duplicada, registra uma rejeição e permite reprocessamento ou cancelamento — tudo usando dados fictícios.</p>

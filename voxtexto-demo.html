@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VoxTexto — demonstração técnica interativa</title>
+<!-- Portfolio language assets -->
+<link rel="stylesheet" href="/assets/portfolio-language.css?v=c9952e50b275">
+<script src="/assets/i18n/voxtexto-demo.js?v=f6abc1aeade7" defer></script>
+<script src="/assets/portfolio-language.js?v=74d9ddcbbaf2" defer></script>
+<!-- End portfolio language assets -->
+
 <meta name="description" content="Explore o fluxo de processamento do VoxTexto: arquivo fictício, worker isolado, histórico por usuário e exportação Word. Demonstração sem envio de áudio ou transcrição real.">
 <meta name="theme-color" content="#07192d"><link rel="canonical" href="https://leandroaugferreira.github.io/voxtexto-demo.html">
 <meta property="og:title" content="VoxTexto — Tour de engenharia Python"><meta property="og:description" content="Simule conclusão, falha e cancelamento de transcrição. Dados fictícios, sem subir gravações.">
@@ -34,6 +40,15 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 </style>
 </head>
 <body>
+<!-- Portfolio language controls -->
+<div class="portfolio-language-bar">
+    <div class="portfolio-languages" data-portfolio-languages="voxtexto-demo" role="group" aria-label="Idioma do site" hidden>
+        <button type="button" data-language="pt" lang="pt-BR" aria-pressed="true"><img src="/img/flag-br.svg" alt="" width="22" height="15"> Português</button>
+        <button type="button" data-language="en" lang="en-US" aria-pressed="false"><img src="/img/flag-us.svg" alt="" width="22" height="15"> English</button>
+    </div>
+</div>
+<!-- End portfolio language controls -->
+
 <header class="top"><div class="wrap"><a class="brand" href="python.html">Vox<span>Texto</span></a><nav class="nav" aria-label="Navegação"><a href="python.html">Projeto completo</a><a href="voxtexto-manual.html">Manual</a><a href="https://github.com/LeandroAugFerreira/transcricao-audio-web" target="_blank" rel="noopener noreferrer">Código-fonte ↗</a></nav></div></header>
 <main class="wrap">
 <section class="hero"><p class="eyebrow">Caso técnico · Python, Flask, SQLite e Word</p><h1>Do arquivo à transcrição. <em>Sem perder o controle.</em></h1>

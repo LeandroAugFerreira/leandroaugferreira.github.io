@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Gestão logística full stack com estoque, reservas e pedidos integrados a indicadores e entregas simuladas. Aplicativo Windows e manual online.">
   <title>NexoLog | Leandro Augusto Ferreira</title>
+<!-- Portfolio language assets -->
+<link rel="stylesheet" href="/assets/portfolio-language.css?v=c9952e50b275">
+<script src="/assets/i18n/nexolog.js?v=7edc163535de" defer></script>
+<script src="/assets/portfolio-language.js?v=74d9ddcbbaf2" defer></script>
+<!-- End portfolio language assets -->
+
   <style>
     :root { color-scheme: dark; --bg:#04101e; --panel:#0a2033; --line:#21435b; --text:#f0f6ff; --muted:#adc2d7; --accent:#00c8f5; }
     * { box-sizing:border-box; } body { margin:0; font-family:Inter,Segoe UI,sans-serif; background:radial-gradient(ellipse at 90% 0, #0a354e, transparent 55%),var(--bg); color:var(--text); line-height:1.65; }
@@ -40,10 +46,19 @@
 
 </style>
   <link rel="stylesheet" href="assets/video-player.css?v=53644a1de1f4">
-  <script src="assets/video-player.js?v=87f25185b657" defer></script>
+  <script src="assets/video-player.js?v=de17eaa97c56" defer></script>
 <meta name="author" content="Leandro Augusto Ferreira"><link rel="canonical" href="https://leandroaugferreira.github.io/nexolog.html"><meta property="og:title" content="NexoLog | Leandro Augusto Ferreira"><meta property="og:url" content="https://leandroaugferreira.github.io/nexolog.html"><meta property="og:image" content="https://leandroaugferreira.github.io/img/nexolog-dashboard.png"><meta property="og:type" content="website"><meta property="og:description" content="Gestão logística full stack com estoque, reservas e pedidos integrados a indicadores e entregas simuladas. Aplicativo Windows e manual online."><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="assets/project-standard.css?v=10e7f4dab0f4"><link rel="stylesheet" href="assets/portfolio-a11y.css?v=2fad2770bce6"></head>
 <body class="portfolio-project" style="--project-accent:#00c8f5">
-  <a class="case-skip" href="#conteudo">Pular para o conteúdo</a><nav class="case-shell case-nav" aria-label="Navegação do projeto"><a href="https://leandroaugferreira.github.io/#nexolog">← Portfólio</a><div><a href="nexolog.html">O projeto</a><a href="nexolog-demo.html">Simulação interativa</a><a href="nexolog-manual.html" target="_blank" rel="noopener noreferrer">Manual online ↗</a><a href="nexolog.html#download">Aplicativo Windows</a></div></nav>
+  <a class="case-skip" href="#conteudo">Pular para o conteúdo</a>
+<!-- Portfolio language controls -->
+<div class="portfolio-language-bar">
+    <div class="portfolio-languages" data-portfolio-languages="nexolog" role="group" aria-label="Idioma do site" hidden>
+        <button type="button" data-language="pt" lang="pt-BR" aria-pressed="true"><img src="/img/flag-br.svg" alt="" width="22" height="15"> Português</button>
+        <button type="button" data-language="en" lang="en-US" aria-pressed="false"><img src="/img/flag-us.svg" alt="" width="22" height="15"> English</button>
+    </div>
+</div>
+<!-- End portfolio language controls -->
+<nav class="case-shell case-nav" aria-label="Navegação do projeto"><a href="https://leandroaugferreira.github.io/#nexolog">← Portfólio</a><div><a href="nexolog.html">O projeto</a><a href="nexolog-demo.html">Simulação interativa</a><a href="nexolog-manual.html" target="_blank" rel="noopener noreferrer">Manual online ↗</a><a href="nexolog.html#download">Aplicativo Windows</a></div></nav>
   <main id="conteudo" class="container" tabindex="-1">
     <header class="hero">
       <div>
@@ -61,7 +76,7 @@
 <section class="case-section" id="visao-do-projeto" aria-labelledby="avaliacao-titulo"><p class="case-eyebrow">PARA QUEM ESTÁ AVALIANDO</p><h2 id="avaliacao-titulo">O projeto em um minuto.</h2><div class="case-grid"><article><h3>O problema</h3><p>Acompanhar o efeito de pedidos e entregas sobre saldos, reservas e indicadores.</p></article><article><h3>O que construí</h3><p>Cadastros, estoque e Kanban de pedidos ligados ao rastreamento demonstrativo e aos relatórios.</p></article><article><h3>O que observar</h3><p>Transações, estados dos pedidos, controle de acesso e auditoria das movimentações.</p></article></div></section>
 <!-- PROJECT STANDARD OVERVIEW END -->
 <section aria-label="Vídeo de apresentação"><h2>Conheça o NexoLog em vídeo</h2>
-<div class="nexolog-player" data-nexolog-player data-scenes="media/nexolog-apresentacao-cenas.json?v=428db1b6e4a0">
+<div class="nexolog-player" data-nexolog-player data-project-name="NexoLog" data-scenes="media/nexolog-apresentacao-cenas.json?v=428db1b6e4a0">
   <video controls playsinline preload="metadata" poster="img/teasers/nexolog-completo.jpg?v=d972c2bfff1b" width="1280" height="720" aria-label="Apresentação do NexoLog">
     <source src="media/nexolog-apresentacao.mp4?v=33ffe460da02" type="video/mp4">
     <track kind="subtitles" src="media/nexolog-pt.vtt?v=302cebdcb274" srclang="pt-BR" label="Português BR" default>
