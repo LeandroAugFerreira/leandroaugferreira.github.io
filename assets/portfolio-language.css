@@ -1,0 +1,70 @@
+.portfolio-languages {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .45rem;
+    color: #e2e8f0;
+}
+
+.portfolio-languages[hidden] {
+    display: none;
+}
+
+.portfolio-languages--hero {
+    display: flex;
+    margin-block-end: 1.25rem;
+}
+
+.portfolio-languages--light {
+    color: #102b45;
+}
+
+.portfolio-languages button {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    min-height: 42px;
+    padding: .45rem .7rem;
+    border: 1px solid #91a5b9;
+    border-radius: .5rem;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.portfolio-languages button:hover,
+.portfolio-languages button[aria-pressed="true"] {
+    border-color: #65dafa;
+    background: #12364a;
+    color: #fff;
+}
+
+.portfolio-languages--light button:hover,
+.portfolio-languages--light button[aria-pressed="true"] {
+    border-color: #0875a4;
+    background: #d8effa;
+    color: #102b45;
+}
+
+.portfolio-languages button:focus-visible {
+    outline: 2px solid #45b5ff;
+    outline-offset: 3px;
+}
+
+.portfolio-languages img {
+    display: block;
+    width: 22px;
+    height: 15px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+@media print {
+    .portfolio-languages {
+        display: none;
+    }
+}
