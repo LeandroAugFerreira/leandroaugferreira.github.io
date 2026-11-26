@@ -1,0 +1,30 @@
+{
+  "html_pages": 31,
+  "local_references_checked": 809,
+  "projects": 9,
+  "preexisting_checker_errors": 42,
+  "new_errors": [],
+  "homepage_outside_chronos_preserved": true,
+  "original_downloads_and_identity_preserved": true,
+  "product": "Chronos 2.0",
+  "reference_date": "2026-11-25",
+  "portfolio_baseline": "804f398971e591fd6c90ba5cf14329dbcd2dcbe9",
+  "source_commit": "70b0390fa8327ea968890a3bb94519c1002ad91a",
+  "source_ci": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas/actions/runs/45724879949",
+  "source_ci_result": "success",
+  "backend_tests": {
+    "passed": 217,
+    "skipped": 1,
+    "skip_reason": "PostgreSQL integration unavailable"
+  },
+  "frontend_tests": {
+    "passed": 91
+  },
+  "browser_ci": "success: real login, comparison API, 42h/40h dates and 390x844 overflow",
+  "portfolio_browser_local": "Desktop 1280x720 and mobile 390x844: all three phases and keyboard selection verified",
+  "desktop_self_test": "success: frozen EXE, Tk, local seed, login/RBAC/CSRF, optimization worker, OR-Tools OPTIMAL, SQLite integrity",
+  "old_checker_note": "The historical full-portfolio checker already reports 42 failures on the baseline, including outdated filter/order/metadata assumptions and directory URL checks. It was preserved unchanged. Baseline comparison found no new failures. The historical DOM script also predates the current showcase and fails on a missing old .project-filters element. Other projects were not modified.",
+  "manual": "HTML current and historical manuals available",
+  "scope": "Chronos presentation, version history, examples, manual, source and Windows packages; other project cards and original assets retained",
+  "production_ready": false
+}

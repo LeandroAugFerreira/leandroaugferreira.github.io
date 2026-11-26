@@ -1,0 +1,31 @@
+{
+  "product": "Chronos 2.0",
+  "edition": "Windows x64 demo",
+  "file": "Chronos-2.0.exe",
+  "bytes": 68936333,
+  "sha256": "eca15268ceb584f00a5b12c99ad91534ca14645672e6d8c0c979b98a39d99867",
+  "download_url": "downloads/Chronos-2.0.exe",
+  "reference_date": "2026-11-25",
+  "source_commit": "70b0390fa8327ea968890a3bb94519c1002ad91a",
+  "digitally_signed": false,
+  "demo_data": "Hospital Horizonte / 350 colaboradores / 19 setores",
+  "personal_accounts_included": false,
+  "n8n_enabled": false,
+  "production_ready": false,
+  "self_test": {
+    "product": "Chronos 2.0",
+    "frozen": true,
+    "frontend_spa": true,
+    "csrf_login_logout": true,
+    "demo_read_only": true,
+    "administrator_created": true,
+    "optimization_queue": "succeeded",
+    "ortools_probe": "OPTIMAL",
+    "seed_idempotent": true,
+    "database_integrity": "ok",
+    "tk_initialized": true,
+    "n8n": false,
+    "scheduler": false
+  },
+  "ci_url": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas/actions/runs/45724879949"
+}

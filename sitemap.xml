@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://leandroaugferreira.github.io/</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/atelie-verde-demo.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/atelie-verde-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/atelie-verde.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/chronos-1.0-manual.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/chronos-1.0.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/chronos-2.0.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/chronos-demo.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/chronos-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/chronos.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/churn-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/churn.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/comercial-case.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/curriculo.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/financeiro-case.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/financeiro-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/financeiro.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/logistica-case.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/nexofiscal-demo.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/nexofiscal-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/nexofiscal.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/nexolog-demo.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/nexolog-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/nexolog.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/python.html</loc></url>
@@ -18,5 +29,6 @@
   <url><loc>https://leandroaugferreira.github.io/transporte.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/venda-manual.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/venda.html</loc></url>
+  <url><loc>https://leandroaugferreira.github.io/voxtexto-demo.html</loc></url>
   <url><loc>https://leandroaugferreira.github.io/voxtexto-manual.html</loc></url>
 </urlset>
