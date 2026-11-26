@@ -1,0 +1,147 @@
+{
+  "product": "Chronos 2.0",
+  "visual_revision": "cobalto-turquesa-2026-11-25",
+  "source_commit": "890a76a9cce7ec8c50233cec007067c4f081b873",
+  "palette": {
+    "action": "#2563EB",
+    "dark_accent": "#81B1FF",
+    "dark_teal": "#2DD4BF",
+    "dark_background": "#0B1220",
+    "light_accent": "#1D4ED8",
+    "light_teal": "#087D76",
+    "light_background": "#F4F7FC"
+  },
+  "preservation": {
+    "preserved": [
+      {
+        "repository": "chronos",
+        "file": "frontend/public/chronos-mark.svg",
+        "unchanged": true,
+        "blob": "12e224da9325def83e5a02fcc563eb778d1338ec"
+      },
+      {
+        "repository": "chronos",
+        "file": "frontend/src/components/identity.tsx",
+        "unchanged": true,
+        "blob": "094756d7710fb23943cef56c52ddcaaf58cc6931"
+      },
+      {
+        "repository": "chronos",
+        "file": "desktop/chronos.ico",
+        "unchanged": true,
+        "blob": "f672a0a5ddc1335dc8d2ad3abe98e6f52187cb15"
+      },
+      {
+        "repository": "portfolio",
+        "file": "img/chronos-mark.svg",
+        "unchanged": true,
+        "blob": "12e224da9325def83e5a02fcc563eb778d1338ec"
+      },
+      {
+        "repository": "portfolio",
+        "file": "assets/chronos.css",
+        "unchanged": true,
+        "blob": "bb35750a88949b13f8102c3e4e51c70ca38faf87"
+      },
+      {
+        "repository": "portfolio",
+        "file": "chronos-1.0.html",
+        "unchanged": true,
+        "blob": "65ab31b56ea1e9c107c8e784f81a890d567e461c"
+      },
+      {
+        "repository": "portfolio",
+        "file": "chronos-1.0-manual.html",
+        "unchanged": true,
+        "blob": "cabb3f698ad29cb83ec46671fa43a8e610bf565b"
+      },
+      {
+        "repository": "portfolio",
+        "file": "downloads/Chronos.exe",
+        "unchanged": true,
+        "blob": "313c86d3e92f5754e18a2ebf65f672d3c0afeb35"
+      }
+    ],
+    "contrast_checks": [
+      {
+        "role": "primary_button",
+        "ratio": 5.17
+      },
+      {
+        "role": "dark_secondary_text",
+        "ratio": 9.09
+      },
+      {
+        "role": "dark_accent",
+        "ratio": 7.6
+      },
+      {
+        "role": "dark_teal",
+        "ratio": 8.87
+      },
+      {
+        "role": "light_secondary_text",
+        "ratio": 5.77
+      },
+      {
+        "role": "light_accent",
+        "ratio": 6.7
+      },
+      {
+        "role": "light_teal",
+        "ratio": 4.99
+      }
+    ]
+  },
+  "executable_bundle": {
+    "bundled_files": [
+      {
+        "file": "help/assets/chronos-v2-palette.css",
+        "exact_match": true,
+        "sha256": "4216fd5613bd6a219038b93ce70b551a0cf8d02bc6c22a3557e24816832712e6"
+      },
+      {
+        "file": "help/img/chronos-mark.svg",
+        "exact_match": true,
+        "sha256": "085aa08780c93ae83daf2ae6fb55c5f25018e022fa91c6a492e02a99b65e6cfa"
+      },
+      {
+        "file": "desktop/chronos.ico",
+        "exact_match": true,
+        "sha256": "d01db16d6bafd9cdc6ce4fbef466951ec40d69f021472d89546b985596865617"
+      }
+    ],
+    "frontend_palette_included": true
+  },
+  "desktop_self_test": {
+    "product": "Chronos 2.0",
+    "frozen": true,
+    "frontend_spa": true,
+    "csrf_login_logout": true,
+    "demo_read_only": true,
+    "administrator_created": true,
+    "optimization_queue": "succeeded",
+    "ortools_probe": "OPTIMAL",
+    "seed_idempotent": true,
+    "database_integrity": "ok",
+    "tk_initialized": true,
+    "n8n": false,
+    "scheduler": false
+  },
+  "frontend_tests": 91,
+  "frontend_build": "success",
+  "browser_checks": [
+    "Real demo login",
+    "Desktop dark and light dashboard",
+    "Mobile comparison and submit through the API",
+    "Desktop and mobile portfolio",
+    "Light HTML manual",
+    "1.0 retained original colors"
+  ],
+  "scope": "Colors, palette stylesheet and matching current release downloads. Original clock SVG/ICO and geometry unchanged. No backend logic, database schema, algorithm or authorization change.",
+  "source_ci": {
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas/actions/runs/45731204424"
+  }
+}

@@ -1,0 +1,40 @@
+/* Chronos 2.0: paleta aprovada. O CSS e os arquivos visuais da versão 1.0 permanecem intactos. */
+:root {
+  --bg: #0b1220;
+  --panel: #131f33;
+  --text: #f1f5ff;
+  --muted: #b5c1d5;
+  --accent: #81b1ff;
+  --secondary-accent: #2dd4bf;
+  --action: #2563eb;
+  --action-text: #ffffff;
+  --line: #30425e;
+  --ink: #17243b;
+  --paper: #f4f7fc;
+}
+.wordmark span { color: var(--secondary-accent); }
+.hero-aside:before { border-color: #81b1ff1c; }
+.button.primary,
+.manual-page .button.primary {
+  background: var(--action);
+  border-color: var(--action);
+  color: var(--action-text);
+}
+.button.primary:hover,
+.manual-page .button.primary:hover { background: #1d4ed8; }
+.button:not(.primary) { border-color: #6f84a3; }
+.version-path span:last-child { border-color: var(--secondary-accent); color: var(--secondary-accent); }
+.manual-page {
+  --bg: #f4f7fc;
+  --panel: #ffffff;
+  --text: #17243b;
+  --muted: #52627a;
+  --accent: #1d4ed8;
+  --secondary-accent: #087d76;
+  --line: #cfdaeb;
+}
+.manual-content code { background: #e7eefc; color: #1d4ed8; }
+.manual-index { scrollbar-color: #71839e transparent; }
+.skip { background: var(--action); color: var(--action-text); }
+.chronos-player video { background: var(--bg); }
+@media (max-width:700px) { .manual-index { background: #e7eefc; } }

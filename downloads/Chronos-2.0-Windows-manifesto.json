@@ -2,11 +2,11 @@
   "product": "Chronos 2.0",
   "edition": "Windows x64 demo",
   "file": "Chronos-2.0.exe",
-  "bytes": 68936333,
-  "sha256": "eca15268ceb584f00a5b12c99ad91534ca14645672e6d8c0c979b98a39d99867",
+  "bytes": 68935769,
+  "sha256": "b38a17c60ac745524b51b3b891afae5a3686735aff21f17d673268459b4b56ce",
   "download_url": "downloads/Chronos-2.0.exe",
   "reference_date": "2026-11-25",
-  "source_commit": "70b0390fa8327ea968890a3bb94519c1002ad91a",
+  "source_commit": "890a76a9cce7ec8c50233cec007067c4f081b873",
   "digitally_signed": false,
   "demo_data": "Hospital Horizonte / 350 colaboradores / 19 setores",
   "personal_accounts_included": false,
@@ -27,5 +27,7 @@
     "n8n": false,
     "scheduler": false
   },
-  "ci_url": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas/actions/runs/45724879949"
+  "ci_url": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas/actions/runs/45731204424",
+  "visual_revision": "cobalto-turquesa-2026-11-25",
+  "original_clock_logo_preserved": true
 }

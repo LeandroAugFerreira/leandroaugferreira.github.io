@@ -6,8 +6,8 @@
     "anchor": "chronos",
     "kind": "app",
     "version": "2.0",
-    "accent": "#e9b98c",
-    "manual_accent": "#89502c",
+    "accent": "#81b1ff",
+    "manual_accent": "#1d4ed8",
     "manual": "chronos-manual.html",
     "media": "chronos",
     "tech": [
