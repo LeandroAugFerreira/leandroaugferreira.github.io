@@ -1,7 +1,7 @@
 [
   {
     "slug": "chronos",
-    "title": "Chronos",
+    "title": "Chronos 2.0",
     "page": "chronos.html",
     "anchor": "chronos",
     "kind": "app",
@@ -17,14 +17,14 @@
       "OR-Tools"
     ],
     "tagline": "Pessoas e tempo, em equilíbrio.",
-    "summary": "Evolução do planejamento de jornadas: comparação normativa por data, valor da hora e histórico da versão 1.0.",
+    "summary": "Planeje jornadas e escalas, compare custos e explore a transição normativa no aplicativo Chronos 2.0 para Windows.",
     "problem": "Organizar pessoas e necessidades de cobertura sem perder o contexto das regras e dos contratos.",
     "solution": "Uma plataforma configurável com cenários versionados, simulação financeira e propostas de escalas.",
     "evaluate": "Elegibilidade por competência, processamento do otimizador e rastreabilidade das decisões.",
     "download": "downloads/Chronos-2.0.exe",
-    "download_label": "Baixar para Windows (.exe)",
+    "download_label": "Baixar Chronos 2.0 para Windows",
     "source": "downloads/Chronos-2.0-codigo-fonte.zip",
-    "image": "img/chronos-social.png",
+    "image": "img/chronos-2.0-painel.jpg",
     "featured": true,
     "repository": "https://github.com/LeandroAugFerreira/chronos-gestao-escalas"
   },

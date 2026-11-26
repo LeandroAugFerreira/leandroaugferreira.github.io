@@ -1,0 +1,33 @@
+{
+  "product": "Chronos 2.0",
+  "reference_date": "2026-11-25",
+  "portfolio_baseline": "6c832bee2c78ec0e0daeae166aa161c026f0acd1",
+  "current_download": "downloads/Chronos-2.0.exe",
+  "current_download_sha256": "b38a17c60ac745524b51b3b891afae5a3686735aff21f17d673268459b4b56ce",
+  "home": "Chronos 2.0 title, actual 2.0 app screenshot, current-version label, complete-project link and direct Windows download",
+  "project_page": "Current platform modules and direct 2.0 EXE download first; 1.0 reference in a secondary collapsed history section",
+  "historical_pages": "Clearly marked as historical; prominent evaluation links point to 2.0. Original video and technical archives remain available.",
+  "browser_checks": [
+    "Home to current product page",
+    "Current app screenshot loaded: 1265x712",
+    "Main hero links directly to Chronos-2.0.exe",
+    "History closed by default",
+    "Historical page primary link points to 2.0",
+    "Portuguese and English download labels",
+    "390x844 mobile home and project page without horizontal overflow",
+    "Keyboard navigation to project/download links"
+  ],
+  "static_checks": {
+    "projects": 9,
+    "changed_pages": 6,
+    "links_and_assets": 260,
+    "other_project_cards_preserved": true,
+    "original_logo_preserved": true,
+    "approved_palette_preserved": true,
+    "source_and_executable_hashes": "passed",
+    "legacy_checker_new_errors": 0
+  },
+  "application_changes": false,
+  "executable_rebuilt": false,
+  "reason": "The existing 2.0 executable already includes the complete application and the transition module; this change prioritizes its presentation and download."
+}
